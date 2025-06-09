@@ -1,0 +1,3 @@
+{"id": 1, "title": "Modern Downtown Apartment", "price": 2500, "bedrooms": 2, "bathrooms": 2, "location": "Downtown", "amenities": ["gym", "parking", "pool"], "description": "Beautiful modern apartment in the heart of downtown, close to restaurants and shopping."}
+{"id": 2, "title": "Cozy Suburban House", "price": 1800, "bedrooms": 3, "bathrooms": 2, "location": "Suburbs", "amenities": ["garden", "garage"], "description": "Spacious family home in quiet suburban neighborhood, great schools nearby."}
+{"id": 3, "title": "Luxury Waterfront Condo", "price": 3500, "bedrooms": 2, "bathrooms": 2.5, "location": "Waterfront", "amenities": ["gym", "pool", "parking", "doorman"], "description": "Stunning waterfront views, modern amenities, and 24/7 security."}

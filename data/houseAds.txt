@@ -1,0 +1,72 @@
+Title: Cozy 1-Bedroom Condo Near UBC
+Price: $1,750/month
+Location: 4320 University Blvd, Vancouver, BC
+Bedrooms: 1
+Bathrooms: 1
+Square Footage: 600 sq ft
+Available From: July 15, 2025
+Description: Ideal for students or young professionals. Bright unit with modern kitchen and walk-in closet. Close to UBC and bus routes.
+Nearby: UBC Campus - 500m, Cafe - 200m, Gym - 800m
+Amenities: In-suite laundry, Elevator, Bike storage
+Contact: rent@ubcliving.ca
+Source: SampleRentals.ca
+
+---
+
+Title: Modern 3-Bedroom Townhouse in Mississauga
+Price: $3,250/month
+Location: 1050 Burnhamthorpe Rd, Mississauga, ON
+Bedrooms: 3
+Bathrooms: 2.5
+Square Footage: 1450 sq ft
+Available From: August 1, 2025
+Description: Spacious family home with garage and backyard. Quiet neighborhood near schools and parks.
+Nearby: Elementary School - 300m, Grocery Store - 1km, Highway 403 - 2km
+Amenities: Garage, Backyard, Central Heating, Dishwasher
+Contact: info@townrentals.ca
+Source: FakeRentals.com
+
+---
+
+Title: Studio Apartment in Downtown Montreal
+Price: $1,200/month
+Location: 789 Rue Sainte-Catherine, Montreal, QC
+Bedrooms: Studio
+Bathrooms: 1
+Square Footage: 450 sq ft
+Available From: Immediate
+Description: Fully furnished studio in heart of downtown. Steps from Metro, cafes, and nightlife.
+Nearby: Metro Station - 100m, University - 700m, Gym - 300m
+Amenities: Furnished, Wi-Fi included, Heating
+Contact: studio@montrealhousing.com
+Source: TestListings.net
+
+---
+
+Title: Basement Suite in Calgary NE
+Price: $950/month
+Location: 86 Whitehorn Dr NE, Calgary, AB
+Bedrooms: 1
+Bathrooms: 1
+Square Footage: 550 sq ft
+Available From: June 20, 2025
+Description: Private entrance, shared laundry. Suitable for single occupant. Near bus stop and shops.
+Nearby: Superstore - 800m, Transit - 100m, Park - 200m
+Amenities: Shared laundry, Separate entrance, Heating
+Contact: calgaryrents@example.com
+Source: MyRentalFeed.org
+
+---
+
+Title: Luxury Penthouse in Downtown Toronto
+Price: $5,500/month
+Location: 1 King Street West, Toronto, ON
+Bedrooms: 2
+Bathrooms: 2
+Square Footage: 1800 sq ft
+Available From: September 1, 2025
+Description: High-rise living with breathtaking views. Smart appliances, concierge, rooftop pool access.
+Nearby: Financial District - 100m, Union Station - 300m, Entertainment District - 500m
+Amenities: Rooftop pool, Concierge, Smart home, Gym
+Contact: penthouse@luxuryto.ca
+Source: EliteHomes.ai
