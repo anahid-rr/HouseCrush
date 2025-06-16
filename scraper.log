@@ -1,0 +1,131 @@
+2025-06-15 19:41:27,104 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-15 19:41:27,104 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 19:41:27,109 - INFO -  * Restarting with stat
+2025-06-15 19:41:46,182 - WARNING -  * Debugger is active!
+2025-06-15 19:41:46,191 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 19:43:31,526 - INFO - 127.0.0.1 - - [15/Jun/2025 19:43:31] "GET / HTTP/1.1" 200 -
+2025-06-15 19:47:03,138 - INFO - 127.0.0.1 - - [15/Jun/2025 19:47:03] "GET / HTTP/1.1" 200 -
+2025-06-15 19:47:40,246 - INFO - Searching zillow for downtown
+2025-06-15 19:47:44,820 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-15 19:47:44,829 - INFO - Found 0 listings on zillow
+2025-06-15 19:47:44,829 - INFO - Searching apartments for downtown
+2025-06-15 19:47:51,742 - ERROR - Error scraping Apartments.com: 404 Client Error: Not Found for url: https://www.apartments.com/downtown/
+2025-06-15 19:47:51,742 - INFO - Found 0 listings on apartments
+2025-06-15 19:47:51,742 - INFO - Searching padmapper for downtown
+2025-06-15 19:47:56,513 - INFO - Found 0 listings on padmapper
+2025-06-15 19:47:56,516 - INFO - Searching kijiji for downtown
+2025-06-15 19:48:02,161 - INFO - Found 0 listings on kijiji
+2025-06-15 19:48:02,197 - INFO - 127.0.0.1 - - [15/Jun/2025 19:48:02] "POST / HTTP/1.1" 200 -
+2025-06-15 19:48:25,702 - INFO - Searching zillow for downtown
+2025-06-15 19:48:29,430 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-15 19:48:29,430 - INFO - Found 0 listings on zillow
+2025-06-15 19:48:29,430 - INFO - Searching apartments for downtown
+2025-06-15 19:48:35,707 - ERROR - Error scraping Apartments.com: 404 Client Error: Not Found for url: https://www.apartments.com/downtown/
+2025-06-15 19:48:35,709 - INFO - Found 0 listings on apartments
+2025-06-15 19:48:35,709 - INFO - Searching padmapper for downtown
+2025-06-15 19:48:41,952 - INFO - Found 0 listings on padmapper
+2025-06-15 19:48:41,954 - INFO - Searching kijiji for downtown
+2025-06-15 19:48:50,242 - INFO - Found 0 listings on kijiji
+2025-06-15 19:48:50,279 - INFO - 127.0.0.1 - - [15/Jun/2025 19:48:50] "POST / HTTP/1.1" 200 -
+2025-06-15 19:49:01,098 - INFO - Searching zillow for downtown
+2025-06-15 19:49:06,377 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-15 19:49:06,377 - INFO - Found 0 listings on zillow
+2025-06-15 19:49:06,377 - INFO - Searching apartments for downtown
+2025-06-15 19:49:12,797 - ERROR - Error scraping Apartments.com: 404 Client Error: Not Found for url: https://www.apartments.com/downtown/
+2025-06-15 19:49:12,798 - INFO - Found 0 listings on apartments
+2025-06-15 19:49:12,798 - INFO - Searching padmapper for downtown
+2025-06-15 19:49:17,289 - INFO - Found 0 listings on padmapper
+2025-06-15 19:49:17,289 - INFO - Searching kijiji for downtown
+2025-06-15 19:49:22,857 - INFO - Found 0 listings on kijiji
+2025-06-15 19:49:22,889 - INFO - 127.0.0.1 - - [15/Jun/2025 19:49:22] "POST / HTTP/1.1" 200 -
+2025-06-15 19:49:41,304 - INFO - Searching zillow for downtown
+2025-06-15 19:49:46,376 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-15 19:49:46,376 - INFO - Found 0 listings on zillow
+2025-06-15 19:49:46,376 - INFO - Searching apartments for downtown
+2025-06-15 19:49:53,127 - ERROR - Error scraping Apartments.com: 404 Client Error: Not Found for url: https://www.apartments.com/downtown/
+2025-06-15 19:49:53,127 - INFO - Found 0 listings on apartments
+2025-06-15 19:49:53,127 - INFO - Searching padmapper for downtown
+2025-06-15 19:50:00,811 - INFO - Found 0 listings on padmapper
+2025-06-15 19:50:00,811 - INFO - Searching kijiji for downtown
+2025-06-15 19:50:07,854 - INFO - Found 0 listings on kijiji
+2025-06-15 19:50:07,888 - INFO - 127.0.0.1 - - [15/Jun/2025 19:50:07] "POST / HTTP/1.1" 200 -
+2025-06-15 19:51:10,727 - INFO - Use pytorch device_name: cpu
+2025-06-15 19:51:10,727 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-06-15 19:51:17,055 - INFO - Searching zillow for 
+2025-06-15 19:51:24,190 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-15 19:51:24,190 - INFO - Found 0 listings on zillow
+2025-06-15 19:51:24,190 - INFO - Searching apartments for 
+2025-06-15 19:51:29,199 - INFO - Found 0 listings on apartments
+2025-06-15 19:51:29,199 - INFO - Searching padmapper for 
+2025-06-15 19:51:36,543 - INFO - Found 0 listings on padmapper
+2025-06-15 19:51:36,543 - INFO - Searching kijiji for 
+2025-06-15 19:51:42,410 - INFO - Found 0 listings on kijiji
+2025-06-15 19:51:42,458 - INFO - 127.0.0.1 - - [15/Jun/2025 19:51:42] "POST / HTTP/1.1" 200 -
+2025-06-15 21:01:04,409 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-15 21:01:06,562 - INFO -  * Restarting with stat
+2025-06-15 21:01:30,611 - WARNING -  * Debugger is active!
+2025-06-15 21:01:30,621 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 21:09:19,230 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-15 21:09:20,625 - INFO -  * Restarting with stat
+2025-06-15 21:09:40,547 - WARNING -  * Debugger is active!
+2025-06-15 21:09:40,556 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 21:09:40,599 - INFO - Use pytorch device_name: cpu
+2025-06-15 21:09:40,599 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-06-15 21:09:47,794 - INFO - Searching zillow for 
+2025-06-15 21:09:54,654 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-15 21:09:54,654 - INFO - Found 0 listings on zillow
+2025-06-15 21:09:54,654 - INFO - Searching apartments for 
+2025-06-15 21:11:12,859 - INFO - Searching zillow for downtown
+2025-06-15 21:11:17,347 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%2C+%22priceMin%22%3A+%7B%22value%22%3A+2300%7D%2C+%22priceMax%22%3A+%7B%22value%22%3A+2500%7D%2C+%22bedsMin%22%3A+%7B%22value%22%3A+1%7D%7D%7D
+2025-06-15 21:11:17,347 - INFO - Found 0 listings on zillow
+2025-06-15 21:11:17,347 - INFO - Searching apartments for downtown
+2025-06-15 21:11:22,917 - ERROR - Error scraping Apartments.com: 404 Client Error: Not Found for url: https://www.apartments.com/downtown/
+2025-06-15 21:11:22,917 - INFO - Found 0 listings on apartments
+2025-06-15 21:11:22,917 - INFO - Searching padmapper for downtown
+2025-06-15 21:11:27,579 - INFO - Found 0 listings on padmapper
+2025-06-15 21:11:27,579 - INFO - Searching kijiji for downtown
+2025-06-15 21:11:35,429 - INFO - Found 0 listings on kijiji
+2025-06-15 21:11:35,486 - INFO - 127.0.0.1 - - [15/Jun/2025 21:11:35] "POST / HTTP/1.1" 200 -
+2025-06-15 21:15:15,357 - INFO - Searching zillow for vancouver
+2025-06-15 21:15:20,804 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+null%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%2C+%22priceMin%22%3A+%7B%22value%22%3A+2300%7D%2C+%22priceMax%22%3A+%7B%22value%22%3A+2500%7D%2C+%22bedsMin%22%3A+%7B%22value%22%3A+1%7D%7D%7D
+2025-06-15 21:15:20,804 - INFO - Found 0 listings on zillow
+2025-06-15 21:15:20,804 - INFO - Searching apartments for vancouver
+2025-06-15 21:33:41,782 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-15 21:33:43,064 - INFO -  * Restarting with stat
+2025-06-15 21:34:02,476 - WARNING -  * Debugger is active!
+2025-06-15 21:34:02,485 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 21:41:30,842 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\app.py', reloading
+2025-06-15 21:41:32,673 - INFO -  * Restarting with stat
+2025-06-15 21:41:56,765 - WARNING -  * Debugger is active!
+2025-06-15 21:41:56,773 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 23:25:21,218 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-15 23:25:21,218 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-15 23:25:21,220 - INFO -  * Restarting with stat
+2025-06-15 23:25:28,946 - WARNING -  * Debugger is active!
+2025-06-15 23:25:28,950 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 23:26:41,346 - INFO - 127.0.0.1 - - [15/Jun/2025 23:26:41] "GET / HTTP/1.1" 200 -
+2025-06-15 23:27:07,999 - INFO - Searching zillow for Vancouver
+2025-06-15 23:27:11,655 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+%22%22%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%2C+%22priceMin%22%3A+%7B%22value%22%3A+1500%7D%2C+%22priceMax%22%3A+%7B%22value%22%3A+2300%7D%2C+%22bedsMin%22%3A+%7B%22value%22%3A+1%7D%7D%7D
+2025-06-15 23:27:11,655 - ERROR - Error searching zillow: 'ZillowScraper' object has no attribute 'log_scraper_error'
+2025-06-15 23:27:11,694 - INFO - 127.0.0.1 - - [15/Jun/2025 23:27:11] "POST / HTTP/1.1" 200 -
+2025-06-15 23:28:03,146 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-15 23:28:03,240 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-15 23:28:04,653 - INFO -  * Restarting with stat
+2025-06-15 23:28:06,478 - INFO -  * Restarting with stat
+2025-06-15 23:28:25,389 - WARNING -  * Debugger is active!
+2025-06-15 23:28:25,394 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 23:28:26,989 - WARNING -  * Debugger is active!
+2025-06-15 23:28:26,999 - INFO -  * Debugger PIN: 226-940-468
+2025-06-15 23:28:36,754 - INFO - Searching zillow for Vancouver
+2025-06-15 23:28:40,762 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+%22%22%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%2C+%22priceMin%22%3A+%7B%22value%22%3A+1500%7D%2C+%22priceMax%22%3A+%7B%22value%22%3A+2300%7D%2C+%22bedsMin%22%3A+%7B%22value%22%3A+1%7D%7D%7D
+2025-06-15 23:28:40,790 - INFO - Found 0 listings on zillow
+2025-06-15 23:28:40,790 - INFO - Searching apartments for Vancouver
+2025-06-15 23:28:47,518 - ERROR - Error scraping Apartments.com: 404 Client Error: Not Found for url: https://www.apartments.com/vancouver/
+2025-06-15 23:28:47,542 - INFO - Found 0 listings on apartments
+2025-06-15 23:28:47,542 - INFO - Searching padmapper for Vancouver
+2025-06-15 23:28:52,775 - INFO - Found 0 listings on padmapper
+2025-06-15 23:28:52,775 - INFO - Searching kijiji for Vancouver
+2025-06-15 23:29:00,516 - INFO - Found 0 listings on kijiji
+2025-06-15 23:29:00,559 - INFO - 127.0.0.1 - - [15/Jun/2025 23:29:00] "POST / HTTP/1.1" 200 -
