@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+House Crush - OpenAI Version
+A rental property assistant that uses OpenAI API for intelligent property search and recommendations.
+"""
+
 from flask import Flask, render_template, request, flash, redirect, url_for
 from scripts.rag_example import run_rag
 from house_scraper import log_user_feedback
@@ -11,13 +17,13 @@ from typing import List, Dict, Optional
 import warnings
 from dotenv import load_dotenv
 
-# Import Perplexity integration
+# Import OpenAI integration
 try:
-    from perplexity_rental_search import search_rentals_with_perplexity, get_perplexity_status
-    PERPLEXITY_AVAILABLE = True
+    from openai_rental_search import search_rentals_with_openai, get_openai_status
+    OPENAI_AVAILABLE = True
 except ImportError as e:
-    PERPLEXITY_AVAILABLE = False
-    print(f"Warning: Perplexity integration not available: {e}")
+    OPENAI_AVAILABLE = False
+    print(f"Warning: OpenAI integration not available: {e}")
 
 # Load environment variables from .env file
 load_dotenv()
@@ -58,11 +64,11 @@ def load_house_ads(file_path: str = 'houseAds.txt') -> List[Dict]:
         print(f"Error loading house ads: {e}")
         return []
 
-def search_rentals_perplexity(location: str, min_price: Optional[int] = None, 
-                            max_price: Optional[int] = None, bedrooms: Optional[int] = None) -> List[Dict]:
-    """Search for rentals using Perplexity API."""
-    if not PERPLEXITY_AVAILABLE:
-        print("Perplexity API not available")
+def search_rentals_openai(location: str, min_price: Optional[int] = None, 
+                         max_price: Optional[int] = None, bedrooms: Optional[int] = None) -> List[Dict]:
+    """Search for rentals using OpenAI API."""
+    if not OPENAI_AVAILABLE:
+        print("OpenAI API not available")
         return []
     
     try:
@@ -71,19 +77,19 @@ def search_rentals_perplexity(location: str, min_price: Optional[int] = None,
         max_price_int = int(max_price) if max_price and max_price.isdigit() else None
         bedrooms_int = int(bedrooms) if bedrooms and bedrooms.isdigit() else None
         
-        print(f"Searching Perplexity for: {location}, price: ${min_price_int}-${max_price_int}, bedrooms: {bedrooms_int}")
+        print(f"Searching OpenAI for: {location}, price: ${min_price_int}-${max_price_int}, bedrooms: {bedrooms_int}")
         
-        listings = search_rentals_with_perplexity(location, min_price_int, max_price_int, bedrooms_int)
+        listings = search_rentals_with_openai(location, min_price_int, max_price_int, bedrooms_int)
         
         # Add match scores for consistency with local data
         for listing in listings:
             listing['match_score'] = 85  # Default high score for real-time data
-            listing['match_reason'] = 'Real-time search result from Perplexity API'
+            listing['match_reason'] = 'Real-time search result from OpenAI API'
         
         return listings
         
     except Exception as e:
-        print(f"Error searching with Perplexity: {e}")
+        print(f"Error searching with OpenAI: {e}")
         return []
 
 def rank_houses(houses: List[Dict], user_preferences: str) -> List[Dict]:
@@ -212,16 +218,16 @@ def index():
 
         # Search for properties based on selected method
         try:
-            if search_method == 'perplexity' and PERPLEXITY_AVAILABLE and filter_values['location']:
-                # Use Perplexity API for real-time search
-                print("Using Perplexity API for real-time search...")
-                houses = search_rentals_perplexity(
+            if search_method == 'openai' and OPENAI_AVAILABLE and filter_values['location']:
+                # Use OpenAI API for real-time search
+                print("Using OpenAI API for real-time search...")
+                houses = search_rentals_openai(
                     filter_values['location'],
                     filter_values['min_price'],
                     filter_values['max_price'],
                     filter_values['num_bedrooms']
                 )
-                search_source = "Perplexity API (Real-time)"
+                search_source = "OpenAI API (Real-time)"
             else:
                 # Use local file-based search
                 print("Using local database for search...")
@@ -263,10 +269,10 @@ def index():
                 
                 summary = f"I found {len(houses)} properties matching your criteria using {search_source}. The top match has a {houses[0].get('match_score', 50)}% compatibility score!" if houses else "No properties found for your criteria."
             else:
-                if search_method == 'perplexity':
-                    summary = "No properties found using Perplexity API. Try adjusting your search criteria or use local database."
+                if search_method == 'openai':
+                    summary = "No properties found using OpenAI API. Try adjusting your search criteria or use local database."
                 else:
-                    summary = "No house listings available in the database. Please check the houseAds.txt file or try Perplexity API search."
+                    summary = "No house listings available in the database. Please check the houseAds.txt file or try OpenAI API search."
                 
         except Exception as e:
             summary = f"Error processing house listings: {str(e)}"
@@ -278,10 +284,10 @@ def index():
                 log_user_feedback(feedback)
                 feedback_msg = "Thank you for your feedback!"
 
-    # Get Perplexity API status for the template
-    perplexity_status = get_perplexity_status() if PERPLEXITY_AVAILABLE else {'available': False, 'status': 'Not installed'}
+    # Get OpenAI API status for the template
+    openai_status = get_openai_status() if OPENAI_AVAILABLE else {'available': False, 'status': 'Not installed'}
 
-    return render_template('index.html', 
+    return render_template('index_openai.html', 
                          answer=answer, 
                          sources=sources, 
                          filters=filters, 
@@ -290,8 +296,8 @@ def index():
                          filter_values=filter_values, 
                          feedback_msg=feedback_msg,
                          search_method=search_method,
-                         perplexity_available=PERPLEXITY_AVAILABLE,
-                         perplexity_status=perplexity_status)
+                         openai_available=OPENAI_AVAILABLE,
+                         openai_status=openai_status)
 
 if __name__ == '__main__':
     # Set up Together AI (you'll need to set this as an environment variable)
@@ -299,14 +305,14 @@ if __name__ == '__main__':
     if not together.api_key:
         print("Warning: TOGETHER_API_KEY environment variable not set. AI ranking will not work.")
     
-    # Check Perplexity API status
-    if PERPLEXITY_AVAILABLE:
-        status = get_perplexity_status()
+    # Check OpenAI API status
+    if OPENAI_AVAILABLE:
+        status = get_openai_status()
         if status['available']:
-            print("✅ Perplexity API is available and ready to use")
+            print("✅ OpenAI API is available and ready to use")
         else:
-            print("⚠️  Perplexity API key not set. Set PERPLEXITY_API_KEY environment variable to enable real-time search.")
+            print("⚠️  OpenAI API key not set. Set OPENAI_API_KEY environment variable to enable real-time search.")
     else:
-        print("⚠️  Perplexity integration not available. Check dependencies and API key setup.")
+        print("⚠️  OpenAI integration not available. Check dependencies and API key setup.")
     
-    app.run(debug=True)
+    app.run(debug=True) 

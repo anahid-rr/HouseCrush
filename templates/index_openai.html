@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Crush - OpenAI Edition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-option {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .search-option label {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .search-option input[type="radio"] {
+            margin-right: 8px;
+            width: auto;
+        }
+
+        .search-option input[type="radio"]:checked + span {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .search-option label:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+        }
+
+        .results-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .property-card {
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .property-card:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .property-card.top-match {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+        }
+
+        .top-match-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #28a745;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .property-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .property-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .property-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .property-tag {
+            background: #f8f9fa;
+            color: #6c757d;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .property-source {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .match-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .match-score-bar {
+            flex: 1;
+            height: 6px;
+            background: #e1e5e9;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .match-score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+            transition: width 0.3s ease;
+        }
+
+        .match-score-text {
+            font-size: 12px;
+            font-weight: 600;
+            color: #28a745;
+        }
+
+        .answer-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .answer {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .sources {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .sources strong {
+            color: #667eea;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .status-available {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-unavailable {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .feedback-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feedback-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-options {
+                flex-direction: column;
+            }
+            
+            .properties-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 House Crush</h1>
+            <p>AI-Powered Rental Property Assistant - OpenAI Edition</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Q&A Section -->
+            <div class="section">
+                <h2>🤖 Ask About Rental Properties</h2>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="question">What would you like to know about rental properties?</label>
+                        <textarea name="question" id="question" rows="4" placeholder="e.g., What should I look for in a downtown apartment? What are typical rental requirements?"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Get Answer</button>
+                </form>
+                
+                {% if answer %}
+                <div class="answer-section" style="margin-top: 20px;">
+                    <h3>💡 Answer</h3>
+                    <div class="answer">{{ answer }}</div>
+                    {% if sources %}
+                    <div class="sources">
+                        <strong>Sources:</strong> {{ sources|join(', ') }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Property Search Section -->
+            <div class="section">
+                <h2>🔍 Find Your Perfect Rental</h2>
+                <form method="POST">
+                    <div class="search-options">
+                        <div class="search-option">
+                            <label>
+                                <input type="radio" name="search_method" value="local" {% if search_method == 'local' %}checked{% endif %}>
+                                <span>Local Database</span>
+                            </label>
+                        </div>
+                        <div class="search-option">
+                            <label>
+                                <input type="radio" name="search_method" value="openai" {% if search_method == 'openai' %}checked{% endif %}>
+                                <span>OpenAI Search</span>
+                                {% if openai_available %}
+                                <span class="status-indicator status-available">✓ Available</span>
+                                {% else %}
+                                <span class="status-indicator status-unavailable">✗ Unavailable</span>
+                                {% endif %}
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <input type="text" name="location" id="location" value="{{ filter_values.location }}" placeholder="e.g., Toronto, Downtown, Mississauga" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="min_price">Minimum Price ($)</label>
+                        <input type="number" name="min_price" id="min_price" value="{{ filter_values.min_price }}" placeholder="e.g., 1500">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="max_price">Maximum Price ($)</label>
+                        <input type="number" name="max_price" id="max_price" value="{{ filter_values.max_price }}" placeholder="e.g., 2500">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="num_bedrooms">Number of Bedrooms</label>
+                        <select name="num_bedrooms" id="num_bedrooms">
+                            <option value="">Any</option>
+                            <option value="1" {% if filter_values.num_bedrooms == '1' %}selected{% endif %}>1+</option>
+                            <option value="2" {% if filter_values.num_bedrooms == '2' %}selected{% endif %}>2+</option>
+                            <option value="3" {% if filter_values.num_bedrooms == '3' %}selected{% endif %}>3+</option>
+                            <option value="4" {% if filter_values.num_bedrooms == '4' %}selected{% endif %}>4+</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn">Search Properties</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        {% if properties or filters %}
+        <div class="results-section">
+            <h2>🏘️ Search Results</h2>
+            
+            {% if filters %}
+            <div class="filters">
+                {% for filter in filters %}
+                <span class="filter-tag">{{ filter }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if summary %}
+            <p style="margin-bottom: 20px; color: #667eea; font-weight: 600;">{{ summary }}</p>
+            {% endif %}
+
+            {% if properties %}
+            <div class="properties-grid">
+                {% for property in properties %}
+                <div class="property-card {% if property.top_match %}top-match{% endif %}">
+                    {% if property.top_match %}
+                    <div class="top-match-badge">TOP MATCH</div>
+                    {% endif %}
+                    
+                    <div class="property-title">{{ property.title }}</div>
+                    <div class="property-price">${{ property.price }}/month</div>
+                    
+                    <div class="property-tags">
+                        {% for tag in property.tags %}
+                        <span class="property-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="property-source">Source: {{ property.source }}</div>
+                    
+                    <div class="match-score">
+                        <div class="match-score-bar">
+                            <div class="match-score-fill" style="width: {{ property.match_score }}%"></div>
+                        </div>
+                        <span class="match-score-text">{{ property.match_score }}%</span>
+                    </div>
+                    
+                    <p style="font-size: 12px; color: #6c757d; margin-top: 10px;">{{ property.match_reason }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p style="text-align: center; color: #6c757d; font-style: italic;">No properties found matching your criteria.</p>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- Feedback Section -->
+        <div class="feedback-section">
+            <h2>💬 Help Us Improve</h2>
+            {% if feedback_msg %}
+            <div class="feedback-message">{{ feedback_msg }}</div>
+            {% endif %}
+            <form method="POST">
+                <div class="form-group">
+                    <label for="feedback">Share your feedback or suggestions:</label>
+                    <textarea name="feedback" id="feedback" rows="3" placeholder="What did you like? What could be improved?"></textarea>
+                </div>
+                <button type="submit" name="feedback" class="btn btn-secondary">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 

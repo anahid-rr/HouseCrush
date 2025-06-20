@@ -129,3 +129,137 @@
 2025-06-15 23:28:52,775 - INFO - Searching kijiji for Vancouver
 2025-06-15 23:29:00,516 - INFO - Found 0 listings on kijiji
 2025-06-15 23:29:00,559 - INFO - 127.0.0.1 - - [15/Jun/2025 23:29:00] "POST / HTTP/1.1" 200 -
+2025-06-15 23:41:49,392 - INFO - Use pytorch device_name: cpu
+2025-06-15 23:41:49,392 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-06-15 23:42:00,066 - INFO - Searching zillow for 
+2025-06-15 23:42:05,026 - ERROR - Error scraping Zillow: 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+%22%22%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-15 23:42:05,046 - INFO - Found 0 listings on zillow
+2025-06-15 23:42:05,051 - INFO - Searching apartments for 
+2025-06-15 23:42:11,805 - INFO - Found 0 listings on apartments
+2025-06-15 23:42:11,805 - INFO - Searching padmapper for 
+2025-06-15 23:42:16,210 - INFO - Found 0 listings on padmapper
+2025-06-15 23:42:16,210 - INFO - Searching kijiji for 
+2025-06-15 23:42:25,076 - INFO - Found 0 listings on kijiji
+2025-06-15 23:42:25,109 - INFO - 127.0.0.1 - - [15/Jun/2025 23:42:25] "POST / HTTP/1.1" 200 -
+2025-06-19 14:34:42,406 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-19 14:34:42,407 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 14:34:42,411 - INFO -  * Restarting with stat
+2025-06-19 14:35:00,908 - WARNING -  * Debugger is active!
+2025-06-19 14:35:00,922 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 14:36:14,906 - INFO - 127.0.0.1 - - [19/Jun/2025 14:36:14] "GET / HTTP/1.1" 200 -
+2025-06-19 14:36:15,345 - INFO - 127.0.0.1 - - [19/Jun/2025 14:36:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 14:36:52,494 - INFO - 127.0.0.1 - - [19/Jun/2025 14:36:52] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-19 14:36:52,783 - INFO - 127.0.0.1 - - [19/Jun/2025 14:36:52] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-19 14:36:52,787 - INFO - 127.0.0.1 - - [19/Jun/2025 14:36:52] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-19 14:36:52,802 - INFO - 127.0.0.1 - - [19/Jun/2025 14:36:52] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-19 14:36:52,811 - INFO - 127.0.0.1 - - [19/Jun/2025 14:36:52] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=XMsmliTU4gQUTbbeIcqz HTTP/1.1" 200 -
+2025-06-19 14:38:03,666 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-19 14:38:05,721 - INFO -  * Restarting with stat
+2025-06-19 14:38:25,285 - WARNING -  * Debugger is active!
+2025-06-19 14:38:25,297 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 14:38:25,355 - INFO - 127.0.0.1 - - [19/Jun/2025 14:38:25] "GET / HTTP/1.1" 200 -
+2025-06-19 14:38:25,426 - INFO - 127.0.0.1 - - [19/Jun/2025 14:38:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 14:38:29,388 - INFO - Searching apartments for Toronto
+2025-06-19 14:38:29,388 - ERROR - Error scraping Apartments.com: 'ApartmentsScraper' object has no attribute 'session'
+2025-06-19 14:38:29,407 - INFO - Found 0 listings on apartments
+2025-06-19 14:38:29,407 - INFO - Searching padmapper for Toronto
+2025-06-19 14:38:29,407 - ERROR - Error scraping PadMapper: 'PadMapperScraper' object has no attribute 'session'
+2025-06-19 14:38:29,426 - INFO - Found 0 listings on padmapper
+2025-06-19 14:38:29,426 - INFO - Searching kijiji for Toronto
+2025-06-19 14:38:29,426 - ERROR - Error scraping Kijiji: 'KijijiScraper' object has no attribute 'session'
+2025-06-19 14:38:29,445 - INFO - Found 0 listings on kijiji
+2025-06-19 14:38:29,448 - INFO - 127.0.0.1 - - [19/Jun/2025 14:38:29] "POST / HTTP/1.1" 200 -
+2025-06-19 14:58:07,511 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-19 14:58:09,181 - INFO -  * Restarting with stat
+2025-06-19 14:58:27,664 - WARNING -  * Debugger is active!
+2025-06-19 14:58:27,676 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 14:59:10,632 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-19 14:59:12,225 - INFO -  * Restarting with stat
+2025-06-19 14:59:31,760 - WARNING -  * Debugger is active!
+2025-06-19 14:59:31,774 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 14:59:37,294 - ERROR - Error scraping Apartments.com: 404 Client Error: Not Found for url: https://www.apartments.com/toronto/
+2025-06-19 14:59:52,280 - INFO - 127.0.0.1 - - [19/Jun/2025 14:59:52] "POST / HTTP/1.1" 200 -
+2025-06-19 15:02:38,847 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-19 15:02:40,273 - INFO -  * Restarting with stat
+2025-06-19 15:51:47,332 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-19 15:51:47,333 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 15:51:47,335 - INFO -  * Restarting with stat
+2025-06-19 15:52:07,598 - WARNING -  * Debugger is active!
+2025-06-19 15:52:07,613 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 15:52:07,953 - INFO - 127.0.0.1 - - [19/Jun/2025 15:52:07] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-19 15:52:08,211 - INFO - 127.0.0.1 - - [19/Jun/2025 15:52:08] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-19 15:52:08,215 - INFO - 127.0.0.1 - - [19/Jun/2025 15:52:08] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-19 15:52:08,258 - INFO - 127.0.0.1 - - [19/Jun/2025 15:52:08] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=4XhHLneZKYumPK8e1sME HTTP/1.1" 200 -
+2025-06-19 15:55:06,705 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\app.py', reloading
+2025-06-19 15:55:08,487 - INFO -  * Restarting with stat
+2025-06-19 15:55:28,928 - WARNING -  * Debugger is active!
+2025-06-19 15:55:28,943 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 15:57:13,208 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\app.py', reloading
+2025-06-19 15:57:14,881 - INFO -  * Restarting with stat
+2025-06-19 15:57:48,243 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-19 15:57:48,243 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 15:57:48,245 - INFO -  * Restarting with stat
+2025-06-19 15:58:06,035 - WARNING -  * Debugger is active!
+2025-06-19 15:58:06,042 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 16:00:39,539 - ERROR - Error getting page content: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.apartments.com/toronto
+Call log:
+  - navigating to "https://www.apartments.com/toronto", waiting until "networkidle"
+
+2025-06-19 16:00:56,498 - ERROR - Error getting page content: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".listing-card") to be visible
+
+2025-06-19 16:01:12,850 - ERROR - Error getting page content: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".search-item") to be visible
+
+2025-06-19 16:01:12,948 - INFO - 127.0.0.1 - - [19/Jun/2025 16:01:12] "POST / HTTP/1.1" 200 -
+2025-06-19 16:01:19,772 - INFO - 127.0.0.1 - - [19/Jun/2025 16:01:19] "GET / HTTP/1.1" 200 -
+2025-06-19 16:01:40,020 - ERROR - Error getting page content: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.apartments.com/toronto
+Call log:
+  - navigating to "https://www.apartments.com/toronto", waiting until "networkidle"
+
+2025-06-19 16:01:55,700 - ERROR - Error getting page content: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".listing-card") to be visible
+
+2025-06-19 16:02:10,566 - ERROR - Error getting page content: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".search-item") to be visible
+
+2025-06-19 16:02:10,641 - INFO - 127.0.0.1 - - [19/Jun/2025 16:02:10] "POST / HTTP/1.1" 200 -
+2025-06-19 16:31:46,535 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\house_scraper.py', reloading
+2025-06-19 16:31:47,602 - INFO -  * Restarting with stat
+2025-06-19 16:38:39,454 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-19 16:38:39,454 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 16:38:39,456 - INFO -  * Restarting with stat
+2025-06-19 16:38:47,498 - WARNING -  * Debugger is active!
+2025-06-19 16:38:47,505 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 16:38:47,527 - INFO - 127.0.0.1 - - [19/Jun/2025 16:38:47] "GET / HTTP/1.1" 200 -
+2025-06-19 16:39:08,684 - ERROR - Error with Apartments.com scraping: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.apartments.com/toronto
+Call log:
+  - navigating to "https://www.apartments.com/toronto", waiting until "networkidle"
+
+2025-06-19 16:39:24,788 - ERROR - Error with PadMapper scraping: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".listing-card") to be visible
+
+2025-06-19 16:39:41,346 - ERROR - Error with Kijiji scraping: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".search-item") to be visible
+
+2025-06-19 16:39:41,407 - INFO - 127.0.0.1 - - [19/Jun/2025 16:39:41] "POST / HTTP/1.1" 200 -
+2025-06-19 17:17:04,924 - INFO - 127.0.0.1 - - [19/Jun/2025 17:17:04] "GET / HTTP/1.1" 200 -
+2025-06-19 17:17:05,563 - INFO - 127.0.0.1 - - [19/Jun/2025 17:17:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 17:24:31,807 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\app.py', reloading
+2025-06-19 17:24:33,060 - INFO -  * Restarting with stat
+2025-06-19 17:24:43,903 - WARNING -  * Debugger is active!
+2025-06-19 17:24:43,923 - INFO -  * Debugger PIN: 226-940-468
+2025-06-19 17:24:44,983 - INFO -  * Detected change in 'D:\\learningProjects\\AI\\HouseCrush\\setup_env.py', reloading
+2025-06-19 17:24:45,746 - INFO -  * Restarting with stat
+2025-06-19 17:24:56,682 - WARNING -  * Debugger is active!
+2025-06-19 17:24:56,688 - INFO -  * Debugger PIN: 226-940-468

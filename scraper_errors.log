@@ -1,2 +1,31 @@
 2025-06-15T23:28:40.762309 - 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+%22%22%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%2C+%22priceMin%22%3A+%7B%22value%22%3A+1500%7D%2C+%22priceMax%22%3A+%7B%22value%22%3A+2300%7D%2C+%22bedsMin%22%3A+%7B%22value%22%3A+1%7D%7D%7D
 2025-06-15T23:28:47.518012 - 404 Client Error: Not Found for url: https://www.apartments.com/vancouver/
+2025-06-15T23:42:05.027276 - 404 Client Error: Not Found for url: https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22pagination%22%3A+%7B%7D%2C+%22mapBounds%22%3A+%7B%7D%2C+%22regionSelection%22%3A+%5B%7B%22regionId%22%3A+%22%22%7D%5D%2C+%22isMapVisible%22%3A+true%2C+%22filterState%22%3A+%7B%22isForSaleByAgent%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForSaleForeclosure%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAllHomes%22%3A+%7B%22value%22%3A+true%7D%2C+%22isMultiFamily%22%3A+%7B%22value%22%3A+false%7D%2C+%22isAuction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isNewConstruction%22%3A+%7B%22value%22%3A+false%7D%2C+%22isForRent%22%3A+%7B%22value%22%3A+true%7D%7D%7D
+2025-06-19T14:38:29.388776 - 'ApartmentsScraper' object has no attribute 'session'
+2025-06-19T14:38:29.407090 - 'PadMapperScraper' object has no attribute 'session'
+2025-06-19T14:38:29.428879 - 'KijijiScraper' object has no attribute 'session'
+2025-06-19T14:59:37.294861 - 404 Client Error: Not Found for url: https://www.apartments.com/toronto/
+2025-06-19T16:00:39.540376 - Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.apartments.com/toronto
+Call log:
+  - navigating to "https://www.apartments.com/toronto", waiting until "networkidle"
+
+2025-06-19T16:00:56.498052 - Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".listing-card") to be visible
+
+2025-06-19T16:01:12.850575 - Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".search-item") to be visible
+
+2025-06-19T16:01:40.021856 - Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.apartments.com/toronto
+Call log:
+  - navigating to "https://www.apartments.com/toronto", waiting until "networkidle"
+
+2025-06-19T16:01:55.700521 - Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".listing-card") to be visible
+
+2025-06-19T16:02:10.566470 - Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".search-item") to be visible
+
