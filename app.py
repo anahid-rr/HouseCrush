@@ -459,4 +459,10 @@ if __name__ == '__main__':
     else:
         print("⚠️  OpenAI integration not available. Check dependencies and API key setup.")
     
-    app.run(debug=True)
+    # Get configuration from environment variables
+    host = os.getenv('HOST', '0.0.0.0')
+    port = int(os.getenv('PORT', 7860))
+    debug = os.getenv('FLASK_ENV') == 'development'
+    
+    print(f"🚀 Starting House Crush on {host}:{port}")
+    app.run(host=host, port=port, debug=debug)

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  housecrush:
+    build: .
+    ports:
+      - "7860:7860"
+    environment:
+      - FLASK_ENV=development
+      - PORT=7860
+      # Add your API keys here or use a .env file
+      # - TOGETHER_API_KEY=your_key_here
+      # - HUGGINGFACE_HUB_TOKEN=your_token_here
+    volumes:
+      - ./results:/app/results
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s 
