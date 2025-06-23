@@ -1,18 +1,13 @@
 #!/usr/bin/env python3
 """
-House Crush - OpenAI Version
+House Crush - OpenAI Version (GPT-4o-mini)
 A rental property assistant that uses OpenAI API for intelligent property search and recommendations.
 """
 
-from flask import Flask, render_template, request, flash, redirect, url_for
-from scripts.rag_example import run_rag
-from house_scraper import log_user_feedback
-import asyncio
+from flask import Flask, render_template, request
 import json
 import os
 from datetime import datetime
-from pathlib import Path
-import together
 from typing import List, Dict, Optional
 import warnings
 from dotenv import load_dotenv
@@ -24,6 +19,14 @@ try:
 except ImportError as e:
     OPENAI_AVAILABLE = False
     print(f"Warning: OpenAI integration not available: {e}")
+
+# Import feedback logger
+try:
+    from feedback_logger import log_user_feedback
+    FEEDBACK_AVAILABLE = True
+except ImportError as e:
+    FEEDBACK_AVAILABLE = False
+    print(f"Warning: Feedback logging not available: {e}")
 
 # Load environment variables from .env file
 load_dotenv()
@@ -44,130 +47,170 @@ data_dict = {
     "rental_trends": "Current rental market trends show increasing demand for properties with home office spaces, outdoor areas, and energy-efficient features. Properties with smart home technology and high-speed internet infrastructure are particularly sought after."
 }
 
-def load_house_ads(file_path: str = 'houseAds.txt') -> List[Dict]:
-    """Load house advertisements from a text file."""
-    try:
-        if not os.path.exists(file_path):
-            return []
-        
-        with open(file_path, 'r', encoding='utf-8') as f:
-            houses = []
-            for line in f:
-                if line.strip():
-                    try:
-                        house = json.loads(line.strip())
-                        houses.append(house)
-                    except json.JSONDecodeError:
-                        continue
-            return houses
-    except Exception as e:
-        print(f"Error loading house ads: {e}")
-        return []
-
 def search_rentals_openai(location: str, min_price: Optional[int] = None, 
-                         max_price: Optional[int] = None, bedrooms: Optional[int] = None) -> List[Dict]:
-    """Search for rentals using OpenAI API."""
+                         max_price: Optional[int] = None, bedrooms: Optional[int] = None,
+                         amenities: Optional[List[str]] = None, lifestyle: Optional[str] = None) -> List[Dict]:
+    """Search for rentals using OpenAI API with GPT-4o-mini."""
     if not OPENAI_AVAILABLE:
         print("OpenAI API not available")
         return []
     
     try:
         # Convert string values to integers
-        min_price_int = int(min_price) if min_price and min_price.isdigit() else None
-        max_price_int = int(max_price) if max_price and max_price.isdigit() else None
-        bedrooms_int = int(bedrooms) if bedrooms and bedrooms.isdigit() else None
+        min_price_int = int(min_price) if min_price and str(min_price).isdigit() else None
+        max_price_int = int(max_price) if max_price and str(max_price).isdigit() else None
+        bedrooms_int = int(bedrooms) if bedrooms and str(bedrooms).isdigit() else None
         
-        print(f"Searching OpenAI for: {location}, price: ${min_price_int}-${max_price_int}, bedrooms: {bedrooms_int}")
+        print(f"🔍 Searching OpenAI (GPT-4o-mini) for: {location}")
+        print(f"💰 Price range: ${min_price_int}-${max_price_int}")
+        print(f"🛏️ Bedrooms: {bedrooms_int}")
+        print(f"🏠 Amenities: {amenities}")
+        print(f"🌍 Lifestyle: {lifestyle}")
         
-        listings = search_rentals_with_openai(location, min_price_int, max_price_int, bedrooms_int)
+        # Call OpenAI API with GPT-4o-mini
+        listings = search_rentals_with_openai(location, min_price_int, max_price_int, bedrooms_int, amenities, lifestyle)
         
-        # Add match scores for consistency with local data
+        print(f"✅ Found {len(listings)} listings from OpenAI GPT-4o-mini")
+        
+        # Process listings to ensure they have the required fields
+        processed_listings = []
         for listing in listings:
-            listing['match_score'] = 85  # Default high score for real-time data
-            listing['match_reason'] = 'Real-time search result from OpenAI API'
+            processed_listing = {
+                'id': listing.get('id', len(processed_listings) + 1),
+                'title': listing.get('title', 'No title'),
+                'price': listing.get('price', 0),
+                'location': listing.get('location', location),
+                'bedrooms': listing.get('bedrooms'),
+                'bathrooms': listing.get('bathrooms'),
+                'amenities': listing.get('amenities', []),
+                'description': listing.get('description', ''),
+                'match_percentage': listing.get('match_percentage', 85),
+                'contact': listing.get('contact', {'name': 'Contact for details', 'phone': 'N/A', 'email': 'N/A'}),
+                'source_website': listing.get('source_website', 'OpenAI Search'),
+                'listing_url': listing.get('listing_url'),
+                'availability_date': listing.get('availability_date', datetime.now().strftime('%Y-%m-%d')),
+                'features': listing.get('features', []),
+                'images': listing.get('images', [])
+            }
+            processed_listings.append(processed_listing)
         
-        return listings
+        return processed_listings
         
     except Exception as e:
-        print(f"Error searching with OpenAI: {e}")
+        print(f"❌ Error searching with OpenAI: {e}")
         return []
 
-def rank_houses(houses: List[Dict], user_preferences: str) -> List[Dict]:
-    """Rank houses based on user preferences using Together AI."""
-    if not houses:
-        return []
+def simple_qa_system(question: str) -> str:
+    """Simple Q&A system using the data dictionary."""
+    question_lower = question.lower()
     
-    # Build a comprehensive prompt for ranking
-    prompt = f"""Given these house listings and user preferences, rank them from best to worst match.
-User Preferences: {user_preferences}
+    # Simple keyword matching
+    if any(word in question_lower for word in ['requirement', 'need', 'document']):
+        return data_dict.get('rental_requirements', 'Contact individual properties for specific requirements.')
+    
+    elif any(word in question_lower for word in ['amenity', 'amenities', 'feature']):
+        return data_dict.get('nearby_amenities', 'Consider proximity to essential services and lifestyle amenities.')
+    
+    elif any(word in question_lower for word in ['downtown', 'suburban', 'city', 'urban']):
+        return f"{data_dict.get('downtown_apartments', '')} {data_dict.get('suburban_homes', '')}"
+    
+    elif any(word in question_lower for word in ['trend', 'market', 'current']):
+        return data_dict.get('rental_trends', 'Market conditions vary by location and time.')
+    
+    elif any(word in question_lower for word in ['type', 'property', 'apartment', 'house']):
+        return data_dict.get('property_types', 'Various property types are available depending on your needs.')
+    
+    elif any(word in question_lower for word in ['location', 'area', 'neighborhood']):
+        return data_dict.get('location_factors', 'Location factors vary by individual preferences and needs.')
+    
+    else:
+        return "I can help you with rental requirements, amenities, property types, location factors, and market trends. Please ask a specific question about rental properties."
 
-House Listings:
-{json.dumps(houses, indent=2)}
-
-Please analyze each house and rank them based on how well they match the user's preferences.
-Return a JSON array of the same houses, but with an added 'match_score' field (0-100) and 'match_reason' field explaining why it's a good or bad match.
-
-Focus on:
-- Price compatibility with budget
-- Location preferences
-- Bedroom/bathroom requirements
-- Amenity matches
-- Overall suitability
-
-Return only valid JSON without any additional text.
-"""
-
+def handle_feedback_submission(feedback: str, request) -> str:
+    """Handle user feedback submission."""
     try:
-        response = together.Complete.create(
-            prompt=prompt,
-            model="mistralai/Mixtral-8x7B-Instruct-v0.1",
-            max_tokens=2000,
-            temperature=0.7,
-            top_p=0.7,
-            top_k=50,
-            repetition_penalty=1.1,
-            stop=['</s>', 'Human:', 'Assistant:']
-        )
-
-        # Extract the response text
-        response_text = response['output']['choices'][0]['text']
-        
-        # Clean the response to extract JSON
-        response_text = response_text.strip()
-        if response_text.startswith('```json'):
-            response_text = response_text[7:]
-        if response_text.endswith('```'):
-            response_text = response_text[:-3]
-        
-        ranked_houses = json.loads(response_text.strip())
-        return sorted(ranked_houses, key=lambda x: x.get('match_score', 0), reverse=True)
-        
+        if FEEDBACK_AVAILABLE:
+            log_user_feedback(feedback, request)
+            return "Thank you for your feedback! It has been logged successfully."
+        else:
+            # Fallback to simple file logging
+            with open('user_feedback.log', 'a', encoding='utf-8') as f:
+                f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {feedback.strip()}\n")
+            return "Thank you for your feedback!"
+            
     except Exception as e:
-        print(f"Error processing AI response: {e}")
-        # Fallback: return houses with default scores
-        for house in houses:
-            house['match_score'] = 50
-            house['match_reason'] = 'Default score - AI processing failed'
-        return houses
+        print(f"Error handling feedback: {e}")
+        return "Thank you for your feedback! (Note: Could not save to log)"
 
-def build_user_preferences(filter_values: Dict) -> str:
-    """Build user preferences string from filter values."""
-    preferences = []
+def format_property_for_display(house: Dict, index: int) -> Dict:
+    """
+    Format a property for display with enhanced features for GPT-4o-mini results.
     
-    if filter_values.get('location'):
-        preferences.append(f"Location: {filter_values['location']}")
+    Args:
+        house: The property data
+        index: Index in the results list
+        
+    Returns:
+        Dict: Formatted property for display
+    """
+    # Handle price formatting
+    price = house.get('price')
+    if price is None or price == 0 or price == 'N/A':
+        display_price = 'Contact for details'
+    else:
+        try:
+            # Ensure price is a number and format it
+            price_num = int(float(price))
+            display_price = f"${price_num:,}/month"
+        except (ValueError, TypeError):
+            display_price = 'Contact for details'
     
-    if filter_values.get('min_price') and filter_values.get('max_price'):
-        preferences.append(f"Budget: ${filter_values['min_price']}-${filter_values['max_price']}")
-    elif filter_values.get('min_price'):
-        preferences.append(f"Minimum budget: ${filter_values['min_price']}")
-    elif filter_values.get('max_price'):
-        preferences.append(f"Maximum budget: ${filter_values['max_price']}")
+    # Handle URL formatting - use listing_url if available
+    url = house.get('listing_url') or house.get('source_website')
+    if not url or url == '#' or url == 'N/A':
+        display_url = None
+    else:
+        # Ensure URL has proper protocol
+        if not url.startswith(('http://', 'https://')):
+            url = 'https://' + url
+        display_url = url
     
-    if filter_values.get('num_bedrooms'):
-        preferences.append(f"Bedrooms: {filter_values['num_bedrooms']}+")
+    # Build tags
+    tags = []
+    if house.get('bedrooms'):
+        tags.append(f"{house['bedrooms']} BR")
+    if house.get('bathrooms'):
+        tags.append(f"{house['bathrooms']} Bath")
+    if house.get('location'):
+        tags.append(house['location'])
+    if house.get('amenities'):
+        # Take first few amenities for display
+        amenity_tags = house['amenities'][:3] if isinstance(house['amenities'], list) else []
+        tags.extend(amenity_tags)
     
-    return " | ".join(preferences) if preferences else "No specific preferences"
+    return {
+        'title': house.get('title', 'No title'),
+        'price': display_price,
+        'price_raw': price,  # Keep raw price for sorting
+        'tags': tags,
+        'top_match': index == 0,
+        'match_score': house.get('match_score', 50),
+        'match_percentage': house.get('match_percentage', 85),
+        'url': display_url,
+        'source': house.get('source_website', 'OpenAI Search'),
+        'match_reason': house.get('match_reason', 'AI analysis'),
+        'location': house.get('location', ''),
+        'bedrooms': house.get('bedrooms'),
+        'bathrooms': house.get('bathrooms'),
+        'amenities': house.get('amenities', []),
+        'description': house.get('description', ''),
+        'source_website': house.get('source_website', ''),
+        'listing_url': house.get('listing_url'),
+        'contact': house.get('contact', {}),
+        'availability_date': house.get('availability_date'),
+        'features': house.get('features', []),
+        'images': house.get('images', [])
+    }
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -177,32 +220,39 @@ def index():
     properties = []
     summary = None
     feedback_msg = None
-    search_method = "local"  # Default to local search
 
     # Default filter values
     filter_values = {
         'location': '',
         'min_price': '',
         'max_price': '',
-        'num_bedrooms': ''
+        'num_bedrooms': '',
+        'amenities': [],
+        'lifestyle': ''
     }
 
     if request.method == 'POST':
         # Q&A section
         question = request.form.get('question')
         if question:
-            answer = run_rag(data_dict, question)
-            if "Source Used:" in answer:
-                answer_text, sources_text = answer.split("Source Used:")
-                answer = answer_text.strip()
-                sources = [s.strip() for s in sources_text.split(",")]
+            answer = simple_qa_system(question)
+            sources = ['House Crush Knowledge Base']
 
         # Property search section
         filter_values['location'] = request.form.get('location', '')
         filter_values['min_price'] = request.form.get('min_price', '')
         filter_values['max_price'] = request.form.get('max_price', '')
         filter_values['num_bedrooms'] = request.form.get('num_bedrooms', '')
-        search_method = request.form.get('search_method', 'local')
+        
+        # Handle amenities - both checkboxes and custom input fields
+        checkbox_amenities = request.form.getlist('amenities')
+        custom_amenities = request.form.getlist('custom_amenities[]')
+        # Filter out empty custom amenities
+        custom_amenities = [amenity.strip() for amenity in custom_amenities if amenity.strip()]
+        # Combine both types of amenities
+        filter_values['amenities'] = checkbox_amenities + custom_amenities
+        
+        filter_values['lifestyle'] = request.form.get('lifestyle', '')
 
         # Build filters for display
         if filter_values['min_price'] and filter_values['max_price']:
@@ -215,79 +265,56 @@ def index():
             filters.append(f"{filter_values['num_bedrooms']}+ Bedrooms")
         if filter_values['location']:
             filters.append(f"Near {filter_values['location']}")
+        if filter_values['amenities']:
+            filters.append(f"Amenities: {', '.join(filter_values['amenities'])}")
+        if filter_values['lifestyle']:
+            filters.append(f"Lifestyle: {filter_values['lifestyle']}")
 
-        # Search for properties based on selected method
+        # Search for properties using OpenAI GPT-4o-mini
         try:
-            if search_method == 'openai' and OPENAI_AVAILABLE and filter_values['location']:
-                # Use OpenAI API for real-time search
-                print("Using OpenAI API for real-time search...")
+            if OPENAI_AVAILABLE and filter_values['location']:
+                print("🚀 Starting OpenAI GPT-4o-mini search...")
                 houses = search_rentals_openai(
                     filter_values['location'],
                     filter_values['min_price'],
                     filter_values['max_price'],
-                    filter_values['num_bedrooms']
+                    filter_values['num_bedrooms'],
+                    filter_values['amenities'],
+                    filter_values['lifestyle']
                 )
-                search_source = "OpenAI API (Real-time)"
-            else:
-                # Use local file-based search
-                print("Using local database for search...")
-                houses = load_house_ads()
-                search_source = "Local Database"
                 
-                if houses and filter_values['location']:
-                    # Build user preferences string
-                    user_preferences = build_user_preferences(filter_values)
+                if houses:
+                    # Format properties for display (top 10)
+                    for i, house in enumerate(houses[:10]):
+                        formatted_property = format_property_for_display(house, i)
+                        properties.append(formatted_property)
                     
-                    # Rank houses using AI
-                    houses = rank_houses(houses, user_preferences)
-            
-            if houses:
-                # Format properties for display (top 8)
-                for i, house in enumerate(houses[:8]):
-                    tags = []
-                    if house.get('bedrooms'):
-                        tags.append(f"{house['bedrooms']} BR")
-                    if house.get('bathrooms'):
-                        tags.append(f"{house['bathrooms']} Bath")
-                    if house.get('location'):
-                        tags.append(house['location'])
-                    if house.get('amenities'):
-                        # Take first few amenities for display
-                        amenity_tags = house['amenities'][:3] if isinstance(house['amenities'], list) else []
-                        tags.extend(amenity_tags)
-                    
-                    properties.append({
-                        'title': house.get('title', 'No title'),
-                        'price': house.get('price', 'N/A'),
-                        'tags': tags,
-                        'top_match': i == 0,
-                        'match_score': house.get('match_score', 50),
-                        'url': house.get('url', '#'),
-                        'source': house.get('source_website', search_source),
-                        'match_reason': house.get('match_reason', 'AI analysis')
-                    })
-                
-                summary = f"I found {len(houses)} properties matching your criteria using {search_source}. The top match has a {houses[0].get('match_score', 50)}% compatibility score!" if houses else "No properties found for your criteria."
-            else:
-                if search_method == 'openai':
-                    summary = "No properties found using OpenAI API. Try adjusting your search criteria or use local database."
+                    # Create summary with match information
+                    top_match = houses[0] if houses else None
+                    match_percentage = top_match.get('match_percentage', 85) if top_match else 0
+                    summary = f"I found {len(houses)} properties matching your criteria using OpenAI GPT-4o-mini. Top match has {match_percentage}% compatibility!"
                 else:
-                    summary = "No house listings available in the database. Please check the houseAds.txt file or try OpenAI API search."
+                    summary = "No properties found using OpenAI GPT-4o-mini. Try adjusting your search criteria or check your API key."
+            else:
+                if not filter_values['location']:
+                    summary = "Please enter a location to search for properties."
+                elif not OPENAI_AVAILABLE:
+                    summary = "OpenAI API is not available. Please check your API key configuration."
                 
         except Exception as e:
-            summary = f"Error processing house listings: {str(e)}"
-            print(f"Error in house processing: {e}")
+            summary = f"Error processing search: {str(e)}"
+            print(f"❌ Error in search processing: {e}")
 
+        # Handle feedback submission
         if 'feedback' in request.form:
             feedback = request.form.get('feedback')
             if feedback:
-                log_user_feedback(feedback)
-                feedback_msg = "Thank you for your feedback!"
+                feedback_msg = handle_feedback_submission(feedback, request)
 
     # Get OpenAI API status for the template
     openai_status = get_openai_status() if OPENAI_AVAILABLE else {'available': False, 'status': 'Not installed'}
 
-    return render_template('index_openai.html', 
+    return render_template('index.html', 
                          answer=answer, 
                          sources=sources, 
                          filters=filters, 
@@ -295,24 +322,32 @@ def index():
                          summary=summary, 
                          filter_values=filter_values, 
                          feedback_msg=feedback_msg,
-                         search_method=search_method,
                          openai_available=OPENAI_AVAILABLE,
                          openai_status=openai_status)
 
 if __name__ == '__main__':
-    # Set up Together AI (you'll need to set this as an environment variable)
-    together.api_key = os.getenv('TOGETHER_API_KEY')
-    if not together.api_key:
-        print("Warning: TOGETHER_API_KEY environment variable not set. AI ranking will not work.")
-    
     # Check OpenAI API status
     if OPENAI_AVAILABLE:
         status = get_openai_status()
         if status['available']:
             print("✅ OpenAI API is available and ready to use")
+            print(f"🤖 Model: GPT-4o-mini")
+            print(f"⚡ Status: {status['status']}")
         else:
             print("⚠️  OpenAI API key not set. Set OPENAI_API_KEY environment variable to enable real-time search.")
     else:
         print("⚠️  OpenAI integration not available. Check dependencies and API key setup.")
+    
+    # Check feedback logging
+    if FEEDBACK_AVAILABLE:
+        print("✅ Feedback logging is available")
+    else:
+        print("⚠️  Feedback logging not available - using fallback method")
+    
+    print("\n🚀 Starting House Crush OpenAI Edition (GPT-4o-mini)...")
+    print("📱 Open your browser to: http://127.0.0.1:5000")
+    print("🤖 Using OpenAI GPT-4o-mini for ultra-fast rental search")
+    print("💰 Cost-effective and high-performance search")
+    print("📝 Feedback logging enabled")
     
     app.run(debug=True) 

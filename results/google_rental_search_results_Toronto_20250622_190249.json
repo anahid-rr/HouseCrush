@@ -1,0 +1,1674 @@
+{
+    "search_summary": {
+        "location": "Toronto",
+        "total_listings_found": 10,
+        "search_timestamp": "2025-06-22T19:02:49.664954",
+        "source": "Google Custom Search API"
+    },
+    "listings": [
+        {
+            "id": 1,
+            "title": "Apartments & Condos for Rent in Liberty Village, Toronto ...",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "1 day ago ... Condo rental listings in Liberty Village updated hourly. Check back often for new additions. They go fast!",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "libertyvillagetoronto.com",
+            "listing_url": "https://libertyvillagetoronto.com/liberty-village-condos-for-rent",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 2,
+            "title": "Forest Hill Apartments for Rent - Toronto, ON - Updated Daily",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "1 day ago ... Browse apartments for rent in Forest Hill (Toronto) and submit your lease application now! ✓ Compare Listings ✓ Available Now ✓ Online Application.",
+            "match_percentage": 100,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "rentcafe.com",
+            "listing_url": "https://www.rentcafe.com/apartments-for-rent/ca/on/toronto/midtown-toronto/forest-hill/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 3,
+            "title": "Springfield, IL for Rent - Homes.com",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "2 days ago ... 1/16. 3430 N Peoria Rd Unit NB167, Springfield, IL 62702. 1/15. 437 W Edwards St, Springfield, IL 62704. 1/51. 300 Forrest Ave Unit 59 ...",
+            "match_percentage": 45,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "homes.com",
+            "listing_url": "https://www.homes.com/springfield-il/homes-for-rent/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 4,
+            "title": "Apartments for Rent in Burquitlam, Coquitlam, BC 61 Rentals ...",
+            "price": 2000,
+            "location": "Toronto",
+            "bedrooms": 4833,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "3 days ago ... looking for? Studio; 1; 2; 3; 4+. #303 - 4833 Brentwood Dr 1 Bed Apartment for Rent ... FERNDALE COURT. 5130 Irving Street, Burnaby, BC V5H 1E7. 1 BED, $2,000. 2 ...",
+            "match_percentage": 60,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "rentcafe.com",
+            "listing_url": "https://www.rentcafe.com/apartments-for-rent/ca/bc/coquitlam/burquitlam/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 5,
+            "title": "1013 Silverdale Rd, Peterborough, ON K9J 7W5 - House for Rent in ...",
+            "price": 2000,
+            "location": "Toronto",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "5 days ago ... This rental unit is available on Apartments.com, starting at C$2000 monthly ... About This Home. Available Now. Bright & Spacious 1-Bedroom Walk-Out Apartment ...",
+            "match_percentage": 70,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/1013-silverdale-rd-peterborough-on/dbtmh8l/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 6,
+            "title": "Homes for Rent, Sublet or Lease in or near Toronto",
+            "price": 3900,
+            "location": "Toronto",
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "amenities": [
+                "Garden"
+            ],
+            "description": "7 days ago ... Hampton Cottage in the city, private garden close... Home for Rent. 3 Bed | 3 Bath. Available September 1, 2025. From CAD $3900/Monthly. View Description.",
+            "match_percentage": 80,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "sabbaticalhomes.com",
+            "listing_url": "https://www.sabbaticalhomes.com/rentals-exchanges/canada/homes-to-rent--toronto",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 7,
+            "title": "151 Ascot Ave, Toronto, ON M6E 1G5 - House for Rent in Toronto ...",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [
+                "Parking"
+            ],
+            "description": "Jun 11, 2025 ... About This Home. Available Now. Best Lease Opportunity In Corso Italia For A Clean And Spacious 2 Bedroom. 1 car parking on driveway included. Detached 3 car ...",
+            "match_percentage": 100,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/151-ascot-ave-toronto-on/6g987ls/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 8,
+            "title": "2737 Keele St #212-W05, Toronto, ON M3M 2E9 | Zillow",
+            "price": 2000,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "amenities": [],
+            "description": "May 25, 2025 ... 2737 Keele St #212-W05, Toronto, ON M3M 2E9 is an apartment unit listed for rent at $2000 /mo. The -- sqft unit is a 1 bed, 1 bath apartment unit.",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Zillow",
+            "listing_url": "https://www.zillow.com/homedetails/2737-Keele-St-212-W05-Toronto-ON-M3M-2E9/452600079_zpid/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 9,
+            "title": "Apartments / Housing For Rent near Toronto, ON - craigslist",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "May 15, 2025 ... refresh the page. craigslist. Apartments / Housing For Rent in Toronto, ON. see also. 1 Bedroom Apartment ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "toronto.craigslist.org",
+            "listing_url": "https://toronto.craigslist.org/search/toronto-on/apa",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 10,
+            "title": "$2000 for a 500+ sqft on church st Toronto? Is it too much? : r ...",
+            "price": 2000,
+            "location": "Toronto",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "May 9, 2025 ... 24 votes, 30 comments. I found a $2000 500+sqft on church st. Toronto. Trying to bring it down to $1800, not sure.",
+            "match_percentage": 70,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "reddit.com",
+            "listing_url": "https://www.reddit.com/r/TorontoRenting/comments/1kji185/2000_for_a_500_sqft_on_church_st_toronto_is_it/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        }
+    ],
+    "raw_response": {
+        "kind": "customsearch#search",
+        "url": {
+            "type": "application/json",
+            "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+        },
+        "queries": {
+            "request": [
+                {
+                    "title": "Google Custom Search - rental apartments Toronto $2000-$2700 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "totalResults": "109000",
+                    "searchTerms": "rental apartments Toronto $2000-$2700 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "count": 10,
+                    "startIndex": 1,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ],
+            "nextPage": [
+                {
+                    "title": "Google Custom Search - rental apartments Toronto $2000-$2700 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "totalResults": "109000",
+                    "searchTerms": "rental apartments Toronto $2000-$2700 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "count": 10,
+                    "startIndex": 11,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ]
+        },
+        "context": {
+            "title": "House crush"
+        },
+        "searchInformation": {
+            "searchTime": 0.457016,
+            "formattedSearchTime": "0.46",
+            "totalResults": "109000",
+            "formattedTotalResults": "109,000"
+        },
+        "items": [
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments & Condos for Rent in Liberty Village, Toronto ...",
+                "htmlTitle": "<b>Apartments</b> &amp; <b>Condos</b> for <b>Rent</b> in Liberty Village, <b>Toronto</b> ...",
+                "link": "https://libertyvillagetoronto.com/liberty-village-condos-for-rent",
+                "displayLink": "libertyvillagetoronto.com",
+                "snippet": "1 day ago ... Condo rental listings in Liberty Village updated hourly. Check back often for new additions. They go fast!",
+                "htmlSnippet": "1 day ago <b>...</b> <b>Condo rental</b> listings in Liberty Village updated hourly. Check back often for new additions. They go fast!",
+                "formattedUrl": "https://libertyvillagetoronto.com/liberty-village-condos-for-rent",
+                "htmlFormattedUrl": "https://libertyvillage<b>toronto</b>.com/liberty-village-condos-for-<b>rent</b>",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7PIH9v0wMzSdXjnJpT2RHhD9PC9y-bZZzCxLOXOB8aY8IOmBC3pdraj4&s",
+                            "width": "318",
+                            "height": "159"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "cdp-version": "1.5.0",
+                            "viewport": "width=device-width, initial-scale=1",
+                            "msapplication-tileimage": "https://media.libertyvillagetoronto.com/wp-content/uploads/2021/07/11014459/cropped-Untitled-design-17-270x270.png"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://media.libertyvillagetoronto.com/wp-content/uploads/2021/07/11014458/LVT-Website-Logo-1.png"
+                        }
+                    ],
+                    "wpheader": [
+                        {
+                            "headline": "Liberty Village Toronto | Your Online Neighbourhood Guide"
+                        }
+                    ],
+                    "sitenavigationelement": [
+                        {
+                            "name": "Home",
+                            "url": "Home"
+                        },
+                        {
+                            "name": "Liberty Village Real Estate: Condos, Lofts & Townhomes For Sale",
+                            "url": "Liberty Village Real Estate: Condos, Lofts & Townhomes For Sale"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Forest Hill Apartments for Rent - Toronto, ON - Updated Daily",
+                "htmlTitle": "Forest Hill <b>Apartments</b> for <b>Rent</b> - <b>Toronto</b>, ON - Updated Daily",
+                "link": "https://www.rentcafe.com/apartments-for-rent/ca/on/toronto/midtown-toronto/forest-hill/",
+                "displayLink": "www.rentcafe.com",
+                "snippet": "1 day ago ... Browse apartments for rent in Forest Hill (Toronto) and submit your lease application now! ✓ Compare Listings ✓ Available Now ✓ Online Application.",
+                "htmlSnippet": "1 day ago <b>...</b> Browse <b>apartments</b> for <b>rent</b> in Forest Hill (<b>Toronto</b>) and submit your <b>lease</b> application <b>now</b>! ✓ Compare Listings ✓ <b>Available Now</b> ✓ Online Application.",
+                "formattedUrl": "https://www.rentcafe.com/apartments-for-rent/.../toronto/...toronto/forest-hil...",
+                "htmlFormattedUrl": "https://www.<b>rent</b>cafe.com/<b>apartments</b>-for-<b>rent</b>/.../<b>toronto</b>/...<b>toronto</b>/forest-hil...",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtJYA2t25acVKIQhPiCuyQ3hHSQiggoAfJ2XojcHRLl33CAX9RfScMbpI&s",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "imageobject": [
+                        {
+                            "contenturl": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final(3).jpg?width=480&quality=90"
+                        },
+                        {
+                            "contenturl": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living%20and%20dining_final(6).jpg?width=480&quality=90"
+                        },
+                        {
+                            "contenturl": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/kitchen%202_final.jpg?width=480&quality=90"
+                        },
+                        {
+                            "contenturl": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/Bedroom_final(6).jpg?width=480&quality=90"
+                        },
+                        {
+                            "contenturl": "https://cdngeneral.rentcafe.com/dmslivecafe/3/636303/6.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/aw_0019(2).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/300STClair-Toronto-LivingRoom1.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/at_0011(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/bf_0036(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final(3).jpg"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/83880/GWL-400-Walmer-Rd-2-Bed-2-Bath-05062021_160953.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/ah_0008(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living%20and%20dining%20and%20bedroom%203_final.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living%202_final(2).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/253335/p1604276_lonsdale_road_toronto_C5832012_3__PhotoGallery.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1845417/1706650645445_TPM_9662(20240905135128147).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/kitchen_final(9).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1503904/1996_Bathurst(20220201112129222).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1314053/Living_Room_2_final.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/253335/p1604267_Logo_color_PhotoGallery.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/940405/Pool2019.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1677130/2000_Bathurst_Kitchen(20240822125205312).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final-v2(2).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final-v2.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1830933/test_photo(20240801132655577).jpeg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1774836/1280x960_12__1(20240319143948098).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1774830/1280x960_19_(20240813123226213).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/at_0013(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/Kitchen%20VS%202-min.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/Kitchen_final(11).jpg?width=480&quality=90"
+                        }
+                    ],
+                    "postaladdress": [
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5N 1C2",
+                            "addressregion": "ON",
+                            "streetaddress": "650 Eglinton Avenue West"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5N 1K7",
+                            "addressregion": "ON",
+                            "streetaddress": "625 Roselawn Avenue"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M4V 1S4",
+                            "addressregion": "ON",
+                            "streetaddress": "300 St. Clair Avenue West"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5N 1K8",
+                            "addressregion": "ON",
+                            "streetaddress": "630 Roselawn Avenue"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5N 1L3",
+                            "addressregion": "ON",
+                            "streetaddress": "680 Roselawn Avenue"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5N 1C2",
+                            "addressregion": "ON",
+                            "streetaddress": "650 Eglinton Avenue West"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 2X7",
+                            "addressregion": "ON",
+                            "streetaddress": "400 Walmer Road"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5N 2P2",
+                            "addressregion": "ON",
+                            "streetaddress": "2100 Bathurst Street"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M6B 1L2",
+                            "addressregion": "ON",
+                            "streetaddress": "655 Briar Hill Avenue"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 2R8",
+                            "addressregion": "ON",
+                            "streetaddress": "117 Old Forest Hill Road & 725 Eglinton Avenue W"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M4V1X4",
+                            "addressregion": "ON",
+                            "streetaddress": "320 Lonsdale Road"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 2W4",
+                            "addressregion": "ON",
+                            "streetaddress": "464 Spadina Rd."
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M4V 2K9",
+                            "addressregion": "ON",
+                            "streetaddress": "606 Avenue Road"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 3L1",
+                            "addressregion": "ON",
+                            "streetaddress": "Markal Property Management"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5N 1C1",
+                            "addressregion": "ON",
+                            "streetaddress": "600 Eglinton Avenue West"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P3K2",
+                            "addressregion": "ON",
+                            "streetaddress": "1687 Bathurst Street"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 3L4",
+                            "addressregion": "ON",
+                            "streetaddress": "250 Heath St. W."
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 0A7",
+                            "addressregion": "ON",
+                            "streetaddress": "2000 Bathurst Street"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M6C 2S7",
+                            "addressregion": "ON",
+                            "streetaddress": "4 Connaught Circle"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M6C 2S7",
+                            "addressregion": "ON",
+                            "streetaddress": "2 Connaught Circle"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 2G6",
+                            "addressregion": "ON",
+                            "streetaddress": "166 Eastbourne Avenue"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 3H3",
+                            "addressregion": "ON",
+                            "streetaddress": "1524 Bathurst Street"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M5P 3H3",
+                            "addressregion": "ON",
+                            "streetaddress": "1520 Bathurst Street"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M6B 4B7",
+                            "addressregion": "ON",
+                            "streetaddress": "660 Briar Hill"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M4V 2K3",
+                            "addressregion": "ON",
+                            "streetaddress": "587 Avenue Road"
+                        },
+                        {
+                            "addresslocality": "Toronto",
+                            "postalcode": "M4V 2K5",
+                            "addressregion": "ON",
+                            "streetaddress": "585 Avenue Road,"
+                        }
+                    ],
+                    "Event": [
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final(3).jpg",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 650 Eglinton Avenue West",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/650-eglinton-avenue-west/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/bf_0036(1).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Melba Apartments",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/melba-apartments/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/83880/GWL-400-Walmer-Rd-2-Bed-2-Bath-05062021_160953.jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 400 Walmer Road",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/400-walmer-road/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/ah_0008(1).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Ridge Hill Manor",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/ridge-hill-manor/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living 2_final(2).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Forest Hill Apartments",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/117-old-forest-hill-road-725-eglinton-avenue-wes/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/kitchen_final(9).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 606 Avenue Road",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/dis-avenue/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/3/940405/Pool2019.jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 250 Heath",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/250-heath/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final-v2(2).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 4 Connaught Circle",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/briarlane-rental-property-management-inc0/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/aw_0019(2).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - San Marino Place",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/san-marino-place/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final-v2.jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 2 Connaught Circle",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/briarlane-rental-property-management-inc/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/at_0013(1).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 660 Briar Hill",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/660-briar-hill/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/Kitchen_final(11).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 585 Avenue Road",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/manhattan-towers-0/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/222635/at_0011(1).jpg?width=480&quality=90",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Casa Blanca",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/on/toronto/casa-blanca/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-22"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "referrer": "always",
+                            "viewport": "width=device-width, initial-scale=1"
+                        }
+                    ],
+                    "apartmentcomplex": [
+                        {
+                            "name": "650 Eglinton Avenue West",
+                            "url": "650 Eglinton Avenue West"
+                        },
+                        {
+                            "name": "San Marino Place",
+                            "url": "San Marino Place"
+                        },
+                        {
+                            "name": "300 St. Clair West",
+                            "url": "300 St. Clair West"
+                        },
+                        {
+                            "name": "Casa Blanca",
+                            "url": "Casa Blanca"
+                        },
+                        {
+                            "name": "Melba Apartments",
+                            "url": "Melba Apartments"
+                        },
+                        {
+                            "name": "650 Eglinton Avenue West",
+                            "url": "650 Eglinton Avenue West"
+                        },
+                        {
+                            "name": "400 Walmer Road",
+                            "url": "400 Walmer Road"
+                        },
+                        {
+                            "name": "Ridge Hill Manor",
+                            "url": "Ridge Hill Manor"
+                        },
+                        {
+                            "name": "655 Briar Hill Avenue",
+                            "url": "655 Briar Hill Avenue"
+                        },
+                        {
+                            "name": "Forest Hill Apartments",
+                            "url": "Forest Hill Apartments"
+                        },
+                        {
+                            "name": "320 Lonsdale Road",
+                            "url": "320 Lonsdale Road"
+                        },
+                        {
+                            "name": "464 Spadina Rd.",
+                            "url": "464 Spadina Rd."
+                        },
+                        {
+                            "name": "606 Avenue Road",
+                            "url": "606 Avenue Road"
+                        },
+                        {
+                            "name": "1996 Bathurst Street",
+                            "url": "1996 Bathurst Street"
+                        },
+                        {
+                            "name": "600 Eglinton Avenue West",
+                            "url": "600 Eglinton Avenue West"
+                        },
+                        {
+                            "name": "1687 Bathurst Street",
+                            "url": "1687 Bathurst Street"
+                        },
+                        {
+                            "name": "250 Heath",
+                            "url": "250 Heath"
+                        },
+                        {
+                            "name": "2000 Bathurst Street",
+                            "url": "2000 Bathurst Street"
+                        },
+                        {
+                            "name": "4 Connaught Circle",
+                            "url": "4 Connaught Circle"
+                        },
+                        {
+                            "name": "2 Connaught Circle",
+                            "url": "2 Connaught Circle"
+                        },
+                        {
+                            "name": "166 Eastbourne Avenue",
+                            "url": "166 Eastbourne Avenue"
+                        },
+                        {
+                            "name": "1524 Bathurst Street",
+                            "url": "1524 Bathurst Street"
+                        },
+                        {
+                            "name": "1520 Bathurst Street",
+                            "url": "1520 Bathurst Street"
+                        },
+                        {
+                            "name": "660 Briar Hill",
+                            "url": "660 Briar Hill"
+                        },
+                        {
+                            "name": "587 Avenue Road",
+                            "url": "587 Avenue Road"
+                        },
+                        {
+                            "name": "585 Avenue Road",
+                            "url": "585 Avenue Road"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://cdngeneral.rentcafe.com/dmslivecafe/2/20735/living_final(3).jpg?width=480&quality=90"
+                        }
+                    ],
+                    "geocoordinates": [
+                        {
+                            "latitude": "43.7026",
+                            "longitude": "-79.4191"
+                        },
+                        {
+                            "latitude": "43.7057",
+                            "longitude": "-79.4229"
+                        },
+                        {
+                            "latitude": "43.6850",
+                            "longitude": "-79.4108"
+                        },
+                        {
+                            "latitude": "43.7063",
+                            "longitude": "-79.4227"
+                        },
+                        {
+                            "latitude": "43.7057",
+                            "longitude": "-79.4254"
+                        },
+                        {
+                            "latitude": "43.7026",
+                            "longitude": "-79.4191"
+                        },
+                        {
+                            "latitude": "43.6850",
+                            "longitude": "-79.4134"
+                        },
+                        {
+                            "latitude": "43.7038",
+                            "longitude": "-79.4264"
+                        },
+                        {
+                            "latitude": "43.7075",
+                            "longitude": "-79.4274"
+                        },
+                        {
+                            "latitude": "43.7014",
+                            "longitude": "-79.4225"
+                        },
+                        {
+                            "latitude": "43.6889",
+                            "longitude": "-79.4121"
+                        },
+                        {
+                            "latitude": "43.6896",
+                            "longitude": "-79.4135"
+                        },
+                        {
+                            "latitude": "43.6896",
+                            "longitude": "-79.4033"
+                        },
+                        {
+                            "latitude": "43.7054",
+                            "longitude": "-79.4241"
+                        },
+                        {
+                            "latitude": "43.7028",
+                            "longitude": "-79.4182"
+                        },
+                        {
+                            "latitude": "43.6959",
+                            "longitude": "-79.4232"
+                        },
+                        {
+                            "latitude": "43.6867",
+                            "longitude": "-79.4143"
+                        },
+                        {
+                            "latitude": "43.6996",
+                            "longitude": "-79.4253"
+                        },
+                        {
+                            "latitude": "43.6888",
+                            "longitude": "-79.4255"
+                        },
+                        {
+                            "latitude": "43.6887",
+                            "longitude": "-79.4256"
+                        },
+                        {
+                            "latitude": "43.7051",
+                            "longitude": "-79.4050"
+                        },
+                        {
+                            "latitude": "43.6851",
+                            "longitude": "-79.4195"
+                        },
+                        {
+                            "latitude": "43.6849",
+                            "longitude": "-79.4195"
+                        },
+                        {
+                            "latitude": "43.7081",
+                            "longitude": "-79.4276"
+                        },
+                        {
+                            "latitude": "43.6894",
+                            "longitude": "-79.4019"
+                        },
+                        {
+                            "latitude": "43.6893",
+                            "longitude": "-79.402"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Springfield, IL for Rent - Homes.com",
+                "htmlTitle": "Springfield, IL for <b>Rent</b> - <b>Homes</b>.com",
+                "link": "https://www.homes.com/springfield-il/homes-for-rent/",
+                "displayLink": "www.homes.com",
+                "snippet": "2 days ago ... 1/16. 3430 N Peoria Rd Unit NB167, Springfield, IL 62702. 1/15. 437 W Edwards St, Springfield, IL 62704. 1/51. 300 Forrest Ave Unit 59 ...",
+                "htmlSnippet": "2 days ago <b>...</b> <b>1</b>/16. 3430 N Peoria Rd Unit NB167, Springfield, IL 62702. <b>1</b>/15. 437 W Edwards St, Springfield, IL 62704. <b>1</b>/51. 300 Forrest Ave Unit 59&nbsp;...",
+                "formattedUrl": "https://www.homes.com/springfield-il/homes-for-rent/",
+                "htmlFormattedUrl": "https://www.homes.com/springfield-il/homes-for-<b>rent</b>/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1A6iDCZuxQ2Fep_rP3ck3SFO4ZwX06RGitQisKgCIsunJpW_7amDyOXw&s",
+                            "width": "275",
+                            "height": "184"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "referrer": "no-referrer-when-downgrade",
+                            "handheldfriendly": "true",
+                            "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5.0",
+                            "language": "en",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://imagescdn.homes.com/i2/66ald3GoWC_2VyDh8-M6mRRDxbaFwHBE9MBxtvJzSC8/117/1516-seven-pines-rd-springfield-il-buildingphoto-2.jpg?p=1"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments for Rent in Burquitlam, Coquitlam, BC 61 Rentals ...",
+                "htmlTitle": "<b>Apartments</b> for <b>Rent</b> in Burquitlam, Coquitlam, BC 61 <b>Rentals</b> ...",
+                "link": "https://www.rentcafe.com/apartments-for-rent/ca/bc/coquitlam/burquitlam/",
+                "displayLink": "www.rentcafe.com",
+                "snippet": "3 days ago ... looking for? Studio; 1; 2; 3; 4+. #303 - 4833 Brentwood Dr 1 Bed Apartment for Rent ... FERNDALE COURT. 5130 Irving Street, Burnaby, BC V5H 1E7. 1 BED, $2,000. 2 ...",
+                "htmlSnippet": "3 days ago <b>...</b> looking for? Studio; 1; 2; 3; 4+. #303 - 4833 Brentwood Dr <b>1 Bed Apartment</b> for <b>Rent</b> ... FERNDALE COURT. 5130 Irving Street, Burnaby, BC V5H 1E7. <b>1 BED</b>, <b>$2,000</b>. 2&nbsp;...",
+                "formattedUrl": "https://www.rentcafe.com/apartments-for-rent/ca/bc/coquitlam/burquitlam/",
+                "htmlFormattedUrl": "https://www.<b>rent</b>cafe.com/<b>apartments</b>-for-<b>rent</b>/ca/bc/coquitlam/burquitlam/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ82NP_xQekx5tZlQdwnwhY8UoQ9wHzJ6XW408wMRnRjcmcglqqzaUKYi2D&s",
+                            "width": "300",
+                            "height": "168"
+                        }
+                    ],
+                    "imageobject": [
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/140343/DSC02867-Enhanced-NR(1).JPG?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1257177/691_North_Road_Office.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/content/images/NoImage.png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1660553/Kitchen(20241213184521723).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1660560/Screenshot_10_(20241210135209332).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1684289/Manaya_Pix_ET_Building1(20250409171016149).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1656039/property_04_2024_01(20250408160839900).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1691994/Screenshot_20__r360_1714603524366(20250604161838093).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1720371/IA1101_Living_Room2_Large(20250616150812122).jpeg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/124258/200312_510_Agnes_Photos_0054.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1825109/Y3(20240716133253491).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1733092/y1_1(20231129173407857).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1984150/The_max_logo_3(20250328110829225).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/134703/homes-for-sale(2).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1858556/CSTH08_Living_Room_1(20250529121346118).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/128613/atira-pm-logo%20(2).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/2021377/logo_2(20250516121930978).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/content/images/NoImage.png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1897878/logo_2(20241219171859189).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1259299/4783_Dawson_Street_Kitchen_1_(20220503132452592).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/content/images/NoImage.png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1658963/01(20250415183522260).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/2065978/53596410d93e74d62799c642abf8454(20250616152812467).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/145544/4433%20Alaska%20Street%20Burnaby-20.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1236363/Front_9.JPG?width=480&quality=90"
+                        }
+                    ],
+                    "postaladdress": [
+                        {
+                            "addresslocality": "Coquitlam",
+                            "postalcode": "V3J 0N5",
+                            "addressregion": "BC",
+                            "streetaddress": "515 Cottonwood Ave"
+                        },
+                        {
+                            "addresslocality": "Coquitlam",
+                            "postalcode": "V3J 0H9",
+                            "addressregion": "BC",
+                            "streetaddress": "RKU751: 608-691 North Rd"
+                        },
+                        {
+                            "addresslocality": "Coquitlam",
+                            "postalcode": "V3K 6V2",
+                            "addressregion": "BC",
+                            "streetaddress": "Strata Plan LMS 1163 - 42 Fawcett Rd"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3M 2M5",
+                            "addressregion": "BC",
+                            "streetaddress": "610 Hamilton Street"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5A 1E1",
+                            "addressregion": "BC",
+                            "streetaddress": "7191 Barnet Road"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3M 2J1",
+                            "addressregion": "BC",
+                            "streetaddress": "615-7Th Avenue"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3M 2M6",
+                            "addressregion": "BC",
+                            "streetaddress": "700 Hamilton Street"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3M 3N1",
+                            "addressregion": "BC",
+                            "streetaddress": "409 Ash Street"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3L 1C3",
+                            "addressregion": "BC",
+                            "streetaddress": "425 Carnarvon St"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3L 0J6",
+                            "addressregion": "BC",
+                            "streetaddress": "510 Agnes Street"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3M 0C3",
+                            "addressregion": "BC",
+                            "streetaddress": "1010-898 Carnarvon Street"
+                        },
+                        {
+                            "addresslocality": "Coquitlam",
+                            "postalcode": "V3B 0T9",
+                            "addressregion": "BC",
+                            "streetaddress": "2602-1182 Westwood Street"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5E 0B3",
+                            "addressregion": "BC",
+                            "streetaddress": "S2703: 2003-6688 Arcola Street (BCS4066)"
+                        },
+                        {
+                            "addresslocality": "Surrey",
+                            "postalcode": "V3T 1V6",
+                            "addressregion": "BC",
+                            "streetaddress": "3211-13398 104 Avenue"
+                        },
+                        {
+                            "addresslocality": "Surrey",
+                            "postalcode": "V3R 1V4",
+                            "addressregion": "BC",
+                            "streetaddress": "14476 108Ave"
+                        },
+                        {
+                            "addresslocality": "Port Coquitlam",
+                            "postalcode": "V3B 1V6",
+                            "addressregion": "BC",
+                            "streetaddress": "3235 Flint Street"
+                        },
+                        {
+                            "addresslocality": "Port Coquitlam",
+                            "postalcode": "V3B 4J9",
+                            "addressregion": "BC",
+                            "streetaddress": "S2711X: 3625 Flint St, Port Coquitlam"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5C 0C3",
+                            "addressregion": "BC",
+                            "streetaddress": "#303 - 4833 Brentwood Dr"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5C 0M9",
+                            "addressregion": "BC",
+                            "streetaddress": "S2603: 2808-4730 Lougheed Hwy (EPS8443)"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5C 0A8",
+                            "addressregion": "BC",
+                            "streetaddress": "RKU760: 114-4783 Dawson Street"
+                        },
+                        {
+                            "addresslocality": "Port Coquitlam",
+                            "postalcode": "V3B 1V2",
+                            "addressregion": "BC",
+                            "streetaddress": "BSMT 1847 Prairie Avenue"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5H 1E7",
+                            "addressregion": "BC",
+                            "streetaddress": "5130 Irving Street"
+                        },
+                        {
+                            "addresslocality": "Surrey",
+                            "postalcode": "V3T 0V2",
+                            "addressregion": "BC",
+                            "streetaddress": "S2713: 2902-13768 100 Avenue (EPS10940)"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5C 5T3",
+                            "addressregion": "BC",
+                            "streetaddress": "4433 Alaska Street"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5H 0G5",
+                            "addressregion": "BC",
+                            "streetaddress": "ALA001: 910-6538 Nelson Ave"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "referrer": "always",
+                            "viewport": "width=device-width, initial-scale=1"
+                        }
+                    ],
+                    "apartmentcomplex": [
+                        {
+                            "name": "Meridian",
+                            "url": "Meridian"
+                        },
+                        {
+                            "name": "RKU751 - 691 North Road",
+                            "url": "RKU751 - 691 North Road"
+                        },
+                        {
+                            "name": "Strata Plan LMS 1163 - 42 Fawcett Rd",
+                            "url": "Strata Plan LMS 1163 - 42 Fawcett Rd"
+                        },
+                        {
+                            "name": "ED. HAMILTON",
+                            "url": "ED. HAMILTON"
+                        },
+                        {
+                            "name": "HARBOURVIEW MANOR",
+                            "url": "HARBOURVIEW MANOR"
+                        },
+                        {
+                            "name": "ED. TOWERS",
+                            "url": "ED. TOWERS"
+                        },
+                        {
+                            "name": "ED. ROYAL",
+                            "url": "ED. ROYAL"
+                        },
+                        {
+                            "name": "Ash Manor",
+                            "url": "Ash Manor"
+                        },
+                        {
+                            "name": "Imperial Apartments",
+                            "url": "Imperial Apartments"
+                        },
+                        {
+                            "name": "The Beverley",
+                            "url": "The Beverley"
+                        },
+                        {
+                            "name": "1010-898 Carnarvon Street",
+                            "url": "1010-898 Carnarvon Street"
+                        },
+                        {
+                            "name": "2602-1182 Westwood Street",
+                            "url": "2602-1182 Westwood Street"
+                        },
+                        {
+                            "name": "S2703: 2003-6688 Arcola Street (BCS4066)",
+                            "url": "S2703: 2003-6688 Arcola Street (BCS4066)"
+                        },
+                        {
+                            "name": "3211-13398 104 Avenue",
+                            "url": "3211-13398 104 Avenue"
+                        },
+                        {
+                            "name": "Country Squire",
+                            "url": "Country Squire"
+                        },
+                        {
+                            "name": "The Alex",
+                            "url": "The Alex"
+                        },
+                        {
+                            "name": "S2711X:3625 Flint St, Port Coquitlam",
+                            "url": "S2711X:3625 Flint St, Port Coquitlam"
+                        },
+                        {
+                            "name": "#303 - 4833 Brentwood Dr",
+                            "url": "#303 - 4833 Brentwood Dr"
+                        },
+                        {
+                            "name": "S2603: 2808-4730 Lougheed Hwy (EPS8443)",
+                            "url": "S2603: 2808-4730 Lougheed Hwy (EPS8443)"
+                        },
+                        {
+                            "name": "RKU760 - Burnaby Garden Suite 2 Bedroom 2 Bath Condo - 4783 Dawson Street",
+                            "url": "RKU760 - Burnaby Garden Suite 2 Bedroom 2 Bath Condo - 4783 Dawson Street"
+                        },
+                        {
+                            "name": "BSMT 1847 Prairie Avenue",
+                            "url": "BSMT 1847 Prairie Avenue"
+                        },
+                        {
+                            "name": "FERNDALE COURT",
+                            "url": "FERNDALE COURT"
+                        },
+                        {
+                            "name": "Surrey Central Brand-new 2 Bed 1 Bath",
+                            "url": "Surrey Central Brand-new 2 Bed 1 Bath"
+                        },
+                        {
+                            "name": "Alaska",
+                            "url": "Alaska"
+                        },
+                        {
+                            "name": "ALA001 9/F, 6538 Nelson Ave",
+                            "url": "ALA001 9/F, 6538 Nelson Ave"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://cdngeneral.rentcafe.com/dmslivecafe/2/140343/DSC02867-Enhanced-NR(1).JPG?width=480&quality=90"
+                        }
+                    ],
+                    "geocoordinates": [
+                        {
+                            "latitude": "49.2591",
+                            "longitude": "-122.8918"
+                        },
+                        {
+                            "latitude": "49.2601",
+                            "longitude": "-122.8926"
+                        },
+                        {
+                            "latitude": "49.2248",
+                            "longitude": "-122.8350"
+                        },
+                        {
+                            "latitude": "49.2147",
+                            "longitude": "-122.9235"
+                        },
+                        {
+                            "latitude": "49.2831",
+                            "longitude": "-122.9541"
+                        },
+                        {
+                            "latitude": "49.2142",
+                            "longitude": "-122.9233"
+                        },
+                        {
+                            "latitude": "49.2142",
+                            "longitude": "-122.9242"
+                        },
+                        {
+                            "latitude": "49.2093",
+                            "longitude": "-122.9192"
+                        },
+                        {
+                            "latitude": "49.2051",
+                            "longitude": "-122.9077"
+                        },
+                        {
+                            "latitude": "49.2052",
+                            "longitude": "-122.9090"
+                        },
+                        {
+                            "latitude": "49.2008",
+                            "longitude": "-122.9144"
+                        },
+                        {
+                            "latitude": "49.2827",
+                            "longitude": "-122.7905"
+                        },
+                        {
+                            "latitude": "49.2191",
+                            "longitude": "-122.9658"
+                        },
+                        {
+                            "latitude": "49.1913",
+                            "longitude": "-122.8513"
+                        },
+                        {
+                            "latitude": "49.1983",
+                            "longitude": "-122.8202"
+                        },
+                        {
+                            "latitude": "49.2717",
+                            "longitude": "-122.7704"
+                        },
+                        {
+                            "latitude": "49.2770",
+                            "longitude": "-122.7708"
+                        },
+                        {
+                            "latitude": "49.2664",
+                            "longitude": "-122.9937"
+                        },
+                        {
+                            "latitude": "49.2657",
+                            "longitude": "-122.9952"
+                        },
+                        {
+                            "latitude": "49.2646",
+                            "longitude": "-122.9959"
+                        },
+                        {
+                            "latitude": "49.2715",
+                            "longitude": "-122.7657"
+                        },
+                        {
+                            "latitude": "49.2260",
+                            "longitude": "-122.9898"
+                        },
+                        {
+                            "latitude": "49.1840",
+                            "longitude": "-122.8409"
+                        },
+                        {
+                            "latitude": "49.2628",
+                            "longitude": "-123.0041"
+                        },
+                        {
+                            "latitude": "49.2245",
+                            "longitude": "-122.9940"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "1013 Silverdale Rd, Peterborough, ON K9J 7W5 - House for Rent in ...",
+                "htmlTitle": "1013 Silverdale Rd, Peterborough, ON K9J 7W5 - House for <b>Rent</b> in ...",
+                "link": "https://www.apartments.com/1013-silverdale-rd-peterborough-on/dbtmh8l/",
+                "displayLink": "www.apartments.com",
+                "snippet": "5 days ago ... This rental unit is available on Apartments.com, starting at C$2000 monthly ... About This Home. Available Now. Bright & Spacious 1-Bedroom Walk-Out Apartment ...",
+                "htmlSnippet": "5 days ago <b>...</b> This <b>rental</b> unit is <b>available</b> on <b>Apartments</b>.com, starting at C<b>$2000</b> monthly ... About This Home. <b>Available Now</b>. Bright &amp; Spacious <b>1</b>-<b>Bedroom</b> Walk-<b>Out Apartment</b>&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/1013-silverdale-rd-peterborough.../dbtmh8l/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/1013-silverdale-rd-peterborough.../dbtmh8l/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMtRRGxzrwc0IZEq9VEnze_DroLJKeZPJ688SrbT25Yj6v53U2l92sTJBE&s",
+                            "width": "259",
+                            "height": "194"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/Ty4rO8d4upsfbQGjLRQf_WUWhgW_iE-rXh0HBS3dmbA/111/1013-silverdale-rd-peterborough-on-primary-photo.jpg",
+                            "place:location:longitude": "-78.35209",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "1013 Silverdale Rd, Peterborough, ON K9J 7W5 - House for Rent in Peterborough, ON | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "44.28839",
+                            "og:title": "1013 Silverdale Rd, Peterborough, ON K9J 7W5 - House for Rent in Peterborough, ON | Apartments.com",
+                            "og:updated_time": "6/21/2025 6:18:30 AM",
+                            "og:description": "1013 Silverdale Rd house in Peterborough,ON, is available for rent. This rental unit is available on Apartments.com, starting at C$2000 monthly.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/Ty4rO8d4upsfbQGjLRQf_WUWhgW_iE-rXh0HBS3dmbA/111/1013-silverdale-rd-peterborough-on-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/1013-silverdale-rd-peterborough-on/dbtmh8l/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/GZXi7ijvBqIqxVFF9gyg530V0JTiF5mcNZblA9Im6fc/111/1013-silverdale-rd-peterborough-on-building-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Homes for Rent, Sublet or Lease in or near Toronto",
+                "htmlTitle": "<b>Homes</b> for <b>Rent</b>, Sublet or <b>Lease</b> in or near <b>Toronto</b>",
+                "link": "https://www.sabbaticalhomes.com/rentals-exchanges/canada/homes-to-rent--toronto",
+                "displayLink": "www.sabbaticalhomes.com",
+                "snippet": "7 days ago ... Hampton Cottage in the city, private garden close... Home for Rent. 3 Bed | 3 Bath. Available September 1, 2025. From CAD $3900/Monthly. View Description.",
+                "htmlSnippet": "7 days ago <b>...</b> Hampton Cottage in the city, private garden close... Home for <b>Rent</b>. 3 <b>Bed</b> | 3 Bath. <b>Available</b> September <b>1</b>, 2025. From CAD $3900/Monthly. View Description.",
+                "formattedUrl": "https://www.sabbaticalhomes.com/rentals.../canada/homes-to-rent--toronto",
+                "htmlFormattedUrl": "https://www.sabbaticalhomes.com/<b>rental</b>s.../canada/homes-to-<b>rent</b>--<b>toronto</b>",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoXLUW66RzVJ5jsO6gJucZIGk4zUuxgi3bErYWD41TMcpzzQcotHit9HZr&s",
+                            "width": "267",
+                            "height": "189"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://www.sabbaticalhomes.com/content/images/sh-logo-short.png",
+                            "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+                            "og:title": "Homes for Rent, Sublet or Lease in or near",
+                            "title": "Homes for Rent, Sublet or Lease in or near",
+                            "og:description": "SabbaticalHomes.com offers homes of all types (houses, apartments, condos, studios, lofts, guest houses) for rent and sublet in or near  , Ontario."
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://www.sabbaticalhomes.com/content/images/sh-logo-short.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "151 Ascot Ave, Toronto, ON M6E 1G5 - House for Rent in Toronto ...",
+                "htmlTitle": "151 Ascot Ave, <b>Toronto</b>, ON M6E 1G5 - House for <b>Rent</b> in <b>Toronto</b> ...",
+                "link": "https://www.apartments.com/151-ascot-ave-toronto-on/6g987ls/",
+                "displayLink": "www.apartments.com",
+                "snippet": "Jun 11, 2025 ... About This Home. Available Now. Best Lease Opportunity In Corso Italia For A Clean And Spacious 2 Bedroom. 1 car parking on driveway included. Detached 3 car ...",
+                "htmlSnippet": "Jun 11, 2025 <b>...</b> About This Home. <b>Available Now</b>. Best <b>Lease</b> Opportunity In Corso Italia For A Clean And Spacious 2 <b>Bedroom</b>. <b>1</b> car <b>parking</b> on driveway included. Detached 3 car&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/151-ascot-ave-toronto-on/6g987ls/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/151-ascot-ave-<b>toronto</b>-on/6g987ls/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSguKvDCElnt6tOKgqhnGMzNw1f_yN4vJSLjg5eVMxgbZ0KGvzMnQEz_PU&s",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/uWur4ur_GYuT0_xeWooLKdIksArPEBmO_QTMzq1ZUVY/111/151-ascot-ave-toronto-on-primary-photo.jpg",
+                            "place:location:longitude": "-79.45018",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "151 Ascot Ave, Toronto, ON M6E 1G5 - House for Rent in Toronto, ON | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "43.67861",
+                            "og:title": "151 Ascot Ave, Toronto, ON M6E 1G5 - House for Rent in Toronto, ON | Apartments.com",
+                            "og:updated_time": "6/20/2025 6:11:43 PM",
+                            "og:description": "151 Ascot Ave house in Toronto,ON, is available for rent. This rental unit is available on Apartments.com, starting at C$1990 monthly.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/uWur4ur_GYuT0_xeWooLKdIksArPEBmO_QTMzq1ZUVY/111/151-ascot-ave-toronto-on-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/151-ascot-ave-toronto-on/6g987ls/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/uWur4ur_GYuT0_xeWooLKdIksArPEBmO_QTMzq1ZUVY/111/151-ascot-ave-toronto-on-primary-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "2737 Keele St #212-W05, Toronto, ON M3M 2E9 | Zillow",
+                "htmlTitle": "2737 Keele St #212-W05, <b>Toronto</b>, ON M3M 2E9 | Zillow",
+                "link": "https://www.zillow.com/homedetails/2737-Keele-St-212-W05-Toronto-ON-M3M-2E9/452600079_zpid/",
+                "displayLink": "www.zillow.com",
+                "snippet": "May 25, 2025 ... 2737 Keele St #212-W05, Toronto, ON M3M 2E9 is an apartment unit listed for rent at $2000 /mo. The -- sqft unit is a 1 bed, 1 bath apartment unit.",
+                "htmlSnippet": "May 25, 2025 <b>...</b> 2737 Keele St #212-W05, <b>Toronto</b>, ON M3M 2E9 is an <b>apartment</b> unit listed for <b>rent</b> at <b>$2000</b> /mo. The -- sqft unit is a <b>1 bed</b>, <b>1</b> bath <b>apartment</b> unit.",
+                "formattedUrl": "https://www.zillow.com/homedetails/2737...Toronto.../452600079_zpid/",
+                "htmlFormattedUrl": "https://www.zillow.com/homedetails/2737...<b>Toronto</b>.../452600079_zpid/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckRG6bpw8ajwkOeWNCOJt7OoET06oTNyVio4Ajj1tbOT7GrCsu467bfpj&s",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-config": "none",
+                            "og:image": "https://photos.zillowstatic.com/fp/48887149cd434843ca25db2be7681685-cc_ft_1536.jpg",
+                            "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                            "zillow_fb:beds": "1",
+                            "og:site_name": "Zillow",
+                            "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                            "og:description": "This is a 1 bedroom, 1 bathroom, Apartment home. It is located at 2737 Keele St #212-W05, Toronto, ON.",
+                            "next-head-count": "49",
+                            "google-signin-cookiepolicy": "single_host_origin",
+                            "zillow_fb:baths": "1",
+                            "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                            "google-signin-scope": "openid profile email",
+                            "msapplication-tilecolor": "#3366b8",
+                            "og:type": "zillow_fb:home",
+                            "author": "Zillow, Inc.",
+                            "og:title": "2737 Keele St #212-W05, Toronto, ON M3M 2E9 | Zillow",
+                            "referrer": "always",
+                            "fb:app_id": "172285552816089",
+                            "apple-mobile-web-app-status-bar-style": "black-translucent",
+                            "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                            "apple-mobile-web-app-capable": "yes",
+                            "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                            "zillow_fb:description": "This is a 1 bedroom, 1 bathroom, Apartment home. It is located at 2737 Keele St #212-W05, Toronto, ON.",
+                            "pod-group-name": "web-platform-render-for-rent-page-sub-app",
+                            "og:url": "https://www.zillow.com/homedetails/2737-Keele-St-212-W05-Toronto-ON-M3M-2E9/452600079_zpid/",
+                            "format-detection": "telephone=no",
+                            "og:zillow_fb:address": "2737 Keele St #212-W05"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://photos.zillowstatic.com/fp/48887149cd434843ca25db2be7681685-cc_ft_1536.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments / Housing For Rent near Toronto, ON - craigslist",
+                "htmlTitle": "<b>Apartments</b> / <b>Housing</b> For <b>Rent</b> near <b>Toronto</b>, ON - craigslist",
+                "link": "https://toronto.craigslist.org/search/toronto-on/apa",
+                "displayLink": "toronto.craigslist.org",
+                "snippet": "May 15, 2025 ... refresh the page. craigslist. Apartments / Housing For Rent in Toronto, ON. see also. 1 Bedroom Apartment ...",
+                "htmlSnippet": "May 15, 2025 <b>...</b> refresh the page. craigslist. <b>Apartments</b> / <b>Housing</b> For <b>Rent</b> in <b>Toronto</b>, ON. see also. <b>1 Bedroom Apartment</b>&nbsp;...",
+                "formattedUrl": "https://toronto.craigslist.org/search/toronto-on/apa",
+                "htmlFormattedUrl": "https://<b>toronto</b>.craigslist.org/search/<b>toronto</b>-on/apa",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "twitter:card": "preview",
+                            "og:site_name": "craigslist",
+                            "viewport": "width=device-width,initial-scale=1",
+                            "og:title": "Apartments / Housing For Rent near Toronto, ON - craigslist",
+                            "og:url": "https://toronto.craigslist.org/search/toronto-on/apa",
+                            "og:description": "Apartments / Housing For Rent near Toronto, ON - craigslist"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "$2000 for a 500+ sqft on church st Toronto? Is it too much? : r ...",
+                "htmlTitle": "<b>$2000</b> for a 500+ sqft on church st <b>Toronto</b>? Is it too much? : r ...",
+                "link": "https://www.reddit.com/r/TorontoRenting/comments/1kji185/2000_for_a_500_sqft_on_church_st_toronto_is_it/",
+                "displayLink": "www.reddit.com",
+                "snippet": "May 9, 2025 ... 24 votes, 30 comments. I found a $2000 500+sqft on church st. Toronto. Trying to bring it down to $1800, not sure.",
+                "htmlSnippet": "May 9, 2025 <b>...</b> 24 votes, 30 comments. I <b>found</b> a <b>$2000</b> 500+sqft on church st. <b>Toronto</b>. Trying to bring it down to $1800, not sure.",
+                "formattedUrl": "https://www.reddit.com/.../TorontoRenting/.../2000_for_a_500_sqft_on_ch...",
+                "htmlFormattedUrl": "https://www.reddit.com/.../<b>TorontoRent</b>ing/.../2000_for_a_500_sqft_on_ch...",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "og:image": "https://share.redd.it/preview/post/1kji185",
+                            "theme-color": "#000000",
+                            "og:image:width": "1200",
+                            "og:type": "website",
+                            "og:image:alt": "An image containing a preview of the post",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "r/TorontoRenting on Reddit: $2000 for a 500+ sqft on church st Toronto? Is it too much?",
+                            "og:site_name": "Reddit",
+                            "og:title": "r/TorontoRenting on Reddit: $2000 for a 500+ sqft on church st Toronto? Is it too much?",
+                            "og:image:height": "630",
+                            "msapplication-navbutton-color": "#000000",
+                            "og:description": "Posted by u/InstanceEffective255 - 24 votes and 30 comments",
+                            "twitter:image": "https://share.redd.it/preview/post/1kji185",
+                            "apple-mobile-web-app-status-bar-style": "black",
+                            "twitter:site": "@reddit",
+                            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                            "apple-mobile-web-app-capable": "yes",
+                            "og:ttl": "600",
+                            "og:url": "https://www.reddit.com/r/TorontoRenting/comments/1kji185/2000_for_a_500_sqft_on_church_st_toronto_is_it/"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -3,137 +3,1041 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Crush - Smart Rental Assistant</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>House Crush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            background: #fafbfc;
+            color: #181c23;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 48px 16px 48px;
+            background: #fff;
+            border-bottom: 1px solid #ececec;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #222;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #4caf87;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav a {
+            color: #444;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-right: 8px;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #4caf87;
+        }
+        .nav .sign-in {
+            border: 1px solid #d1e7dd;
+            background: #fff;
+            color: #222;
+            border-radius: 8px;
+            padding: 8px 20px;
+            margin-right: 8px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav .sign-in:hover {
+            background: #f6fefb;
+            color: #4caf87;
+        }
+        .nav .get-started {
+            background: #4caf87;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .nav .get-started:hover {
+            background: #388e5c;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            background: none;
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .main-bg-house {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 480px;
+            max-width: 80vw;
+            opacity: 0.13;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+        .badge {
+            display: inline-block;
+            background: #e6f4ea;
+            color: #388e5c;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 6px 18px;
+            font-size: 1rem;
+            margin-bottom: 24px;
+            box-shadow: none;
+        }
+        .headline {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            line-height: 1.1;
+        }
+        .headline .accent {
+            color: #4caf87;
+        }
+        .subheadline {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .cta-primary {
+            background: #4caf87;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 16px 36px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: none;
+        }
+        .cta-primary:hover {
+            background: #388e5c;
+        }
+        .cta-secondary {
+            background: #fff;
+            color: #222;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px 36px;
+            font-size: 1.25rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: none;
+        }
+        .cta-secondary:hover {
+            background: #f6fefb;
+            color: #4caf87;
+        }
+        .results-section {
+            background: #fff;
+            margin: 32px auto;
+            max-width: 1100px;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px 0 rgba(60,72,88,0.08);
+            padding: 0 0 0 0;
+            position: relative;
+        }
+        .results-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 32px 32px 16px 32px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .filter-chip {
+            background: #f5f7fa;
+            color: #222;
+            border-radius: 20px;
+            padding: 8px 18px;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .filter-chip.location {
+            background: #e6f4ea;
+            color: #388e5c;
+            font-weight: 600;
+        }
+        .filter-chip svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 4px;
+        }
+        .close {
+            font-size: 1.1em;
+            color: #aaa;
+            margin-left: 6px;
+            cursor: pointer;
+        }
+        .property-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            padding: 24px 32px 32px 32px;
+        }
+        .property-card {
+            background: #fafbfc;
+            border-radius: 12px;
+            box-shadow: 0 1px 4px 0 rgba(60,72,88,0.04);
+            padding: 0 0 18px 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 210px;
+            position: relative;
+            border: 1.5px solid #f0f0f0;
+        }
+        .property-card .property-image {
+            height: 70px;
+            background: #e6e6e6;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 0.5em;
+        }
+        .property-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #181c23;
+            margin: 12px 0 0 0;
+            text-align: center;
+        }
+        .property-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #4caf87;
+            text-align: center;
+            margin: 4px 0 0 0;
+        }
+        .property-tags {
+            display: flex;
+            gap: 10px;
+            margin: 14px 0 0 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: #e6f4ea;
+            color: #388e5c;
+            border-radius: 14px;
+            padding: 4px 14px;
+            font-size: 0.98rem;
+            font-weight: 500;
+        }
+        .match-badge {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            background: #e6f4ea;
+            color: #388e5c;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 14px;
+            padding: 4px 16px;
+            z-index: 2;
+        }
+        .property-card.top-match .match-badge {
+            background: #4caf87;
+            color: #fff;
+        }
+        .results-footer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-top: 1px solid #f0f0f0;
+            padding: 18px 32px;
+            background: #fff;
+            border-radius: 0 0 18px 18px;
+            font-size: 1.1rem;
+            color: #222;
+            margin-top: 0;
+        }
+        .footer-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-text { flex: 1; }
+        .pain-section {
+            max-width: 1200px;
+            margin: 60px auto 0 auto;
+            padding: 0 16px 60px 16px;
+            text-align: center;
+            background: none;
+            border-radius: 0;
+        }
+        .pain-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #181c23;
+        }
+        .pain-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .pain-cards {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .pain-card {
+            flex: 1 1 300px;
+            max-width: 370px;
+            min-width: 260px;
+            background: #fff;
+            border-radius: 16px;
+            border: 2px solid #f5eaea;
+            padding: 36px 28px 32px 28px;
+            box-sizing: border-box;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+        .pain-card .pain-icon {
+            margin-bottom: 18px;
+        }
+        .pain-card-title {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #7a2323;
+        }
+        .pain-card-desc {
+            font-size: 1.08rem;
+            color: #7a2323;
+            font-weight: 400;
+        }
+        .pain-card.pain-red {
+            background: #fdf6f6;
+            border-color: #faeaea;
+        }
+        .pain-card.pain-orange {
+            background: #fffbf6;
+            border-color: #faf5ea;
+        }
+        .pain-card.pain-orange .pain-card-title, .pain-card.pain-orange .pain-card-desc {
+            color: #b26a1a;
+        }
+        .pain-card.pain-yellow {
+            background: #fffef6;
+            border-color: #fafbea;
+        }
+        .pain-card.pain-yellow .pain-card-title, .pain-card.pain-yellow .pain-card-desc {
+            color: #b29b1a;
+        }
+        .how-section {
+            background: #fafbfc;
+            padding: 60px 0 40px 0;
+        }
+        .how-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 0 16px;
+        }
+        .how-left {
+            flex: 1;
+            max-width: 500px;
+        }
+        .how-badge {
+            display: inline-block;
+            background: #e6f4ea;
+            color: #388e5c;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 6px 18px;
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .how-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #181c23;
+        }
+        .how-desc {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 32px;
+            font-weight: 400;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .how-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .how-features li {
+            font-size: 1.13rem;
+            color: #222;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .checkmark {
+            color: #4caf87;
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        .how-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .ai-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(60,72,88,0.12);
+            padding: 24px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .ai-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.13rem;
+            color: #222;
+            margin-bottom: 20px;
+        }
+        .ai-card-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ai-card-section {
+            margin-bottom: 20px;
+        }
+        .ai-card-sources {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .ai-source {
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .ai-source-zillow {
+            background: #e6f4ea;
+            color: #388e5c;
+        }
+        .ai-source-apts {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        .ai-source-rent {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        .ai-source-craig {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        .ai-progress-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 12px;
+        }
+        .ai-progress-list {
+            margin-bottom: 12px;
+        }
+        .ai-progress-list div {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        .ai-progress-bars {
+            display: flex;
+            gap: 4px;
+        }
+        .ai-bar {
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            flex: 1;
+        }
+        .ai-bar-1 {
+            background: #4caf87;
+            animation: pulse 2s infinite;
+        }
+        .ai-bar-2 {
+            background: #4caf87;
+            animation: pulse 2s infinite 0.5s;
+        }
+        .ai-bar-3 {
+            background: #4caf87;
+            animation: pulse 2s infinite 1s;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        .ai-result {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .ai-result:last-child {
+            border-bottom: none;
+        }
+        .ai-result-top {
+            background: #e6f4ea;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 8px 0;
+        }
+        .ai-match-score {
+            font-size: 0.85rem;
+            color: #388e5c;
+            font-weight: 600;
+        }
+        .ai-result-price {
+            font-weight: 700;
+            color: #4caf87;
+        }
+        .ai-location-match {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #388e5c;
+            font-weight: 600;
+        }
+        .ai-location-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .features-section {
+            max-width: 1200px;
+            margin: 60px auto 0 auto;
+            padding: 0 16px 60px 16px;
+            text-align: center;
+        }
+        .features-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #181c23;
+        }
+        .features-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            border: 2px solid #f5f5f5;
+            padding: 32px 24px;
+            text-align: center;
+            transition: box-shadow 0.2s, border 0.2s;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-card:hover {
+            box-shadow: 0 8px 32px 0 rgba(60,72,88,0.12);
+            border-color: #4caf87;
+        }
+        .feature-illustration {
+            margin-bottom: 20px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .site-badge {
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+        .site-badge.zillow {
+            background: #e6f4ea;
+            color: #388e5c;
+        }
+        .site-badge.apartments {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        .site-badge.rent {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        .site-badge.craigslist {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        .unified-results {
+            font-weight: 700;
+            color: #4caf87;
+            margin-top: 8px;
+        }
+        .filter-badge {
+            background: #e6f4ea;
+            color: #388e5c;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+        .filter-label {
+            font-weight: 700;
+            color: #4caf87;
+            margin-top: 8px;
+        }
+        .commute-label {
+            font-weight: 700;
+            color: #4caf87;
+            margin-top: 8px;
+        }
+        .ai-scores {
+            text-align: left;
+        }
+        .ai-scores div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+        .ai-scores span {
+            color: #4caf87;
+            font-weight: 700;
+        }
+        .shortlist-box {
+            background: #e6f4ea;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+        }
+        .shortlist-badge {
+            background: #4caf87;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin: 4px 0;
+        }
+        .shortlist-label {
+            font-weight: 700;
+            color: #4caf87;
+            margin-top: 8px;
+        }
+        .feature-icon {
+            margin-bottom: 16px;
+        }
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #181c23;
+            margin-bottom: 8px;
+        }
+        .feature-desc {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .steps-section {
+            background: #fafbfc;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .steps-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #181c23;
+        }
+        .steps-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .steps-grid {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+        .step {
+            flex: 1 1 220px;
+            min-width: 200px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .step-circle {
+            width: 48px;
+            height: 48px;
+            background: #4caf87;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+        .step-title {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: #181c23;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .step-desc {
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+        }
+        .pricing-section {
+            max-width: 1200px;
+            margin: 60px auto 0 auto;
+            padding: 0 16px 60px 16px;
+            text-align: center;
+        }
+        .pricing-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #181c23;
+        }
+        .pricing-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .pricing-grid {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .pricing-card {
+            flex: 1 1 300px;
+            max-width: 350px;
+            min-width: 280px;
+            background: #fff;
+            border-radius: 16px;
+            border: 2px solid #f5f5f5;
+            padding: 32px 24px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+        .pricing-card:hover {
+            box-shadow: 0 8px 32px 0 rgba(60,72,88,0.12);
+        }
+        .pricing-card.best-value {
+            border-color: #4caf87;
+            box-shadow: 0 8px 32px 0 rgba(76,175,135,0.2);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4caf87;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #181c23;
+            margin-bottom: 16px;
+        }
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4caf87;
+            margin-bottom: 24px;
+        }
+        .pricing-price span {
+            font-size: 1.5rem;
+            color: #555;
+            font-weight: 400;
+        }
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px 0;
+            text-align: left;
+        }
+        .pricing-features li {
+            margin-bottom: 10px;
+            padding-left: 1.2em;
+            position: relative;
+        }
+        .pricing-features li:before {
+            content: '✔';
+            color: #4caf87;
+            position: absolute;
+            left: 0;
+            font-size: 1em;
+            top: 0;
+        }
+        .pricing-btn {
+            background: #4caf87;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 32px;
+            font-size: 1.13rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .pricing-btn:hover {
+            background: #388e5c;
+        }
+        .footer {
+            background: linear-gradient(90deg, #222 60%, #388e5c 100%);
+            color: #fff;
+            padding: 48px 0 0 0;
+            font-size: 1rem;
+            margin-top: 0;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 0 16px 32px 16px;
+            gap: 32px;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            max-width: 320px;
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+        .footer-desc {
+            color: #b7e4c7;
+            font-size: 1rem;
+            margin-top: 4px;
+            font-weight: 400;
+        }
+        .footer-links {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .footer-link-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #b7e4c7;
+            font-size: 1.08rem;
+        }
+        .footer-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #4caf87;
+        }
+        .footer-bottom {
+            border-top: 1px solid #2e3a4a;
+            text-align: center;
+            color: #b7e4c7;
+            font-size: 1rem;
+            padding: 18px 0 12px 0;
+            margin-top: 0;
+        }
+
+        @media (max-width: 900px) {
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+            .results-section {
+                max-width: 98vw;
+                padding: 0;
+            }
+            .results-header, .property-grid, .results-footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .how-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .pricing-grid {
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+            }
+            .pricing-card {
+                max-width: 100%;
+                min-width: 0;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .results-section {
+                top: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .results-header, .property-grid, .results-footer {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-card {
+                min-height: 0;
+            }
+        }
+        @media (max-width: 700px) {
+            .header { padding: 16px 10px; }
+            .main { padding: 40px 5px 20px 5px; }
+            .headline { font-size: 2rem; }
+            .subheadline { font-size: 1rem; }
+            .cta-primary, .cta-secondary { font-size: 1rem; padding: 12px 18px; }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto px-4 py-8">
-        <!-- Header -->
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-indigo-600 mb-2">House Crush</h1>
-            <p class="text-gray-600">Your smart rental assistant that finds the perfect home for you</p>
-        </header>
-
-        <!-- Q&A Section -->
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 mb-8">
-            <form method="POST" action="/" class="mb-8">
-                <div class="mb-4">
-                    <label for="question" class="block text-gray-700 text-sm font-bold mb-2">Ask about rental properties:</label>
-                    <div class="flex gap-2">
-                        <input type="text" 
-                               name="question" 
-                               id="question" 
-                               class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                               placeholder="e.g., What are the typical rental requirements?"
-                               required>
-                        <button type="submit" 
-                                class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
-                            <i class="fas fa-search mr-2"></i>Search
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <!-- Quick Questions -->
-            <div class="mt-8">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">Quick Questions:</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <button onclick="setQuestion('What are the typical rental requirements?')" 
-                            class="text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-clipboard-list text-indigo-500 mr-2"></i>
-                        What are the typical rental requirements?
-                    </button>
-                    <button onclick="setQuestion('What amenities should I look for?')" 
-                            class="text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-home text-indigo-500 mr-2"></i>
-                        What amenities should I look for?
-                    </button>
-                    <button onclick="setQuestion('What is the difference between downtown and suburban properties?')" 
-                            class="text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-building text-indigo-500 mr-2"></i>
-                        What is the difference between downtown and suburban properties?
-                    </button>
-                    <button onclick="setQuestion('What are current rental market trends?')" 
-                            class="text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-chart-line text-indigo-500 mr-2"></i>
-                        What are current rental market trends?
-                    </button>
-                </div>
-            </div>
-            <!-- Results Section -->
-            {% if answer %}
-            <div class="bg-gray-50 rounded-lg p-6 mt-8">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
-                <div class="prose max-w-none">
-                    {{ answer | safe }}
-                </div>
-                
-                {% if sources %}
-                <div class="mt-6 pt-4 border-t border-gray-200">
-                    <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
-                    <ul class="text-sm text-gray-600">
-                        {% for source in sources %}
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-file-alt text-indigo-500"></i>
-                            {{ source }}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endif %}
-            </div>
-            {% endif %}
+<body class="bg-gray-100 min-h-screen" {% if summary %}data-has-search-results="true"{% endif %}>
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4h-6v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10.5z"/></svg>
+            </span>
+            House Crush
+        </a>
+        <nav class="nav">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#sign-in" class="sign-in">Sign In</a>
+            <button class="get-started">Get Started</button>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="badge">⚡ AI-Powered Rental Search</div>
+        <h1 class="headline">Find Your Perfect <span class="accent">Rental</span> in Minutes</h1>
+        <div class="subheadline">
+            Stop wasting hours browsing multiple websites. Our AI finds and ranks rental properties based on your lifestyle, budget, and proximity to places that matter to you.
         </div>
-        <!-- Main Content -->
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
-            <!-- Property Filters and Search Form -->
-            <form method="POST" action="/" class="mb-8">
-                <!-- Search Method Selection -->
-                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                    <h3 class="text-lg font-semibold text-blue-800 mb-3">Search Method</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label class="flex items-center p-3 bg-white rounded-lg border-2 cursor-pointer hover:bg-blue-50 transition-colors">
-                            <input type="radio" name="search_method" value="local" class="mr-3" 
-                                   {% if search_method == 'local' %}checked{% endif %}>
-                            <div>
-                                <div class="font-semibold text-gray-800">Local Database</div>
-                                <div class="text-sm text-gray-600">Search pre-collected listings with AI ranking</div>
-                            </div>
-                        </label>
-                        <label class="flex items-center p-3 bg-white rounded-lg border-2 cursor-pointer hover:bg-blue-50 transition-colors 
-                                   {% if not perplexity_available %}opacity-50 cursor-not-allowed{% endif %}">
-                            <input type="radio" name="search_method" value="perplexity" class="mr-3" 
-                                   {% if search_method == 'perplexity' and perplexity_available %}checked{% endif %}
-                                   {% if not perplexity_available %}disabled{% endif %}>
-                            <div>
-                                <div class="font-semibold text-gray-800">
-                                    Perplexity API 
-                                    {% if not perplexity_available %}
-                                        <span class="text-red-500 text-xs">(Not Available)</span>
-                                    {% endif %}
-                                </div>
-                                <div class="text-sm text-gray-600">Real-time search across multiple rental sites</div>
-                            </div>
-                        </label>
-                    </div>
-                    
-                    <!-- Perplexity Status -->
-                    {% if perplexity_available %}
-                        <div class="mt-3 text-sm">
-                            <span class="text-green-600">
-                                <i class="fas fa-check-circle mr-1"></i>
-                                Perplexity API: {{ perplexity_status.status }}
-                            </span>
-                        </div>
-                    {% else %}
-                        <div class="mt-3 text-sm text-red-600">
-                            <i class="fas fa-exclamation-triangle mr-1"></i>
-                            Perplexity API not available. Install with: pip install perplexity-sdk
-                        </div>
-                    {% endif %}
-                </div>
+        <div class="cta-buttons">
+            <button class="cta-primary" onclick="document.getElementById('searchFormSection').style.display='block'; window.scrollTo({top: document.getElementById('searchFormSection').offsetTop-60, behavior: 'smooth'});">Start Your Search&nbsp;&rarr;</button>
+            <button class="cta-secondary">Watch Demo</button>
+        </div>
+    </main>
 
-                <!-- Property Filters -->
+    <!-- Search Form Section (hidden by default) -->
+    <section id="searchFormSection" style="display:none; margin: 0 auto; max-width: 1100px; padding: 0 16px;">
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Find Your Next Home, Intelligently</h2>
+            <form method="POST" action="/">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                     <div>
                         <label class="block text-gray-700 text-xs mb-1" for="location">City</label>
@@ -152,37 +1056,59 @@
                         <input type="number" name="num_bedrooms" id="num_bedrooms" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="e.g. 2" value="{{ filter_values.num_bedrooms }}">
                     </div>
                 </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Amenities</label>
+                    <div class="space-y-2">
+                        <div class="text-xs text-gray-500 mb-2">Common amenities (add your own below):</div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
+                            {% for amenity in ['Parking', 'Storage', 'Pool', 'Bike Storage'] %}
+                            <label class="flex items-center">
+                                <input type="checkbox" name="amenities" value="{{ amenity }}" {% if amenity in filter_values.amenities %}checked{% endif %} class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                                <span class="ml-2 text-gray-700">{{ amenity }}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 text-xs mb-1">Add custom amenities:</label>
+                            <div id="custom-amenities-container">
+                                <div class="flex gap-2 mb-2">
+                                    <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry">
+                                    <button type="button" onclick="addAmenityField()" class="bg-indigo-100 text-indigo-600 px-3 py-2 rounded-lg hover:bg-indigo-200 transition-colors"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="lifestyle">Lifestyle Preferences</label>
+                    <input type="text" name="lifestyle" id="lifestyle" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="e.g. near a park, quiet area, close to gym" value="{{ filter_values.lifestyle }}">
+                </div>
                 <div class="flex justify-end">
-                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                        <i class="fas fa-search mr-2"></i>Find Properties
-                    </button>
+                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"><i class="fas fa-search mr-2"></i>Find Properties</button>
                 </div>
             </form>
-
-            <!-- Property Search Results Section -->
-            <div class="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-12">
+            {% if summary %}
+            <div class="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-8">
                 <div class="flex flex-wrap items-center gap-2 mb-6">
                     {% for filter in filters %}
-                        <span class="inline-flex items-center bg-green-100 text-green-800 text-sm font-medium px-4 py-1 rounded-full mr-2 mb-2">
-                            <i class="fas fa-filter mr-1"></i> {{ filter }}
-                            <button type="button" class="ml-2 text-green-600 hover:text-green-800 focus:outline-none">&times;</button>
-                        </span>
+                    <span class="inline-flex items-center bg-green-100 text-green-800 text-sm font-medium px-4 py-1 rounded-full mr-2 mb-2"><i class="fas fa-filter mr-1"></i> {{ filter }}</span>
                     {% endfor %}
                 </div>
+                {% if properties %}
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {% for property in properties %}
                     <div class="bg-gray-50 rounded-lg p-5 border border-gray-200 relative">
                         {% if property.top_match %}
-                            <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Top Match</span>
+                        <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Top Match</span>
                         {% elif property.match_score %}
-                            <span class="absolute top-4 left-4 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">{{ property.match_score }}% Match</span>
+                        <span class="absolute top-4 left-4 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">{{ property.match_score }}% Match</span>
                         {% endif %}
-                        <div class="h-20 mb-2 bg-gray-200 rounded"></div> <!-- Placeholder for image -->
+                        <div class="h-20 mb-2 bg-gray-200 rounded"></div>
                         <div class="text-lg font-semibold text-gray-800 mt-2">{{ property.title }}</div>
-                        <div class="text-green-700 text-xl font-bold mb-2">${{ property.price }}/mo</div>
+                        <div class="text-green-700 text-xl font-bold mb-2">${{ property.price }}</div>
                         <div class="flex flex-wrap gap-2 mb-2">
                             {% for tag in property.tags %}
-                            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">{{ tag }}</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">{{ tag }}</span>
                             {% endfor %}
                         </div>
                         <div class="text-xs text-gray-500 mt-2">
@@ -192,17 +1118,390 @@
                     </div>
                     {% endfor %}
                 </div>
+                {% endif %}
                 <div class="mt-8 bg-gray-50 rounded-lg p-4 flex items-center gap-3">
                     <i class="fas fa-robot text-green-600 text-2xl"></i>
-                    <div>
-                        <span class="font-semibold">House Crush AI</span>
-                        <span class="text-gray-700">{{ summary }}</span>
+                    <div><span class="font-semibold">House Crush AI</span> <span class="text-gray-700">{{ summary }}</span></div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Results Section (Example) -->
+    <section class="results-section" style="padding: 0 16px;">
+        <div class="results-header">
+            <div class="filter-chip">Budget: $1,000–$2,000 <span class="close">&times;</span></div>
+            <div class="filter-chip">2+ Bedrooms <span class="close">&times;</span></div>
+            <div class="filter-chip">Pet Friendly <span class="close">&times;</span></div>
+            <div class="filter-chip location"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#b7e4c7"></circle><path d="M10 4a4 4 0 0 1 4 4c0 2.5-4 8-4 8s-4-5.5-4-8a4 4 0 0 1 4-4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#388e5c"></path></svg> Near Downtown</div>
+        </div>
+        <div class="property-grid">
+            <div class="property-card top-match">
+                <div class="match-badge">Top Match</div>
+                <div class="property-image"></div>
+                <div class="property-title">Modern Downtown Apartment</div>
+                <div class="property-price">$1,850/mo</div>
+                <div class="property-tags">
+                    <span class="tag">5 min to gym</span>
+                    <span class="tag">Near transit</span>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="match-badge">98% Match</div>
+                <div class="property-image"></div>
+                <div class="property-title">Spacious Loft with Parking</div>
+                <div class="property-price">$1,695/mo</div>
+                <div class="property-tags">
+                    <span class="tag">10 min to work</span>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="property-image"></div>
+                <div class="property-title">Cozy 2BR with Balcony</div>
+                <div class="property-price">$1,550/mo</div>
+                <div class="property-tags">
+                    <span class="tag">Pet friendly</span>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="property-image"></div>
+                <div class="property-title">Luxury Highrise Studio</div>
+                <div class="property-price">$1,925/mo</div>
+                <div class="property-tags">
+                    <span class="tag">Gym included</span>
+                </div>
+            </div>
+        </div>
+        <div class="results-footer">
+            <div class="footer-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="#e6f4ea"></circle><path d="M12 7v5l3 3" stroke="#388e5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+            </div>
+            <div class="footer-text"><b>House Crush AI</b> I found 28 properties matching your criteria. The top match is only 5 minutes from your gym!</div>
+        </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <section id="qaSection" style="margin: 0 auto; max-width: 1100px;">
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Ask About Rental Properties</h2>
+            <form method="POST" action="/" class="mb-8" id="qaForm">
+                <div class="mb-4">
+                    <label for="question" class="block text-gray-700 text-sm mb-2">Ask about rental properties:</label>
+                    <div class="flex gap-2">
+                        <input type="text" name="question" id="question" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What are the typical rental requirements?" required="">
+                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                            <i class="fas fa-search mr-2"></i>Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- Quick Questions -->
+            <div class="mt-8">
+                <h3 class="text-base font-medium text-gray-600 mb-3">Quick Questions:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button onclick="setQuestion('What are the typical rental requirements?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-clipboard-list text-indigo-500 mr-2"></i>
+                        What are the typical rental requirements?
+                    </button>
+                    <button onclick="setQuestion('What amenities should I look for?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-home text-indigo-500 mr-2"></i>
+                        What amenities should I look for?
+                    </button>
+                    <button onclick="setQuestion('What is the difference between downtown and suburban properties?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-building text-indigo-500 mr-2"></i>
+                        What is the difference between downtown and suburban properties?
+                    </button>
+                    <button onclick="setQuestion('What are current rental market trends?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-chart-line text-indigo-500 mr-2"></i>
+                        What are current rental market trends?
+                    </button>
+                </div>
+            </div>
+            <!-- Results Section -->
+            {% if answer %}
+            <div class="bg-gray-50 rounded-lg p-6 mt-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
+                <div class="prose max-w-none">
+                    {{ answer | safe }}
+                </div>
+                {% if sources %}
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                    <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
+                    <ul class="text-sm text-gray-600">
+                        {% for source in sources %}
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-file-alt text-indigo-500"></i>
+                            {{ source }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-section">
+        <h2 class="pain-title">The Rental Search Struggle is Real</h2>
+        <div class="pain-subtitle">Finding the right rental shouldn't feel like a full-time job</div>
+        <div class="pain-cards">
+            <div class="pain-card pain-red">
+                <div class="pain-icon">
+                    <svg width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#faeaea"></circle><path d="M12 7v5l3 3" stroke="#b23b3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><circle cx="12" cy="12" r="8" stroke="#b23b3b" stroke-width="2" fill="none"></circle></svg>
+                </div>
+                <div class="pain-card-title">Time Consuming</div>
+                <div class="pain-card-desc">Hours spent checking multiple websites, manually comparing listings, and calculating commute times.</div>
+            </div>
+            <div class="pain-card pain-orange">
+                <div class="pain-icon">
+                    <svg width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff5e6"></circle><path d="M11 11h2v5h-2z" fill="#b26a1a"></path><circle cx="12" cy="9" r="1" fill="#b26a1a"></circle><circle cx="12" cy="12" r="8" stroke="#b26a1a" stroke-width="2" fill="none"></circle></svg>
+                </div>
+                <div class="pain-card-title">Scattered Information</div>
+                <div class="pain-card-desc">Properties are spread across different platforms with inconsistent information and formats.</div>
+            </div>
+            <div class="pain-card pain-yellow">
+                <div class="pain-icon">
+                    <svg width="44" height="44" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fffbe6"></circle><path d="M12 7a5 5 0 0 1 5 5c0 3-5 8-5 8s-5-5.5-5-8a5 5 0 0 1 5-5zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" fill="#b29b1a"></path></svg>
+                </div>
+                <div class="pain-card-title">Location Guesswork</div>
+                <div class="pain-card-desc">Difficult to assess proximity to work, gym, schools, and other important places in your life.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-section">
+        <div class="how-content">
+            <div class="how-left">
+                <div class="how-badge">AI-Powered Solution</div>
+                <h2 class="how-title">Smart Rental Search That Actually Works</h2>
+                <div class="how-desc">
+                    Our AI aggregates listings from multiple sources, understands your lifestyle preferences, and delivers a personalized shortlist of the best rental options ranked by how well they fit your life.
+                </div>
+                <ul class="how-features">
+                    <li><span class="checkmark">✔</span> Aggregates from multiple property websites</li>
+                    <li><span class="checkmark">✔</span> Intelligent ranking based on your preferences</li>
+                    <li><span class="checkmark">✔</span> Real-time commute and proximity analysis</li>
+                </ul>
+            </div>
+            <div class="how-right">
+                <div class="ai-card">
+                    <div class="ai-card-header">
+                        <span class="ai-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#4caf87"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </span>
+                        AI Matching Engine
+                    </div>
+                    <div class="ai-card-section ai-card-sources">
+                        <span class="ai-source ai-source-zillow">Zillow</span>
+                        <span class="ai-source ai-source-apts">Apartments.com</span>
+                        <span class="ai-source ai-source-rent">Rent.com</span>
+                        <span class="ai-source ai-source-craig">Craigslist</span>
+                    </div>
+                    <div class="ai-card-section ai-card-progress">
+                        <div class="ai-progress-title">AI Analysis in Progress</div>
+                        <div class="ai-progress-list">
+                            <div>Analyzing commute times</div>
+                            <div>Matching preferences</div>
+                            <div>Calculating proximity scores</div>
+                        </div>
+                        <div class="ai-progress-bars">
+                            <div class="ai-bar ai-bar-1"></div>
+                            <div class="ai-bar ai-bar-2"></div>
+                            <div class="ai-bar ai-bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="ai-card-section ai-card-results">
+                        <div class="ai-result ai-result-top">
+                            <div>
+                                <b>Downtown Loft</b><br>
+                                <span class="ai-match-score">98% Match Score</span>
+                            </div>
+                            <div class="ai-result-price">$1,850</div>
+                        </div>
+                        <div class="ai-result">
+                            <div>
+                                <b>Modern Apartment</b><br>
+                                <span class="ai-match-score">94% Match Score</span>
+                            </div>
+                            <div class="ai-result-price">$1,695</div>
+                        </div>
+                        <div class="ai-result">
+                            <div>
+                                <b>Cozy 2BR</b>
+                            </div>
+                            <div class="ai-result-price">$1,550</div>
+                        </div>
+                        <div class="ai-location-match">
+                            <span class="ai-location-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#e6f4ea"/><path d="M10 4a4 4 0 0 1 4 4c0 2.5-4 8-4 8s-4-5.5-4-8a4 4 0 0 1 4-4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#388e5c"/></svg>
+                            </span>
+                            Perfect location match!
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Feedback Section -->
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-12">
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="features-title">Powerful Features That Save You Time</h2>
+        <div class="features-subtitle">Everything you need to find your perfect rental, powered by AI</div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-illustration">
+                    <span class="site-badge zillow">Zillow</span>
+                    <span class="site-badge apartments">Apartments</span>
+                    <span class="site-badge rent">Rent.com</span>
+                    <span class="site-badge craigslist">Craigslist</span>
+                    <div class="unified-results">&rarr; Unified Results</div>
+                </div>
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#e6f4ea"/><path d="M10 17l5-5-5-5v10z" fill="#388e5c"/></svg>
+                </div>
+                <div class="feature-title">Multi-Site Aggregation</div>
+                <div class="feature-desc">Automatically gathers listings from all major rental websites in one place</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-illustration">
+                    <div class="filter-badge">$1K–$2K</div>
+                    <div class="filter-badge">2+ BR</div>
+                    <div class="filter-badge">Pet OK</div>
+                    <div class="filter-label">Filters</div>
+                </div>
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><path d="M4 4h16M6 8h12M8 12h8M10 16h4"/></g></svg>
+                </div>
+                <div class="feature-title">Smart Filtering</div>
+                <div class="feature-desc">Filter by budget, bedrooms, parking, amenities, and lifestyle preferences</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-illustration">
+                    <svg width="48" height="32" viewBox="0 0 48 32"><rect x="8" y="8" width="32" height="16" rx="3" fill="#fff" stroke="#e6f4ea" stroke-width="2"/><circle cx="16" cy="16" r="3" fill="#e57373"/><circle cx="24" cy="16" r="3" fill="#388e5c"/><circle cx="32" cy="16" r="3" fill="#64b5f6"/></svg>
+                    <div class="commute-label">15 min commute</div>
+                </div>
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></g></svg>
+                </div>
+                <div class="feature-title">Google Maps Integration</div>
+                <div class="feature-desc">Real-time commute calculations and proximity to important locations</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-illustration">
+                    <div class="ai-scores">
+                        <div>Property A <span>98%</span></div>
+                        <div>Property B <span>94%</span></div>
+                        <div>Property C <span>89%</span></div>
+                    </div>
+                </div>
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></g></svg>
+                </div>
+                <div class="feature-title">AI-Powered Ranking</div>
+                <div class="feature-desc">Intelligent scoring based on how well properties match your lifestyle</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-illustration">
+                    <div class="shortlist-box">
+                        <div>Top Pick</div>
+                        <div class="shortlist-badge">Near Gym</div>
+                        <div>Good Match</div>
+                    </div>
+                    <div class="shortlist-label">Your Shortlist</div>
+                </div>
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></g></svg>
+                </div>
+                <div class="feature-title">Personalized Shortlist</div>
+                <div class="feature-desc">Get a curated list of the best options with helpful badges and insights</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-illustration">
+                    <svg width="48" height="24" viewBox="0 0 48 24"><rect x="6" y="6" width="36" height="12" rx="2" fill="#fff" stroke="#e6f4ea" stroke-width="2"/><rect x="12" y="10" width="24" height="4" rx="1" fill="#e6f4ea"/></svg>
+                </div>
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M8 15h8M8 11h8M8 7h8"/></g></svg>
+                </div>
+                <div class="feature-title">Simple Interface</div>
+                <div class="feature-desc">Clean, intuitive design with map view and easy-to-understand results</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Steps Section -->
+    <section class="steps-section">
+        <h2 class="steps-title">How House Crush Works</h2>
+        <div class="steps-subtitle">From search to shortlist in three simple steps</div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-circle">1</div>
+                <div class="step-title">Set Your Preferences</div>
+                <div class="step-desc">Tell us your budget, desired amenities, and important locations like work and gym</div>
+            </div>
+            <div class="step">
+                <div class="step-circle">2</div>
+                <div class="step-title">AI Does the Work</div>
+                <div class="step-desc">Our AI searches multiple sites, analyzes locations, and calculates commute times</div>
+            </div>
+            <div class="step">
+                <div class="step-circle">3</div>
+                <div class="step-title">Get Your Shortlist</div>
+                <div class="step-desc">Receive ranked results with helpful badges like "Near Gym" and "Quick Commute"</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <h2 class="pricing-title">Choose Your Plan</h2>
+        <div class="pricing-subtitle">Flexible pricing for every renter and team. Start for free, upgrade anytime.</div>
+        <div class="pricing-grid">
+            <div class="pricing-card best-value">
+                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-name">Pro</div>
+                <div class="pricing-price">$19<span>/mo</span></div>
+                <ul class="pricing-features">
+                    <li>Unlimited rental searches</li>
+                    <li>Personalized shortlist & badges</li>
+                    <li>Commute & proximity analysis</li>
+                    <li>Email alerts for new matches</li>
+                    <li>Priority support</li>
+                </ul>
+                <button class="pricing-btn">Start Pro</button>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-name">Free</div>
+                <div class="pricing-price">$0<span>/mo</span></div>
+                <ul class="pricing-features">
+                    <li>Basic rental search</li>
+                    <li>Limited shortlist</li>
+                    <li>Standard commute analysis</li>
+                    <li>Community support</li>
+                </ul>
+                <button class="pricing-btn">Start Free</button>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-name">Team</div>
+                <div class="pricing-price">$49<span>/mo</span></div>
+                <ul class="pricing-features">
+                    <li>All Pro features</li>
+                    <li>Team collaboration</li>
+                    <li>Shared shortlists</li>
+                    <li>Admin dashboard</li>
+                    <li>Premium support</li>
+                </ul>
+                <button class="pricing-btn">Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedbackSection" style="margin: 0 auto; max-width: 1100px; padding: 0 16px; box-sizing: border-box;">
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-12">
             <h3 class="text-lg font-semibold text-gray-800 mb-4">Feedback</h3>
             {% if feedback_msg %}
                 <div class="mb-4 p-3 bg-green-100 text-green-800 rounded">{{ feedback_msg }}</div>
@@ -212,13 +1511,81 @@
                 <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Submit Feedback</button>
             </form>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><rect width="24" height="24" rx="8" fill="#4caf87"/><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4h-6v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10.5z" fill="#fff"/></svg>
+                </span>
+                <div>
+                    <b>House Crush</b>
+                    <div class="footer-desc">AI-powered rental search that saves you time and finds better homes.</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <div class="footer-link-title">Product</div>
+                    <a href="#">Features</a>
+                    <a href="#">How it Works</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div>
+                    <div class="footer-link-title">Company</div>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div>
+                    <div class="footer-link-title">Support</div>
+                    <a href="#">Help Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 House Crush. All rights reserved.
+        </div>
+    </footer>
 
     <script>
         function setQuestion(question) {
             document.getElementById('question').value = question;
-            document.querySelector('form').submit();
         }
+
+        function addAmenityField() {
+            const container = document.getElementById('custom-amenities-container');
+            const newField = document.createElement('div');
+            newField.className = 'flex gap-2 mb-2';
+            newField.innerHTML = `
+                <input type="text" name="custom_amenities[]" 
+                       class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" 
+                       placeholder="e.g., Gym, Balcony, In-unit Laundry">
+                <button type="button" onclick="removeAmenityField(this)" 
+                        class="bg-red-100 text-red-600 px-3 py-2 rounded-lg hover:bg-red-200 transition-colors">
+                    <i class="fas fa-minus"></i>
+                </button>
+            `;
+            container.appendChild(newField);
+        }
+
+        function removeAmenityField(button) {
+            button.parentElement.remove();
+        }
+
+        // Show search form if there are search results
+        window.addEventListener('DOMContentLoaded', function() {
+            const hasSearchResults = document.body.getAttribute('data-has-search-results') === 'true';
+            if (hasSearchResults) {
+                const searchForm = document.getElementById('searchFormSection');
+                if (searchForm) {
+                    searchForm.style.display = 'block';
+                }
+            }
+        });
     </script>
 </body>
 </html>

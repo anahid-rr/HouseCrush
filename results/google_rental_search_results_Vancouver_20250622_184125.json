@@ -1,0 +1,1629 @@
+{
+    "search_summary": {
+        "location": "Vancouver",
+        "total_listings_found": 10,
+        "search_timestamp": "2025-06-22T18:41:25.273904",
+        "source": "Google Custom Search API"
+    },
+    "listings": [
+        {
+            "id": 1,
+            "title": "victoria, BC apartments / housing for rent - craigslist",
+            "price": 2000,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [
+                "Parking"
+            ],
+            "description": "2 hours ago ... Top floor, south facing 1-bed 1-bath 1-parking condo. $2,000. Victoria ... Mod Apartments - 1 Bedroom - Available Now. $2,100 · Savannah House - 1 Bedroom ...",
+            "match_percentage": 70,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "victoria.craigslist.org",
+            "listing_url": "https://victoria.craigslist.org/search/apa",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 2,
+            "title": "Apartments For Rent in British Columbia - New Listings Daily",
+            "price": 1725,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "1 day ago ... STUDIO, Ask for Pricing. 1 BED, $1,725. 2 BEDS, Ask for Pricing. Contact Property. A tall apartment building with balconies and a gate in front. 24. Today ...",
+            "match_percentage": 60,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "rentcafe.com",
+            "listing_url": "https://www.rentcafe.com/apartments-for-rent/ca/bc/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 3,
+            "title": "Apartments & Condos for Rent in Liberty Village, Toronto ...",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "1 day ago ... Condo rental listings in Liberty Village updated hourly. Check back often for new additions. They go fast!",
+            "match_percentage": 60,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "libertyvillagetoronto.com",
+            "listing_url": "https://libertyvillagetoronto.com/liberty-village-condos-for-rent",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 4,
+            "title": "1 Bedroom Apartments For Rent in Vancouver BC - 658 Rentals ...",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "1 day ago ... Check out the photos and floor plans to envision how you'll make your new one bedroom apartment your own. With more than 1 million currently available rentals ...",
+            "match_percentage": 100,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/vancouver-bc/1-bedrooms/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 5,
+            "title": "vancouver, BC apartments / housing for rent - craigslist",
+            "price": 2600,
+            "location": "Vancouver",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [
+                "Parking"
+            ],
+            "description": "Jun 8, 2025 ... Brand new one bedroom with parking at Central Park House for rent ... Studio + Parking near Oakridge & Queen Elizabeth Park — Available Now. $2,600.",
+            "match_percentage": 100,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "vancouver.craigslist.org",
+            "listing_url": "https://vancouver.craigslist.org/search/apa",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 6,
+            "title": "Summerfield at Morgan Metro - 8100 Gibbs Way, Hyattsville, MD ...",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "4 days ago ... steps away from Morgan Boulevard Metro Station- Blue/Grey line Experience luxurious living at Summerfield at Morgan Metro in Hyattsville, Maryland.",
+            "match_percentage": 0,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "redfin.com",
+            "listing_url": "https://www.redfin.com/MD/Hyattsville/Summerfield-at-Morgan-Metro/apartment/23209840",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 7,
+            "title": "vancouver apartments / housing for rent - craigslist",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "7 days ago ... refresh the page. craigslist. Apartments / Housing For Rent in Vancouver, BC - Vancouver. see also. Availability ...",
+            "match_percentage": 75,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "vancouver.craigslist.org",
+            "listing_url": "https://vancouver.craigslist.org/search/van/apa",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 8,
+            "title": "One bedroom & bath. Langford @ 2629 Millstream - unfurnished in a ...",
+            "price": 2000,
+            "location": "Vancouver",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [
+                "Parking"
+            ],
+            "description": "Jun 12, 2025 ... → Rent $2000 includes parking *Tenant pays utilities & Wifi → Security deposit 1/2 mo rent Available Now ✨Virtual Showings from the ...",
+            "match_percentage": 50,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "facebook.com",
+            "listing_url": "https://www.facebook.com/groups/1299877280408871/posts/one-bedroom-bathlangford-2629-millstream-unfurnished-in-a-brand-new-buildingconv/2279349622461627/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 9,
+            "title": "vancouver, BC apartments / housing for rent \"cambie\" - craigslist",
+            "price": 2250,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [
+                "Parking"
+            ],
+            "description": "5 days ago ... Large 862 Sq-ft, 1 Bedroom Rental Homes in Oakridge Available Now. $2,250 ... Studio + Parking near Oakridge & Queen Elizabeth Park — Available Now.",
+            "match_percentage": 100,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "vancouver.craigslist.org",
+            "listing_url": "https://vancouver.craigslist.org/search/apa?query=cambie",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 10,
+            "title": "Find Your Perfect Rental - TJ Guyer Property Management",
+            "price": 925,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "amenities": [],
+            "description": "Apr 8, 2025 ... ... , and electric. Available NOW. View Details Apply Now · 1 / 12. 302 South Street - #8, Centralia, WA 98531. RENT. $925. 1 bed. 1 bath. 540 sqft. STATUS: ...",
+            "match_percentage": 50,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "tjguyer.com",
+            "listing_url": "https://www.tjguyer.com/available-properties",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        }
+    ],
+    "raw_response": {
+        "kind": "customsearch#search",
+        "url": {
+            "type": "application/json",
+            "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+        },
+        "queries": {
+            "request": [
+                {
+                    "title": "Google Custom Search - rental apartments Vancouver $2000-$2500 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "totalResults": "292000",
+                    "searchTerms": "rental apartments Vancouver $2000-$2500 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "count": 10,
+                    "startIndex": 1,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ],
+            "nextPage": [
+                {
+                    "title": "Google Custom Search - rental apartments Vancouver $2000-$2500 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "totalResults": "292000",
+                    "searchTerms": "rental apartments Vancouver $2000-$2500 rent 1 bedroom 1 bed with Parking for rent available now",
+                    "count": 10,
+                    "startIndex": 11,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ]
+        },
+        "context": {
+            "title": "House crush"
+        },
+        "searchInformation": {
+            "searchTime": 0.641049,
+            "formattedSearchTime": "0.64",
+            "totalResults": "292000",
+            "formattedTotalResults": "292,000"
+        },
+        "items": [
+            {
+                "kind": "customsearch#result",
+                "title": "victoria, BC apartments / housing for rent - craigslist",
+                "htmlTitle": "victoria, BC <b>apartments</b> / <b>housing</b> for <b>rent</b> - craigslist",
+                "link": "https://victoria.craigslist.org/search/apa",
+                "displayLink": "victoria.craigslist.org",
+                "snippet": "2 hours ago ... Top floor, south facing 1-bed 1-bath 1-parking condo. $2,000. Victoria ... Mod Apartments - 1 Bedroom - Available Now. $2,100 · Savannah House - 1 Bedroom ...",
+                "htmlSnippet": "2 hours ago <b>...</b> Top floor, south facing <b>1</b>-<b>bed</b> 1-bath 1-<b>parking</b> condo. <b>$2,000</b>. Victoria ... Mod <b>Apartments</b> - <b>1 Bedroom</b> - <b>Available Now</b>. $2,100 &middot; Savannah House - <b>1 Bedroom</b>&nbsp;...",
+                "formattedUrl": "https://victoria.craigslist.org/search/apa",
+                "htmlFormattedUrl": "https://victoria.craigslist.org/search/apa",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "twitter:card": "preview",
+                            "og:site_name": "craigslist",
+                            "viewport": "width=device-width,initial-scale=1",
+                            "og:title": "victoria, BC apartments / housing for rent - craigslist",
+                            "og:url": "https://victoria.craigslist.org/search/apa",
+                            "og:description": "victoria, BC apartments / housing for rent - craigslist"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments For Rent in British Columbia - New Listings Daily",
+                "htmlTitle": "<b>Apartments</b> For <b>Rent</b> in British Columbia - New Listings Daily",
+                "link": "https://www.rentcafe.com/apartments-for-rent/ca/bc/",
+                "displayLink": "www.rentcafe.com",
+                "snippet": "1 day ago ... STUDIO, Ask for Pricing. 1 BED, $1,725. 2 BEDS, Ask for Pricing. Contact Property. A tall apartment building with balconies and a gate in front. 24. Today ...",
+                "htmlSnippet": "1 day ago <b>...</b> <b>STUDIO</b>, Ask for Pricing. <b>1 BED</b>, $1,725. 2 BEDS, Ask for Pricing. Contact Property. A tall <b>apartment</b> building with balconies and a gate in front. 24. <b>Today</b>&nbsp;...",
+                "formattedUrl": "https://www.rentcafe.com/apartments-for-rent/ca/bc/",
+                "htmlFormattedUrl": "https://www.<b>rent</b>cafe.com/<b>apartments</b>-for-<b>rent</b>/ca/bc/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdu5rRvOl0kB0x5lwJdvqhiy4Qhq7j0KpXSsB4EVziLaIHrh8NM-2K1aG&s",
+                            "width": "250",
+                            "height": "202"
+                        }
+                    ],
+                    "imageobject": [
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/YelloOnYates-Victoria-LivingRoom1(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/106197/DSC06980-Edit.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/93642/CF_Onni_The_Lloyd_25.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/p0606221_shoreview-321-east-2nd-street-livingroom2.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/Hoylake-Victoria-LivingRoom1.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1692143/Building_image_Nov_2023(20250123134657397).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1097385/Robbie_Yaletown_939_Living_Dining_3_Balcony%20(1)_staged_TT.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1656039/property_04_2024_01(20250408160839900).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1621426/Park_Village_10(20230525184250905).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/Horizon-Towers-Apartments-Burnaby-BC-Living-Dining-Kitchen(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1691994/Screenshot_20__r360_1714603524366(20250604161838093).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/174823/2016-09-01-3bedroom_04.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/140343/kitchenmorn.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/140343/23034%20-%20Hudson%20House18231_HDR.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/124258/200312_510_Agnes_Photos_0054.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/735240/Robbie_Parkview_Towers_Living_Dining_staged_corrected_vk.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/111265/Weidner-Canada_Ridgeview-View_Apartment_Living-Room.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/126289/5d4_6032-edit(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/111265/Weidner-Canada_Willow-View-Terrace_Apartment_Closet.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/47679/Craigflowerkitchen1_0.png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/Living_Kitchen.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1986045/1(20250603192650893).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/176626/Douglas%20Lodge_Example%20Suites%20(6).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/126289/5DSR8477-Edit(2).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/p0539910_TheCrest-Nanaimo-Livingroom2.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1638193/01_1(20250522133809026).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/735251/Robbie_Larchway%20Gardens_Living_Dining_1_staged_corrected2_HD.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/171133/20250425_Revolve%20Interiors_Shared%20Kitchen_252155.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/47679/621CrownKitchen.png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/176626/290%20Bassett%20rear.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/2%20-%20Glades-on-55_Langley_Living-Area.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1097384/Robbie_Panarama%20Tower_Living_Room_staged_MV.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/TheConservatoryII-Kelowna-Livingroom.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1720371/IA1101_Living_Room2_Large(20250616150812122).jpeg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/140343/116-755-Caledonia-Avenue-Victoria-360hometours-13s.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/176626/1088%20Sunset%20Pool.jpeg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1658963/01(20250415183522260).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/BayviewGardens-WhiteRock-1371-Blackwood-Street-LivingRoom.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/47679/1849Rivesidekitchen4.png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/BraemarGardens-Coquitlam-LivingRoomB.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/212398/1-print-001(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/126289/5DSR6237-Edit(1).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1660581/Screenshot_12_(20250617165813175).png?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/126289/DSC05761_100355.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1634001/York_Plaza(20250610161457735).jpeg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/p0539909_SummerhillPlace-Nanaimo-LivingRoom.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1692116/IMG_7341(20250404153216621).JPG?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/3/1768838/Suite_2_07_v2(20240408152948462).jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/p0793751_07_1_photogallery.jpg?width=480&quality=90"
+                        },
+                        {
+                            "url": "https://cdngeneral.rentcafe.com/dmslivecafe/2/47679/crossingatbelmont2brlivingroom.jpg?width=480&quality=90"
+                        }
+                    ],
+                    "postaladdress": [
+                        {
+                            "addresslocality": "Victoria",
+                            "postalcode": "V8W 0E5",
+                            "addressregion": "BC",
+                            "streetaddress": "819 Yates Street"
+                        },
+                        {
+                            "addresslocality": "North Vancouver",
+                            "postalcode": "V7L 0G6",
+                            "addressregion": "BC",
+                            "streetaddress": "154 18Th Street East"
+                        },
+                        {
+                            "addresslocality": "North Vancouver",
+                            "postalcode": "V7P 0C8",
+                            "addressregion": "BC",
+                            "streetaddress": "1060 Churchill Crescent"
+                        },
+                        {
+                            "addresslocality": "North Vancouver",
+                            "postalcode": "V7M 1J6",
+                            "addressregion": "BC",
+                            "streetaddress": "310 East 2Nd Street"
+                        },
+                        {
+                            "addresslocality": "Victoria",
+                            "postalcode": "V9B 0S5",
+                            "addressregion": "BC",
+                            "streetaddress": "691-697 Hoylake Avenue"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6J2E5",
+                            "addressregion": "BC",
+                            "streetaddress": "1745 W 12 Ave."
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6Z 3C1",
+                            "addressregion": "BC",
+                            "streetaddress": "939 Beatty Street"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3M 2M6",
+                            "addressregion": "BC",
+                            "streetaddress": "700 Hamilton Street"
+                        },
+                        {
+                            "addresslocality": "Prince George",
+                            "postalcode": "V2M 3P9",
+                            "addressregion": "BC",
+                            "streetaddress": "113 125 Ospika Blvd North"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5H 1S9",
+                            "addressregion": "BC",
+                            "streetaddress": "4960 Sanders Street"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3M 3N1",
+                            "addressregion": "BC",
+                            "streetaddress": "409 Ash Street"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6A 0J3",
+                            "addressregion": "BC",
+                            "streetaddress": "303 E Pender St"
+                        },
+                        {
+                            "addresslocality": "Victoria",
+                            "postalcode": "V8V 3P3",
+                            "addressregion": "BC",
+                            "streetaddress": "1468 Vancouver Street"
+                        },
+                        {
+                            "addresslocality": "Victoria",
+                            "postalcode": "V8W 0G8",
+                            "addressregion": "BC",
+                            "streetaddress": "1700 Blanshard St"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3L 0J6",
+                            "addressregion": "BC",
+                            "streetaddress": "510 Agnes Street"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5H 1S7",
+                            "addressregion": "BC",
+                            "streetaddress": "4769 Hazel Street"
+                        },
+                        {
+                            "addresslocality": "Fort St. John",
+                            "postalcode": "V1J 7G4",
+                            "addressregion": "BC",
+                            "streetaddress": "8503 85Th Ave"
+                        },
+                        {
+                            "addresslocality": "West Kelowna",
+                            "postalcode": "V4T 1N3",
+                            "addressregion": "BC",
+                            "streetaddress": "3405 Old Okanagan Highway"
+                        },
+                        {
+                            "addresslocality": "Dawson Creek",
+                            "postalcode": "V1G 4Y7",
+                            "addressregion": "BC",
+                            "streetaddress": "1537 92Nd Avenue"
+                        },
+                        {
+                            "addresslocality": "Victoria",
+                            "postalcode": "V9B 1N1",
+                            "addressregion": "BC",
+                            "streetaddress": "2951 Craigowan Rd"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V5K 0G6",
+                            "addressregion": "BC",
+                            "streetaddress": "388 Kaslo Street"
+                        },
+                        {
+                            "addresslocality": "Dawson Creek",
+                            "postalcode": "V1G 0C7",
+                            "addressregion": "BC",
+                            "streetaddress": "Upper Montney"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6J 2E2",
+                            "addressregion": "BC",
+                            "streetaddress": "1507 West 12Th Ave"
+                        },
+                        {
+                            "addresslocality": "Kamloops",
+                            "postalcode": "V2C 0K5",
+                            "addressregion": "BC",
+                            "streetaddress": "955 Victoria Street West"
+                        },
+                        {
+                            "addresslocality": "Nanaimo",
+                            "postalcode": "V9S 0B4",
+                            "addressregion": "BC",
+                            "streetaddress": "775 Terminal Avenue North"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6E 1R9",
+                            "addressregion": "BC",
+                            "streetaddress": "1101 Harwood Street,"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6K 2E8",
+                            "addressregion": "BC",
+                            "streetaddress": "2475 West Broadway Street,"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V5V 0J6",
+                            "addressregion": "BC",
+                            "streetaddress": "3572 Glen Drive,"
+                        },
+                        {
+                            "addresslocality": "Courtenay",
+                            "postalcode": "V9N 0G9",
+                            "addressregion": "BC",
+                            "streetaddress": "621 Crown Isle Blvd,"
+                        },
+                        {
+                            "addresslocality": "Penticton",
+                            "postalcode": "V2A 5W3",
+                            "addressregion": "BC",
+                            "streetaddress": "101 - 290 Bassett Street,"
+                        },
+                        {
+                            "addresslocality": "Langley",
+                            "postalcode": "V3A 5V5",
+                            "addressregion": "BC",
+                            "streetaddress": "20051 55A Avenue,"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5H 1P6",
+                            "addressregion": "BC",
+                            "streetaddress": "4390 Grange Street,"
+                        },
+                        {
+                            "addresslocality": "Kelowna",
+                            "postalcode": "V1V 3B9",
+                            "addressregion": "BC",
+                            "streetaddress": "773 Glenmore Road,"
+                        },
+                        {
+                            "addresslocality": "New Westminster",
+                            "postalcode": "V3L 1C3",
+                            "addressregion": "BC",
+                            "streetaddress": "425 Carnarvon St,"
+                        },
+                        {
+                            "addresslocality": "Victoria",
+                            "postalcode": "V8T 0C2",
+                            "addressregion": "BC",
+                            "streetaddress": "755 Caledonia Avenue,"
+                        },
+                        {
+                            "addresslocality": "Kelowna",
+                            "postalcode": "V1Y 9W1",
+                            "addressregion": "BC",
+                            "streetaddress": "551 - 1088 Sunset Drive,"
+                        },
+                        {
+                            "addresslocality": "Burnaby",
+                            "postalcode": "V5H 1E7",
+                            "addressregion": "BC",
+                            "streetaddress": "5130 Irving Street,"
+                        },
+                        {
+                            "addresslocality": "White Rock",
+                            "postalcode": "V4B 3V2",
+                            "addressregion": "BC",
+                            "streetaddress": "1371 Blackwood Street,"
+                        },
+                        {
+                            "addresslocality": "Courtenay",
+                            "postalcode": "V9N 0H9",
+                            "addressregion": "BC",
+                            "streetaddress": "1849 & 1876 Riverside,"
+                        },
+                        {
+                            "addresslocality": "Coquitlam",
+                            "postalcode": "V3K 1E3",
+                            "addressregion": "BC",
+                            "streetaddress": "1000 Brunette Avenue,"
+                        },
+                        {
+                            "addresslocality": "Langley",
+                            "postalcode": "V3A 3Y5",
+                            "addressregion": "BC",
+                            "streetaddress": "20230 56Th Ave,"
+                        },
+                        {
+                            "addresslocality": "Kelowna",
+                            "postalcode": "V1W 0A5",
+                            "addressregion": "BC",
+                            "streetaddress": "2160 Mayer Road,"
+                        },
+                        {
+                            "addresslocality": "White Rock",
+                            "postalcode": "V4B 4B2",
+                            "addressregion": "BC",
+                            "streetaddress": "1360 Fir Street,"
+                        },
+                        {
+                            "addresslocality": "Colwood",
+                            "postalcode": "V9B 7E1",
+                            "addressregion": "BC",
+                            "streetaddress": "2676 Wilfert Rd,"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6K 3J3",
+                            "addressregion": "BC",
+                            "streetaddress": "1615 Vine Street,"
+                        },
+                        {
+                            "addresslocality": "Nanaimo",
+                            "postalcode": "V9S 0C3",
+                            "addressregion": "BC",
+                            "streetaddress": "1820 Summerhill Place,"
+                        },
+                        {
+                            "addresslocality": "Vancouver",
+                            "postalcode": "V6E1Z8",
+                            "addressregion": "BC",
+                            "streetaddress": "1250 Bute Street,"
+                        },
+                        {
+                            "addresslocality": "Prince George",
+                            "postalcode": "V2M 0B9",
+                            "addressregion": "BC",
+                            "streetaddress": "1360 Foothills Blvd.,"
+                        },
+                        {
+                            "addresslocality": "Nanaimo",
+                            "postalcode": "V9S 0C3",
+                            "addressregion": "BC",
+                            "streetaddress": "1820 Summerhill Place,"
+                        },
+                        {
+                            "addresslocality": "Victoria",
+                            "postalcode": "V9B 0W4",
+                            "addressregion": "BC",
+                            "streetaddress": "945 Reunion Ave,"
+                        }
+                    ],
+                    "Event": [
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/YelloOnYates-Victoria-LivingRoom1(1).jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Yello on Yates",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/victoria/yello-on-yates/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/140343/23034 - Hudson House18231_HDR.jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Hudson House",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/victoria/hudsonhouse/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/111265/Weidner-Canada_Ridgeview-View_Apartment_Living-Room.jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Ridgeview Village",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/fort-st.-john/ridgeview-village/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/111265/Weidner-Canada_Willow-View-Terrace_Apartment_Closet.jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Willow View",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/dawson-creek/willow-view/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/171133/20250425_Revolve Interiors_Shared Kitchen_252155.jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Revolve",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/vancouver/revolvepc/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/TheConservatoryII-Kelowna-Livingroom.jpg?crop=(0,0,300,200)&cropxunits=300&cropyunits=200&width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - The Conservatory",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/kelowna/the-conservatory/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/BayviewGardens-WhiteRock-1371-Blackwood-Street-LivingRoom.jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Bayview Gardens",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/white-rock/bayview-gardens/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/47679/crossingatbelmont2brlivingroom.jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Crossing at Belmont",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/victoria/crossing-at-belmont/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/93642/CF_Onni_The_Lloyd_25.jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - The Lloyd",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/north-vancouver/1060-churchill-crescent-vancouver-bc-v7p-0c8/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        },
+                        {
+                            "image": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/Horizon-Towers-Apartments-Burnaby-BC-Living-Dining-Kitchen(1).jpg?width=480&quality=90",
+                            "endDate": "2025-06-21",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - Horizon Towers",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.rentcafe.com/apartments/bc/burnaby/horizon-towers/default.aspx?Show3DTour=1",
+                            "startDate": "2025-06-21"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "referrer": "always",
+                            "viewport": "width=device-width, initial-scale=1"
+                        }
+                    ],
+                    "apartmentcomplex": [
+                        {
+                            "name": "Yello On Yates",
+                            "url": "Yello On Yates"
+                        },
+                        {
+                            "name": "The Saint George",
+                            "url": "The Saint George"
+                        },
+                        {
+                            "name": "The Lloyd",
+                            "url": "The Lloyd"
+                        },
+                        {
+                            "name": "Bridgeview, Shoreview, Citadel",
+                            "url": "Bridgeview, Shoreview, Citadel"
+                        },
+                        {
+                            "name": "Hoylake Apartments",
+                            "url": "Hoylake Apartments"
+                        },
+                        {
+                            "name": "Pine Manor",
+                            "url": "Pine Manor"
+                        },
+                        {
+                            "name": "Yaletown 939",
+                            "url": "Yaletown 939"
+                        },
+                        {
+                            "name": "ED. ROYAL",
+                            "url": "ED. ROYAL"
+                        },
+                        {
+                            "name": "Park Village Apartments",
+                            "url": "Park Village Apartments"
+                        },
+                        {
+                            "name": "Horizon Towers",
+                            "url": "Horizon Towers"
+                        },
+                        {
+                            "name": "Ash Manor",
+                            "url": "Ash Manor"
+                        },
+                        {
+                            "name": "Brixton Flats",
+                            "url": "Brixton Flats"
+                        },
+                        {
+                            "name": "Neighbour",
+                            "url": "Neighbour"
+                        },
+                        {
+                            "name": "Hudson House",
+                            "url": "Hudson House"
+                        },
+                        {
+                            "name": "The Beverley",
+                            "url": "The Beverley"
+                        },
+                        {
+                            "name": "Arbour Place",
+                            "url": "Arbour Place"
+                        },
+                        {
+                            "name": "Ridgeview Village",
+                            "url": "Ridgeview Village"
+                        },
+                        {
+                            "name": "Skygreen",
+                            "url": "Skygreen"
+                        },
+                        {
+                            "name": "Willow View",
+                            "url": "Willow View"
+                        },
+                        {
+                            "name": "Christie Point",
+                            "url": "Christie Point"
+                        },
+                        {
+                            "name": "388 Kaslo East Village Apartments",
+                            "url": "388 Kaslo East Village Apartments"
+                        },
+                        {
+                            "name": "Upper Montney Estates",
+                            "url": "Upper Montney Estates"
+                        },
+                        {
+                            "name": "Douglas Lodge",
+                            "url": "Douglas Lodge"
+                        },
+                        {
+                            "name": "The View",
+                            "url": "The View"
+                        },
+                        {
+                            "name": "The Crest",
+                            "url": "The Crest"
+                        },
+                        {
+                            "name": "STANLEY MANOR",
+                            "url": "STANLEY MANOR"
+                        },
+                        {
+                            "name": "Larchway Gardens",
+                            "url": "Larchway Gardens"
+                        },
+                        {
+                            "name": "Revolve",
+                            "url": "Revolve"
+                        },
+                        {
+                            "name": "Crown Isle Boulevard",
+                            "url": "Crown Isle Boulevard"
+                        },
+                        {
+                            "name": "Unfurnished Unit 101 - 290 Bassett Street",
+                            "url": "Unfurnished Unit 101 - 290 Bassett Street"
+                        },
+                        {
+                            "name": "Glades On 55",
+                            "url": "Glades On 55"
+                        },
+                        {
+                            "name": "Panarama Tower",
+                            "url": "Panarama Tower"
+                        },
+                        {
+                            "name": "The Conservatory",
+                            "url": "The Conservatory"
+                        },
+                        {
+                            "name": "Imperial Apartments",
+                            "url": "Imperial Apartments"
+                        },
+                        {
+                            "name": "Hudson Walk One",
+                            "url": "Hudson Walk One"
+                        },
+                        {
+                            "name": "Unfurnished Unit 551 - 1088 Sunset Drive",
+                            "url": "Unfurnished Unit 551 - 1088 Sunset Drive"
+                        },
+                        {
+                            "name": "FERNDALE COURT",
+                            "url": "FERNDALE COURT"
+                        },
+                        {
+                            "name": "Bayview Gardens",
+                            "url": "Bayview Gardens"
+                        },
+                        {
+                            "name": "The Shores",
+                            "url": "The Shores"
+                        },
+                        {
+                            "name": "Braemar Gardens",
+                            "url": "Braemar Gardens"
+                        },
+                        {
+                            "name": "Capstone Apartments",
+                            "url": "Capstone Apartments"
+                        },
+                        {
+                            "name": "Lavida",
+                            "url": "Lavida"
+                        },
+                        {
+                            "name": "LA PLAYA VISTA",
+                            "url": "LA PLAYA VISTA"
+                        },
+                        {
+                            "name": "Marakai",
+                            "url": "Marakai"
+                        },
+                        {
+                            "name": "YORK PLAZA",
+                            "url": "YORK PLAZA"
+                        },
+                        {
+                            "name": "Summerhill Place Apartments",
+                            "url": "Summerhill Place Apartments"
+                        },
+                        {
+                            "name": "Bute Manor",
+                            "url": "Bute Manor"
+                        },
+                        {
+                            "name": "Briarwood III",
+                            "url": "Briarwood III"
+                        },
+                        {
+                            "name": "Summerhill Place",
+                            "url": "Summerhill Place"
+                        },
+                        {
+                            "name": "Crossing At Belmont",
+                            "url": "Crossing At Belmont"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://cdngeneral.rentcafe.com/dmslivecafe/2/13522/YelloOnYates-Victoria-LivingRoom1(1).jpg?width=480&quality=90"
+                        }
+                    ],
+                    "geocoordinates": [
+                        {
+                            "latitude": "48.4254",
+                            "longitude": "-123.3613"
+                        },
+                        {
+                            "latitude": "49.3255",
+                            "longitude": "-123.0696"
+                        },
+                        {
+                            "latitude": "49.3231",
+                            "longitude": "-123.1037"
+                        },
+                        {
+                            "latitude": "49.3158",
+                            "longitude": "-123.0842"
+                        },
+                        {
+                            "latitude": "48.4658",
+                            "longitude": "-123.5007"
+                        },
+                        {
+                            "latitude": "49.2612",
+                            "longitude": "-123.1447"
+                        },
+                        {
+                            "latitude": "49.2763",
+                            "longitude": "-123.1165"
+                        },
+                        {
+                            "latitude": "49.2142",
+                            "longitude": "-122.9242"
+                        },
+                        {
+                            "latitude": "53.9255",
+                            "longitude": "-122.7945"
+                        },
+                        {
+                            "latitude": "49.2277",
+                            "longitude": "-122.9933"
+                        },
+                        {
+                            "latitude": "49.2093",
+                            "longitude": "-122.9192"
+                        },
+                        {
+                            "latitude": "49.2805",
+                            "longitude": "-123.0971"
+                        },
+                        {
+                            "latitude": "48.4269",
+                            "longitude": "-123.3568"
+                        },
+                        {
+                            "latitude": "48.4307",
+                            "longitude": "-123.3634"
+                        },
+                        {
+                            "latitude": "49.2052",
+                            "longitude": "-122.9090"
+                        },
+                        {
+                            "latitude": "49.2290",
+                            "longitude": "-122.9968"
+                        },
+                        {
+                            "latitude": "56.2313",
+                            "longitude": "-120.8194"
+                        },
+                        {
+                            "latitude": "49.8405",
+                            "longitude": "-119.6249"
+                        },
+                        {
+                            "latitude": "55.7703",
+                            "longitude": "-120.2464"
+                        },
+                        {
+                            "latitude": "48.4582",
+                            "longitude": "-123.4242"
+                        },
+                        {
+                            "latitude": "49.2814",
+                            "longitude": "-123.0463"
+                        },
+                        {
+                            "latitude": "55.7605",
+                            "longitude": "-120.2269"
+                        },
+                        {
+                            "latitude": "49.2609",
+                            "longitude": "-123.1391"
+                        },
+                        {
+                            "latitude": "50.6800",
+                            "longitude": "-120.3625"
+                        },
+                        {
+                            "latitude": "49.1798",
+                            "longitude": "-123.9496"
+                        },
+                        {
+                            "latitude": "49.2794",
+                            "longitude": "-123.1332"
+                        },
+                        {
+                            "latitude": "49.2642",
+                            "longitude": "-123.1612"
+                        },
+                        {
+                            "latitude": "49.253",
+                            "longitude": "-123.0818"
+                        },
+                        {
+                            "latitude": "49.7156",
+                            "longitude": "-124.9629"
+                        },
+                        {
+                            "latitude": "49.4973",
+                            "longitude": "-119.6027"
+                        },
+                        {
+                            "latitude": "49.1032",
+                            "longitude": "-122.6679"
+                        },
+                        {
+                            "latitude": "49.2319",
+                            "longitude": "-123.0062"
+                        },
+                        {
+                            "latitude": "49.9016",
+                            "longitude": "-119.4534"
+                        },
+                        {
+                            "latitude": "49.2051",
+                            "longitude": "-122.9077"
+                        },
+                        {
+                            "latitude": "48.4307",
+                            "longitude": "-123.3634"
+                        },
+                        {
+                            "latitude": "49.8959",
+                            "longitude": "-119.4979"
+                        },
+                        {
+                            "latitude": "49.226",
+                            "longitude": "-122.9898"
+                        },
+                        {
+                            "latitude": "49.0268",
+                            "longitude": "-122.8066"
+                        },
+                        {
+                            "latitude": "49.6833",
+                            "longitude": "-124.9871"
+                        },
+                        {
+                            "latitude": "49.2372",
+                            "longitude": "-122.8667"
+                        },
+                        {
+                            "latitude": "49.1043",
+                            "longitude": "-122.6618"
+                        },
+                        {
+                            "latitude": "49.8754",
+                            "longitude": "-119.4403"
+                        },
+                        {
+                            "latitude": "49.0268",
+                            "longitude": "-122.7982"
+                        },
+                        {
+                            "latitude": "48.4463",
+                            "longitude": "-123.4707"
+                        },
+                        {
+                            "latitude": "49.2714",
+                            "longitude": "-123.1578"
+                        },
+                        {
+                            "latitude": "49.1828",
+                            "longitude": "-123.9779"
+                        },
+                        {
+                            "latitude": "49.281",
+                            "longitude": "-123.1338"
+                        },
+                        {
+                            "latitude": "53.9117",
+                            "longitude": "-122.8104"
+                        },
+                        {
+                            "latitude": "49.1828",
+                            "longitude": "-123.9779"
+                        },
+                        {
+                            "latitude": "48.4372",
+                            "longitude": "-123.511"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments & Condos for Rent in Liberty Village, Toronto ...",
+                "htmlTitle": "<b>Apartments</b> &amp; <b>Condos</b> for <b>Rent</b> in Liberty Village, Toronto ...",
+                "link": "https://libertyvillagetoronto.com/liberty-village-condos-for-rent",
+                "displayLink": "libertyvillagetoronto.com",
+                "snippet": "1 day ago ... Condo rental listings in Liberty Village updated hourly. Check back often for new additions. They go fast!",
+                "htmlSnippet": "1 day ago <b>...</b> Condo <b>rental</b> listings in Liberty Village updated hourly. Check back often for new additions. They go fast!",
+                "formattedUrl": "https://libertyvillagetoronto.com/liberty-village-condos-for-rent",
+                "htmlFormattedUrl": "https://libertyvillagetoronto.com/liberty-village-condos-for-<b>rent</b>",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7PIH9v0wMzSdXjnJpT2RHhD9PC9y-bZZzCxLOXOB8aY8IOmBC3pdraj4&s",
+                            "width": "318",
+                            "height": "159"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "cdp-version": "1.5.0",
+                            "viewport": "width=device-width, initial-scale=1",
+                            "msapplication-tileimage": "https://media.libertyvillagetoronto.com/wp-content/uploads/2021/07/11014459/cropped-Untitled-design-17-270x270.png"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://media.libertyvillagetoronto.com/wp-content/uploads/2021/07/11014458/LVT-Website-Logo-1.png"
+                        }
+                    ],
+                    "wpheader": [
+                        {
+                            "headline": "Liberty Village Toronto | Your Online Neighbourhood Guide"
+                        }
+                    ],
+                    "sitenavigationelement": [
+                        {
+                            "name": "Home",
+                            "url": "Home"
+                        },
+                        {
+                            "name": "Liberty Village Real Estate: Condos, Lofts & Townhomes For Sale",
+                            "url": "Liberty Village Real Estate: Condos, Lofts & Townhomes For Sale"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "1 Bedroom Apartments For Rent in Vancouver BC - 658 Rentals ...",
+                "htmlTitle": "<b>1 Bedroom Apartments</b> For <b>Rent</b> in <b>Vancouver</b> BC - 658 <b>Rentals</b> ...",
+                "link": "https://www.apartments.com/vancouver-bc/1-bedrooms/",
+                "displayLink": "www.apartments.com",
+                "snippet": "1 day ago ... Check out the photos and floor plans to envision how you'll make your new one bedroom apartment your own. With more than 1 million currently available rentals ...",
+                "htmlSnippet": "1 day ago <b>...</b> Check <b>out</b> the photos and floor plans to envision how you&#39;ll make your new <b>one bedroom apartment</b> your own. With more than <b>1</b> million currently <b>available rentals</b>&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/vancouver-bc/1-bedrooms/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/<b>vancouver</b>-bc/<b>1</b>-<b>bedroom</b>s/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrTZEpfttXTKF8J-a8L9-p5dpwQrZkF01w1u2I8cSh0eM_MzP3RzHhxklj&s",
+                            "width": "300",
+                            "height": "168"
+                        }
+                    ],
+                    "Event": [
+                        {
+                            "image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/wesley-place-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - Wesley Place",
+                            "description": "Wesley Place Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/wesley-place-vancouver-bc/1lbs0m6/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/gBGZ7cyzvtcql7OFM7O0RS5x5BAjlvFUWx4fLkj9KNY/117/8675-french-vancouver-bc-lobby.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 8675 French",
+                            "description": "8675 French Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/8675-french-vancouver-bc/bq48xeb/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/QzUAXn2LQSQDAPuf2mEVLkyyy4pegtBSszd8cWsv_wU/117/1770-pendrell-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 1770 Pendrell",
+                            "description": "1770 Pendrell Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/1770-pendrell-vancouver-bc/820jtn2/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/_1Kql6MC2Wck-Zj6J5cWOwagLptiuPV4eSfV0j747bQ/117/1326-west-13th-vancouver-bc-lobby.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 1326 West 13th",
+                            "description": "1326 West 13th Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/1326-west-13th-vancouver-bc/qkp50qz/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/XTj9zTAAPZd4s1a_g6lP72K3LCLobL8huvXRRwsMZ4I/117/3583-kingsway-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 3583 Kingsway",
+                            "description": "3583 Kingsway Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/3583-kingsway-vancouver-bc/sfetq76/#threedTours",
+                            "startDate": "2025-06-22"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "1 Bedroom Apartments For Rent in Vancouver BC - 658 Rentals | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "1 Bedroom Apartments For Rent in Vancouver BC - 658 Rentals | Apartments.com",
+                            "og:updated_time": "6/22/2025 10:41:19 AM",
+                            "og:description": "Find your ideal 1 bedroom apartment in Vancouver, BC. Discover 658 spacious units for rent with modern amenities and a variety of floor plans to fit your lifestyle.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/vancouver-bc/1-bedrooms/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "vancouver, BC apartments / housing for rent - craigslist",
+                "htmlTitle": "<b>vancouver</b>, BC <b>apartments</b> / <b>housing</b> for <b>rent</b> - craigslist",
+                "link": "https://vancouver.craigslist.org/search/apa",
+                "displayLink": "vancouver.craigslist.org",
+                "snippet": "Jun 8, 2025 ... Brand new one bedroom with parking at Central Park House for rent ... Studio + Parking near Oakridge & Queen Elizabeth Park — Available Now. $2,600.",
+                "htmlSnippet": "Jun 8, 2025 <b>...</b> Brand new <b>one bedroom</b> with <b>parking</b> at Central Park House for <b>rent</b> ... <b>Studio</b> + <b>Parking</b> near Oakridge &amp; Queen Elizabeth Park — <b>Available Now</b>. $2,600.",
+                "formattedUrl": "https://vancouver.craigslist.org/search/apa",
+                "htmlFormattedUrl": "https://<b>vancouver</b>.craigslist.org/search/apa",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "twitter:card": "preview",
+                            "og:site_name": "craigslist",
+                            "viewport": "width=device-width,initial-scale=1",
+                            "og:title": "vancouver, BC apartments / housing for rent - craigslist",
+                            "og:url": "https://vancouver.craigslist.org/search/apa",
+                            "og:description": "vancouver, BC apartments / housing for rent - craigslist"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Summerfield at Morgan Metro - 8100 Gibbs Way, Hyattsville, MD ...",
+                "htmlTitle": "Summerfield at Morgan Metro - 8100 Gibbs Way, Hyattsville, MD ...",
+                "link": "https://www.redfin.com/MD/Hyattsville/Summerfield-at-Morgan-Metro/apartment/23209840",
+                "displayLink": "www.redfin.com",
+                "snippet": "4 days ago ... steps away from Morgan Boulevard Metro Station- Blue/Grey line Experience luxurious living at Summerfield at Morgan Metro in Hyattsville, Maryland.",
+                "htmlSnippet": "4 days ago <b>...</b> steps away from Morgan Boulevard Metro Station- Blue/Grey line Experience luxurious living at Summerfield at Morgan Metro in Hyattsville, Maryland.",
+                "formattedUrl": "https://www.redfin.com/MD/Hyattsville/Summerfield-at.../23209840",
+                "htmlFormattedUrl": "https://www.redfin.com/MD/Hyattsville/Summerfield-at.../23209840",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuICTRYEIO3chGijCN6sfIe4GO9qSFsXPu44R0m5KRg1KDWLrvR6R1wA&s=0",
+                            "width": "149",
+                            "height": "99"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://ssl.cdn-redfin.com/photo/rent/b57119c1-b043-4079-8292-7cc38ac5fdec/bigphoto/0_2.jpg",
+                            "copyright": "Redfin",
+                            "og:type": "redfinrealestate:rental",
+                            "home_url": "https://www.redfin.com",
+                            "viewport": "width=device-width, initial-scale=1, minimum-scale=1, user-scalable=0, maximum-scale=1",
+                            "author": "Redfin",
+                            "og:title": "Summerfield at Morgan Metro | 8100 Gibbs Way, Hyattsville, MD 20785 - 1-2 beds/1-2.5 baths",
+                            "classification": "Business: Real Estate",
+                            "category": "Business: Real Estate"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://ssl.cdn-redfin.com/photo/rent/b57119c1-b043-4079-8292-7cc38ac5fdec/bigphoto/0_2.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "vancouver apartments / housing for rent - craigslist",
+                "htmlTitle": "<b>vancouver apartments</b> / <b>housing</b> for <b>rent</b> - craigslist",
+                "link": "https://vancouver.craigslist.org/search/van/apa",
+                "displayLink": "vancouver.craigslist.org",
+                "snippet": "7 days ago ... refresh the page. craigslist. Apartments / Housing For Rent in Vancouver, BC - Vancouver. see also. Availability ...",
+                "htmlSnippet": "7 days ago <b>...</b> refresh the page. craigslist. <b>Apartments</b> / <b>Housing</b> For <b>Rent</b> in <b>Vancouver</b>, BC - <b>Vancouver</b>. see also. <b>Availability</b>&nbsp;...",
+                "formattedUrl": "https://vancouver.craigslist.org/search/van/apa",
+                "htmlFormattedUrl": "https://<b>vancouver</b>.craigslist.org/search/van/apa",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "twitter:card": "preview",
+                            "og:site_name": "craigslist",
+                            "viewport": "width=device-width,initial-scale=1",
+                            "og:title": "vancouver apartments / housing for rent - craigslist",
+                            "og:url": "https://vancouver.craigslist.org/search/van/apa",
+                            "og:description": "vancouver apartments / housing for rent - craigslist"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "One bedroom & bath. Langford @ 2629 Millstream - unfurnished in a ...",
+                "htmlTitle": "<b>One bedroom</b> &amp; bath. Langford @ 2629 Millstream - unfurnished in a ...",
+                "link": "https://www.facebook.com/groups/1299877280408871/posts/one-bedroom-bathlangford-2629-millstream-unfurnished-in-a-brand-new-buildingconv/2279349622461627/",
+                "displayLink": "www.facebook.com",
+                "snippet": "Jun 12, 2025 ... → Rent $2000 includes parking *Tenant pays utilities & Wifi → Security deposit 1/2 mo rent Available Now ✨Virtual Showings from the ...",
+                "htmlSnippet": "Jun 12, 2025 <b>...</b> → <b>Rent $2000</b> includes <b>parking</b> *Tenant pays utilities &amp; Wifi → Security deposit <b>1</b>/2 mo <b>rent Available Now</b> ✨Virtual Showings from the&nbsp;...",
+                "formattedUrl": "https://www.facebook.com/groups/...bedroom.../2279349622461627/",
+                "htmlFormattedUrl": "https://www.facebook.com/groups/...<b>bedroom</b>.../2279349622461627/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3tmRcYUZWoutu0uBS2Z68GCo2RN5ojAqdYAezOOaafEkvQKYkZ20P3A&s=0",
+                            "width": "150",
+                            "height": "100"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "apple-itunes-app": "app-id=284882215, app-argument=fb://story/?graphqlid=UzpfSTEwMDAwMTcwODcyMDA4NzpWSzoyMjc5MzQ5NjIyNDYxNjI3",
+                            "og:image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=23947403428233280",
+                            "theme-color": "#FFFFFF",
+                            "twitter:card": "summary",
+                            "al:android:package": "com.facebook.katana",
+                            "al:ios:url": "fb://story/?graphqlid=UzpfSTEwMDAwMTcwODcyMDA4NzpWSzoyMjc5MzQ5NjIyNDYxNjI3",
+                            "og:description": "One bedroom & bath.\nLangford  @ 2629 Millstream - unfurnished in a brand new building.\nConveniently located this luxury condo could be your next home. \nContemporary rental offers 560 sq ft of living...",
+                            "al:ios:app_store_id": "284882215",
+                            "twitter:image": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=23947403428233280",
+                            "twitter:image:alt": "One bedroom & bath.\nLangford  @ 2629 Millstream - unfurnished in a brand new building.\nConveniently located this luxury condo could be your next home. \nContemporary rental offers 560 sq ft of living & all the comforts of home plus loads of building amenities.\n\n→ Rent    $2000 includes parking *Tenant pays utilities & Wifi\n→ Security deposit 1/2 mo rent\n\nAvailable Now\n✨Virtual Showings from the comfort of your couch...",
+                            "twitter:site": "@facebookapp",
+                            "application-name": "Facebook Groups",
+                            "og:type": "video.other",
+                            "og:image:alt": "One bedroom & bath.\nLangford  @ 2629 Millstream - unfurnished in a brand new building.\nConveniently located this luxury condo could be your next home. \nContemporary rental offers 560 sq ft of living & all the comforts of home plus loads of building amenities.\n\n→ Rent    $2000 includes parking *Tenant pays utilities & Wifi\n→ Security deposit 1/2 mo rent\n\nAvailable Now\n✨Virtual Showings from the comfort of your couch (please ask for the link & application) or on site by appointment: Mon-Fri 1-4PM  \n✨Find out if this one is right for you.\n✨Prospective tenants are pre-qualified prior to onsite showings by filling out an application.\n\nNS/NP and maximum 2 persons\n\nRequirements:\n* Tenant must obtain tenancy insurance\n* References will be requested \n* Proof of income/employment\n* Half-month security deposit\n\nAmenities:\n\n→ outdoor landscaped terrace & BBQ area, seating etc\n→ all appliances\n→ 3 level security \n→ secure parking\n→ central air & heat\n\nPerfectly situated in central Langford, you’re ju",
+                            "twitter:title": "One bedroom & bath.\nLangford  @ 2629 Millstream - unfurnished in a...",
+                            "al:ios:app_name": "Facebook",
+                            "application-url": "https://www.facebook.com/groups/",
+                            "og:title": "One bedroom & bath.\nLangford  @ 2629 Millstream - unfurnished in a brand new building.\nConveniently located this luxury condo could be your next home. \nContemporary rental offers 560 sq ft of living & all the comforts of home plus loads of building amenities.\n\n→ Rent    $2000 includes parking *Tenant pays utilities & Wifi\n→ Security deposit 1/2 mo rent\n\nAvailable Now\n✨Virtual Showings from the comfort of your couch (please ask for the link & application) or on site by appointment: Mon-Fri 1-4PM  \n✨Find out if this one is right for you.\n✨Prospective tenants are pre-qualified prior to onsite showings by filling out an application.\n\nNS/NP and maximum 2 persons\n\nRequirements:\n* Tenant must obtain tenancy insurance\n* References will be requested \n* Proof of income/employment\n* Half-month security deposit\n\nAmenities:\n\n→ outdoor landscaped terrace & BBQ area, seating etc\n→ all appliances\n→ 3 level security \n→ secure parking\n→ central air & heat\n\nPerfectly situated in central Langford, you’re ju",
+                            "google": "notranslate",
+                            "al:android:url": "fb://native_post/UzpfSTEwMDAwMTcwODcyMDA4NzpWSzoyMjc5MzQ5NjIyNDYxNjI3",
+                            "referrer": "origin-when-crossorigin",
+                            "viewport": "width=device-width, initial-scale=1",
+                            "twitter:description": "One bedroom & bath.\nLangford  @ 2629 Millstream - unfurnished in a brand new building.\nConveniently located this luxury condo could be your next home. \nContemporary rental offers 560 sq ft of living...",
+                            "og:locale": "en_US",
+                            "fb-version": "464.0.0.0.109:2844",
+                            "og:url": "https://www.facebook.com/groups/1299877280408871/posts/one-bedroom-bathlangford-2629-millstream-unfurnished-in-a-brand-new-buildingconv/2279349622461627/",
+                            "al:android:app_name": "Facebook"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=23947403434899946"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "vancouver, BC apartments / housing for rent \"cambie\" - craigslist",
+                "htmlTitle": "<b>vancouver</b>, BC <b>apartments</b> / <b>housing</b> for <b>rent</b> &quot;cambie&quot; - craigslist",
+                "link": "https://vancouver.craigslist.org/search/apa?query=cambie",
+                "displayLink": "vancouver.craigslist.org",
+                "snippet": "5 days ago ... Large 862 Sq-ft, 1 Bedroom Rental Homes in Oakridge Available Now. $2,250 ... Studio + Parking near Oakridge & Queen Elizabeth Park — Available Now.",
+                "htmlSnippet": "5 days ago <b>...</b> Large 862 Sq-ft, <b>1 Bedroom Rental Homes</b> in Oakridge <b>Available Now</b>. $2,250 ... <b>Studio</b> + <b>Parking</b> near Oakridge &amp; Queen Elizabeth Park — <b>Available Now</b>.",
+                "formattedUrl": "https://vancouver.craigslist.org/search/apa?query=cambie",
+                "htmlFormattedUrl": "https://<b>vancouver</b>.craigslist.org/search/apa?query=cambie",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "twitter:card": "preview",
+                            "og:site_name": "craigslist",
+                            "viewport": "width=device-width,initial-scale=1",
+                            "og:title": "vancouver, BC apartments / housing for rent \"cambie\" - craigslist",
+                            "og:url": "https://vancouver.craigslist.org/search/apa?query=cambie",
+                            "og:description": "vancouver, BC apartments / housing for rent \"cambie\" - craigslist"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Find Your Perfect Rental - TJ Guyer Property Management",
+                "htmlTitle": "Find Your Perfect <b>Rental</b> - TJ Guyer Property Management",
+                "link": "https://www.tjguyer.com/available-properties",
+                "displayLink": "www.tjguyer.com",
+                "snippet": "Apr 8, 2025 ... ... , and electric. Available NOW. View Details Apply Now · 1 / 12. 302 South Street - #8, Centralia, WA 98531. RENT. $925. 1 bed. 1 bath. 540 sqft. STATUS: ...",
+                "htmlSnippet": "Apr 8, 2025 <b>...</b> ... , and electric. <b>Available NOW</b>. View Details Apply <b>Now</b> &middot; <b>1</b> / 12. 302 South Street - #8, Centralia, WA 98531. <b>RENT</b>. $925. <b>1 bed</b>. <b>1</b> bath. 540 sqft. STATUS:&nbsp;...",
+                "formattedUrl": "https://www.tjguyer.com/available-properties",
+                "htmlFormattedUrl": "https://www.tjguyer.com/<b>available</b>-properties",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMZcgz3wDYbfRhzaAVKmn_u6pwa1R9E54fcDAxtgSU9hIiF-cLMG1YjO0&s",
+                            "width": "320",
+                            "height": "157"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://lirp.cdn-website.com/437a49af/dms3rep/multi/opt/logo-1920w.png",
+                            "og:type": "website",
+                            "twitter:card": "summary",
+                            "twitter:title": "Find Your Perfect Rental - TJ Guyer Property Management",
+                            "viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5,viewport-fit=cover",
+                            "apple-mobile-web-app-capable": "yes",
+                            "twitter:description": "Discover a wide selection of quality rental properties in Southwest Washington with TJ Guyer Property Management. Find your perfect home today.",
+                            "og:title": "Find Your Perfect Rental - TJ Guyer Property Management",
+                            "og:url": "https://www.tjguyer.com/available-properties",
+                            "og:description": "Discover a wide selection of quality rental properties in Southwest Washington with TJ Guyer Property Management. Find your perfect home today.",
+                            "twitter:image": "https://lirp.cdn-website.com/437a49af/dms3rep/multi/opt/logo-1920w.png"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://lirp.cdn-website.com/437a49af/dms3rep/multi/opt/logo-1920w.png"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

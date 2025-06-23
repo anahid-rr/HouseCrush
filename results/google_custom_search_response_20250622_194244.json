@@ -1,0 +1,704 @@
+{
+    "kind": "customsearch#search",
+    "url": {
+        "type": "application/json",
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+        "request": [
+            {
+                "title": "Google Custom Search - rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                "totalResults": "157000",
+                "searchTerms": "rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                "count": 10,
+                "startIndex": 1,
+                "language": "lang_en",
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "active",
+                "cx": "67fb538571a9346de",
+                "sort": "date"
+            }
+        ],
+        "nextPage": [
+            {
+                "title": "Google Custom Search - rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                "totalResults": "157000",
+                "searchTerms": "rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                "count": 10,
+                "startIndex": 11,
+                "language": "lang_en",
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "active",
+                "cx": "67fb538571a9346de",
+                "sort": "date"
+            }
+        ]
+    },
+    "context": {
+        "title": "House crush"
+    },
+    "searchInformation": {
+        "searchTime": 0.339276,
+        "formattedSearchTime": "0.34",
+        "totalResults": "157000",
+        "formattedTotalResults": "157,000"
+    },
+    "items": [
+        {
+            "kind": "customsearch#result",
+            "title": "1 Bedroom Apartments For Rent in Vancouver BC - 658 Rentals ...",
+            "htmlTitle": "<b>1 Bedroom Apartments</b> For <b>Rent</b> in <b>Vancouver</b> BC - 658 <b>Rentals</b> ...",
+            "link": "https://www.apartments.com/vancouver-bc/1-bedrooms/",
+            "displayLink": "www.apartments.com",
+            "snippet": "1 day ago ... 1 Bedroom Apartments for Rent in Vancouver BC - 658 Rentals. Map. Vancouver ... 1 Bed / Baths Commute Home Type Specialty Housing Pets Move-In Date. Price.",
+            "htmlSnippet": "1 day ago <b>...</b> <b>1 Bedroom Apartments</b> for <b>Rent</b> in <b>Vancouver</b> BC - 658 <b>Rentals</b>. Map. <b>Vancouver</b> ... <b>1 Bed</b> / Baths Commute Home Type Specialty <b>Housing</b> Pets Move-In Date. Price.",
+            "formattedUrl": "https://www.apartments.com/vancouver-bc/1-bedrooms/",
+            "htmlFormattedUrl": "https://www.<b>apartments</b>.com/<b>vancouver</b>-bc/<b>1-bedroom</b>s/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrTZEpfttXTKF8J-a8L9-p5dpwQrZkF01w1u2I8cSh0eM_MzP3RzHhxklj&s",
+                        "width": "300",
+                        "height": "168"
+                    }
+                ],
+                "Event": [
+                    {
+                        "image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/wesley-place-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-22",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - Wesley Place",
+                        "description": "Wesley Place Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/wesley-place-vancouver-bc/1lbs0m6/#threedTours",
+                        "startDate": "2025-06-22"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/gBGZ7cyzvtcql7OFM7O0RS5x5BAjlvFUWx4fLkj9KNY/117/8675-french-vancouver-bc-lobby.jpg?p=1",
+                        "endDate": "2025-06-22",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - 8675 French",
+                        "description": "8675 French Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/8675-french-vancouver-bc/bq48xeb/#threedTours",
+                        "startDate": "2025-06-22"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/QzUAXn2LQSQDAPuf2mEVLkyyy4pegtBSszd8cWsv_wU/117/1770-pendrell-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-22",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - 1770 Pendrell",
+                        "description": "1770 Pendrell Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/1770-pendrell-vancouver-bc/820jtn2/#threedTours",
+                        "startDate": "2025-06-22"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/_1Kql6MC2Wck-Zj6J5cWOwagLptiuPV4eSfV0j747bQ/117/1326-west-13th-vancouver-bc-lobby.jpg?p=1",
+                        "endDate": "2025-06-22",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - 1326 West 13th",
+                        "description": "1326 West 13th Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/1326-west-13th-vancouver-bc/qkp50qz/#threedTours",
+                        "startDate": "2025-06-22"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/XTj9zTAAPZd4s1a_g6lP72K3LCLobL8huvXRRwsMZ4I/117/3583-kingsway-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-22",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - 3583 Kingsway",
+                        "description": "3583 Kingsway Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/3583-kingsway-vancouver-bc/sfetq76/#threedTours",
+                        "startDate": "2025-06-22"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg",
+                        "og:type": "article",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "1 Bedroom Apartments For Rent in Vancouver BC - 658 Rentals | Apartments.com",
+                        "og:site_name": "Apartments.com",
+                        "handheldfriendly": "true",
+                        "og:title": "1 Bedroom Apartments For Rent in Vancouver BC - 658 Rentals | Apartments.com",
+                        "og:updated_time": "6/22/2025 10:41:19 AM",
+                        "og:description": "Find your ideal 1 bedroom apartment in Vancouver, BC. Discover 658 spacious units for rent with modern amenities and a variety of floor plans to fit your lifestyle.",
+                        "twitter:creator": "@apartmentscom",
+                        "twitter:image": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg",
+                        "referrer": "no-referrer-when-downgrade",
+                        "fb:app_id": "739299276152207",
+                        "viewport": "width=device-width, height=device-height, initial-scale=1",
+                        "og:url": "https://www.apartments.com/vancouver-bc/1-bedrooms/",
+                        "format-detection": "telephone=no"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Apartments For Rent Under $1000 in Vancouver WA | Zillow",
+            "htmlTitle": "<b>Apartments</b> For <b>Rent</b> Under $1000 in <b>Vancouver</b> WA | Zillow",
+            "link": "https://www.zillow.com/vancouver-wa/apartments-under-1000/",
+            "displayLink": "www.zillow.com",
+            "snippet": "4 days ago ... Search by Bedroom Size · Vancouver 1 Bedroom Apartments · Vancouver 2 Bedroom Apartments · Vancouver 3 Bedroom Apartments ...",
+            "htmlSnippet": "4 days ago <b>...</b> Search by Bedroom Size &middot; <b>Vancouver 1 Bedroom Apartments</b> &middot; <b>Vancouver</b> 2 Bedroom <b>Apartments</b> &middot; <b>Vancouver</b> 3 Bedroom <b>Apartments</b>&nbsp;...",
+            "formattedUrl": "https://www.zillow.com/vancouver-wa/apartments-under-1000/",
+            "htmlFormattedUrl": "https://www.zillow.com/<b>vancouver</b>-wa/<b>apartments</b>-under-1000/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ1FEwraJMqih1KvWJquP_UtfZwLw0nvuUpHJYoDg_mv7bubWR_HWzjZM&s",
+                        "width": "260",
+                        "height": "194"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "msapplication-tilecolor": "#3366b8",
+                        "msapplication-config": "none",
+                        "og:image": "/apple-touch-icon.png",
+                        "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                        "og:site_name": "Zillow",
+                        "author": "Zillow, Inc.",
+                        "og:title": "Apartments For Rent Under $1000 in Vancouver WA | Zillow",
+                        "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                        "og:description": "Find apartments for rent under $1,000 in Vancouver WA on Zillow. Check availability, photos, floor plans, phone number, reviews, map or get in touch with the property manager.",
+                        "referrer": "always",
+                        "next-head-count": "56",
+                        "fb:app_id": "172285552816089",
+                        "google-signin-cookiepolicy": "single_host_origin",
+                        "apple-mobile-web-app-status-bar-style": "black-translucent",
+                        "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                        "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                        "apple-mobile-web-app-capable": "yes",
+                        "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                        "google-signin-scope": "openid profile email",
+                        "pod-group-name": "web-platform-render-search-page-sub-app",
+                        "og:url": "https://www.zillow.com/vancouver-wa/apartments-under-1000/",
+                        "format-detection": "telephone=no"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://photos.zillowstatic.com/fp/bc6609876346c380857170267378c200-p_e.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Apartments for rent near Burrard Station - Vancouver BC ...",
+            "htmlTitle": "<b>Apartments</b> for <b>rent</b> near Burrard Station - <b>Vancouver</b> BC ...",
+            "link": "https://www.apartments.com/transit/bc/vancouver/burrard-station/sbky2b4/",
+            "displayLink": "www.apartments.com",
+            "snippet": "6 days ago ... See all 726 apartments for rent near Burrard Station. Each Apartments.com listing has verified information like property rating, floor plan, ...",
+            "htmlSnippet": "6 days ago <b>...</b> See all 726 <b>apartments</b> for <b>rent</b> near Burrard Station. Each <b>Apartments</b>.com listing has verified information like property rating, floor plan,&nbsp;...",
+            "formattedUrl": "https://www.apartments.com/transit/bc/vancouver/burrard-station/sbky2b4/",
+            "htmlFormattedUrl": "https://www.<b>apartments</b>.com/transit/bc/<b>vancouver</b>/burrard-station/sbky2b4/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN-QpJh81kmejhF7TbxUmyAMLNeaohx32xvLZRMdz2r6Yj507HUfyhTjhg&s",
+                        "width": "275",
+                        "height": "183"
+                    }
+                ],
+                "Event": [
+                    {
+                        "image": "https://images1.apartments.com/i2/ZSkDXpZhNtIHxHZaZ1ctsPkyHgVHpPfZUSPsGX31taU/117/barafield-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-18",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - Barafield",
+                        "description": "Barafield Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/barafield-vancouver-bc/h87z8q3/#threedTours",
+                        "startDate": "2025-06-18"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/kUTeinlAZjNChNzsYkboVZ23E3WikAhG5UpqF06QTwU/117/the-glenmore-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-18",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - The Glenmore",
+                        "description": "The Glenmore Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/the-glenmore-vancouver-bc/e5h3e7m/#threedTours",
+                        "startDate": "2025-06-18"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/e5Yj-aK5q8WZ1Fno7Fe0H_uP2fhiQE5aqq7co3wrpsc/117/landis-residences-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-18",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - Landis Residences",
+                        "description": "Landis Residences Apartments for rent to view",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/landis-residences-vancouver-bc/lmpq6tf/#threedTours",
+                        "startDate": "2025-06-18"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/wesley-place-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-18",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - Wesley Place",
+                        "description": "Wesley Place Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/wesley-place-vancouver-bc/1lbs0m6/#threedTours",
+                        "startDate": "2025-06-18"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/QzUAXn2LQSQDAPuf2mEVLkyyy4pegtBSszd8cWsv_wU/117/1770-pendrell-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-18",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - 1770 Pendrell",
+                        "description": "1770 Pendrell Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/1770-pendrell-vancouver-bc/820jtn2/#threedTours",
+                        "startDate": "2025-06-18"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://images1.apartments.com/i2/e5Yj-aK5q8WZ1Fno7Fe0H_uP2fhiQE5aqq7co3wrpsc/117/image.jpg",
+                        "og:type": "article",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Apartments for rent near Burrard Station - Vancouver BC | Apartments.com",
+                        "og:site_name": "Apartments.com",
+                        "handheldfriendly": "true",
+                        "og:title": "Apartments for rent near Burrard Station - Vancouver BC | Apartments.com",
+                        "og:updated_time": "6/18/2025 10:40:11 PM",
+                        "og:description": "See all 726 apartments for rent near Burrard Station. Each Apartments.com listing has verified information like property rating, floor plan, school and neighborhood data, amenities, expenses, policies and of course, up to date rental rates and availability.",
+                        "twitter:creator": "@apartmentscom",
+                        "twitter:image": "https://images1.apartments.com/i2/e5Yj-aK5q8WZ1Fno7Fe0H_uP2fhiQE5aqq7co3wrpsc/117/image.jpg",
+                        "referrer": "no-referrer-when-downgrade",
+                        "fb:app_id": "739299276152207",
+                        "viewport": "width=device-width, height=device-height, initial-scale=1",
+                        "og:url": "https://www.apartments.com/transit/bc/vancouver/burrard-station/sbky2b4/",
+                        "format-detection": "telephone=no"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://images1.apartments.com/i2/e5Yj-aK5q8WZ1Fno7Fe0H_uP2fhiQE5aqq7co3wrpsc/117/image.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Apartments for Rent Near Vancouver Community College ...",
+            "htmlTitle": "<b>Apartments</b> for <b>Rent</b> Near <b>Vancouver</b> Community College ...",
+            "link": "https://www.apartments.com/off-campus-housing/bc/vancouver/vancouver-community-college-downtown/",
+            "displayLink": "www.apartments.com",
+            "snippet": "6 days ago ... See all 1171 apartments for rent near Vancouver Community College Downtown - Vancouver, BC (University). Each Apartments.com listing has verified ...",
+            "htmlSnippet": "6 days ago <b>...</b> See all 1171 <b>apartments</b> for <b>rent</b> near <b>Vancouver</b> Community College Downtown - <b>Vancouver</b>, BC (University). Each <b>Apartments</b>.com listing has verified&nbsp;...",
+            "formattedUrl": "https://www.apartments.com/.../vancouver/vancouver-community-college-d...",
+            "htmlFormattedUrl": "https://www.<b>apartments</b>.com/.../<b>vancouver</b>/<b>vancouver</b>-community-college-d...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-esT0O6_2E_CZ60fqjWQ4_8X6mskc2hflnFvEZWv9g_NgBaOAlegkY3M&s",
+                        "width": "222",
+                        "height": "227"
+                    }
+                ],
+                "Event": [
+                    {
+                        "image": "https://images1.apartments.com/i2/_1Kql6MC2Wck-Zj6J5cWOwagLptiuPV4eSfV0j747bQ/117/1326-west-13th-vancouver-bc-lobby.jpg?p=1",
+                        "endDate": "2025-06-19",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - 1326 West 13th",
+                        "description": "1326 West 13th Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/1326-west-13th-vancouver-bc/qkp50qz/#threedTours",
+                        "startDate": "2025-06-19"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/aQe5BfX41LlRj8YhlX0fUOITGxFwyvj20B2t23OYUh8/117/metropolitan-towers-vancouver-bc-interior-photo.jpg?p=1",
+                        "endDate": "2025-06-19",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - Metropolitan Towers",
+                        "description": "Metropolitan Towers Apartments for rent to",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/metropolitan-towers-vancouver-bc/ldp2smf/#threedTours",
+                        "startDate": "2025-06-19"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/wesley-place-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-19",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - Wesley Place",
+                        "description": "Wesley Place Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/wesley-place-vancouver-bc/1lbs0m6/#threedTours",
+                        "startDate": "2025-06-19"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/e5Yj-aK5q8WZ1Fno7Fe0H_uP2fhiQE5aqq7co3wrpsc/117/landis-residences-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-19",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - Landis Residences",
+                        "description": "Landis Residences Apartments for rent to view",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/landis-residences-vancouver-bc/lmpq6tf/#threedTours",
+                        "startDate": "2025-06-19"
+                    },
+                    {
+                        "image": "https://images1.apartments.com/i2/QzUAXn2LQSQDAPuf2mEVLkyyy4pegtBSszd8cWsv_wU/117/1770-pendrell-vancouver-bc-building-photo.jpg?p=1",
+                        "endDate": "2025-06-19",
+                        "eventStatus": "http://schema.org/EventScheduled",
+                        "name": "3D Tour - 1770 Pendrell",
+                        "description": "1770 Pendrell Apartments for rent to view a 3D tour.",
+                        "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                        "url": "https://www.apartments.com/1770-pendrell-vancouver-bc/820jtn2/#threedTours",
+                        "startDate": "2025-06-19"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/image.jpg",
+                        "og:type": "article",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Apartments for Rent Near Vancouver Community College Downtown - Vancouver, BC Student Housing | Apartments.com",
+                        "og:site_name": "Apartments.com",
+                        "handheldfriendly": "true",
+                        "og:title": "Apartments for Rent Near Vancouver Community College Downtown - Vancouver, BC Student Housing | Apartments.com",
+                        "og:updated_time": "6/19/2025 11:18:31 PM",
+                        "og:description": "See all 1,171 apartments for rent near Vancouver Community College Downtown - Vancouver, BC (University). Each Apartments.com listing has verified information like property rating, floor plan, school and neighborhood data, amenities, expenses, policies and of course, up to date rental rates and availability.",
+                        "twitter:creator": "@apartmentscom",
+                        "twitter:image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/image.jpg",
+                        "referrer": "no-referrer-when-downgrade",
+                        "fb:app_id": "739299276152207",
+                        "viewport": "width=device-width, height=device-height, initial-scale=1",
+                        "og:url": "https://www.apartments.com/off-campus-housing/bc/vancouver/vancouver-community-college-downtown/",
+                        "format-detection": "telephone=no"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/image.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "668 Citadel Parade #2601, Vancouver, BC V6B 1W8 | Zillow",
+            "htmlTitle": "668 Citadel Parade #2601, <b>Vancouver</b>, BC V6B 1W8 | Zillow",
+            "link": "https://www.zillow.com/homedetails/668-Citadel-Parade-2601-Vancouver-BC-V6B-1W8/2056976653_zpid/",
+            "displayLink": "www.zillow.com",
+            "snippet": "Jun 12, 2025 ... 668 Citadel Parade #2601, Vancouver, BC V6B 1W8 is an apartment unit listed for rent at $2700 /mo. The 564 Square Feet unit is a 1 bed, 1 bath apartment ...",
+            "htmlSnippet": "Jun 12, 2025 <b>...</b> 668 Citadel Parade #2601, <b>Vancouver</b>, BC V6B 1W8 is an <b>apartment</b> unit listed for <b>rent</b> at $2700 /mo. The 564 Square Feet unit is a <b>1 bed</b>, 1 bath <b>apartment</b>&nbsp;...",
+            "formattedUrl": "https://www.zillow.com/homedetails/...Vancouver.../2056976653_zpid/",
+            "htmlFormattedUrl": "https://www.zillow.com/homedetails/...<b>Vancouver</b>.../2056976653_zpid/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ48AgA7xviIVKrEVVCMq8gzYEMqxhm5R63AU2WO7ce3RxFsRz5i2BAYhg&s",
+                        "width": "225",
+                        "height": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "msapplication-config": "none",
+                        "og:image": "https://photos.zillowstatic.com/fp/3c3bbf40a86a87cca12f8a06c1c1dce7-cc_ft_1536.jpg",
+                        "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                        "zillow_fb:beds": "1",
+                        "og:site_name": "Zillow",
+                        "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                        "og:description": "This 564 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 668 Citadel Parade #2601, Vancouver, BC.",
+                        "next-head-count": "49",
+                        "google-signin-cookiepolicy": "single_host_origin",
+                        "zillow_fb:baths": "1",
+                        "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                        "google-signin-scope": "openid profile email",
+                        "msapplication-tilecolor": "#3366b8",
+                        "og:type": "zillow_fb:home",
+                        "author": "Zillow, Inc.",
+                        "og:title": "668 Citadel Parade #2601, Vancouver, BC V6B 1W8 | Zillow",
+                        "referrer": "always",
+                        "fb:app_id": "172285552816089",
+                        "apple-mobile-web-app-status-bar-style": "black-translucent",
+                        "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                        "apple-mobile-web-app-capable": "yes",
+                        "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                        "zillow_fb:description": "This 564 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 668 Citadel Parade #2601, Vancouver, BC.",
+                        "pod-group-name": "web-platform-render-for-rent-page-sub-app",
+                        "og:url": "https://www.zillow.com/homedetails/668-Citadel-Parade-2601-Vancouver-BC-V6B-1W8/2056976653_zpid/",
+                        "format-detection": "telephone=no",
+                        "og:zillow_fb:address": "668 Citadel Parade #2601"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://photos.zillowstatic.com/fp/3c3bbf40a86a87cca12f8a06c1c1dce7-cc_ft_1536.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "1055 Richards St #508, Vancouver, BC V6B 0C2 | Zillow",
+            "htmlTitle": "1055 Richards St #508, <b>Vancouver</b>, BC V6B 0C2 | Zillow",
+            "link": "https://www.zillow.com/homedetails/1055-Richards-St-508-Vancouver-BC-V6B-0C2/344976004_zpid/",
+            "displayLink": "www.zillow.com",
+            "snippet": "May 28, 2025 ... The 609 Square Feet unit is a 1 bed, 1 bath apartment unit. View more property ... 1 Bedroom/1 Bathroom apartment, 609 square feet in central Yaletown.",
+            "htmlSnippet": "May 28, 2025 <b>...</b> The 609 Square Feet unit is a <b>1 bed</b>, 1 bath <b>apartment</b> unit. View more property ... <b>1 Bedroom</b>/1 Bathroom <b>apartment</b>, 609 square feet in central Yaletown.",
+            "formattedUrl": "https://www.zillow.com/homedetails/...St...Vancouver.../344976004_zpid/",
+            "htmlFormattedUrl": "https://www.zillow.com/homedetails/...St...<b>Vancouver</b>.../344976004_zpid/",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "msapplication-config": "none",
+                        "og:image": "https://photos.zillowstatic.com/fp/6fcdbe7624efe8240cb18744f5117d4c-cc_ft_1536.jpg",
+                        "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                        "zillow_fb:beds": "1",
+                        "og:site_name": "Zillow",
+                        "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                        "og:description": "This 609 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 1055 Richards St #508, Vancouver, BC.",
+                        "next-head-count": "49",
+                        "google-signin-cookiepolicy": "single_host_origin",
+                        "zillow_fb:baths": "1",
+                        "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                        "google-signin-scope": "openid profile email",
+                        "msapplication-tilecolor": "#3366b8",
+                        "og:type": "zillow_fb:home",
+                        "author": "Zillow, Inc.",
+                        "og:title": "1055 Richards St #508, Vancouver, BC V6B 0C2 | Zillow",
+                        "referrer": "always",
+                        "fb:app_id": "172285552816089",
+                        "apple-mobile-web-app-status-bar-style": "black-translucent",
+                        "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                        "apple-mobile-web-app-capable": "yes",
+                        "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                        "zillow_fb:description": "This 609 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 1055 Richards St #508, Vancouver, BC.",
+                        "pod-group-name": "web-platform-render-for-rent-page-sub-app",
+                        "og:url": "https://www.zillow.com/homedetails/1055-Richards-St-508-Vancouver-BC-V6B-0C2/344976004_zpid/",
+                        "format-detection": "telephone=no",
+                        "og:zillow_fb:address": "1055 Richards St #508"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://photos.zillowstatic.com/fp/6fcdbe7624efe8240cb18744f5117d4c-cc_ft_1536.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "168 W 1st Ave, Vancouver, BC V5Y 0H6 | Zillow",
+            "htmlTitle": "168 W 1st Ave, <b>Vancouver</b>, BC V5Y 0H6 | Zillow",
+            "link": "https://www.zillow.com/homedetails/168-W-1st-Ave-Vancouver-BC-V5Y-0H6/2052942891_zpid/",
+            "displayLink": "www.zillow.com",
+            "snippet": "May 26, 2025 ... ... W 1st Ave, Vancouver, BC V5Y 0H6 is an apartment unit listed for rent at $2400 /mo. The 517 Square Feet unit is a 1 bed, 1 bath apartment ... 1 Bedroom** **Video ...",
+            "htmlSnippet": "May 26, 2025 <b>...</b> ... W 1st Ave, <b>Vancouver</b>, BC V5Y 0H6 is an <b>apartment</b> unit listed for <b>rent</b> at $2400 /mo. The 517 Square Feet unit is a <b>1 bed</b>, 1 bath <b>apartment</b> ... <b>1 Bedroom</b>** **Video&nbsp;...",
+            "formattedUrl": "https://www.zillow.com/homedetails/...Vancouver.../2052942891_zpid/",
+            "htmlFormattedUrl": "https://www.zillow.com/homedetails/...<b>Vancouver</b>.../2052942891_zpid/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRANzQL9_TpmJLCO1Mbw8VkGx3sR7xPGTX6gJlsi_8r53x6pV_f6hf_xHgW&s",
+                        "width": "259",
+                        "height": "194"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "msapplication-config": "none",
+                        "og:image": "https://photos.zillowstatic.com/fp/f02429b59f6f63bfa36472ffe467225e-cc_ft_1536.jpg",
+                        "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                        "zillow_fb:beds": "1",
+                        "og:site_name": "Zillow",
+                        "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                        "og:description": "This 517 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 168 W 1st Ave, Vancouver, BC.",
+                        "next-head-count": "49",
+                        "google-signin-cookiepolicy": "single_host_origin",
+                        "zillow_fb:baths": "1",
+                        "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                        "google-signin-scope": "openid profile email",
+                        "msapplication-tilecolor": "#3366b8",
+                        "og:type": "zillow_fb:home",
+                        "author": "Zillow, Inc.",
+                        "og:title": "168 W 1st Ave, Vancouver, BC V5Y 0H6 | Zillow",
+                        "referrer": "always",
+                        "fb:app_id": "172285552816089",
+                        "apple-mobile-web-app-status-bar-style": "black-translucent",
+                        "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                        "apple-mobile-web-app-capable": "yes",
+                        "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                        "zillow_fb:description": "This 517 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 168 W 1st Ave, Vancouver, BC.",
+                        "pod-group-name": "web-platform-render-for-rent-page-sub-app",
+                        "og:url": "https://www.zillow.com/homedetails/168-W-1st-Ave-Vancouver-BC-V5Y-0H6/2052942891_zpid/",
+                        "format-detection": "telephone=no",
+                        "og:zillow_fb:address": "168 W 1st Ave"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://photos.zillowstatic.com/fp/f02429b59f6f63bfa36472ffe467225e-cc_ft_960.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "3163 Riverwalk Ave #320, Vancouver, BC V5S 0A8 | Zillow",
+            "htmlTitle": "3163 Riverwalk Ave #320, <b>Vancouver</b>, BC V5S 0A8 | Zillow",
+            "link": "https://www.zillow.com/homedetails/3163-Riverwalk-Ave-320-Vancouver-BC-V5S-0A8/2070563626_zpid/",
+            "displayLink": "www.zillow.com",
+            "snippet": "May 24, 2025 ... ... Riverwalk Ave #320, Vancouver, BC V5S 0A8 is currently not for sale. The 663 Square Feet apartment home is a 1 bed ... Modern 1-Bedroom Condo in ...",
+            "htmlSnippet": "May 24, 2025 <b>...</b> ... Riverwalk Ave #320, <b>Vancouver</b>, BC V5S 0A8 is currently not for sale. The 663 Square Feet <b>apartment</b> home is a <b>1 bed</b> ... Modern <b>1-Bedroom</b> Condo in&nbsp;...",
+            "formattedUrl": "https://www.zillow.com/homedetails/...Vancouver.../2070563626_zpid/",
+            "htmlFormattedUrl": "https://www.zillow.com/homedetails/...<b>Vancouver</b>.../2070563626_zpid/",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "msapplication-config": "none",
+                        "og:image": "https://photos.zillowstatic.com/fp/3ba6a74cdfc4b2c5f221add01b246aff-cc_ft_1536.jpg",
+                        "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                        "zillow_fb:beds": "1",
+                        "og:site_name": "Zillow",
+                        "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                        "og:description": "3163 Riverwalk Ave #320, Vancouver BC, is a Apartment home that contains 663 sq ft.It contains 1 bedroom and 1 bathroom.",
+                        "next-head-count": "52",
+                        "google-signin-cookiepolicy": "single_host_origin",
+                        "zillow_fb:baths": "1",
+                        "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                        "google-signin-scope": "openid profile email",
+                        "msapplication-tilecolor": "#3366b8",
+                        "og:type": "zillow_fb:home",
+                        "author": "Zillow, Inc.",
+                        "og:title": "3163 Riverwalk Ave #320, Vancouver, BC V5S 0A8 | Zillow",
+                        "referrer": "always",
+                        "fb:app_id": "172285552816089",
+                        "apple-mobile-web-app-status-bar-style": "black-translucent",
+                        "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                        "apple-mobile-web-app-capable": "yes",
+                        "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                        "zillow_fb:description": "3163 Riverwalk Ave #320, Vancouver BC, is a Apartment home that contains 663 sq ft.It contains 1 bedroom and 1 bathroom.",
+                        "pod-group-name": "web-platform-render-not-for-sale-page-sub-app",
+                        "og:url": "https://www.zillow.com/homedetails/3163-Riverwalk-Ave-320-Vancouver-BC-V5S-0A8/2070563626_zpid/",
+                        "format-detection": "telephone=no",
+                        "og:zillow_fb:address": "3163 Riverwalk Ave #320"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://photos.zillowstatic.com/fp/3ba6a74cdfc4b2c5f221add01b246aff-cc_ft_1536.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "717 Chesterfield Ave #207, North Vancouver, BC V7M 3L8 | Zillow",
+            "htmlTitle": "717 Chesterfield Ave #207, North <b>Vancouver</b>, BC V7M 3L8 | Zillow",
+            "link": "https://www.zillow.com/homedetails/717-Chesterfield-Ave-207-North-Vancouver-BC-V7M-3L8/452166591_zpid/",
+            "displayLink": "www.zillow.com",
+            "snippet": "May 20, 2025 ... ... Chesterfield Ave #207, North Vancouver, BC V7M 3L8 is a listed for rent at $2795 /mo. The 664 Square Feet is a 1 bed ... This 664 sq ft 2nd floor 1 bedroom ...",
+            "htmlSnippet": "May 20, 2025 <b>...</b> ... Chesterfield Ave #207, North <b>Vancouver</b>, BC V7M 3L8 is a listed for <b>rent</b> at $2795 /mo. The 664 Square Feet is a <b>1 bed</b> ... This 664 sq ft 2nd floor <b>1 bedroom</b>&nbsp;...",
+            "formattedUrl": "https://www.zillow.com/homedetails/717...Vancouver.../452166591_zpid/",
+            "htmlFormattedUrl": "https://www.zillow.com/homedetails/717...<b>Vancouver</b>.../452166591_zpid/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBSkwG7ybzihLPl8yveSiD4IkRk79g2WItbiGYtkAAmd066TLjO6uMzJmR&s",
+                        "width": "260",
+                        "height": "194"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "msapplication-config": "none",
+                        "apple-itunes-app": "app-id=310738695",
+                        "og:image": "https://photos.zillowstatic.com/fp/c3eb55fc92b7537465e27162f2313d21-cc_ft_1536.jpg",
+                        "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                        "zillow_fb:beds": "1",
+                        "og:site_name": "Zillow",
+                        "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                        "og:description": "This 664 square feet Condo home has 1 bedroom and 1 bathroom. It is located at 717 Chesterfield Ave #207, North Vancouver, BC.",
+                        "next-head-count": "50",
+                        "google-signin-cookiepolicy": "single_host_origin",
+                        "zillow_fb:baths": "1",
+                        "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                        "google-signin-scope": "openid profile email",
+                        "msapplication-tilecolor": "#3366b8",
+                        "og:type": "zillow_fb:home",
+                        "author": "Zillow, Inc.",
+                        "og:title": "717 Chesterfield Ave #207, North Vancouver, BC V7M 3L8 | Zillow",
+                        "referrer": "always",
+                        "fb:app_id": "172285552816089",
+                        "apple-mobile-web-app-status-bar-style": "black-translucent",
+                        "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                        "apple-mobile-web-app-capable": "yes",
+                        "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                        "zillow_fb:description": "This 664 square feet Condo home has 1 bedroom and 1 bathroom. It is located at 717 Chesterfield Ave #207, North Vancouver, BC.",
+                        "pod-group-name": "web-platform-render-for-rent-page-sub-app",
+                        "og:url": "https://www.zillow.com/homedetails/717-Chesterfield-Ave-207-North-Vancouver-BC-V7M-3L8/452166591_zpid/",
+                        "format-detection": "telephone=no",
+                        "og:zillow_fb:address": "717 Chesterfield Ave #207"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://photos.zillowstatic.com/fp/c3eb55fc92b7537465e27162f2313d21-p_e.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Vancouver BC Condos For Rent - 1,141 Rentals from C$2,449 ...",
+            "htmlTitle": "<b>Vancouver</b> BC <b>Condos</b> For <b>Rent</b> - 1,141 <b>Rentals</b> from C<b>$2,449</b> ...",
+            "link": "https://www.apartments.com/condos/vancouver-bc/",
+            "displayLink": "www.apartments.com",
+            "snippet": "May 16, 2025 ... Condos BC Vancouver. Find the Perfect Vancouver, BC Rental. Search by Bedrooms. 1 Bedroom Apartments in Vancouver · 2 Bedroom Apartments in Vancouver · 3 ...",
+            "htmlSnippet": "May 16, 2025 <b>...</b> <b>Condos</b> BC <b>Vancouver</b>. Find the Perfect <b>Vancouver</b>, BC <b>Rental</b>. Search by Bedrooms. <b>1 Bedroom Apartments</b> in <b>Vancouver</b> &middot; 2 Bedroom <b>Apartments</b> in <b>Vancouver</b> &middot; 3&nbsp;...",
+            "formattedUrl": "https://www.apartments.com/condos/vancouver-bc/",
+            "htmlFormattedUrl": "https://www.<b>apartments</b>.com/condos/<b>vancouver</b>-bc/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2gpBqdtO4cU0yjt92MHQdgVnWx9bMWoORCx6sQyb0rAuYggyk2Fkvus&s",
+                        "width": "259",
+                        "height": "194"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://images1.apartments.com/i2/4S-n_NaOFYGA138nu_Q-sQGDigt-S2ixd6w06V2mERM/117/image.jpg",
+                        "og:type": "article",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Vancouver BC Condos For Rent - 1,141 Rentals from C$2,449 | Apartments.com",
+                        "og:site_name": "Apartments.com",
+                        "handheldfriendly": "true",
+                        "og:title": "Vancouver BC Condos For Rent - 1,141 Rentals from C$2,449 | Apartments.com",
+                        "og:updated_time": "6/21/2025 5:00:41 PM",
+                        "og:description": "Discover convenient and modern living in Vancouver when you browse 1,141 condos for rent. Enjoy upscale amenities and prime locations to fit your lifestyle.",
+                        "twitter:creator": "@apartmentscom",
+                        "twitter:image": "https://images1.apartments.com/i2/4S-n_NaOFYGA138nu_Q-sQGDigt-S2ixd6w06V2mERM/117/image.jpg",
+                        "referrer": "no-referrer-when-downgrade",
+                        "fb:app_id": "739299276152207",
+                        "viewport": "width=device-width, height=device-height, initial-scale=1",
+                        "og:url": "https://www.apartments.com/condos/vancouver-bc/",
+                        "format-detection": "telephone=no"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://images1.apartments.com/i2/4S-n_NaOFYGA138nu_Q-sQGDigt-S2ixd6w06V2mERM/117/image.jpg"
+                    }
+                ]
+            }
+        }
+    ]
+}

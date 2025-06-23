@@ -1,0 +1,767 @@
+{
+    "search_summary": {
+        "location": "Toronto",
+        "total_listings_found": 10,
+        "search_timestamp": "2025-06-22T19:26:03.235405",
+        "source": "Google Custom Search API"
+    },
+    "listings": [
+        {
+            "id": 1,
+            "title": "Main Square Apartments - 2575 Danforth Ave Toronto, ON ...",
+            "price": 1900,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "amenities": [],
+            "description": "1 day ago ... 1 Bed 1 Bath G C$1,900 – C$2,575. 1 Bed 1 Bath 505 – 678 Sq Ft. View 1 ... Details Apply Unit 02650902. 1 Bed 1 Bath E Junior Call for Rent ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/main-square-toronto-on/r4zqpm1/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 2,
+            "title": "1 Bedroom Houses for Rent in Toronto ON - 330 houses | Zillow",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "6 days ago ... Find your next 1 bedroom house for rent that you'll love in Toronto ON on Zillow. Use our detailed filters to find the perfect spot that fits all your ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Zillow",
+            "listing_url": "https://www.zillow.com/toronto-on/rent-houses-1-bedrooms/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 3,
+            "title": "The Fairbank Apartments - 9 Croham Rd Toronto, ON | Apartments ...",
+            "price": 1999,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "amenities": [
+                "Balcony"
+            ],
+            "description": "7 days ago ... 1 Bed Unit - Juliet Balcony C$1,999 – C$2,335. 1 Bed 1 Bath 547 – 604 Sq Ft ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in Toronto · 3 ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/the-fairbank-toronto-on/xvbwntm/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 4,
+            "title": "Apartments for Rent under C$2,500 in Toronto ON - 5,518 Rentals ...",
+            "price": 2500,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "Jun 13, 2025 ... Apartments for Rent under C$2,500 in Toronto ON - 5,518 Rentals - Page 18 ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/toronto-on/under-2500/18/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 5,
+            "title": "19 Grand Trunk Crescent, Toronto, ON M5J 3A3 - Condo for Rent in ...",
+            "price": 2550,
+            "location": "Toronto",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "May 7, 2025 ... Experience the best of urban living in this furnished 1-bedroom + study, 1 ... rentals from C$2550. * Price shown is base rent and may not include non ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/19-grand-trunk-crescent-toronto-on/5kz11vn/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 6,
+            "title": "4900 Bathurst St # 1 Bedroom, Toronto, ON M2R 1X6 | Zillow",
+            "price": 2199,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": 4900,
+            "amenities": [],
+            "description": "Apr 11, 2025 ... 4900 Bathurst St #1-BEDROOM, Toronto, ON M2R 1X6 is an apartment unit listed for rent at $2199 /mo. The 701 Square Feet unit is a 1 bed, 1 bath apartment ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Zillow",
+            "listing_url": "https://www.zillow.com/homedetails/4900-Bathurst-St-1-BEDROOM-Toronto-ON-M2R-1X6/443900673_zpid/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 7,
+            "title": "1046 Bathurst St #1-BEDROOM, Toronto, ON M5R 3G7 | Zillow",
+            "price": 2899,
+            "location": "Toronto",
+            "bedrooms": 2,
+            "bathrooms": 1046,
+            "amenities": [],
+            "description": "Apr 11, 2025 ... 1046 Bathurst St #1-BEDROOM, Toronto, ON M5R 3G7 is an apartment unit listed for rent at $2899 /mo. The 1100 Square Feet unit is a 2 beds, 1 bath apartment ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Zillow",
+            "listing_url": "https://www.zillow.com/homedetails/1046-Bathurst-St-1-BEDROOM-Toronto-ON-M5R-3G7/443332233_zpid/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 8,
+            "title": "Apartments for Rent Near York University Glendon Campus ...",
+            "price": 2700,
+            "location": "Toronto",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "Mar 21, 2025 ... C$2,700. 2 Beds. Toronto, ON M4P 0G1. Email Call. Building Photo - 15-3415 Roehampton Ave. C$2,450. 1 Bed. Toronto, ON M4P 0C2. Email",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/off-campus-housing/on/toronto/york-university-glendon-campus/6/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 9,
+            "title": "1 Yorkville Ave Unit ID: 5065, Toronto, ON M4W 0B1 - Condo for ...",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "amenities": [],
+            "description": "Mar 7, 2025 ... 1 Bed, 1 Bath, 344 sq ft. 1553 Bloor St W Unit ID1023035P, Toronto, ON M6P ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in Toronto · 3 Bedroom ...",
+            "match_percentage": 65,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/1-yorkville-ave-toronto-on-unit-id-5065/cj3j6qf/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 10,
+            "title": "188-188 Jameson Ave, Toronto, ON M6K 2Z3 - Apartment for Rent ...",
+            "price": null,
+            "location": "Toronto",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "Mar 5, 2025 ... 1 Bed. 1015 Orchard. 1015 Orchard Rd, Mississauga, ON L5E 2N8. Pets Allowed ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in Toronto · 3 Bedroom ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/188-188-jameson-ave-toronto-on/re62cn2/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        }
+    ],
+    "raw_response": {
+        "kind": "customsearch#search",
+        "url": {
+            "type": "application/json",
+            "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+        },
+        "queries": {
+            "request": [
+                {
+                    "title": "Google Custom Search - rental apartments Toronto (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                    "totalResults": "160000",
+                    "searchTerms": "rental apartments Toronto (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                    "count": 10,
+                    "startIndex": 1,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ],
+            "nextPage": [
+                {
+                    "title": "Google Custom Search - rental apartments Toronto (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                    "totalResults": "160000",
+                    "searchTerms": "rental apartments Toronto (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$2800\" (\"1 bedroom\" OR \"1 bed\")",
+                    "count": 10,
+                    "startIndex": 11,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ]
+        },
+        "context": {
+            "title": "House crush"
+        },
+        "searchInformation": {
+            "searchTime": 0.387639,
+            "formattedSearchTime": "0.39",
+            "totalResults": "160000",
+            "formattedTotalResults": "160,000"
+        },
+        "items": [
+            {
+                "kind": "customsearch#result",
+                "title": "Main Square Apartments - 2575 Danforth Ave Toronto, ON ...",
+                "htmlTitle": "Main Square <b>Apartments</b> - 2575 Danforth Ave <b>Toronto</b>, ON ...",
+                "link": "https://www.apartments.com/main-square-toronto-on/r4zqpm1/",
+                "displayLink": "www.apartments.com",
+                "snippet": "1 day ago ... 1 Bed 1 Bath G C$1,900 – C$2,575. 1 Bed 1 Bath 505 – 678 Sq Ft. View 1 ... Details Apply Unit 02650902. 1 Bed 1 Bath E Junior Call for Rent ...",
+                "htmlSnippet": "1 day ago <b>...</b> <b>1 Bed</b> 1 Bath G C$1,900 – C<b>$2,575</b>. <b>1 Bed</b> 1 Bath 505 – 678 Sq Ft. View <b>1</b> ... Details Apply Unit 02650902. <b>1 Bed</b> 1 Bath E Junior Call for <b>Rent</b>&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/main-square-toronto-on/r4zqpm1/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/main-square-<b>toronto</b>-on/r4zqpm1/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNSodmrYc-7AbTX_Xge_NUk5ontCJrVPbJpSuj1Bgd3UYZmVZKpn_qdl3W&s",
+                            "width": "233",
+                            "height": "216"
+                        }
+                    ],
+                    "Product": [
+                        {
+                            "itemtype": "http://schema.org/RealEstateListing"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/oI0zQqZRUh_-WXoPtPenZZ1mXxrgnfy42AAQfHRrI5A/111/main-square-toronto-on-primary-photo.jpg",
+                            "place:location:longitude": "-79.3004",
+                            "image": "https://images1.apartments.com/i2/oI0zQqZRUh_-WXoPtPenZZ1mXxrgnfy42AAQfHRrI5A/117/main-square-toronto-on-primary-photo.jpg?p=1",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "Main Square Apartments - 2575 Danforth Ave Toronto, ON | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "43.68809",
+                            "og:title": "Main Square Apartments - 2575 Danforth Ave Toronto, ON | Apartments.com",
+                            "og:updated_time": "6/21/2025 10:50:58 PM",
+                            "og:description": "View all available apartments for rent at Main Square in Toronto, ON. Main Square has rental units ranging from 435-1015 sq ft starting at C$1825.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/oI0zQqZRUh_-WXoPtPenZZ1mXxrgnfy42AAQfHRrI5A/111/main-square-toronto-on-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/main-square-toronto-on/r4zqpm1/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/oI0zQqZRUh_-WXoPtPenZZ1mXxrgnfy42AAQfHRrI5A/111/main-square-toronto-on-primary-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "1 Bedroom Houses for Rent in Toronto ON - 330 houses | Zillow",
+                "htmlTitle": "<b>1 Bedroom</b> Houses for <b>Rent</b> in <b>Toronto</b> ON - 330 houses | Zillow",
+                "link": "https://www.zillow.com/toronto-on/rent-houses-1-bedrooms/",
+                "displayLink": "www.zillow.com",
+                "snippet": "6 days ago ... Find your next 1 bedroom house for rent that you'll love in Toronto ON on Zillow. Use our detailed filters to find the perfect spot that fits all your ...",
+                "htmlSnippet": "6 days ago <b>...</b> Find your next <b>1 bedroom</b> house for <b>rent</b> that you&#39;ll love in <b>Toronto</b> ON on Zillow. Use our detailed filters to find the perfect spot that fits all your&nbsp;...",
+                "formattedUrl": "https://www.zillow.com/toronto-on/rent-houses-1-bedrooms/",
+                "htmlFormattedUrl": "https://www.zillow.com/<b>toronto</b>-on/rent-houses-<b>1-bedroom</b>s/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAmX8R7y25G4G4LXFc66OD2VpoVRRGjk80yvZGWGnp9bW8qB8Sv60ci1YZ&s",
+                            "width": "260",
+                            "height": "194"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-tilecolor": "#3366b8",
+                            "msapplication-config": "none",
+                            "apple-itunes-app": "app-id=310738695",
+                            "og:image": "/apple-touch-icon.png",
+                            "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                            "og:site_name": "Zillow",
+                            "author": "Zillow, Inc.",
+                            "og:title": "1 Bedroom Houses for Rent in Toronto ON - 330 houses  | Zillow",
+                            "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                            "og:description": "Find your next 1 bedroom house for rent that you'll love in Toronto ON on Zillow. Use our detailed filters to find the perfect spot that fits all your requirements and more.",
+                            "referrer": "always",
+                            "next-head-count": "58",
+                            "fb:app_id": "172285552816089",
+                            "google-signin-cookiepolicy": "single_host_origin",
+                            "apple-mobile-web-app-status-bar-style": "black-translucent",
+                            "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                            "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                            "apple-mobile-web-app-capable": "yes",
+                            "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                            "google-signin-scope": "openid profile email",
+                            "pod-group-name": "web-platform-render-search-page-sub-app",
+                            "og:url": "https://www.zillow.com/toronto-on/rent-houses-1-bedrooms/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://photos.zillowstatic.com/fp/281aaf4774198eec6d974e5234143623-p_e.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "The Fairbank Apartments - 9 Croham Rd Toronto, ON | Apartments ...",
+                "htmlTitle": "The Fairbank <b>Apartments</b> - 9 Croham Rd <b>Toronto</b>, ON | <b>Apartments</b> ...",
+                "link": "https://www.apartments.com/the-fairbank-toronto-on/xvbwntm/",
+                "displayLink": "www.apartments.com",
+                "snippet": "7 days ago ... 1 Bed Unit - Juliet Balcony C$1,999 – C$2,335. 1 Bed 1 Bath 547 – 604 Sq Ft ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in Toronto · 3 ...",
+                "htmlSnippet": "7 days ago <b>...</b> <b>1 Bed</b> Unit - Juliet Balcony C$1,999 – C<b>$2,335</b>. <b>1 Bed</b> 1 Bath 547 – 604 Sq Ft ... <b>1 Bedroom Apartments</b> in <b>Toronto</b> &middot; 2 Bedroom <b>Apartments</b> in <b>Toronto</b> &middot; 3&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/the-fairbank-toronto-on/xvbwntm/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/the-fairbank-<b>toronto</b>-on/xvbwntm/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDBSdSSncFgCCZ4sexU7fEdseM6QJUKZ5fY9OZGnL14Xsg89VVUkFf4h4&s",
+                            "width": "259",
+                            "height": "194"
+                        }
+                    ],
+                    "Product": [
+                        {
+                            "itemtype": "http://schema.org/RealEstateListing"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/XkCWI6NJsTyGAoBEd_HQjm_gVBdhaA22wCXeuzRDWqA/111/the-fairbank-toronto-on-primary-photo.jpg",
+                            "place:location:longitude": "-79.46395",
+                            "image": "https://images1.apartments.com/i2/XkCWI6NJsTyGAoBEd_HQjm_gVBdhaA22wCXeuzRDWqA/117/the-fairbank-toronto-on-primary-photo.jpg?p=1",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "The Fairbank Apartments - 9 Croham Rd Toronto, ON | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "43.69311",
+                            "og:title": "The Fairbank Apartments - 9 Croham Rd Toronto, ON | Apartments.com",
+                            "og:updated_time": "6/22/2025 8:13:54 AM",
+                            "og:description": "View all available apartments for rent at The Fairbank in Toronto, ON. The Fairbank has rental units ranging from 434-962 sq ft starting at C$1999.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/XkCWI6NJsTyGAoBEd_HQjm_gVBdhaA22wCXeuzRDWqA/111/the-fairbank-toronto-on-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/the-fairbank-toronto-on/xvbwntm/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/XkCWI6NJsTyGAoBEd_HQjm_gVBdhaA22wCXeuzRDWqA/111/the-fairbank-toronto-on-primary-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments for Rent under C$2,500 in Toronto ON - 5,518 Rentals ...",
+                "htmlTitle": "<b>Apartments</b> for <b>Rent</b> under C<b>$2,500</b> in <b>Toronto</b> ON - 5,518 <b>Rentals</b> ...",
+                "link": "https://www.apartments.com/toronto-on/under-2500/18/",
+                "displayLink": "www.apartments.com",
+                "snippet": "Jun 13, 2025 ... Apartments for Rent under C$2,500 in Toronto ON - 5,518 Rentals - Page 18 ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in ...",
+                "htmlSnippet": "Jun 13, 2025 <b>...</b> <b>Apartments</b> for <b>Rent</b> under C<b>$2,500</b> in <b>Toronto</b> ON - 5,518 <b>Rentals</b> - Page 18 ... <b>1 Bedroom Apartments</b> in <b>Toronto</b> &middot; 2 Bedroom <b>Apartments</b> in&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/toronto-on/under-2500/18/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/<b>toronto</b>-on/under-2500/18/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRro1Nd0HLTqQK4oxXXh4ZxE850kDkB804YlEzkVt9EYN43_cQQwBw3toPM&s",
+                            "width": "259",
+                            "height": "194"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/hIpIdN3oux293KxewY9c8BrLPA5uy6mWKibIjr4S1UM/117/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "Apartments for Rent under C$2,500 in Toronto ON - 5,518 Rentals - Page 18 | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "Apartments for Rent under C$2,500 in Toronto ON - 5,518 Rentals - Page 18 | Apartments.com",
+                            "og:updated_time": "6/18/2025 7:33:15 AM",
+                            "og:description": "Search for an apartment in Toronto, ON. View detailed listings, compare your favorites, and take the next step toward your new rental.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/hIpIdN3oux293KxewY9c8BrLPA5uy6mWKibIjr4S1UM/117/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/toronto-on/under-2500/18/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/DstPelx5OO-RALXWKvum4KITTvunWBbfrLDgFv3QiUM/117/45-jimston-dr-markham-on-building-photo.jpg?p=1"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "19 Grand Trunk Crescent, Toronto, ON M5J 3A3 - Condo for Rent in ...",
+                "htmlTitle": "19 Grand Trunk Crescent, <b>Toronto</b>, ON M5J 3A3 - <b>Condo</b> for <b>Rent</b> in ...",
+                "link": "https://www.apartments.com/19-grand-trunk-crescent-toronto-on/5kz11vn/",
+                "displayLink": "www.apartments.com",
+                "snippet": "May 7, 2025 ... Experience the best of urban living in this furnished 1-bedroom + study, 1 ... rentals from C$2550. * Price shown is base rent and may not include non ...",
+                "htmlSnippet": "May 7, 2025 <b>...</b> Experience the best of urban living in this furnished <b>1-bedroom</b> + study, 1 ... <b>rentals</b> from C<b>$2550</b>. * Price shown is base <b>rent</b> and may not include non&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/19-grand-trunk-crescent-toronto.../5kz11vn/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/19-grand-trunk-crescent-<b>toronto</b>.../5kz11vn/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKdmkjwGtXMILHU49ddaPE306tU7911f1PIfPev6HEwOBTDOzYo07GSNg&s",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/pu3gTYzq1P8jNEFOqC86rsVfAHiCTfWByfq_Gzh6ltU/111/19-grand-trunk-crescent-toronto-on-primary-photo.jpg",
+                            "place:location:longitude": "-79.38272",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "19 Grand Trunk Crescent, Toronto, ON M5J 3A3 - Condo for Rent in Toronto, ON | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "43.64168",
+                            "og:title": "19 Grand Trunk Crescent, Toronto, ON M5J 3A3 - Condo for Rent in Toronto, ON | Apartments.com",
+                            "og:updated_time": "6/21/2025 7:48:33 AM",
+                            "og:description": "View all available condos for rent at 19 Grand Trunk Crescent in Toronto, ON. 19 Grand Trunk Crescenthas rental units starting at C$2550.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/pu3gTYzq1P8jNEFOqC86rsVfAHiCTfWByfq_Gzh6ltU/111/19-grand-trunk-crescent-toronto-on-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/19-grand-trunk-crescent-toronto-on/5kz11vn/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/pu3gTYzq1P8jNEFOqC86rsVfAHiCTfWByfq_Gzh6ltU/111/19-grand-trunk-crescent-toronto-on-primary-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "4900 Bathurst St # 1 Bedroom, Toronto, ON M2R 1X6 | Zillow",
+                "htmlTitle": "4900 Bathurst St # <b>1 Bedroom</b>, <b>Toronto</b>, ON M2R 1X6 | Zillow",
+                "link": "https://www.zillow.com/homedetails/4900-Bathurst-St-1-BEDROOM-Toronto-ON-M2R-1X6/443900673_zpid/",
+                "displayLink": "www.zillow.com",
+                "snippet": "Apr 11, 2025 ... 4900 Bathurst St #1-BEDROOM, Toronto, ON M2R 1X6 is an apartment unit listed for rent at $2199 /mo. The 701 Square Feet unit is a 1 bed, 1 bath apartment ...",
+                "htmlSnippet": "Apr 11, 2025 <b>...</b> 4900 Bathurst St #<b>1-BEDROOM</b>, <b>Toronto</b>, ON M2R 1X6 is an <b>apartment</b> unit listed for <b>rent</b> at $2199 /mo. The 701 Square Feet unit is a <b>1 bed</b>, 1 bath <b>apartment</b>&nbsp;...",
+                "formattedUrl": "https://www.zillow.com/...St-1-BEDROOM-Toronto.../443900673_zpid/",
+                "htmlFormattedUrl": "https://www.zillow.com/...St-<b>1-BEDROOM</b>-<b>Toronto</b>.../443900673_zpid/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlb9FELCnmfa5PkUJEi33v76AIYruKYomnbts9qlx3czN8zafh_vqFqpFd&s",
+                            "width": "276",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-config": "none",
+                            "og:image": "https://photos.zillowstatic.com/fp/fc974efaaa9ddc3786289602909ec570-cc_ft_1536.jpg",
+                            "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                            "zillow_fb:beds": "1",
+                            "og:site_name": "Zillow",
+                            "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                            "og:description": "This 701 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 4900 Bathurst St #1-BEDROOM, Toronto, ON.",
+                            "next-head-count": "50",
+                            "google-signin-cookiepolicy": "single_host_origin",
+                            "zillow_fb:baths": "1",
+                            "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                            "google-signin-scope": "openid profile email",
+                            "msapplication-tilecolor": "#3366b8",
+                            "og:type": "zillow_fb:home",
+                            "author": "Zillow, Inc.",
+                            "og:title": "4900 Bathurst St # 1 Bedroom, Toronto, ON M2R 1X6 | Zillow",
+                            "referrer": "always",
+                            "fb:app_id": "172285552816089",
+                            "apple-mobile-web-app-status-bar-style": "black-translucent",
+                            "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                            "apple-mobile-web-app-capable": "yes",
+                            "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                            "zillow_fb:description": "This 701 square feet Apartment home has 1 bedroom and 1 bathroom. It is located at 4900 Bathurst St #1-BEDROOM, Toronto, ON.",
+                            "pod-group-name": "web-platform-render-for-rent-page-sub-app",
+                            "og:url": "https://www.zillow.com/homedetails/4900-Bathurst-St-1-BEDROOM-Toronto-ON-M2R-1X6/443900673_zpid/",
+                            "format-detection": "telephone=no",
+                            "og:zillow_fb:address": "4900 Bathurst St # 1 Bedroom"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://photos.zillowstatic.com/fp/fc974efaaa9ddc3786289602909ec570-cc_ft_1536.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "1046 Bathurst St #1-BEDROOM, Toronto, ON M5R 3G7 | Zillow",
+                "htmlTitle": "1046 Bathurst St #<b>1-BEDROOM</b>, <b>Toronto</b>, ON M5R 3G7 | Zillow",
+                "link": "https://www.zillow.com/homedetails/1046-Bathurst-St-1-BEDROOM-Toronto-ON-M5R-3G7/443332233_zpid/",
+                "displayLink": "www.zillow.com",
+                "snippet": "Apr 11, 2025 ... 1046 Bathurst St #1-BEDROOM, Toronto, ON M5R 3G7 is an apartment unit listed for rent at $2899 /mo. The 1100 Square Feet unit is a 2 beds, 1 bath apartment ...",
+                "htmlSnippet": "Apr 11, 2025 <b>...</b> 1046 Bathurst St #<b>1-BEDROOM</b>, <b>Toronto</b>, ON M5R 3G7 is an <b>apartment</b> unit listed for <b>rent</b> at $2899 /mo. The 1100 Square Feet unit is a 2 beds, 1 bath <b>apartment</b>&nbsp;...",
+                "formattedUrl": "https://www.zillow.com/...St-1-BEDROOM-Toronto.../443332233_zpid/",
+                "htmlFormattedUrl": "https://www.zillow.com/...St-<b>1-BEDROOM</b>-<b>Toronto</b>.../443332233_zpid/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkMS55emG3tPQR6Y2J-dNpNaUn-Pq6kRIvM9zuHvHj8zRhibCkVNbGyw0&s=0",
+                            "width": "150",
+                            "height": "113"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-config": "none",
+                            "apple-itunes-app": "app-id=310738695",
+                            "og:image": "https://photos.zillowstatic.com/fp/495d42896df1df292fa5aeecefca0c66-cc_ft_1536.jpg",
+                            "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                            "zillow_fb:beds": "2",
+                            "og:site_name": "Zillow",
+                            "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                            "og:description": "This 1100 square feet Apartment home has 2 bedrooms and 1 bathroom. It is located at 1046 Bathurst St #1-BEDROOM, Toronto, ON.",
+                            "next-head-count": "50",
+                            "google-signin-cookiepolicy": "single_host_origin",
+                            "zillow_fb:baths": "1",
+                            "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                            "google-signin-scope": "openid profile email",
+                            "msapplication-tilecolor": "#3366b8",
+                            "og:type": "zillow_fb:home",
+                            "author": "Zillow, Inc.",
+                            "og:title": "1046 Bathurst St #1-BEDROOM, Toronto, ON M5R 3G7 | Zillow",
+                            "referrer": "always",
+                            "fb:app_id": "172285552816089",
+                            "apple-mobile-web-app-status-bar-style": "black-translucent",
+                            "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                            "apple-mobile-web-app-capable": "yes",
+                            "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                            "zillow_fb:description": "This 1100 square feet Apartment home has 2 bedrooms and 1 bathroom. It is located at 1046 Bathurst St #1-BEDROOM, Toronto, ON.",
+                            "pod-group-name": "web-platform-render-for-rent-page-sub-app",
+                            "og:url": "https://www.zillow.com/homedetails/1046-Bathurst-St-1-BEDROOM-Toronto-ON-M5R-3G7/443332233_zpid/",
+                            "format-detection": "telephone=no",
+                            "og:zillow_fb:address": "1046 Bathurst St #1-BEDROOM"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://photos.zillowstatic.com/fp/495d42896df1df292fa5aeecefca0c66-cc_ft_1536.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments for Rent Near York University Glendon Campus ...",
+                "htmlTitle": "<b>Apartments</b> for <b>Rent</b> Near York University Glendon Campus ...",
+                "link": "https://www.apartments.com/off-campus-housing/on/toronto/york-university-glendon-campus/6/",
+                "displayLink": "www.apartments.com",
+                "snippet": "Mar 21, 2025 ... C$2,700. 2 Beds. Toronto, ON M4P 0G1. Email Call. Building Photo - 15-3415 Roehampton Ave. C$2,450. 1 Bed. Toronto, ON M4P 0C2. Email",
+                "htmlSnippet": "Mar 21, 2025 <b>...</b> C<b>$2,700</b>. 2 Beds. <b>Toronto</b>, ON M4P 0G1. Email Call. Building Photo - 15-3415 Roehampton Ave. C<b>$2,450</b>. <b>1 Bed</b>. <b>Toronto</b>, ON M4P 0C2. Email",
+                "formattedUrl": "https://www.apartments.com/off-campus-housing/on/toronto/york.../6/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/off-campus-housing/on/<b>toronto</b>/york.../6/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ06OVkBE9yKCuYuysD-P5inOcktjCd8xjw01gvbBa3K7Z439Ddm3VaqCjy&s",
+                            "width": "259",
+                            "height": "194"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/KVbQN1DrMqivW7ybInjumLSjZAzhJN_djX0DrriFdiU/117/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "Apartments for Rent Near York University Glendon Campus - Toronto, ON Student Housing - Page 6 | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "Apartments for Rent Near York University Glendon Campus - Toronto, ON Student Housing - Page 6 | Apartments.com",
+                            "og:updated_time": "5/21/2025 3:25:11 AM",
+                            "og:description": "See all 1,751 apartments for rent near York University Glendon Campus - Toronto, ON (University). Each Apartments.com listing has verified information like property rating, floor plan, school and neighborhood data, amenities, expenses, policies and of course, up to date rental rates and availability.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/KVbQN1DrMqivW7ybInjumLSjZAzhJN_djX0DrriFdiU/117/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/off-campus-housing/on/toronto/york-university-glendon-campus/6/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/2nFLDLDs-CtlJjDXD_TfQL0Gt_rm_nGsupon6aaE86I/117/92-owen-blvd-toronto-on-building-photo.jpg?p=1"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "1 Yorkville Ave Unit ID: 5065, Toronto, ON M4W 0B1 - Condo for ...",
+                "htmlTitle": "1 Yorkville Ave Unit ID: 5065, <b>Toronto</b>, ON M4W 0B1 - <b>Condo</b> for ...",
+                "link": "https://www.apartments.com/1-yorkville-ave-toronto-on-unit-id-5065/cj3j6qf/",
+                "displayLink": "www.apartments.com",
+                "snippet": "Mar 7, 2025 ... 1 Bed, 1 Bath, 344 sq ft. 1553 Bloor St W Unit ID1023035P, Toronto, ON M6P ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in Toronto · 3 Bedroom ...",
+                "htmlSnippet": "Mar 7, 2025 <b>...</b> <b>1 Bed</b>, 1 Bath, 344 sq ft. 1553 Bloor St W Unit ID1023035P, <b>Toronto</b>, ON M6P ... <b>1 Bedroom Apartments</b> in <b>Toronto</b> &middot; 2 Bedroom <b>Apartments</b> in <b>Toronto</b> &middot; 3 Bedroom&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/1-yorkville-ave-toronto-on-unit-id.../cj3j6qf/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/1-yorkville-ave-<b>toronto</b>-on-unit-id.../cj3j6qf/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkXXqQ6fP-WS0A11ENnHDe3oXnl970vEDhOiqDDGP-zQprriHqB3uIjOPJ&s",
+                            "width": "225",
+                            "height": "225"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/mxqijXc9OSQyaKA-YtyBUrTXo4dNFLKWsZa-9JRhmfw/111/1-yorkville-ave-unit-id-5065-toronto-on-primary-photo.jpg",
+                            "place:location:longitude": "-79.38776",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "1 Yorkville Ave Unit ID: 5065, Toronto, ON M4W 0B1 - Condo for Rent in Toronto, ON | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "43.67163",
+                            "og:title": "1 Yorkville Ave Unit ID: 5065, Toronto, ON M4W 0B1 - Condo for Rent in Toronto, ON | Apartments.com",
+                            "og:updated_time": "4/6/2025 7:06:28 AM",
+                            "og:description": "See Condo ID: 5065 for rent at 1 Yorkville Ave in Toronto, ON from C$2500 plus find other available Toronto condos. Apartments.com has 3D tours, HD videos, reviews and more researched data than all other rental sites.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/mxqijXc9OSQyaKA-YtyBUrTXo4dNFLKWsZa-9JRhmfw/111/1-yorkville-ave-unit-id-5065-toronto-on-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/1-yorkville-ave-toronto-on-unit-id-5065/cj3j6qf/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/mxqijXc9OSQyaKA-YtyBUrTXo4dNFLKWsZa-9JRhmfw/111/1-yorkville-ave-unit-id-5065-toronto-on-primary-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "188-188 Jameson Ave, Toronto, ON M6K 2Z3 - Apartment for Rent ...",
+                "htmlTitle": "188-188 Jameson Ave, <b>Toronto</b>, ON M6K 2Z3 - <b>Apartment</b> for <b>Rent</b> ...",
+                "link": "https://www.apartments.com/188-188-jameson-ave-toronto-on/re62cn2/",
+                "displayLink": "www.apartments.com",
+                "snippet": "Mar 5, 2025 ... 1 Bed. 1015 Orchard. 1015 Orchard Rd, Mississauga, ON L5E 2N8. Pets Allowed ... 1 Bedroom Apartments in Toronto · 2 Bedroom Apartments in Toronto · 3 Bedroom ...",
+                "htmlSnippet": "Mar 5, 2025 <b>...</b> <b>1 Bed</b>. 1015 Orchard. 1015 Orchard Rd, Mississauga, ON L5E 2N8. Pets Allowed ... <b>1 Bedroom Apartments</b> in <b>Toronto</b> &middot; 2 Bedroom <b>Apartments</b> in <b>Toronto</b> &middot; 3 Bedroom&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/188-188-jameson-ave-toronto-on/re62cn2/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/188-188-jameson-ave-<b>toronto</b>-on/re62cn2/",
+                "pagemap": {
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/OloeOyeRMg7KiJsqhTMoLX-HBD7UWgTnldcOAJwIi8o/111/188-188-jameson-ave-toronto-on-primary-photo.jpg",
+                            "place:location:longitude": "-79.43714",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "188-188 Jameson Ave, Toronto, ON M6K 2Z3 - Apartment for Rent in Toronto, ON | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "43.63913",
+                            "og:title": "188-188 Jameson Ave, Toronto, ON M6K 2Z3 - Apartment for Rent in Toronto, ON | Apartments.com",
+                            "og:updated_time": "4/8/2025 6:16:11 PM",
+                            "og:description": "Find apartments for rent, condos, townhomes and other rental homes. View videos, floor plans, photos and 360-degree views. No registration required!",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/OloeOyeRMg7KiJsqhTMoLX-HBD7UWgTnldcOAJwIi8o/111/188-188-jameson-ave-toronto-on-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/188-188-jameson-ave-toronto-on/re62cn2/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/OloeOyeRMg7KiJsqhTMoLX-HBD7UWgTnldcOAJwIi8o/111/188-188-jameson-ave-toronto-on-primary-photo.jpg"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

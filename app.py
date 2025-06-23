@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from scripts.rag_example import run_rag
-from house_scraper import log_user_feedback
+
 import asyncio
 import json
 import os
@@ -11,13 +11,29 @@ from typing import List, Dict, Optional
 import warnings
 from dotenv import load_dotenv
 
-# Import Perplexity integration
+
+# Import feedback logger
 try:
-    from perplexity_rental_search import search_rentals_with_perplexity, get_perplexity_status
-    PERPLEXITY_AVAILABLE = True
+    from feedback_logger import log_user_feedback
+    FEEDBACK_AVAILABLE = True
 except ImportError as e:
-    PERPLEXITY_AVAILABLE = False
-    print(f"Warning: Perplexity integration not available: {e}")
+    FEEDBACK_AVAILABLE = False
+    print(f"Warning: Feedback logging not available: {e}")
+# Import OpenAI rental search integration
+try:
+    from openai_rental_search import search_rentals_with_openai, get_openai_status
+    OPENAI_AVAILABLE = True
+except ImportError as e:
+    OPENAI_AVAILABLE = False
+    print(f"Warning: OpenAI integration not available: {e}")
+
+# Import Google Custom Search integration
+try:
+    from google_rental_search import search_rentals_with_google, get_google_status
+    GOOGLE_AVAILABLE = True
+except ImportError as e:
+    GOOGLE_AVAILABLE = False
+    print(f"Warning: Google Custom Search integration not available: {e}")
 
 # Load environment variables from .env file
 load_dotenv()
@@ -58,11 +74,12 @@ def load_house_ads(file_path: str = 'houseAds.txt') -> List[Dict]:
         print(f"Error loading house ads: {e}")
         return []
 
-def search_rentals_perplexity(location: str, min_price: Optional[int] = None, 
-                            max_price: Optional[int] = None, bedrooms: Optional[int] = None) -> List[Dict]:
-    """Search for rentals using Perplexity API."""
-    if not PERPLEXITY_AVAILABLE:
-        print("Perplexity API not available")
+def search_rentals_openai(location: str, min_price: Optional[int] = None, 
+                         max_price: Optional[int] = None, bedrooms: Optional[int] = None,
+                         amenities: Optional[List[str]] = None, lifestyle: Optional[str] = None) -> List[Dict]:
+    """Search for rentals using OpenAI API with conversational approach."""
+    if not OPENAI_AVAILABLE:
+        print("OpenAI API not available")
         return []
     
     try:
@@ -71,19 +88,84 @@ def search_rentals_perplexity(location: str, min_price: Optional[int] = None,
         max_price_int = int(max_price) if max_price and max_price.isdigit() else None
         bedrooms_int = int(bedrooms) if bedrooms and bedrooms.isdigit() else None
         
-        print(f"Searching Perplexity for: {location}, price: ${min_price_int}-${max_price_int}, bedrooms: {bedrooms_int}")
+        print(f"Searching OpenAI for: {location}, price: ${min_price_int}-${max_price_int}, bedrooms: {bedrooms_int}")
+        print(f"Amenities: {amenities}, Lifestyle: {lifestyle}")
         
-        listings = search_rentals_with_perplexity(location, min_price_int, max_price_int, bedrooms_int)
+        listings = search_rentals_with_openai(location, min_price_int, max_price_int, bedrooms_int, amenities, lifestyle)
         
-        # Add match scores for consistency with local data
+        # Process the listings to ensure they have the required fields
+        processed_listings = []
         for listing in listings:
-            listing['match_score'] = 85  # Default high score for real-time data
-            listing['match_reason'] = 'Real-time search result from Perplexity API'
+            processed_listing = {
+                'id': listing.get('id', len(processed_listings) + 1),
+                'title': listing.get('title', 'No title'),
+                'price': listing.get('price', 0),
+                'location': listing.get('location', location),
+                'bedrooms': listing.get('bedrooms'),
+                'bathrooms': listing.get('bathrooms'),
+                'amenities': listing.get('amenities', []),
+                'description': listing.get('description', ''),
+                'match_percentage': listing.get('match_percentage', 85),
+                'contact': listing.get('contact', {'name': 'Contact for details', 'phone': 'N/A', 'email': 'N/A'}),
+                'source_website': listing.get('source_website', 'OpenAI Search'),
+                'listing_url': listing.get('listing_url'),
+                'availability_date': listing.get('availability_date', datetime.now().strftime('%Y-%m-%d')),
+                'features': listing.get('features', []),
+                'images': listing.get('images', [])
+            }
+            processed_listings.append(processed_listing)
         
-        return listings
+        return processed_listings
         
     except Exception as e:
-        print(f"Error searching with Perplexity: {e}")
+        print(f"Error searching with OpenAI: {e}")
+        return []
+
+def search_rentals_google(location: str, min_price: Optional[int] = None, 
+                         max_price: Optional[int] = None, bedrooms: Optional[int] = None,
+                         amenities: Optional[List[str]] = None, lifestyle: Optional[str] = None) -> List[Dict]:
+    """Search for rentals using Google Custom Search API."""
+    if not GOOGLE_AVAILABLE:
+        print("Google Custom Search API not available")
+        return []
+    
+    try:
+        # Convert string values to integers
+        min_price_int = int(min_price) if min_price and min_price.isdigit() else None
+        max_price_int = int(max_price) if max_price and max_price.isdigit() else None
+        bedrooms_int = int(bedrooms) if bedrooms and bedrooms.isdigit() else None
+        
+        print(f"Searching Google Custom Search for: {location}, price: ${min_price_int}-${max_price_int}, bedrooms: {bedrooms_int}")
+        print(f"Amenities: {amenities}, Lifestyle: {lifestyle}")
+        
+        listings = search_rentals_with_google(location, min_price_int, max_price_int, bedrooms_int, amenities, lifestyle)
+        
+        # Process the listings to ensure they have the required fields
+        processed_listings = []
+        for listing in listings:
+            processed_listing = {
+                'id': listing.get('id', len(processed_listings) + 1),
+                'title': listing.get('title', 'No title'),
+                'price': listing.get('price', 0),
+                'location': listing.get('location', location),
+                'bedrooms': listing.get('bedrooms'),
+                'bathrooms': listing.get('bathrooms'),
+                'amenities': listing.get('amenities', []),
+                'description': listing.get('description', ''),
+                'match_percentage': listing.get('match_percentage', 75),
+                'contact': listing.get('contact', {'name': 'Contact for details', 'phone': 'N/A', 'email': 'N/A'}),
+                'source_website': listing.get('source_website', 'Google Search'),
+                'listing_url': listing.get('listing_url'),
+                'availability_date': listing.get('availability_date', datetime.now().strftime('%Y-%m-%d')),
+                'features': listing.get('features', []),
+                'images': listing.get('images', [])
+            }
+            processed_listings.append(processed_listing)
+        
+        return processed_listings
+        
+    except Exception as e:
+        print(f"Error searching with Google: {e}")
         return []
 
 def rank_houses(houses: List[Dict], user_preferences: str) -> List[Dict]:
@@ -161,6 +243,12 @@ def build_user_preferences(filter_values: Dict) -> str:
     if filter_values.get('num_bedrooms'):
         preferences.append(f"Bedrooms: {filter_values['num_bedrooms']}+")
     
+    if filter_values.get('amenities'):
+        preferences.append(f"Amenities: {', '.join(filter_values['amenities'])}")
+    
+    if filter_values.get('lifestyle'):
+        preferences.append(f"Lifestyle: {filter_values['lifestyle']}")
+    
     return " | ".join(preferences) if preferences else "No specific preferences"
 
 @app.route('/', methods=['GET', 'POST'])
@@ -171,14 +259,16 @@ def index():
     properties = []
     summary = None
     feedback_msg = None
-    search_method = "local"  # Default to local search
+    search_method = "google" if GOOGLE_AVAILABLE else "local"  # Default to Google search if available
 
     # Default filter values
     filter_values = {
         'location': '',
         'min_price': '',
         'max_price': '',
-        'num_bedrooms': ''
+        'num_bedrooms': '',
+        'amenities': [],
+        'lifestyle': ''
     }
 
     if request.method == 'POST':
@@ -196,6 +286,16 @@ def index():
         filter_values['min_price'] = request.form.get('min_price', '')
         filter_values['max_price'] = request.form.get('max_price', '')
         filter_values['num_bedrooms'] = request.form.get('num_bedrooms', '')
+        
+        # Handle amenities - both checkboxes and custom input fields
+        checkbox_amenities = request.form.getlist('amenities')
+        custom_amenities = request.form.getlist('custom_amenities[]')
+        # Filter out empty custom amenities
+        custom_amenities = [amenity.strip() for amenity in custom_amenities if amenity.strip()]
+        # Combine both types of amenities
+        filter_values['amenities'] = checkbox_amenities + custom_amenities
+        
+        filter_values['lifestyle'] = request.form.get('lifestyle', '')
         search_method = request.form.get('search_method', 'local')
 
         # Build filters for display
@@ -209,42 +309,76 @@ def index():
             filters.append(f"{filter_values['num_bedrooms']}+ Bedrooms")
         if filter_values['location']:
             filters.append(f"Near {filter_values['location']}")
+        if filter_values['amenities']:
+            filters.append(f"Amenities: {', '.join(filter_values['amenities'])}")
+        if filter_values['lifestyle']:
+            filters.append(f"Lifestyle: {filter_values['lifestyle']}")
 
-        # Search for properties based on selected method
+        # Search for properties using Google Custom Search
         try:
-            if search_method == 'perplexity' and PERPLEXITY_AVAILABLE and filter_values['location']:
-                # Use Perplexity API for real-time search
-                print("Using Perplexity API for real-time search...")
-                houses = search_rentals_perplexity(
+            if filter_values['location']:
+                # Use Google Custom Search API
+                print("Using Google Custom Search API...")
+                houses = search_rentals_google(
                     filter_values['location'],
                     filter_values['min_price'],
                     filter_values['max_price'],
-                    filter_values['num_bedrooms']
+                    filter_values['num_bedrooms'],
+                    filter_values['amenities'],
+                    filter_values['lifestyle']
                 )
-                search_source = "Perplexity API (Real-time)"
-            else:
-                # Use local file-based search
-                print("Using local database for search...")
-                houses = load_house_ads()
-                search_source = "Local Database"
+                search_source = "Google Custom Search API"
+
+                # --- Start: New Post-Search Filtering ---
                 
-                if houses and filter_values['location']:
-                    # Build user preferences string
-                    user_preferences = build_user_preferences(filter_values)
+                filtered_houses = []
+                min_price_filter = int(filter_values['min_price']) if filter_values['min_price'] else None
+                max_price_filter = int(filter_values['max_price']) if filter_values['max_price'] else None
+                bedrooms_filter = int(filter_values['num_bedrooms']) if filter_values['num_bedrooms'] else None
+
+                for house in houses:
+                    price = house.get('price')
+                    bedrooms = house.get('bedrooms')
                     
-                    # Rank houses using AI
-                    houses = rank_houses(houses, user_preferences)
+                    # Price check
+                    if price and min_price_filter and price < min_price_filter:
+                        continue
+                    if price and max_price_filter and price > max_price_filter:
+                        continue
+                        
+                    # Bedroom check
+                    if bedrooms and bedrooms_filter and bedrooms < bedrooms_filter:
+                        continue
+                        
+                    filtered_houses.append(house)
+                
+                houses = filtered_houses
+
+                # --- Start: Prioritize Zillow results ---
+                houses.sort(key=lambda house: house.get('source_website') != 'Zillow')
+                # --- End: Prioritize Zillow results ---
+
+                # --- End: New Post-Search Filtering ---
+
+            else:
+                houses = []
+                search_source = "Local Database"
             
             if houses:
-                # Format properties for display (top 8)
-                for i, house in enumerate(houses[:8]):
+                # Format properties for display
+                for i, house in enumerate(houses):
+                    # Skip properties with no price
+                    price = house.get('price')
+                    if not price or price == 'N/A' or price == 0:
+                        continue
+
                     tags = []
                     if house.get('bedrooms'):
                         tags.append(f"{house['bedrooms']} BR")
                     if house.get('bathrooms'):
                         tags.append(f"{house['bathrooms']} Bath")
                     if house.get('location'):
-                        tags.append(house['location'])
+                        tags.append(f"{house['location']}")
                     if house.get('amenities'):
                         # Take first few amenities for display
                         amenity_tags = house['amenities'][:3] if isinstance(house['amenities'], list) else []
@@ -252,21 +386,23 @@ def index():
                     
                     properties.append({
                         'title': house.get('title', 'No title'),
-                        'price': house.get('price', 'N/A'),
+                        'price': price,
                         'tags': tags,
                         'top_match': i == 0,
                         'match_score': house.get('match_score', 50),
-                        'url': house.get('url', '#'),
+                        'url': house.get('listing_url', '#'),
                         'source': house.get('source_website', search_source),
                         'match_reason': house.get('match_reason', 'AI analysis')
                     })
                 
-                summary = f"I found {len(houses)} properties matching your criteria using {search_source}. The top match has a {houses[0].get('match_score', 50)}% compatibility score!" if houses else "No properties found for your criteria."
-            else:
-                if search_method == 'perplexity':
-                    summary = "No properties found using Perplexity API. Try adjusting your search criteria or use local database."
+                summary = f"I found {len(properties)} properties matching your criteria using {search_source}."
+                if len(properties) > 0:
+                    summary += f" The top match has a {properties[0].get('match_score', 50)}% compatibility score!"
                 else:
-                    summary = "No house listings available in the database. Please check the houseAds.txt file or try Perplexity API search."
+                    summary = "No properties found with a valid price. Try adjusting your search criteria."
+
+            else:
+                summary = "No properties found using Google Custom Search API. Try adjusting your search criteria."
                 
         except Exception as e:
             summary = f"Error processing house listings: {str(e)}"
@@ -278,8 +414,11 @@ def index():
                 log_user_feedback(feedback)
                 feedback_msg = "Thank you for your feedback!"
 
-    # Get Perplexity API status for the template
-    perplexity_status = get_perplexity_status() if PERPLEXITY_AVAILABLE else {'available': False, 'status': 'Not installed'}
+    # Get OpenAI API status for the template
+    openai_status = get_openai_status() if OPENAI_AVAILABLE else {'available': False, 'status': 'Not installed'}
+    
+    # Get Google Custom Search API status for the template
+    google_status = get_google_status() if GOOGLE_AVAILABLE else {'available': False, 'status': 'Not installed'}
 
     return render_template('index.html', 
                          answer=answer, 
@@ -289,9 +428,10 @@ def index():
                          summary=summary, 
                          filter_values=filter_values, 
                          feedback_msg=feedback_msg,
-                         search_method=search_method,
-                         perplexity_available=PERPLEXITY_AVAILABLE,
-                         perplexity_status=perplexity_status)
+                         openai_available=OPENAI_AVAILABLE,
+                         openai_status=openai_status,
+                         google_available=GOOGLE_AVAILABLE,
+                         google_status=google_status)
 
 if __name__ == '__main__':
     # Set up Together AI (you'll need to set this as an environment variable)
@@ -299,14 +439,24 @@ if __name__ == '__main__':
     if not together.api_key:
         print("Warning: TOGETHER_API_KEY environment variable not set. AI ranking will not work.")
     
-    # Check Perplexity API status
-    if PERPLEXITY_AVAILABLE:
-        status = get_perplexity_status()
+    # Check Google Custom Search API status
+    if GOOGLE_AVAILABLE:
+        status = get_google_status()
         if status['available']:
-            print("✅ Perplexity API is available and ready to use")
+            print("✅ Google Custom Search API is available and ready to use")
         else:
-            print("⚠️  Perplexity API key not set. Set PERPLEXITY_API_KEY environment variable to enable real-time search.")
+            print("⚠️  Google Custom Search API not configured. Set GOOGLE_API_KEY and GOOGLE_SEARCH_ENGINE_ID environment variables.")
     else:
-        print("⚠️  Perplexity integration not available. Check dependencies and API key setup.")
+        print("⚠️  Google Custom Search integration not available. Check dependencies and API key setup.")
+    
+    # Check OpenAI API status
+    if OPENAI_AVAILABLE:
+        status = get_openai_status()
+        if status['available']:
+            print("✅ OpenAI API is available and ready to use")
+        else:
+            print("⚠️  OpenAI API key not set. Set OPENAI_API_KEY environment variable to enable real-time search.")
+    else:
+        print("⚠️  OpenAI integration not available. Check dependencies and API key setup.")
     
     app.run(debug=True)

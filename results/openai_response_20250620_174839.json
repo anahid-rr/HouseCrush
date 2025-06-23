@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BkghJxOu7dL66GZGGA736drjkY0qp",
+    "object": "chat.completion",
+    "created": 1750466917,
+    "model": "gpt-3.5-turbo-0125",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "[\n    {\n        \"title\": \"Modern Condo in Downtown Toronto\",\n        \"price\": 2500,\n        \"location\": \"Downtown Toronto\",\n        \"bedrooms\": 1,\n        \"bathrooms\": 1,\n        \"amenities\": [\"Parking\", \"Gym\", \"Swimming Pool\"],\n        \"description\": \"Beautiful modern condo in the heart of downtown Toronto with great amenities.\",\n        \"contact\": {\n            \"name\": \"John Doe\",\n            \"phone\": \"555-555-5555\",\n            \"email\": \"johndoe@example.com\"\n        },\n        \"source_website\": \"apartments.com\"\n    },\n    {\n        \"title\": \"Cozy Apartment near Yonge and Eglinton\",\n        \"price\": 2800,\n        \"location\": \"Yonge and Eglinton\",\n        \"bedrooms\": 1,\n        \"bathrooms\": 1,\n        \"amenities\": [\"Parking\", \"Balcony\"],\n        \"description\": \"Cozy apartment located in a vibrant neighborhood near Yonge and Eglinton.\",\n        \"contact\": {\n            \"name\": \"Jane Smith\",\n            \"phone\": \"555-555-1234\",\n            \"email\": \"janesmith@example.com\"\n        },\n        \"source_website\": \"zillow.com\"\n    }\n]",
+                "refusal": null,
+                "annotations": []
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 302,
+        "completion_tokens": 277,
+        "total_tokens": 579,
+        "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+}

@@ -1,0 +1,884 @@
+{
+    "search_summary": {
+        "location": "Vancouver",
+        "total_listings_found": 10,
+        "search_timestamp": "2025-06-22T19:28:55.155517",
+        "source": "Google Custom Search API"
+    },
+    "listings": [
+        {
+            "id": 1,
+            "title": "Student Apartments For Rent in Vancouver BC - 1,135 Rentals ...",
+            "price": 2302,
+            "location": "Vancouver",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "1 day ago ... 2 Bedroom Apartments in Vancouver · 3 Bedroom Apartments in Vancouver · Rooms ... The average cost for a student housing apartment is C$2,302. You can ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/vancouver-bc/student-housing/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 2,
+            "title": "Apartments for Rent under C$3,000 in Vancouver BC - 814 Rentals ...",
+            "price": 3000,
+            "location": "Vancouver",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "2 days ago ... Apartments for Rent under C$3,000 in Vancouver BC - 814 Rentals - Page 7 ... 2 Bedroom Apartments in Vancouver · 3 Bedroom Apartments in ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/vancouver-bc/under-3000/7/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 3,
+            "title": "2 Bedroom Apartments For Rent in Vancouver BC - 432 Rentals ...",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "3 days ago ... Find your ideal 2 bedroom apartment in Vancouver, BC. Discover 432 spacious units for rent with modern amenities and a variety of floor plans to fit your ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/vancouver-bc/2-bedrooms/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 4,
+            "title": "The Arvon - 11603 NE 71st St Vancouver, WA 98662 | Apartments.com",
+            "price": 1649,
+            "location": "Vancouver",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "3 days ago ... The Arvon has one to three bedrooms with rent ranges from $1,649/mo. to $2,676/mo. ... 2 Bedroom Apartments in Vancouver · 3 Bedroom Apartments in Vancouver ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/the-arvon-vancouver-wa/rsnyc70/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 5,
+            "title": "Apartments For Rent Under $1000 in Vancouver WA | Zillow",
+            "price": 1000,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "4 days ago ... Search by Bedroom Size · Vancouver 1 Bedroom Apartments · Vancouver 2 Bedroom Apartments · Vancouver 3 Bedroom Apartments ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Zillow",
+            "listing_url": "https://www.zillow.com/vancouver-wa/apartments-under-1000/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 6,
+            "title": "2 Bedroom Apartments For Rent in Portland OR | Zillow",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "Jun 9, 2025 ... Find your next 2 bedroom apartment in Portland OR on Zillow. Use our detailed filters to find the perfect place, then get in touch with the property ...",
+            "match_percentage": 60,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Zillow",
+            "listing_url": "https://www.zillow.com/portland-or/apartments-2-bedrooms/6_p/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 7,
+            "title": "3594 Malsum Dr Unit 405, North Vancouver, BC V7G 0B4 ...",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": 2,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "Jun 4, 2025 ... Lupine Walk Seymour Village 2 Bed Apartment Rental 405-3594 Malsum Dr North Vancouver ... Contact VADA Property Management to schedule a viewing at this 2 bedroom ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/3594-malsum-dr-north-vancouver-bc-unit-405/gjs0fqx/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 8,
+            "title": "401-10289 133 St, Surrey, BC V3T 0B1 - Townhouse for Rent in ...",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": null,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "Jun 4, 2025 ... Spacious Ground-Level 2-Bedroom + Den Condo (townhouse) with Backyard Access – Central Surrey Welcome to this exceptionally spacious 2-bedroom, 2-bathroom ...",
+            "match_percentage": 60,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/401-10289-133-st-surrey-bc/3fgyeyf/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 9,
+            "title": "Pet Friendly Vancouver BC Condos For Rent - 524 Rentals from C ...",
+            "price": null,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [
+                "Pet Friendly"
+            ],
+            "description": "May 16, 2025 ... Condos BC Vancouver. Find the Perfect Vancouver, BC Rental. Search by Bedrooms. 1 Bedroom Apartments in Vancouver · 2 Bedroom Apartments in Vancouver · 3 ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/condos/vancouver-bc/pet-friendly/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        },
+        {
+            "id": 10,
+            "title": "Vancouver BC Condos For Rent - 1,141 Rentals from C$2,449 ...",
+            "price": 2449,
+            "location": "Vancouver",
+            "bedrooms": 1,
+            "bathrooms": null,
+            "amenities": [],
+            "description": "May 16, 2025 ... Condos BC Vancouver. Find the Perfect Vancouver, BC Rental. Search by Bedrooms. 1 Bedroom Apartments in Vancouver · 2 Bedroom Apartments in Vancouver · 3 ...",
+            "match_percentage": 90,
+            "contact": {
+                "name": "Contact for details",
+                "phone": "N/A",
+                "email": "N/A"
+            },
+            "source_website": "Apartments.com",
+            "listing_url": "https://www.apartments.com/condos/vancouver-bc/",
+            "availability_date": "2025-06-22",
+            "features": [],
+            "images": []
+        }
+    ],
+    "raw_response": {
+        "kind": "customsearch#search",
+        "url": {
+            "type": "application/json",
+            "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+        },
+        "queries": {
+            "request": [
+                {
+                    "title": "Google Custom Search - rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$3000\" (\"2 bedroom\" OR \"2 bed\")",
+                    "totalResults": "143000",
+                    "searchTerms": "rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$3000\" (\"2 bedroom\" OR \"2 bed\")",
+                    "count": 10,
+                    "startIndex": 1,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ],
+            "nextPage": [
+                {
+                    "title": "Google Custom Search - rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$3000\" (\"2 bedroom\" OR \"2 bed\")",
+                    "totalResults": "143000",
+                    "searchTerms": "rental apartments Vancouver (site:apartments.com OR site:zillow.com OR site:kijiji.ca) \"$2300..$3000\" (\"2 bedroom\" OR \"2 bed\")",
+                    "count": 10,
+                    "startIndex": 11,
+                    "language": "lang_en",
+                    "inputEncoding": "utf8",
+                    "outputEncoding": "utf8",
+                    "safe": "active",
+                    "cx": "67fb538571a9346de",
+                    "sort": "date"
+                }
+            ]
+        },
+        "context": {
+            "title": "House crush"
+        },
+        "searchInformation": {
+            "searchTime": 0.373925,
+            "formattedSearchTime": "0.37",
+            "totalResults": "143000",
+            "formattedTotalResults": "143,000"
+        },
+        "items": [
+            {
+                "kind": "customsearch#result",
+                "title": "Student Apartments For Rent in Vancouver BC - 1,135 Rentals ...",
+                "htmlTitle": "Student <b>Apartments</b> For <b>Rent</b> in <b>Vancouver</b> BC - 1,135 <b>Rentals</b> ...",
+                "link": "https://www.apartments.com/vancouver-bc/student-housing/",
+                "displayLink": "www.apartments.com",
+                "snippet": "1 day ago ... 2 Bedroom Apartments in Vancouver · 3 Bedroom Apartments in Vancouver · Rooms ... The average cost for a student housing apartment is C$2,302. You can ...",
+                "htmlSnippet": "1 day ago <b>...</b> <b>2 Bedroom Apartments</b> in <b>Vancouver</b> &middot; 3 Bedroom <b>Apartments</b> in <b>Vancouver</b> &middot; Rooms ... The average cost for a student <b>housing apartment</b> is C<b>$2,302</b>. You can&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/vancouver-bc/student-housing/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/<b>vancouver</b>-bc/student-housing/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-esT0O6_2E_CZ60fqjWQ4_8X6mskc2hflnFvEZWv9g_NgBaOAlegkY3M&s",
+                            "width": "222",
+                            "height": "227"
+                        }
+                    ],
+                    "Event": [
+                        {
+                            "image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/wesley-place-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - Wesley Place",
+                            "description": "Wesley Place Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/wesley-place-vancouver-bc/1lbs0m6/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/e5Yj-aK5q8WZ1Fno7Fe0H_uP2fhiQE5aqq7co3wrpsc/117/landis-residences-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - Landis Residences",
+                            "description": "Landis Residences Apartments for rent to view",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/landis-residences-vancouver-bc/lmpq6tf/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/ZSkDXpZhNtIHxHZaZ1ctsPkyHgVHpPfZUSPsGX31taU/117/barafield-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - Barafield",
+                            "description": "Barafield Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/barafield-vancouver-bc/h87z8q3/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/kUTeinlAZjNChNzsYkboVZ23E3WikAhG5UpqF06QTwU/117/the-glenmore-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - The Glenmore",
+                            "description": "The Glenmore Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/the-glenmore-vancouver-bc/e5h3e7m/#threedTours",
+                            "startDate": "2025-06-22"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/w7dp5WYhsuULCTDKmaglsn0kut4GtuJRCG8Rgh7Q4bs/117/855-jervis-vancouver-bc-interior-photo.jpg?p=1",
+                            "endDate": "2025-06-22",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 855 Jervis",
+                            "description": "855 Jervis Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/855-jervis-vancouver-bc/gfw1yfx/#threedTours",
+                            "startDate": "2025-06-22"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "Student Apartments For Rent in Vancouver BC - 1,135 Rentals | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "Student Apartments For Rent in Vancouver BC - 1,135 Rentals | Apartments.com",
+                            "og:updated_time": "6/22/2025 10:50:31 AM",
+                            "og:description": "Discover your ideal college housing in Vancouver. Browse 1,135 affordable and convenient options for rent near your campus. Start your search today!",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/vancouver-bc/student-housing/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/image.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments for Rent under C$3,000 in Vancouver BC - 814 Rentals ...",
+                "htmlTitle": "<b>Apartments</b> for <b>Rent</b> under C<b>$3,000</b> in <b>Vancouver</b> BC - 814 <b>Rentals</b> ...",
+                "link": "https://www.apartments.com/vancouver-bc/under-3000/7/",
+                "displayLink": "www.apartments.com",
+                "snippet": "2 days ago ... Apartments for Rent under C$3,000 in Vancouver BC - 814 Rentals - Page 7 ... 2 Bedroom Apartments in Vancouver · 3 Bedroom Apartments in ...",
+                "htmlSnippet": "2 days ago <b>...</b> <b>Apartments</b> for <b>Rent</b> under C<b>$3,000</b> in <b>Vancouver</b> BC - 814 <b>Rentals</b> - Page 7 ... <b>2 Bedroom Apartments</b> in <b>Vancouver</b> &middot; 3 Bedroom <b>Apartments</b> in&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/vancouver-bc/under-3000/7/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/<b>vancouver</b>-bc/under-3000/7/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3HranrUwjYYVbMK16gcHONWTZCXmHX_RKMgFJp_1cS6Jac4GjDsfpso&s",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/v_HEM1psq15OpA3AMidwC7NcmHeO2DJReNnTP2NXOY4/115/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "Apartments for Rent under C$3,000 in Vancouver BC - 814 Rentals - Page 7 | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "Apartments for Rent under C$3,000 in Vancouver BC - 814 Rentals - Page 7 | Apartments.com",
+                            "og:updated_time": "6/21/2025 4:13:57 AM",
+                            "og:description": "Search for an apartment in Vancouver, BC. View detailed listings, compare your favorites, and take the next step toward your new rental.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/v_HEM1psq15OpA3AMidwC7NcmHeO2DJReNnTP2NXOY4/115/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/vancouver-bc/under-3000/7/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/J-EoZITUpl8M5wUVVh2HiUCBZGoDVs_Abp03_5cOyaQ/115/1033-haro-st-unit-12999-vancouver-bc-building-photo.jpg?p=1"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "2 Bedroom Apartments For Rent in Vancouver BC - 432 Rentals ...",
+                "htmlTitle": "<b>2 Bedroom Apartments</b> For <b>Rent</b> in <b>Vancouver</b> BC - 432 <b>Rentals</b> ...",
+                "link": "https://www.apartments.com/vancouver-bc/2-bedrooms/",
+                "displayLink": "www.apartments.com",
+                "snippet": "3 days ago ... Find your ideal 2 bedroom apartment in Vancouver, BC. Discover 432 spacious units for rent with modern amenities and a variety of floor plans to fit your ...",
+                "htmlSnippet": "3 days ago <b>...</b> Find your ideal <b>2 bedroom apartment</b> in <b>Vancouver</b>, BC. Discover 432 spacious units for <b>rent</b> with modern amenities and a variety of floor plans to fit your&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/vancouver-bc/2-bedrooms/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/<b>vancouver</b>-bc/<b>2-bedroom</b>s/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrTZEpfttXTKF8J-a8L9-p5dpwQrZkF01w1u2I8cSh0eM_MzP3RzHhxklj&s",
+                            "width": "300",
+                            "height": "168"
+                        }
+                    ],
+                    "Event": [
+                        {
+                            "image": "https://images1.apartments.com/i2/P48zS3gZN7ywyyLGOE2ZnTQ2EJRGOilFeOvBIaPA3nU/117/wesley-place-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-20",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - Wesley Place",
+                            "description": "Wesley Place Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/wesley-place-vancouver-bc/1lbs0m6/#threedTours",
+                            "startDate": "2025-06-20"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/gBGZ7cyzvtcql7OFM7O0RS5x5BAjlvFUWx4fLkj9KNY/117/8675-french-vancouver-bc-lobby.jpg?p=1",
+                            "endDate": "2025-06-20",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 8675 French",
+                            "description": "8675 French Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/8675-french-vancouver-bc/bq48xeb/#threedTours",
+                            "startDate": "2025-06-20"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/QzUAXn2LQSQDAPuf2mEVLkyyy4pegtBSszd8cWsv_wU/117/1770-pendrell-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-20",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 1770 Pendrell",
+                            "description": "1770 Pendrell Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/1770-pendrell-vancouver-bc/820jtn2/#threedTours",
+                            "startDate": "2025-06-20"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/e5Yj-aK5q8WZ1Fno7Fe0H_uP2fhiQE5aqq7co3wrpsc/117/landis-residences-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-20",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - Landis Residences",
+                            "description": "Landis Residences Apartments for rent to view",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/landis-residences-vancouver-bc/lmpq6tf/#threedTours",
+                            "startDate": "2025-06-20"
+                        },
+                        {
+                            "image": "https://images1.apartments.com/i2/XTj9zTAAPZd4s1a_g6lP72K3LCLobL8huvXRRwsMZ4I/117/3583-kingsway-vancouver-bc-building-photo.jpg?p=1",
+                            "endDate": "2025-06-20",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour - 3583 Kingsway",
+                            "description": "3583 Kingsway Apartments for rent to view a 3D tour.",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.apartments.com/3583-kingsway-vancouver-bc/sfetq76/#threedTours",
+                            "startDate": "2025-06-20"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "2 Bedroom Apartments For Rent in Vancouver BC - 432 Rentals | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "2 Bedroom Apartments For Rent in Vancouver BC - 432 Rentals | Apartments.com",
+                            "og:updated_time": "6/20/2025 12:23:55 PM",
+                            "og:description": "Find your ideal 2 bedroom apartment in Vancouver, BC. Discover 432 spacious units for rent with modern amenities and a variety of floor plans to fit your lifestyle.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/vancouver-bc/2-bedrooms/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/aParkZdRcKYsKyYIoQS9tx42fe4dKBkeSXncRVBiHR4/117/image.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "The Arvon - 11603 NE 71st St Vancouver, WA 98662 | Apartments.com",
+                "htmlTitle": "The Arvon - 11603 NE 71st St <b>Vancouver</b>, WA 98662 | <b>Apartments</b>.com",
+                "link": "https://www.apartments.com/the-arvon-vancouver-wa/rsnyc70/",
+                "displayLink": "www.apartments.com",
+                "snippet": "3 days ago ... The Arvon has one to three bedrooms with rent ranges from $1,649/mo. to $2,676/mo. ... 2 Bedroom Apartments in Vancouver · 3 Bedroom Apartments in Vancouver ...",
+                "htmlSnippet": "3 days ago <b>...</b> The Arvon has one to three bedrooms with <b>rent</b> ranges from $1,649/mo. to <b>$2,676</b>/mo. ... <b>2 Bedroom Apartments</b> in <b>Vancouver</b> &middot; 3 Bedroom <b>Apartments</b> in <b>Vancouver</b>&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/the-arvon-vancouver-wa/rsnyc70/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/the-arvon-<b>vancouver</b>-wa/rsnyc70/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCOz_VnFFd0oXAaM7vf7sZ8vaXhQOajURZzToTfqgXbDI6yfsHjIGhw1-&s",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/tHysitvUjpkbs7Bds0hfnszE4GcZa_HGnw_R-vkZeS8/111/the-arvon-vancouver-wa-primary-photo.jpg",
+                            "place:location:longitude": "-122.55333",
+                            "image": "https://images1.apartments.com/i2/tHysitvUjpkbs7Bds0hfnszE4GcZa_HGnw_R-vkZeS8/117/the-arvon-vancouver-wa-primary-photo.jpg?p=1",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "The Arvon - 11603 NE 71st St Vancouver, WA 98662 | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "45.67294",
+                            "og:title": "The Arvon - 11603 NE 71st St Vancouver, WA 98662 | Apartments.com",
+                            "og:updated_time": "6/22/2025 7:37:05 PM",
+                            "og:description": "See all available apartments for rent at The Arvon in Vancouver, WA. The Arvon has rental units ranging from 804-1178 sq ft starting at $1649.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/tHysitvUjpkbs7Bds0hfnszE4GcZa_HGnw_R-vkZeS8/111/the-arvon-vancouver-wa-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/the-arvon-vancouver-wa/rsnyc70/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/tHysitvUjpkbs7Bds0hfnszE4GcZa_HGnw_R-vkZeS8/111/the-arvon-vancouver-wa-primary-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Apartments For Rent Under $1000 in Vancouver WA | Zillow",
+                "htmlTitle": "<b>Apartments</b> For <b>Rent</b> Under $1000 in <b>Vancouver</b> WA | Zillow",
+                "link": "https://www.zillow.com/vancouver-wa/apartments-under-1000/",
+                "displayLink": "www.zillow.com",
+                "snippet": "4 days ago ... Search by Bedroom Size · Vancouver 1 Bedroom Apartments · Vancouver 2 Bedroom Apartments · Vancouver 3 Bedroom Apartments ...",
+                "htmlSnippet": "4 days ago <b>...</b> Search by Bedroom Size &middot; <b>Vancouver</b> 1 Bedroom <b>Apartments</b> &middot; <b>Vancouver 2 Bedroom Apartments</b> &middot; <b>Vancouver</b> 3 Bedroom <b>Apartments</b>&nbsp;...",
+                "formattedUrl": "https://www.zillow.com/vancouver-wa/apartments-under-1000/",
+                "htmlFormattedUrl": "https://www.zillow.com/<b>vancouver</b>-wa/<b>apartments</b>-under-1000/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ1FEwraJMqih1KvWJquP_UtfZwLw0nvuUpHJYoDg_mv7bubWR_HWzjZM&s",
+                            "width": "260",
+                            "height": "194"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-tilecolor": "#3366b8",
+                            "msapplication-config": "none",
+                            "og:image": "/apple-touch-icon.png",
+                            "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                            "og:site_name": "Zillow",
+                            "author": "Zillow, Inc.",
+                            "og:title": "Apartments For Rent Under $1000 in Vancouver WA | Zillow",
+                            "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                            "og:description": "Find apartments for rent under $1,000 in Vancouver WA on Zillow. Check availability, photos, floor plans, phone number, reviews, map or get in touch with the property manager.",
+                            "referrer": "always",
+                            "next-head-count": "56",
+                            "fb:app_id": "172285552816089",
+                            "google-signin-cookiepolicy": "single_host_origin",
+                            "apple-mobile-web-app-status-bar-style": "black-translucent",
+                            "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                            "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                            "apple-mobile-web-app-capable": "yes",
+                            "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                            "google-signin-scope": "openid profile email",
+                            "pod-group-name": "web-platform-render-search-page-sub-app",
+                            "og:url": "https://www.zillow.com/vancouver-wa/apartments-under-1000/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://photos.zillowstatic.com/fp/bc6609876346c380857170267378c200-p_e.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "2 Bedroom Apartments For Rent in Portland OR | Zillow",
+                "htmlTitle": "<b>2 Bedroom Apartments</b> For <b>Rent</b> in Portland OR | Zillow",
+                "link": "https://www.zillow.com/portland-or/apartments-2-bedrooms/6_p/",
+                "displayLink": "www.zillow.com",
+                "snippet": "Jun 9, 2025 ... Find your next 2 bedroom apartment in Portland OR on Zillow. Use our detailed filters to find the perfect place, then get in touch with the property ...",
+                "htmlSnippet": "Jun 9, 2025 <b>...</b> Find your next <b>2 bedroom apartment</b> in Portland OR on Zillow. Use our detailed filters to find the perfect place, then get in touch with the property&nbsp;...",
+                "formattedUrl": "https://www.zillow.com/portland-or/apartments-2-bedrooms/6_p/",
+                "htmlFormattedUrl": "https://www.zillow.com/portland-or/<b>apartments</b>-<b>2-bedroom</b>s/6_p/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpAbOI9d7VmwZvTMWFIn0-mNxXB46e7FFEj_M-x48lGYyc8DSswS5b6T8&s",
+                            "width": "260",
+                            "height": "194"
+                        }
+                    ],
+                    "Event": [
+                        {
+                            "image": "https://photos.zillowstatic.com/fp/8b8c76a5742da84bb5f423a1cc4ade3c-p_e.jpg",
+                            "endDate": "2025-06-13",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 2080 NW Front Ave  # D203",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.zillow.com/apartments/portland-or/waterline/5xGN7h/",
+                            "startDate": "2025-06-13"
+                        },
+                        {
+                            "image": "https://photos.zillowstatic.com/fp/98a67d201b9a403782494cbb595b2af7-p_e.jpg",
+                            "endDate": "2025-06-13",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 2837 SE Colt Dr   # 29",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.zillow.com/apartments/portland-or/wimbledon-square-and-gardens/5XjQDY/",
+                            "startDate": "2025-06-13"
+                        },
+                        {
+                            "image": "https://photos.zillowstatic.com/fp/6dc6050e425458da911eb73162785823-p_e.jpg",
+                            "endDate": "2025-06-13",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 1075 NW 16th Ave  Apt 307",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.zillow.com/apartments/portland-or/derby-slabtown/9VLx8C/",
+                            "startDate": "2025-06-13"
+                        },
+                        {
+                            "image": "https://photos.zillowstatic.com/fp/89357237f6a28d5fd75857b82d7ad9a9-p_e.jpg",
+                            "endDate": "2025-06-13",
+                            "eventStatus": "http://schema.org/EventScheduled",
+                            "name": "3D Tour Available - 8150 SW Barnes Rd   Apt S204",
+                            "eventAttendanceMode": "http://schema.org/OnlineEventAttendanceMode",
+                            "url": "https://www.zillow.com/apartments/portland-or/81-fifty-at-west-hills/5XjRF5/",
+                            "startDate": "2025-06-13"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "msapplication-tilecolor": "#3366b8",
+                            "msapplication-config": "none",
+                            "og:image": "/apple-touch-icon.png",
+                            "copyright": "Copyright (c) 2006-2025 Zillow, Inc.",
+                            "og:site_name": "Zillow",
+                            "author": "Zillow, Inc.",
+                            "og:title": "2 Bedroom Apartments For Rent in Portland OR | Zillow",
+                            "msapplication-tileimage": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png",
+                            "og:description": "Find your next 2 bedroom apartment in Portland OR on Zillow. Use our detailed filters to find the perfect place, then get in touch with the property manager.",
+                            "referrer": "always",
+                            "next-head-count": "58",
+                            "fb:app_id": "172285552816089",
+                            "google-signin-cookiepolicy": "single_host_origin",
+                            "apple-mobile-web-app-status-bar-style": "black-translucent",
+                            "viewport": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+                            "google-translate-customization": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a",
+                            "apple-mobile-web-app-capable": "yes",
+                            "google-signin-clientid": "238648973530.apps.googleusercontent.com",
+                            "google-signin-scope": "openid profile email",
+                            "pod-group-name": "web-platform-render-search-page-sub-app",
+                            "og:url": "https://www.zillow.com/portland-or/apartments-2-bedrooms/6_p/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://photos.zillowstatic.com/fp/8b8c76a5742da84bb5f423a1cc4ade3c-p_e.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "3594 Malsum Dr Unit 405, North Vancouver, BC V7G 0B4 ...",
+                "htmlTitle": "3594 Malsum Dr Unit 405, North <b>Vancouver</b>, BC V7G 0B4 ...",
+                "link": "https://www.apartments.com/3594-malsum-dr-north-vancouver-bc-unit-405/gjs0fqx/",
+                "displayLink": "www.apartments.com",
+                "snippet": "Jun 4, 2025 ... Lupine Walk Seymour Village 2 Bed Apartment Rental 405-3594 Malsum Dr North Vancouver ... Contact VADA Property Management to schedule a viewing at this 2 bedroom ...",
+                "htmlSnippet": "Jun 4, 2025 <b>...</b> Lupine Walk Seymour Village <b>2 Bed Apartment Rental</b> 405-3594 Malsum Dr North <b>Vancouver</b> ... Contact VADA Property Management to schedule a viewing at this <b>2 bedroom</b>&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/3594-malsum-dr-north-vancouver.../gjs0fqx/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/3594-malsum-dr-north-<b>vancouver</b>.../gjs0fqx/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF9UF4QUz4tHJeXX85WawzKAM0YIe7WqFGGfoGASX4nNXvTbttFpwLlQXC&s",
+                            "width": "194",
+                            "height": "259"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/001afjPLRrqfdMEUqLnhTW7K9kQbs9w2RvtDJR33am0/111/lupine-walk-seymour-village-2-bed-apartmen-unit-405-north-vancouver-bc-primary-photo.jpg",
+                            "place:location:longitude": "-122.97026",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "3594 Malsum Dr Unit 405, North Vancouver, BC V7G 0B4 - Apartment for Rent in North Vancouver, BC | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "49.31086",
+                            "og:title": "3594 Malsum Dr Unit 405, North Vancouver, BC V7G 0B4 - Apartment for Rent in North Vancouver, BC | Apartments.com",
+                            "og:updated_time": "6/5/2025 11:43:25 PM",
+                            "og:description": "Find apartments for rent, condos, townhomes and other rental homes. View videos, floor plans, photos and 360-degree views. No registration required!",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/001afjPLRrqfdMEUqLnhTW7K9kQbs9w2RvtDJR33am0/111/lupine-walk-seymour-village-2-bed-apartmen-unit-405-north-vancouver-bc-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/3594-malsum-dr-north-vancouver-bc-unit-405/gjs0fqx/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/001afjPLRrqfdMEUqLnhTW7K9kQbs9w2RvtDJR33am0/111/lupine-walk-seymour-village-2-bed-apartmen-unit-405-north-vancouver-bc-primary-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "401-10289 133 St, Surrey, BC V3T 0B1 - Townhouse for Rent in ...",
+                "htmlTitle": "401-10289 133 St, Surrey, BC V3T 0B1 - Townhouse for <b>Rent</b> in ...",
+                "link": "https://www.apartments.com/401-10289-133-st-surrey-bc/3fgyeyf/",
+                "displayLink": "www.apartments.com",
+                "snippet": "Jun 4, 2025 ... Spacious Ground-Level 2-Bedroom + Den Condo (townhouse) with Backyard Access – Central Surrey Welcome to this exceptionally spacious 2-bedroom, 2-bathroom ...",
+                "htmlSnippet": "Jun 4, 2025 <b>...</b> Spacious Ground-Level <b>2-Bedroom</b> + Den Condo (townhouse) with Backyard Access – Central Surrey Welcome to this exceptionally spacious <b>2-bedroom</b>, 2-bathroom&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/401-10289-133-st-surrey-bc/3fgyeyf/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/401-10289-133-st-surrey-bc/3fgyeyf/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxLvB_pSnlFTDLPn37PtG3VcmabELEHshcxKmnaU1Uct-SbBg9snJJr0Q&s",
+                            "width": "259",
+                            "height": "194"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/zVOrZ_7U_cw2G540yGqOA8oXwm9odclpj6poe4wzLoA/111/401-10289-133-st-surrey-bc-primary-photo.jpg",
+                            "place:location:longitude": "-122.85381",
+                            "image": "https://images1.apartments.com/i2/zVOrZ_7U_cw2G540yGqOA8oXwm9odclpj6poe4wzLoA/117/401-10289-133-st-surrey-bc-primary-photo.jpg?p=1",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "401-10289 133 St, Surrey, BC V3T 0B1 - Townhouse for Rent in Surrey, BC | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "place:location:latitude": "49.11603",
+                            "og:title": "401-10289 133 St, Surrey, BC V3T 0B1 - Townhouse for Rent in Surrey, BC | Apartments.com",
+                            "og:updated_time": "6/13/2025 3:16:15 PM",
+                            "og:description": "See all available rentals at 401-10289 133 St in Surrey, BC. 401-10289 133 Sthas rental units starting at C$3000.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/zVOrZ_7U_cw2G540yGqOA8oXwm9odclpj6poe4wzLoA/111/401-10289-133-st-surrey-bc-primary-photo.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/401-10289-133-st-surrey-bc/3fgyeyf/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/w_z6eF85EO36DaTbW4ZHAcpoFmmY1wKRHBmKF5gJTNM/111/401-10289-133-st-surrey-bc-building-photo.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Pet Friendly Vancouver BC Condos For Rent - 524 Rentals from C ...",
+                "htmlTitle": "Pet Friendly <b>Vancouver</b> BC <b>Condos</b> For <b>Rent</b> - 524 <b>Rentals</b> from C ...",
+                "link": "https://www.apartments.com/condos/vancouver-bc/pet-friendly/",
+                "displayLink": "www.apartments.com",
+                "snippet": "May 16, 2025 ... Condos BC Vancouver. Find the Perfect Vancouver, BC Rental. Search by Bedrooms. 1 Bedroom Apartments in Vancouver · 2 Bedroom Apartments in Vancouver · 3 ...",
+                "htmlSnippet": "May 16, 2025 <b>...</b> <b>Condos</b> BC <b>Vancouver</b>. Find the Perfect <b>Vancouver</b>, BC <b>Rental</b>. Search by Bedrooms. 1 Bedroom <b>Apartments</b> in <b>Vancouver</b> &middot; <b>2 Bedroom Apartments</b> in <b>Vancouver</b> &middot; 3&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/condos/vancouver-bc/pet-friendly/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/condos/<b>vancouver</b>-bc/pet-friendly/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj3DISAtIfak-Qr221yMmSCOYajuseljq-KdrybgcUyT_HfKtRYN4XJ7R3&s",
+                            "width": "275",
+                            "height": "183"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/fBLU9Lvs8CqsJpVnPJpE2V_Z4m4A3-4EL3b-ONThvL0/117/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "Pet Friendly Vancouver BC Condos For Rent - 524 Rentals from C$2,449 | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "Pet Friendly Vancouver BC Condos For Rent - 524 Rentals from C$2,449 | Apartments.com",
+                            "og:updated_time": "6/22/2025 10:44:24 AM",
+                            "og:description": "Find your perfect pet friendly rental on Apartments.com. Discover 524 Vancouver condos for rent that welcome your furry friends with open arms.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/fBLU9Lvs8CqsJpVnPJpE2V_Z4m4A3-4EL3b-ONThvL0/117/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/condos/vancouver-bc/pet-friendly/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/fBLU9Lvs8CqsJpVnPJpE2V_Z4m4A3-4EL3b-ONThvL0/117/2040-cornwall-ave-unit-id1051761p-vancouver-bc-building-photo.jpg?p=1"
+                        }
+                    ]
+                }
+            },
+            {
+                "kind": "customsearch#result",
+                "title": "Vancouver BC Condos For Rent - 1,141 Rentals from C$2,449 ...",
+                "htmlTitle": "<b>Vancouver</b> BC <b>Condos</b> For <b>Rent</b> - 1,141 <b>Rentals</b> from C<b>$2,449</b> ...",
+                "link": "https://www.apartments.com/condos/vancouver-bc/",
+                "displayLink": "www.apartments.com",
+                "snippet": "May 16, 2025 ... Condos BC Vancouver. Find the Perfect Vancouver, BC Rental. Search by Bedrooms. 1 Bedroom Apartments in Vancouver · 2 Bedroom Apartments in Vancouver · 3 ...",
+                "htmlSnippet": "May 16, 2025 <b>...</b> <b>Condos</b> BC <b>Vancouver</b>. Find the Perfect <b>Vancouver</b>, BC <b>Rental</b>. Search by Bedrooms. 1 Bedroom <b>Apartments</b> in <b>Vancouver</b> &middot; <b>2 Bedroom Apartments</b> in <b>Vancouver</b> &middot; 3&nbsp;...",
+                "formattedUrl": "https://www.apartments.com/condos/vancouver-bc/",
+                "htmlFormattedUrl": "https://www.<b>apartments</b>.com/condos/<b>vancouver</b>-bc/",
+                "pagemap": {
+                    "cse_thumbnail": [
+                        {
+                            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2gpBqdtO4cU0yjt92MHQdgVnWx9bMWoORCx6sQyb0rAuYggyk2Fkvus&s",
+                            "width": "259",
+                            "height": "194"
+                        }
+                    ],
+                    "metatags": [
+                        {
+                            "og:image": "https://images1.apartments.com/i2/4S-n_NaOFYGA138nu_Q-sQGDigt-S2ixd6w06V2mERM/117/image.jpg",
+                            "og:type": "article",
+                            "twitter:card": "summary_large_image",
+                            "twitter:title": "Vancouver BC Condos For Rent - 1,141 Rentals from C$2,449 | Apartments.com",
+                            "og:site_name": "Apartments.com",
+                            "handheldfriendly": "true",
+                            "og:title": "Vancouver BC Condos For Rent - 1,141 Rentals from C$2,449 | Apartments.com",
+                            "og:updated_time": "6/21/2025 5:00:41 PM",
+                            "og:description": "Discover convenient and modern living in Vancouver when you browse 1,141 condos for rent. Enjoy upscale amenities and prime locations to fit your lifestyle.",
+                            "twitter:creator": "@apartmentscom",
+                            "twitter:image": "https://images1.apartments.com/i2/4S-n_NaOFYGA138nu_Q-sQGDigt-S2ixd6w06V2mERM/117/image.jpg",
+                            "referrer": "no-referrer-when-downgrade",
+                            "fb:app_id": "739299276152207",
+                            "viewport": "width=device-width, height=device-height, initial-scale=1",
+                            "og:url": "https://www.apartments.com/condos/vancouver-bc/",
+                            "format-detection": "telephone=no"
+                        }
+                    ],
+                    "cse_image": [
+                        {
+                            "src": "https://images1.apartments.com/i2/4S-n_NaOFYGA138nu_Q-sQGDigt-S2ixd6w06V2mERM/117/image.jpg"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
