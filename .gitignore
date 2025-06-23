@@ -1,0 +1,6 @@
+
+.env
+*.key
+*.pem
+private/
+secrets/
