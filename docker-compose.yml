@@ -6,11 +6,14 @@ services:
     ports:
       - "7860:7860"
     environment:
-      - FLASK_ENV=development
+      - FLASK_ENV=production
       - PORT=7860
       # Add your API keys here or use a .env file
       # - TOGETHER_API_KEY=your_key_here
-      # - HUGGINGFACE_HUB_TOKEN=your_token_here
+      # - GOOGLE_API_KEY=your_key_here
+      # - GOOGLE_SEARCH_ENGINE_ID=your_search_engine_id_here
+    env_file:
+      - .env
     volumes:
       - ./results:/app/results
       - ./logs:/app/logs

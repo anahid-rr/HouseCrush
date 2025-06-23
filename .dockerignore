@@ -50,9 +50,9 @@ results/*.json
 results/*.txt
 *.log
 user_feedback.log
-scraper_errors.log
+feedback_data.json
 
-# Documentation
+# Documentation (keep only main README)
 README_*.md
 *.md
 !README.md
@@ -63,4 +63,16 @@ test_*.py
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Environment files (will be mounted)
+.env
+.env.*
+
+# Private directory
+private/ 

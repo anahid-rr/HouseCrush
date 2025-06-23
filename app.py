@@ -459,10 +459,11 @@ if __name__ == '__main__':
     else:
         print("⚠️  OpenAI integration not available. Check dependencies and API key setup.")
     
-    # Get configuration from environment variables
+    # Get configuration from environment variables (Hugging Face Spaces compatible)
     host = os.getenv('HOST', '0.0.0.0')
     port = int(os.getenv('PORT', 7860))
     debug = os.getenv('FLASK_ENV') == 'development'
     
     print(f"🚀 Starting House Crush on {host}:{port}")
+    print(f"🌐 Access your app at: http://localhost:{port}")
     app.run(host=host, port=port, debug=debug)
