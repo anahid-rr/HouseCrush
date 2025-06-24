@@ -9,7 +9,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     FLASK_APP=app.py \
     FLASK_ENV=production \
-    PORT=7860
+    PORT=7860 \
+    HOST=0.0.0.0
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -31,12 +32,12 @@ COPY . .
 # Create necessary directories
 RUN mkdir -p results logs
 
-# Expose port
+# Expose port 7860 (Hugging Face Spaces standard)
 EXPOSE 7860
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD curl -f http://localhost:7860/ || exit 1
 
-# Run the application
+# Run the application with proper host binding for Hugging Face Spaces
 CMD ["python", "app.py"] 
