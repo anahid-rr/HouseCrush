@@ -5,11 +5,12 @@ House Crush is your intelligent rental assistant that finds the perfect home by 
 ## ✨ Features
 
 - **Modern Landing Page**: Beautiful, responsive design with comprehensive information about the rental search process
-- **Multi-Site Property Search**: Aggregates listings from Zillow, Apartments.com, and Kijiji
-- **AI-Powered Q&A**: Get instant answers to rental-related questions using our RAG system
+- **Streamlined Property Search**: AI-powered search across multiple rental platforms with intelligent filtering
+- **AI-Powered Q&A**: Get instant answers to rental-related questions using OpenAI integration
 - **Smart Filtering**: Filter by city, price range, bedrooms, amenities, and lifestyle preferences
 - **Interactive Feedback System**: Submit feedback and suggestions directly through the web interface
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **Multiple Page Support**: About, Blog, Contact, Help, Privacy, and Terms pages
 
 ## 🚀 Quick Start
 
@@ -33,7 +34,7 @@ House Crush is your intelligent rental assistant that finds the perfect home by 
 3. **Set up environment variables:**
    Create a `.env` file in your project root with your API keys:
    ```
-   TOGETHER_API_KEY=your_together_api_key_here
+   OPENAI_API_KEY=your_openai_api_key_here
    GOOGLE_API_KEY=your_google_api_key_here
    GOOGLE_SEARCH_ENGINE_ID=your_google_search_engine_id_here
    ```
@@ -68,9 +69,9 @@ House Crush is your intelligent rental assistant that finds the perfect home by 
      - `requirements.txt`
      - `Dockerfile`
      - `templates/` folder
-     - `scripts/` folder
-     - `google_rental_search.py`
-     - `openai_rental_search.py`
+     - `static/` folder
+     - `google_search.py`
+     - `qanda.py`
      - `feedback_logger.py`
      - `data/` folder
 
@@ -82,8 +83,7 @@ In your Hugging Face Space settings:
 3. Add the following environment variables:
 
 ```
-TOGETHER_API_KEY=your_together_api_key_here
-HUGGINGFACE_HUB_TOKEN=your_huggingface_token_here
+OPENAI_API_KEY=your_openai_api_key_here
 GOOGLE_API_KEY=your_google_api_key_here
 GOOGLE_SEARCH_ENGINE_ID=your_google_search_engine_id_here
 FLASK_ENV=production
@@ -109,7 +109,7 @@ For local Docker deployment:
 1. **Build and run with Docker:**
    ```bash
    docker build -t housecrush .
-   docker run -p 7860:7860 -e TOGETHER_API_KEY=your_key housecrush
+   docker run -p 7860:7860 -e OPENAI_API_KEY=your_key housecrush
    ```
 
 2. **Or use Docker Compose:**
@@ -124,16 +124,18 @@ For local Docker deployment:
 - Add custom amenities and lifestyle preferences
 - Get AI-ranked results with match scores and proximity information
 - View properties from multiple sources in a unified interface
+- Uses streamlined search method for optimal results
 
 ### Q&A System
 - Ask rental-related questions using the interactive Q&A section
 - Use quick question buttons for common inquiries
 - Get detailed answers with source citations
-- Powered by Retrieval-Augmented Generation (RAG) technology
+- Powered by OpenAI GPT models (GPT-4o with fallback to GPT-3.5-turbo)
 
 ### Feedback System
 - Submit feedback, suggestions, or report issues
 - All feedback is logged and reviewed for continuous improvement
+- Supports both simple feedback and detailed contact forms
 
 ## 🛠️ Technical Architecture
 
@@ -145,52 +147,53 @@ For local Docker deployment:
 
 ### Backend
 - **Flask**: Web framework for handling requests and serving content
-- **Together AI**: AI model integration for intelligent responses
-- **Sentence Transformers**: Text embedding for RAG system
+- **OpenAI API**: AI model integration for Q&A responses
 - **Google Custom Search API**: Property search across multiple websites
 - **Gunicorn**: Production WSGI server for Hugging Face deployment
 
 ### Data Sources
 - **Zillow**: Residential property listings (prioritized)
 - **Apartments.com**: Apartment and rental properties
+- **PadMapper**: Rental property aggregator
 - **Kijiji**: Canadian classifieds and rental listings
 
 ## 📁 Project Structure
 
 ```
 HouseCrush/
-├── app.py                          # Main Flask application
+├── app.py                          # Main Flask application with streamlined search
 ├── templates/
-│   └── index.html                  # Modern landing page with integrated functionality
-├── scripts/
-│   └── rag_example.py             # RAG system for Q&A
-├── google_rental_search.py        # Google Custom Search integration
-├── openai_rental_search.py        # OpenAI API integration
-├── feedback_logger.py             # User feedback system
-├── requirements.txt               # Python dependencies
-├── Dockerfile                     # Docker configuration for Hugging Face
+│   ├── index.html                  # Main landing page with integrated functionality
+│   ├── about.html                  # About page
+│   ├── blog.html                   # Blog page
+│   ├── contact.html                # Contact page with feedback form
+│   ├── help.html                   # Help page
+│   ├── privacy.html                # Privacy policy
+│   └── terms.html                  # Terms of service
+├── static/
+│   └── img/
+│       └── background.jpg          # Background images
+├── google_search.py               # Google Custom Search integration with streamlined search
+├── qanda.py                      # OpenAI-powered Q&A system
+├── feedback_logger.py            # User feedback system
+├── requirements.txt              # Python dependencies
+├── Dockerfile                    # Docker configuration for Hugging Face
 └── README.md                     # This file
 ```
 
 ## 🔧 Configuration
 
 ### Environment Variables
-- `TOGETHER_API_KEY`: API key for Together AI services (required for AI ranking)
-- `HUGGINGFACE_HUB_TOKEN`: Hugging Face token for model downloads (required for RAG)
+- `OPENAI_API_KEY`: API key for OpenAI services (required for Q&A system)
 - `GOOGLE_API_KEY`: Google Custom Search API key (required for property search)
 - `GOOGLE_SEARCH_ENGINE_ID`: Google Custom Search Engine ID (required for property search)
 
 ### API Setup Instructions
 
-#### Together AI
-1. Sign up at [Together AI](https://together.ai/)
+#### OpenAI
+1. Sign up at [OpenAI](https://platform.openai.com/)
 2. Get your API key from the dashboard
-3. Add to environment variables: `TOGETHER_API_KEY=your_key`
-
-#### Hugging Face Hub Token
-1. Go to [Hugging Face Settings](https://huggingface.co/settings/tokens)
-2. Create a new token with read permissions
-3. Add to environment variables: `HUGGINGFACE_HUB_TOKEN=your_token`
+3. Add to environment variables: `OPENAI_API_KEY=your_key`
 
 #### Google Custom Search
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
@@ -217,7 +220,6 @@ HouseCrush/
 - **Build Failures**: Check the build logs in your Space settings
 - **Environment Variables**: Ensure all API keys are set in Space settings
 - **Port Configuration**: The app automatically uses port 7860
-- **Memory Issues**: If the build fails due to memory, try reducing the model size in `rag_example.py`
 
 ### Build Troubleshooting
 
@@ -228,8 +230,7 @@ HouseCrush/
 
 #### Hugging Face Spaces Build Issues
 1. **Timeout**: The build may take 5-10 minutes for the first time
-2. **Model Download**: Large models are downloaded during build
-3. **Environment Variables**: Double-check all required variables are set
+2. **Environment Variables**: Double-check all required variables are set
 
 ### Runtime Issues
 
@@ -243,10 +244,10 @@ HouseCrush/
 2. Check Google Custom Search Engine configuration
 3. Ensure search engine includes rental websites
 
-#### AI Features Not Working
-1. Verify Together AI API key is valid
-2. Check Hugging Face token permissions
-3. Ensure sufficient API credits
+#### Q&A System Not Working
+1. Verify OpenAI API key is valid
+2. Check API usage limits and credits
+3. Ensure proper model access
 
 ## 🤝 Contributing
 
@@ -258,7 +259,7 @@ HouseCrush/
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## 📞 Support
 
