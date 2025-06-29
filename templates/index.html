@@ -14,6 +14,12 @@
             background: #fafbfc;
             color: #181c23;
         }
+        .line-clamp-2 {
+            display: -webkit-box;
+          
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
         .header {
             display: flex;
             align-items: center;
@@ -606,24 +612,50 @@
         .feature-card {
             background: #fff;
             border-radius: 16px;
-            border: 2px solid #f5f5f5;
-            padding: 32px 24px;
+            border: none;
+            box-shadow: 0 2px 12px 0 rgba(60,72,88,0.06);
+            padding: 0;
             text-align: center;
-            transition: box-shadow 0.2s, border 0.2s;
             min-height: 320px;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
+            transition: box-shadow 0.2s, border 0.2s;
         }
         .feature-card:hover {
             box-shadow: 0 8px 32px 0 rgba(60,72,88,0.12);
-            border-color: #4caf87;
         }
         .feature-illustration {
-            margin-bottom: 20px;
-            min-height: 60px;
+            background: #e6f4ea;
+            height: 125px;
+            min-height: 125px;
+            max-height: 125px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding: 0;
+        }
+        .feature-content {
+            background: #fff;
+            padding: 24px 24px 32px 24px;
+            border-top: 1px solid #e0e0e0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #181c23;
+            margin-bottom: 8px;
+        }
+        .feature-desc {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
         }
         .site-badge {
             padding: 4px 8px;
@@ -706,17 +738,6 @@
         .feature-icon {
             margin-bottom: 16px;
         }
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #181c23;
-            margin-bottom: 8px;
-        }
-        .feature-desc {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.5;
-        }
         .steps-section {
             background: #fafbfc;
             padding: 60px 0 40px 0;
@@ -782,6 +803,7 @@
             margin: 60px auto 0 auto;
             padding: 0 16px 60px 16px;
             text-align: center;
+            display: none; /* Hidden for now */
         }
         .pricing-title {
             font-size: 2.2rem;
@@ -1017,43 +1039,51 @@
         <nav class="nav">
             <a href="#features">Features</a>
             <a href="#how-it-works">How it Works</a>
-            <a href="#sign-in" class="sign-in">Sign In</a>
-            <button class="get-started">Get Started</button>
+            <a href="#qaSection" >Q&A</a>
+            <button class="get-started">Watch Demo</button>
         </nav>
     </header>
-    <main class="main">
-        <div class="badge">⚡ AI-Powered Rental Search</div>
-        <h1 class="headline">Find Your Perfect <span class="accent">Rental</span> in Minutes</h1>
-        <div class="subheadline">
-            Stop wasting hours browsing multiple websites. Our AI finds and ranks rental properties based on your lifestyle, budget, and proximity to places that matter to you.
-        </div>
-        <div class="cta-buttons">
-            <button class="cta-primary" onclick="document.getElementById('searchFormSection').style.display='block'; window.scrollTo({top: document.getElementById('searchFormSection').offsetTop-60, behavior: 'smooth'});">Start Your Search&nbsp;&rarr;</button>
-            <button class="cta-secondary">Watch Demo</button>
+    <main class="main" style="position: relative; background: url('/static/img/background.jpg') center center/cover no-repeat; min-height: 70vh; padding-bottom: 32px;">
+        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 0;">
+            <div class="badge" style="margin-bottom: 18px;">⚡ AI-Powered Rental Search</div>
+            <h1 class="headline" style="color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.25);">Find Your Perfect <span class="accent">Rental</span> in Minutes</h1>
+           
+            <div class="subheadline" style="color: #f3f3f3; text-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+                Stop wasting hours browsing multiple websites. Our AI finds and ranks rental properties based on your lifestyle, budget, and proximity to places that matter to you.
+            </div>
+            <div class="cta-buttons" style="display: flex; gap: 20px; margin-top: 5px;">
+                <!-- <button class="cta-primary" onclick="showSearchFormAndScroll()" style="display:none;">Start Your Search&nbsp;&rarr;</button> -->
+                <!-- <button class="cta-secondary">Watch Demo</button> -->
+            </div>
         </div>
     </main>
 
-    <!-- Search Form Section (hidden by default) -->
-    <section id="searchFormSection" style="display:none; margin: 0 auto; max-width: 1100px; padding: 0 16px;">
+    <!-- Search Form Section -->
+    <section id="searchFormSection" style="margin: 0 auto; max-width: 1100px; padding: 48px 16px 0 16px;">
         <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Find Your Next Home, Intelligently</h2>
-            <form method="POST" action="/">
+           
+            <div style="background: #4caf87; color: #fff; border-top-left-radius: 12px; border-top-right-radius: 12px; padding: 18px 28px 12px 28px; margin: -24px -24px 24px -24px;">
+                <h2 class="text-2xl font-bold" style="color: #fff; margin: 0;">Find Your Next Home, Intelligently</h2>
+            </div>
+            <form method="POST" action="/" onsubmit="return validateSearchForm()">
+                <input type="hidden" name="form_type" value="search">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                     <div>
-                        <label class="block text-gray-700 text-xs mb-1" for="location">City</label>
-                        <input type="text" name="location" id="location" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="e.g. Toronto" value="{{ filter_values.location }}">
+                        <label class="block text-gray-700 text-xs mb-1" for="location">City <span class="text-red-500">*</span></label>
+                        <input type="text" name="location" id="location" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="e.g. Toronto" value="{{ filter_values.location }}" required>
                     </div>
                     <div>
                         <label class="block text-gray-700 text-xs mb-1" for="min_price">Min Price</label>
-                        <input type="number" name="min_price" id="min_price" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="e.g. 1000" value="{{ filter_values.min_price }}">
+                        <input type="number" name="min_price" id="min_price" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="e.g. 1000" value="{{ filter_values.min_price }}" min="0">
                     </div>
                     <div>
                         <label class="block text-gray-700 text-xs mb-1" for="max_price">Max Price</label>
-                        <input type="number" name="max_price" id="max_price" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="e.g. 2000" value="{{ filter_values.max_price }}">
+                        <input type="number" name="max_price" id="max_price" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="e.g. 2000" value="{{ filter_values.max_price }}" min="0">
                     </div>
                     <div>
                         <label class="block text-gray-700 text-xs mb-1" for="num_bedrooms">Bedrooms</label>
-                        <input type="number" name="num_bedrooms" id="num_bedrooms" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="e.g. 2" value="{{ filter_values.num_bedrooms }}">
+                        <input type="number" name="num_bedrooms" id="num_bedrooms" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="e.g. 2" value="{{ filter_values.num_bedrooms }}" min="0" max="10">
                     </div>
                 </div>
                 <div class="mb-4">
@@ -1087,6 +1117,17 @@
                     <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"><i class="fas fa-search mr-2"></i>Find Properties</button>
                 </div>
             </form>
+            
+            <!-- Error Message Display -->
+            {% if error_message %}
+            <div class="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>
+                    <span class="text-red-700 font-medium">{{ error_message }}</span>
+                </div>
+            </div>
+            {% endif %}
+            
             {% if summary %}
             <div class="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-8">
                 <div class="flex flex-wrap items-center gap-2 mb-6">
@@ -1103,9 +1144,15 @@
                         {% elif property.match_score %}
                         <span class="absolute top-4 left-4 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">{{ property.match_score }}% Match</span>
                         {% endif %}
-                        <div class="h-20 mb-2 bg-gray-200 rounded"></div>
-                        <div class="text-lg font-semibold text-gray-800 mt-2">{{ property.title }}</div>
-                        <div class="text-green-700 text-xl font-bold mb-2">${{ property.price }}</div>
+                        {% if property.image_url %}
+                        <div class="h-48 mb-2 bg-gray-200 rounded" style="background-image: url('{{ property.image_url }}'); background-size: cover; background-position: center;"></div>
+                        {% else %}
+                        <div class="h-48 mb-2 bg-gray-200 rounded"></div>
+                        {% endif %}
+                       
+                        <div class="text-lg font-semibold text-gray-800 mt-2"> {{ property.description[:150] }}{% if property.description|length > 150 %}...{% endif %}</div>
+                        <div class="text-green-700 text-xl font-bold mb-2">{{ property.price }}</div>
+                       
                         <div class="flex flex-wrap gap-2 mb-2">
                             {% for tag in property.tags %}
                             <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">{{ tag }}</span>
@@ -1125,6 +1172,48 @@
                 </div>
             </div>
             {% endif %}
+            {% if filtered_properties %}
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-robot text-indigo-600 mr-2"></i>
+                    AI-Filtered Individual Listings ({{ filtered_properties|length }} found)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {% for property in filtered_properties %}
+                    <div class="bg-gray-50 rounded-lg p-5 border border-gray-200 relative">
+                        {% if loop.index0 == 0 %}
+                        <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Top Match</span>
+                        {% elif property.match_score %}
+                        <span class="absolute top-4 left-4 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">{{ property.match_score }}% Match</span>
+                        {% endif %}
+                        {% if property.image_url %}
+                        <div class="h-48 mb-2 bg-gray-200 rounded" style="background-image: url('{{ property.image_url }}'); background-size: cover; background-position: center;"></div>
+                        {% else %}
+                        <div class="h-48 mb-2 bg-gray-200 rounded"></div>
+                        {% endif %}
+                        <div class="text-lg font-semibold text-gray-800 mt-2">{{ property.description }}</div>
+                        <div class="text-green-700 text-xl font-bold mb-2">{{ property.price }}</div>
+                        {% if property.features %}
+                        <div class="text-sm text-gray-600 mb-2 line-clamp-2">{{ property.features[:150] }}{% if property.description|length > 150 %}...{% endif %}</div>
+                        {% endif %}
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            {% for tag in property.tags %}
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="text-xs text-gray-500 mt-2">
+                            <i class="fas fa-external-link-alt mr-1"></i>
+                            <a href="{{ property.url }}" target="_blank" class="text-indigo-600 hover:text-indigo-800">{{ property.source }}</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <div class="mt-8 bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+                <i class="fas fa-robot text-green-600 text-2xl"></i>
+                <div><span class="font-semibold">House Crush AI</span> <span class="text-gray-700">{{ summary }}</span></div>
+            </div>
         </div>
     </section>
 
@@ -1182,64 +1271,69 @@
     </section>
 
     <!-- Q&A Section -->
-    <section id="qaSection" style="margin: 0 auto; max-width: 1100px;">
-        <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Ask About Rental Properties</h2>
-            <form method="POST" action="/" class="mb-8" id="qaForm">
-                <div class="mb-4">
-                    <label for="question" class="block text-gray-700 text-sm mb-2">Ask about rental properties:</label>
-                    <div class="flex gap-2">
-                        <input type="text" name="question" id="question" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What are the typical rental requirements?" required="">
-                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
-                            <i class="fas fa-search mr-2"></i>Search
+    <section id="qaSection" style="margin: 0 auto; max-width: 100vw; background: transparent; padding: 0;">
+        <div style="background: #fafbfc; width: 100vw; box-shadow: 0 8px 32px 0 rgba(60,72,88,0.10); padding: 60px 0 40px 0; margin: 0;">
+            <div class="bg-white rounded-lg shadow-lg p-6 mx-auto" style="max-width: 1100px;">
+                <div style="background: #4f46e5; color: #fff; border-top-left-radius: 12px; border-top-right-radius: 12px; padding: 18px 28px 12px 28px; margin: -24px -24px 24px -24px;">
+                    <h2 class="text-2xl font-bold" style="color: #fff; margin: 0;">Ask About Rental Properties</h2>
+                </div>
+                <form method="POST" action="/" class="mb-8" id="qaForm">
+                    <input type="hidden" name="form_type" value="qa">
+                    <div class="mb-4">
+                        <label for="question" class="block text-gray-700 text-sm mb-2">Ask about rental properties:</label>
+                        <div class="flex gap-2">
+                            <input type="text" name="question" id="question" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What are the typical rental requirements?" required="">
+                            <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                                <i class="fas fa-search mr-2"></i>Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Quick Questions -->
+                <div class="mt-8">
+                    <h3 class="text-base font-medium text-gray-600 mb-3">Quick Questions:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button onclick="setQuestion('What are the typical rental requirements?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                            <i class="fas fa-clipboard-list text-indigo-500 mr-2"></i>
+                            What are the typical rental requirements?
+                        </button>
+                        <button onclick="setQuestion('What amenities should I look for?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                            <i class="fas fa-home text-indigo-500 mr-2"></i>
+                            What amenities should I look for?
+                        </button>
+                        <button onclick="setQuestion('What is the difference between downtown and suburban properties?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                            <i class="fas fa-building text-indigo-500 mr-2"></i>
+                            What is the difference between downtown and suburban properties?
+                        </button>
+                        <button onclick="setQuestion('What are current rental market trends?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                            <i class="fas fa-chart-line text-indigo-500 mr-2"></i>
+                            What are current rental market trends?
                         </button>
                     </div>
                 </div>
-            </form>
-            <!-- Quick Questions -->
-            <div class="mt-8">
-                <h3 class="text-base font-medium text-gray-600 mb-3">Quick Questions:</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <button onclick="setQuestion('What are the typical rental requirements?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                        <i class="fas fa-clipboard-list text-indigo-500 mr-2"></i>
-                        What are the typical rental requirements?
-                    </button>
-                    <button onclick="setQuestion('What amenities should I look for?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                        <i class="fas fa-home text-indigo-500 mr-2"></i>
-                        What amenities should I look for?
-                    </button>
-                    <button onclick="setQuestion('What is the difference between downtown and suburban properties?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                        <i class="fas fa-building text-indigo-500 mr-2"></i>
-                        What is the difference between downtown and suburban properties?
-                    </button>
-                    <button onclick="setQuestion('What are current rental market trends?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                        <i class="fas fa-chart-line text-indigo-500 mr-2"></i>
-                        What are current rental market trends?
-                    </button>
-                </div>
-            </div>
-            <!-- Results Section -->
-            {% if answer %}
-            <div class="bg-gray-50 rounded-lg p-6 mt-8">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
-                <div class="prose max-w-none">
-                    {{ answer | safe }}
-                </div>
-                {% if sources %}
-                <div class="mt-6 pt-4 border-t border-gray-200">
-                    <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
-                    <ul class="text-sm text-gray-600">
-                        {% for source in sources %}
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-file-alt text-indigo-500"></i>
-                            {{ source }}
-                        </li>
-                        {% endfor %}
-                    </ul>
+                <!-- Results Section -->
+                {% if answer %}
+                <div class="bg-gray-50 rounded-lg p-6 mt-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
+                    <div class="prose max-w-none">
+                        {{ answer | safe }}
+                    </div>
+                    {% if sources %}
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
+                        <ul class="text-sm text-gray-600">
+                            {% for source in sources %}
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-file-alt text-indigo-500"></i>
+                                {{ source }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
                 </div>
                 {% endif %}
             </div>
-            {% endif %}
         </div>
     </section>
 
@@ -1273,7 +1367,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-section">
+    <section class="how-section" id="how-it-works">
         <div class="how-content">
             <div class="how-left">
                 <div class="how-badge">AI-Powered Solution</div>
@@ -1348,7 +1442,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="features-section" id="features">
         <h2 class="features-title">Powerful Features That Save You Time</h2>
         <div class="features-subtitle">Everything you need to find your perfect rental, powered by AI</div>
         <div class="features-grid">
@@ -1356,15 +1450,17 @@
                 <div class="feature-illustration">
                     <span class="site-badge zillow">Zillow</span>
                     <span class="site-badge apartments">Apartments</span>
-                    <span class="site-badge rent">Rent.com</span>
-                    <span class="site-badge craigslist">Craigslist</span>
+                    <span class="site-badge rent">Kijiji.ca</span>
+                    <!-- <span class="site-badge Kijiji">Kijiji.ca</span> -->
                     <div class="unified-results">&rarr; Unified Results</div>
                 </div>
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#e6f4ea"/><path d="M10 17l5-5-5-5v10z" fill="#388e5c"/></svg>
+                <div class="feature-content">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#e6f4ea"/><path d="M10 17l5-5-5-5v10z" fill="#388e5c"/></svg>
+                    </div>
+                    <div class="feature-title">Multi-Site Aggregation</div>
+                    <div class="feature-desc">Automatically gathers listings from all major rental websites in one place</div>
                 </div>
-                <div class="feature-title">Multi-Site Aggregation</div>
-                <div class="feature-desc">Automatically gathers listings from all major rental websites in one place</div>
             </div>
             <div class="feature-card">
                 <div class="feature-illustration">
@@ -1373,22 +1469,26 @@
                     <div class="filter-badge">Pet OK</div>
                     <div class="filter-label">Filters</div>
                 </div>
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><path d="M4 4h16M6 8h12M8 12h8M10 16h4"/></g></svg>
+                <div class="feature-content">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><path d="M4 4h16M6 8h12M8 12h8M10 16h4"/></g></svg>
+                    </div>
+                    <div class="feature-title">Smart Filtering</div>
+                    <div class="feature-desc">Filter by budget, bedrooms, parking, amenities, and lifestyle preferences</div>
                 </div>
-                <div class="feature-title">Smart Filtering</div>
-                <div class="feature-desc">Filter by budget, bedrooms, parking, amenities, and lifestyle preferences</div>
             </div>
             <div class="feature-card">
                 <div class="feature-illustration">
                     <svg width="48" height="32" viewBox="0 0 48 32"><rect x="8" y="8" width="32" height="16" rx="3" fill="#fff" stroke="#e6f4ea" stroke-width="2"/><circle cx="16" cy="16" r="3" fill="#e57373"/><circle cx="24" cy="16" r="3" fill="#388e5c"/><circle cx="32" cy="16" r="3" fill="#64b5f6"/></svg>
                     <div class="commute-label">15 min commute</div>
                 </div>
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></g></svg>
+                <div class="feature-content">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></g></svg>
+                    </div>
+                    <div class="feature-title">Google Maps Integration</div>
+                    <div class="feature-desc">Real-time commute calculations and proximity to important locations</div>
                 </div>
-                <div class="feature-title">Google Maps Integration</div>
-                <div class="feature-desc">Real-time commute calculations and proximity to important locations</div>
             </div>
             <div class="feature-card">
                 <div class="feature-illustration">
@@ -1398,11 +1498,13 @@
                         <div>Property C <span>89%</span></div>
                     </div>
                 </div>
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></g></svg>
+                <div class="feature-content">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></g></svg>
+                    </div>
+                    <div class="feature-title">AI-Powered Ranking</div>
+                    <div class="feature-desc">Intelligent scoring based on how well properties match your lifestyle</div>
                 </div>
-                <div class="feature-title">AI-Powered Ranking</div>
-                <div class="feature-desc">Intelligent scoring based on how well properties match your lifestyle</div>
             </div>
             <div class="feature-card">
                 <div class="feature-illustration">
@@ -1413,21 +1515,25 @@
                     </div>
                     <div class="shortlist-label">Your Shortlist</div>
                 </div>
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></g></svg>
+                <div class="feature-content">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></g></svg>
+                    </div>
+                    <div class="feature-title">Personalized Shortlist</div>
+                    <div class="feature-desc">Get a curated list of the best options with helpful badges and insights</div>
                 </div>
-                <div class="feature-title">Personalized Shortlist</div>
-                <div class="feature-desc">Get a curated list of the best options with helpful badges and insights</div>
             </div>
             <div class="feature-card">
                 <div class="feature-illustration">
                     <svg width="48" height="24" viewBox="0 0 48 24"><rect x="6" y="6" width="36" height="12" rx="2" fill="#fff" stroke="#e6f4ea" stroke-width="2"/><rect x="12" y="10" width="24" height="4" rx="1" fill="#e6f4ea"/></svg>
                 </div>
-                <div class="feature-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M8 15h8M8 11h8M8 7h8"/></g></svg>
+                <div class="feature-content">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24"><g stroke="#388e5c" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M8 15h8M8 11h8M8 7h8"/></g></svg>
+                    </div>
+                    <div class="feature-title">Simple Interface</div>
+                    <div class="feature-desc">Clean, intuitive design with map view and easy-to-understand results</div>
                 </div>
-                <div class="feature-title">Simple Interface</div>
-                <div class="feature-desc">Clean, intuitive design with map view and easy-to-understand results</div>
             </div>
         </div>
     </section>
@@ -1499,20 +1605,6 @@
         </div>
     </section>
 
-    <!-- Feedback Section -->
-    <section id="feedbackSection" style="margin: 0 auto; max-width: 1100px; padding: 0 16px; box-sizing: border-box;">
-        <div class="bg-white rounded-lg shadow-lg p-6 mt-12">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4">Feedback</h3>
-            {% if feedback_msg %}
-                <div class="mb-4 p-3 bg-green-100 text-green-800 rounded">{{ feedback_msg }}</div>
-            {% endif %}
-            <form method="POST" action="/">
-                <textarea name="feedback" rows="3" class="w-full p-3 border border-gray-300 rounded-lg mb-2" placeholder="Let us know your thoughts, suggestions, or issues..."></textarea>
-                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Submit Feedback</button>
-            </form>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -1528,21 +1620,21 @@
             <div class="footer-links">
                 <div>
                     <div class="footer-link-title">Product</div>
-                    <a href="#">Features</a>
-                    <a href="#">How it Works</a>
-                    <a href="#">Pricing</a>
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How it Works</a>
+                    <a href="#qaSection">Q&A</a>
                 </div>
                 <div>
                     <div class="footer-link-title">Company</div>
-                    <a href="#">About</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
+                    <a href="/about">About</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/contact">Contact</a>
                 </div>
                 <div>
                     <div class="footer-link-title">Support</div>
-                    <a href="#">Help Center</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="/help">Help Center</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -1551,41 +1643,221 @@
         </div>
     </footer>
 
+    <button id="backToTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'});" style="display:none; position:fixed; bottom:32px; right:32px; z-index:1000; background:#4caf87; color:#fff; border:none; border-radius:50%; width:52px; height:52px; box-shadow:0 4px 16px rgba(60,72,88,0.15); font-size:2rem; align-items:center; justify-content:center; cursor:pointer; transition:background 0.2s;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script>
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('backToTopBtn');
+        if (window.scrollY > 300) {
+            btn.style.display = 'flex';
+        } else {
+            btn.style.display = 'none';
+        }
+    });
+    </script>
+
+    <script>
+        // Form validation and popup functionality
+        function validateSearchForm() {
+            const location = document.getElementById('location').value.trim();
+            const minPrice = document.getElementById('min_price').value.trim();
+            const maxPrice = document.getElementById('max_price').value.trim();
+            const numBedrooms = document.getElementById('num_bedrooms').value.trim();
+            
+            let errors = [];
+            
+            // Required field validation
+            if (!location) {
+                errors.push("City/Location is required");
+            }
+            
+            // Price validation
+            if (minPrice && maxPrice) {
+                const min = parseInt(minPrice);
+                const max = parseInt(maxPrice);
+                if (isNaN(min) || isNaN(max)) {
+                    errors.push("Please enter valid numbers for price range");
+                } else if (min > max) {
+                    errors.push("Minimum price cannot be greater than maximum price");
+                } else if (min < 0 || max < 0) {
+                    errors.push("Prices cannot be negative");
+                }
+            } else if (minPrice) {
+                const min = parseInt(minPrice);
+                if (isNaN(min) || min < 0) {
+                    errors.push("Please enter a valid minimum price");
+                }
+            } else if (maxPrice) {
+                const max = parseInt(maxPrice);
+                if (isNaN(max) || max < 0) {
+                    errors.push("Please enter a valid maximum price");
+                }
+            }
+            
+            // Bedrooms validation
+            if (numBedrooms) {
+                const beds = parseInt(numBedrooms);
+                if (isNaN(beds) || beds < 0 || beds > 10) {
+                    errors.push("Please enter a valid number of bedrooms (0-10)");
+                }
+            }
+            
+            // Show errors if any
+            if (errors.length > 0) {
+                showValidationPopup(errors);
+                return false;
+            }
+            
+            return true;
+        }
+        
+        function showValidationPopup(errors) {
+            // Create popup overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            overlay.id = 'validation-overlay';
+            
+            // Create popup content
+            const popup = document.createElement('div');
+            popup.className = 'bg-white rounded-lg shadow-xl p-6 max-w-md w-full mx-4 transform transition-all';
+            
+            // Popup header
+            const header = document.createElement('div');
+            header.className = 'flex items-center justify-between mb-4';
+            header.innerHTML = `
+                <div class="flex items-center">
+                    <i class="fas fa-exclamation-triangle text-red-500 text-xl mr-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-800">Validation Error</h3>
+                </div>
+                <button onclick="closeValidationPopup()" class="text-gray-400 hover:text-gray-600 text-xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            
+            // Popup body
+            const body = document.createElement('div');
+            body.className = 'mb-4';
+            
+            const errorList = document.createElement('ul');
+            errorList.className = 'list-disc list-inside space-y-2';
+            
+            errors.forEach(error => {
+                const li = document.createElement('li');
+                li.className = 'text-red-600 text-sm';
+                li.textContent = error;
+                errorList.appendChild(li);
+            });
+            
+            body.appendChild(errorList);
+            
+            // Popup footer
+            const footer = document.createElement('div');
+            footer.className = 'flex justify-end';
+            footer.innerHTML = `
+                <button onclick="closeValidationPopup()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                    OK
+                </button>
+            `;
+            
+            // Assemble popup
+            popup.appendChild(header);
+            popup.appendChild(body);
+            popup.appendChild(footer);
+            overlay.appendChild(popup);
+            
+            // Add to page
+            document.body.appendChild(overlay);
+            
+            // Add click outside to close
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    closeValidationPopup();
+                }
+            });
+            
+            // Focus on popup
+            setTimeout(() => {
+                popup.style.transform = 'scale(1)';
+            }, 10);
+        }
+        
+        function closeValidationPopup() {
+            const overlay = document.getElementById('validation-overlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        }
+        
+        // Add form submission handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchForm = document.querySelector('form[method="POST"]');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    // Only validate if it's the search form (not Q&A form)
+                    const locationField = document.getElementById('location');
+                    if (locationField && !validateSearchForm()) {
+                        e.preventDefault();
+                        return false;
+                    }
+                });
+            }
+            
+            // Auto-scroll to search form if there are results
+            const hasSearchResults = document.body.getAttribute('data-has-search-results') === 'true';
+            if (hasSearchResults) {
+                const searchFormSection = document.getElementById('searchFormSection');
+                if (searchFormSection) {
+                    // Scroll to the form section with a slight delay to ensure page is loaded
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: searchFormSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
+        });
+        
+        // Existing functions...
         function setQuestion(question) {
             document.getElementById('question').value = question;
         }
-
+        
         function addAmenityField() {
             const container = document.getElementById('custom-amenities-container');
             const newField = document.createElement('div');
             newField.className = 'flex gap-2 mb-2';
             newField.innerHTML = `
-                <input type="text" name="custom_amenities[]" 
-                       class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" 
-                       placeholder="e.g., Gym, Balcony, In-unit Laundry">
-                <button type="button" onclick="removeAmenityField(this)" 
-                        class="bg-red-100 text-red-600 px-3 py-2 rounded-lg hover:bg-red-200 transition-colors">
-                    <i class="fas fa-minus"></i>
-                </button>
+                <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry">
+                <button type="button" onclick="removeAmenityField(this)" class="bg-red-100 text-red-600 px-3 py-2 rounded-lg hover:bg-red-200 transition-colors"><i class="fas fa-minus"></i></button>
             `;
             container.appendChild(newField);
         }
-
+        
         function removeAmenityField(button) {
             button.parentElement.remove();
         }
-
-        // Show search form if there are search results
-        window.addEventListener('DOMContentLoaded', function() {
-            const hasSearchResults = document.body.getAttribute('data-has-search-results') === 'true';
-            if (hasSearchResults) {
-                const searchForm = document.getElementById('searchFormSection');
-                if (searchForm) {
-                    searchForm.style.display = 'block';
-                }
-            }
-        });
+        
+        function showSearchForm() {
+            document.getElementById('searchFormSection').style.display = 'block';
+            document.getElementById('qaSection').style.display = 'none';
+        }
+        
+        function showQASection() {
+            document.getElementById('searchFormSection').style.display = 'none';
+            document.getElementById('qaSection').style.display = 'block';
+        }
+        
+        function showSearchFormAndScroll() {
+            const searchFormSection = document.getElementById('searchFormSection');
+            searchFormSection.style.display = 'block';
+            window.scrollTo({
+                top: searchFormSection.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>

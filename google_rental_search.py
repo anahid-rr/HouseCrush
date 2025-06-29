@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """
-Google Custom Search API Integration for Rental Search
-This module uses Google Custom Search API to search for rental listings in real-time.
-Uses the official Google Custom Search JSON API endpoint.
+Google Custom Search API Integration for Rental Listings
+This module provides functionality to search for rental listings using Google Custom Search API.
 """
 
-import os
+import requests
 import json
 import logging
-import requests
-from typing import List, Dict, Optional
-from datetime import datetime
-from dotenv import load_dotenv
+import os
 import re
+from datetime import datetime
+from typing import List, Optional, Dict
+from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
@@ -21,39 +20,21 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class GoogleRentalSearch:
+class GoogleRentalSearch1:
     def __init__(self):
         """Initialize Google Custom Search API client."""
         self.api_key = os.getenv('GOOGLE_API_KEY')
         self.search_engine_id = os.getenv('GOOGLE_SEARCH_ENGINE_ID')
-        self.api_url = "https://www.googleapis.com/customsearch/v1"
+        self.api_url = 'https://www.googleapis.com/customsearch/v1'
         
-        if not self.api_key:
-            logger.warning("GOOGLE_API_KEY not found in environment variables")
-        if not self.search_engine_id:
-            logger.warning("GOOGLE_SEARCH_ENGINE_ID not found in environment variables")
-        
-        if self.api_key and self.search_engine_id:
-            logger.info("Google Custom Search API client initialized successfully")
-        else:
-            logger.error("Google Custom Search API not properly configured")
+        if not self.api_key or not self.search_engine_id:
+            logger.warning("Google Custom Search API not properly configured. Set GOOGLE_API_KEY and GOOGLE_SEARCH_ENGINE_ID environment variables.")
 
     def search_rentals(self, location: str, min_price: Optional[int] = None, 
                       max_price: Optional[int] = None, bedrooms: Optional[int] = None,
                       amenities: Optional[List[str]] = None, lifestyle: Optional[str] = None) -> List[Dict]:
         """
         Search for rental listings using Google Custom Search API.
-        
-        Args:
-            location: City or area to search
-            min_price: Minimum price filter
-            max_price: Maximum price filter
-            bedrooms: Number of bedrooms required
-            amenities: List of required amenities
-            lifestyle: Lifestyle preferences (e.g., near a park)
-            
-        Returns:
-            List of rental listings with structured data
         """
         if not self.api_key or not self.search_engine_id:
             logger.error("Google Custom Search API not properly configured")
@@ -61,20 +42,21 @@ class GoogleRentalSearch:
 
         try:
             # Build search query
-            query = self._build_search_query(location, min_price, max_price, bedrooms, amenities, lifestyle)
-            logger.info(f"Searching Google Custom Search with query: {query}")
-
-            # Validate query
+            query = self._build_search_query1(location, min_price, max_price, bedrooms, amenities, lifestyle)
+            
+            # If query is empty (invalid location), return empty results
             if not query or len(query.strip()) == 0:
-                logger.error("Empty or invalid search query")
+                logger.warning(f"Invalid location '{location}' provided. Returning empty results.")
                 return []
+            
+            logger.info(f"Searching Google Custom Search with query: {query}")
 
             # Prepare the API request
             params = {
                 'key': self.api_key,
                 'cx': self.search_engine_id,
                 'q': query,
-                'num': 10,  # Number of results (max 10 per request for free tier)
+                'num': 10,  # Number of results
                 'safe': 'active',
                 'lr': 'lang_en',  # Language restriction
                 'sort': 'date'  # Sort by date (most recent first)
@@ -97,7 +79,13 @@ class GoogleRentalSearch:
                 result = response.json()
                 self._save_response_to_file(result)
                 listings = self._parse_google_response(result, location)
+                
                 logger.info(f"Found {len(listings)} rental listings with Google Custom Search")
+                
+                # Save the complete search results
+                if listings:
+                    self._save_search_results(result, location, listings)
+                
                 return listings
             else:
                 logger.error(f"API request failed with status {response.status_code}: {response.text}")
@@ -124,7 +112,7 @@ class GoogleRentalSearch:
         except Exception as e:
             logger.error(f"Error saving Google Custom Search response to file: {e}")
 
-    def _build_search_query(self, location: str, min_price: Optional[int] = None,
+    def _build_search_query1(self, location: str, min_price: Optional[int] = None,
                            max_price: Optional[int] = None, bedrooms: Optional[int] = None,
                            amenities: Optional[List[str]] = None, lifestyle: Optional[str] = None) -> str:
         """Build a search query for rental listings."""
@@ -132,10 +120,17 @@ class GoogleRentalSearch:
         target_sites = [
             "apartments.com",
             "zillow.com",
+            "padmapper.com",
             "kijiji.ca"
         ]
         site_query = " OR ".join([f"site:{site}" for site in target_sites])
         
+        # Validate location - if it's not a proper city name, return empty query
+        if not location or not self._is_valid_city_name(location):
+            logger.warning(f"Invalid location provided: '{location}'. Location must be a valid city name.")
+            return ""  # Return empty query to get no results
+        
+        # Build query parts
         query_parts = [f"rental apartments {location}", f"({site_query})"]
         
         # Add price filters
@@ -149,20 +144,57 @@ class GoogleRentalSearch:
         # Add bedroom filter
         if bedrooms:
             bedroom_terms = [f'"{bedrooms} bedroom"', f'"{bedrooms} bed"']
-            query_parts.append(f"({' OR '.join(bedroom_terms)})")
+            query_parts.append(f"({' AND '.join(bedroom_terms)})")
         
         # Add amenities filter
         if amenities:
-            amenities_text = ' AND '.join([f'"{amenity}"' for amenity in amenities[:3]])
+            amenities_text = ' OR '.join([f'"{amenity}"' for amenity in amenities[:3]])
             query_parts.append(f"({amenities_text})")
             
         # Add lifestyle filter
         if lifestyle:
-            query_parts.append(f'"{lifestyle}"')
+            if isinstance(lifestyle, list):
+                # Handle list of lifestyle keywords
+                lifestyle_terms = [f'"{keyword}"' for keyword in lifestyle[:3]]  # Limit to 3 keywords
+                query_parts.append(f"({' OR '.join(lifestyle_terms)})")
+            else:
+                # Handle single lifestyle string (backward compatibility)
+                query_parts.append(f'"{lifestyle}"')
         
         # Join and clean the query
         query = " ".join(query_parts)
         return " ".join(query.split())  # Remove extra whitespace
+
+    def _is_valid_city_name(self, location: str) -> bool:
+        """Validate if the location is a proper city name."""
+        if not location or not location.strip():
+            return False
+        
+        location = location.strip()
+        
+        # Reject if it's just a number (like "2300")
+        if location.isdigit():
+            return False
+        
+        # Reject if it starts with $ and is followed by numbers (like "$2300")
+        if location.startswith('$') and location[1:].isdigit():
+            return False
+        
+        # Reject if it's too short (likely not a city name)
+        if len(location) <= 2:
+            return False
+        
+        # Reject if it contains only numbers and special characters
+        if not any(c.isalpha() for c in location):
+            return False
+        
+        # Reject common non-city terms
+        invalid_terms = ['price', 'rent', 'apartment', 'house', 'bedroom', 'bathroom', 'sqft', 'sq ft']
+        location_lower = location.lower()
+        if any(term in location_lower for term in invalid_terms):
+            return False
+        
+        return True
 
     def _parse_google_response(self, response: Dict, location: str) -> List[Dict]:
         """Parse Google Custom Search response into structured rental listings."""
@@ -323,169 +355,146 @@ class GoogleRentalSearch:
             r'\$([0-9,]+)(?:\s*\/\s*month)?',
             r'([0-9,]+)\s*\/\s*month',
             r'rent\s*\$([0-9,]+)',
-            r'\$([0-9,]+)\s*rent'
+            r'\$([0-9,]+)\s*rent',
+            r'for\s*\$([0-9,]+)',  # "for $1500"
+            r'at\s*\$([0-9,]+)',   # "at $1500"
+            r'listed\s*at\s*\$([0-9,]+)',  # "listed at $1500"
+            r'price\s*\$([0-9,]+)',  # "price $1500"
         ]
         
         for pattern in price_patterns:
             match = re.search(pattern, text, re.IGNORECASE)
             if match:
                 try:
+                    # Remove commas and convert to integer
                     price_str = match.group(1).replace(',', '')
-                    return int(price_str)
-                except (ValueError, TypeError):
+                    price = int(price_str)
+                    
+                    # Validate reasonable price range (between $500 and $10,000)
+                    if 500 <= price <= 10000:
+                        return price
+                except (ValueError, IndexError):
                     continue
         
         return None
 
     def _extract_bedrooms_from_text(self, text: str) -> Optional[int]:
         """Extract number of bedrooms from text."""
-        # First try to extract from "beds/baths" format
-        bed_bath_match = self._extract_from_bed_bath_format(text)
-        if bed_bath_match and bed_bath_match.get('bedrooms'):
-            return bed_bath_match['bedrooms']
-        
-        # Look for bedroom patterns with various formats
-        patterns = [
-            # Standard bedroom patterns
-            r'(\d+)\s*(?:bed|bedroom|br)',
+        # Look for bedroom patterns
+        bedroom_patterns = [
             r'(\d+)\s*bedroom',
-            r'(\d+)\s*br',
-            # Handle "beds" format
-            r'(\d+)\s*beds?',
-            # Handle "beds/baths" format (e.g., "2 bed/bath")
-            r'(\d+)\s*bed/bath',
-            # Handle "2+" notation
-            r'(\d+)\+\s*(?:bed|bedroom|br|beds?)',
-            # Handle "2+ bed/bath" format
-            r'(\d+)\+\s*bed/bath',
-            # Handle standalone "2+" when context suggests bedrooms
-            r'(\d+)\+',  # This is more general, will be validated in context
+            r'(\d+)\s*br\b',
+            r'(\d+)\s*bed',
+            r'(\d+)\s*bedroom\s*apartment',
+            r'(\d+)\s*bedroom\s*unit',
         ]
         
-        for pattern in patterns:
+        for pattern in bedroom_patterns:
             match = re.search(pattern, text, re.IGNORECASE)
             if match:
                 try:
-                    bedroom_count = int(match.group(1))
-                    # For the general "2+" pattern, validate it's in a bedroom context
-                    if pattern == r'(\d+)\+':
-                        # Check if the surrounding text suggests this is about bedrooms
-                        context_start = max(0, match.start() - 20)
-                        context_end = min(len(text), match.end() + 20)
-                        context = text[context_start:context_end].lower()
-                        bedroom_indicators = ['bed', 'bedroom', 'br', 'room', 'apartment', 'unit', 'suite']
-                        if not any(indicator in context for indicator in bedroom_indicators):
-                            continue
-                    return bedroom_count
-                except (ValueError, TypeError):
+                    bedrooms = int(match.group(1))
+                    # Validate reasonable range (1-10 bedrooms)
+                    if 1 <= bedrooms <= 10:
+                        return bedrooms
+                except (ValueError, IndexError):
                     continue
+        
+        # Try to extract from bed/bath format like "2 bed, 1 bath"
+        bed_bath_match = self._extract_from_bed_bath_format(text)
+        if bed_bath_match and bed_bath_match.get('bedrooms'):
+            return bed_bath_match['bedrooms']
         
         return None
 
     def _extract_bathrooms_from_text(self, text: str) -> Optional[int]:
         """Extract number of bathrooms from text."""
-        # First try to extract from "beds/baths" format
+        # Look for bathroom patterns
+        bathroom_patterns = [
+            r'(\d+)\s*bathroom',
+            r'(\d+)\s*ba\b',
+            r'(\d+)\s*bath',
+            r'(\d+)\s*full\s*bath',
+            r'(\d+)\s*half\s*bath',
+        ]
+        
+        for pattern in bathroom_patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                try:
+                    bathrooms = int(match.group(1))
+                    # Validate reasonable range (1-10 bathrooms)
+                    if 1 <= bathrooms <= 10:
+                        return bathrooms
+                except (ValueError, IndexError):
+                    continue
+        
+        # Try to extract from bed/bath format like "2 bed, 1 bath"
         bed_bath_match = self._extract_from_bed_bath_format(text)
         if bed_bath_match and bed_bath_match.get('bathrooms'):
             return bed_bath_match['bathrooms']
         
-        # Look for bathroom patterns with various formats
-        patterns = [
-            # Standard bathroom patterns
-            r'(\d+)\s*(?:bath|bathroom|ba)',
-            r'(\d+)\s*bathroom',
-            r'(\d+)\s*ba',
-            # Handle "baths" format
-            r'(\d+)\s*baths?',
-            # Handle "beds/baths" format (e.g., "2 bed/1 bath")
-            r'(\d+)\s*bath',  # This will catch "1 bath" in "2 bed/1 bath"
-            # Handle "2+" notation
-            r'(\d+)\+\s*(?:bath|bathroom|ba|baths?)',
-            # Handle standalone "2+" when context suggests bathrooms
-            r'(\d+)\+',  # This is more general, will be validated in context
-        ]
-        
-        for pattern in patterns:
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                try:
-                    bathroom_count = int(match.group(1))
-                    # For the general "2+" pattern, validate it's in a bathroom context
-                    if pattern == r'(\d+)\+':
-                        # Check if the surrounding text suggests this is about bathrooms
-                        context_start = max(0, match.start() - 20)
-                        context_end = min(len(text), match.end() + 20)
-                        context = text[context_start:context_end].lower()
-                        bathroom_indicators = ['bath', 'bathroom', 'ba', 'washroom', 'toilet']
-                        if not any(indicator in context for indicator in bathroom_indicators):
-                            continue
-                    return bathroom_count
-                except (ValueError, TypeError):
-                    continue
-        
         return None
 
     def _extract_from_bed_bath_format(self, text: str) -> Optional[Dict]:
-        """Extract both bedroom and bathroom counts from 'beds/baths' format patterns."""
-        # Patterns for "beds/baths" format
-        patterns = [
-            r'(\d+)\s*(?:bed|beds?)\s*/\s*(\d+)\s*(?:bath|baths?)',  # "2 bed/1 bath"
-            r'(\d+)\s*(?:bedroom|bedrooms?)\s*/\s*(\d+)\s*(?:bathroom|bathrooms?)',  # "2 bedroom/1 bathroom"
-            r'(\d+)\s*br\s*/\s*(\d+)\s*ba',  # "2 br/1 ba"
-            r'(\d+)\+\s*(?:bed|beds?)\s*/\s*(\d+)\s*(?:bath|baths?)',  # "2+ bed/1 bath"
-            r'(\d+)\+\s*(?:bedroom|bedrooms?)\s*/\s*(\d+)\s*(?:bathroom|bathrooms?)',  # "2+ bedroom/1 bathroom"
-        ]
+        """Extract bedrooms and bathrooms from common formats like '2 bed, 1 bath'."""
+        # Pattern for "X bed, Y bath" format
+        pattern = r'(\d+)\s*bed[,\s]+(\d+)\s*bath'
+        match = re.search(pattern, text, re.IGNORECASE)
         
-        for pattern in patterns:
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                try:
-                    bedrooms = int(match.group(1))
-                    bathrooms = int(match.group(2))
+        if match:
+            try:
+                bedrooms = int(match.group(1))
+                bathrooms = int(match.group(2))
+                
+                # Validate reasonable ranges
+                if 1 <= bedrooms <= 10 and 1 <= bathrooms <= 10:
                     return {'bedrooms': bedrooms, 'bathrooms': bathrooms}
-                except (ValueError, TypeError):
-                    continue
+            except (ValueError, IndexError):
+                pass
         
         return None
 
     def _extract_amenities_from_text(self, text: str) -> List[str]:
         """Extract amenities from text."""
+        amenities = []
+        
         # Common amenities to look for
-        amenities = [
-            'parking', 'gym', 'pool', 'balcony', 'laundry', 'dishwasher',
-            'air conditioning', 'heating', 'elevator', 'doorman', 'storage',
-            'bike storage', 'rooftop', 'terrace', 'garden', 'pet friendly'
+        amenity_keywords = [
+            'parking', 'gym', 'pool', 'washer', 'dryer', 'dishwasher', 'balcony',
+            'air conditioning', 'heating', 'furnished', 'unfurnished', 'pet friendly',
+            'no pets', 'elevator', 'doorman', 'security', 'storage', 'parking',
+            'garage', 'outdoor space', 'rooftop', 'terrace', 'garden', 'fireplace',
+            'hardwood floors', 'carpet', 'central air', 'window ac', 'utilities included'
         ]
         
-        found_amenities = []
-        for amenity in amenities:
-            if re.search(r'\b' + re.escape(amenity) + r'\b', text, re.IGNORECASE):
-                found_amenities.append(amenity.title())
+        text_lower = text.lower()
+        for amenity in amenity_keywords:
+            if amenity in text_lower:
+                amenities.append(amenity.title())
         
-        return found_amenities
+        return amenities[:5]  # Limit to 5 amenities
 
     def _extract_source_website(self, url: str) -> str:
-        """Extract source website name from URL."""
-        # Extract domain from URL
-        domain_match = re.search(r'https?://(?:www\.)?([^/]+)', url)
-        if domain_match:
-            domain = domain_match.group(1)
-            # Map common domains to friendly names
+        """Extract the source website from URL."""
+        try:
+            from urllib.parse import urlparse
+            parsed = urlparse(url)
+            domain = parsed.netloc.lower()
+            
+            # Map domains to friendly names
             domain_mapping = {
-                'zillow.com': 'Zillow',
                 'apartments.com': 'Apartments.com',
-                'rent.com': 'Rent.com',
-                'padmapper.com': 'PadMapper',
-                'rentfaster.ca': 'RentFaster',
+                'zillow.com': 'Zillow',
                 'kijiji.ca': 'Kijiji',
-                'craigslist.org': 'Craigslist',
-                'realtor.com': 'Realtor.com',
-                'rentals.ca': 'Rentals.ca',
-                'viewit.ca': 'Viewit.ca'
+                'rent.com': 'Rent.com',
+                'apartmentfinder.com': 'Apartment Finder',
+                'rentals.com': 'Rentals.com'
             }
+            
             return domain_mapping.get(domain, domain)
-        
-        return 'Google Search'
+        except:
+            return 'Unknown'
 
     def _extract_contact_info(self, text: str) -> Dict:
         """Extract contact information from text."""
@@ -496,51 +505,34 @@ class GoogleRentalSearch:
         }
         
         # Look for phone numbers
-        phone_match = re.search(r'(\d{3}[-.\s]?\d{3}[-.\s]?\d{4})', text)
+        phone_pattern = r'\(?(\d{3})\)?[\s.-]?(\d{3})[\s.-]?(\d{4})'
+        phone_match = re.search(phone_pattern, text)
         if phone_match:
-            contact['phone'] = phone_match.group(1)
+            contact['phone'] = f"({phone_match.group(1)}) {phone_match.group(2)}-{phone_match.group(3)}"
         
         # Look for email addresses
-        email_match = re.search(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', text)
+        email_pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        email_match = re.search(email_pattern, text)
         if email_match:
             contact['email'] = email_match.group(0)
         
         return contact
 
     def _calculate_match_percentage(self, title: str, snippet: str, location: str) -> int:
-        """Calculate match percentage based on search criteria."""
-        score = 0
-        text = (title + " " + snippet).lower()
+        """Calculate a match percentage based on location relevance."""
+        full_text = (title + " " + snippet).lower()
         location_lower = location.lower()
         
-        # Location match (30 points)
-        if location_lower in text:
-            score += 30
-        
-        # Price indication (25 points)
-        if any(word in text for word in ['rent', 'month', '$']):
-            score += 25
-        
-        # Property type indication (20 points)
-        if any(word in text for word in ['apartment', 'condo', 'house', 'unit', 'suite']):
-            score += 20
-        
-        # Bedroom/Bathroom indication (15 points) - enhanced to catch various formats
-        bedroom_indicators = ['bed', 'bedroom', 'br', 'beds']
-        bathroom_indicators = ['bath', 'bathroom', 'ba', 'baths']
-        bed_bath_indicators = ['bed/bath', 'beds/baths']
-        
-        if any(indicator in text for indicator in bedroom_indicators + bathroom_indicators + bed_bath_indicators):
-            score += 15
-        
-        # Availability indication (10 points)
-        if any(word in text for word in ['available', 'now', 'immediate', 'vacant']):
-            score += 10
-        
-        return min(score, 100)
+        # Simple scoring based on location mentions
+        if location_lower in full_text:
+            return 85
+        elif any(word in full_text for word in location_lower.split()):
+            return 75
+        else:
+            return 60
 
     def _save_search_results(self, response_data: Dict, location: str, listings: List[Dict]):
-        """Save the complete search results to a JSON file."""
+        """Save the processed search results to a JSON file."""
         try:
             results_dir = 'results'
             os.makedirs(results_dir, exist_ok=True)
@@ -548,84 +540,122 @@ class GoogleRentalSearch:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             file_path = os.path.join(results_dir, f'google_rental_search_results_{location}_{timestamp}.json')
             
-            # Create search results summary
-            search_results = {
-                'search_summary': {
+            # Create a comprehensive results object
+            results = {
+                'search_metadata': {
                     'location': location,
-                    'total_listings_found': len(listings),
-                    'search_timestamp': datetime.now().isoformat(),
-                    'source': 'Google Custom Search API'
+                    'timestamp': timestamp,
+                    'total_results_found': len(listings),
+                    'search_source': 'Google Custom Search API'
                 },
                 'listings': listings,
                 'raw_response': response_data
             }
             
             with open(file_path, 'w', encoding='utf-8') as f:
-                json.dump(search_results, f, ensure_ascii=False, indent=4)
+                json.dump(results, f, ensure_ascii=False, indent=4)
             
-            logger.info(f"Successfully saved search results to {file_path}")
+            logger.info(f"Successfully saved {len(listings)} rental listings to {file_path}")
 
         except Exception as e:
             logger.error(f"Error saving search results to file: {e}")
 
     def get_api_status(self) -> Dict:
-        """Get the status of the Google Custom Search API connection."""
-        if not self.api_key or not self.search_engine_id:
+        """Get the status of the Google Custom Search API configuration."""
+        if not self.api_key:
             return {
                 'available': False,
-                'api_key_set': bool(self.api_key),
-                'search_engine_id_set': bool(self.search_engine_id),
-                'status': 'API key or Search Engine ID not set'
+                'status': 'API key not configured',
+                'message': 'Set GOOGLE_API_KEY environment variable'
             }
         
-        try:
-            # Test API connection with a simple request
-            test_params = {
-                'key': self.api_key,
-                'cx': self.search_engine_id,
-                'q': 'test',
-                'num': 1,
-                'searchType': 'searchTypeUndefined'
-            }
-            
-            response = requests.get(
-                self.api_url,
-                params=test_params,
-                timeout=10
-            )
-            
-            if response.status_code == 200:
-                return {
-                    'available': True,
-                    'api_key_set': True,
-                    'search_engine_id_set': True,
-                    'status': 'Connected (Google Custom Search)'
-                }
-            else:
-                return {
-                    'available': False,
-                    'api_key_set': True,
-                    'search_engine_id_set': True,
-                    'status': f'API Error: {response.status_code}'
-                }
-                
-        except Exception as e:
+        if not self.search_engine_id:
             return {
                 'available': False,
-                'api_key_set': True,
-                'search_engine_id_set': True,
-                'status': f'Connection Error: {str(e)}'
+                'status': 'Search engine ID not configured',
+                'message': 'Set GOOGLE_SEARCH_ENGINE_ID environment variable'
             }
+        
+        return {
+            'available': True,
+            'status': 'Configured and ready',
+            'message': 'Google Custom Search API is properly configured'
+        }
 
 # Global instance
-google_search = GoogleRentalSearch()
+google_rental_search = GoogleRentalSearch()
 
 def search_rentals_with_google(location: str, min_price: Optional[int] = None,
                               max_price: Optional[int] = None, bedrooms: Optional[int] = None,
                               amenities: Optional[List[str]] = None, lifestyle: Optional[str] = None) -> List[Dict]:
-    """Convenience function to search rentals using Google Custom Search API."""
-    return google_search.search_rentals(location, min_price, max_price, bedrooms, amenities, lifestyle)
+    """Search for rental listings using Google Custom Search API."""
+    return google_rental_search.search_rentals(location, min_price, max_price, bedrooms, amenities, lifestyle)
 
 def get_google_status() -> Dict:
-    """Get Google Custom Search API status."""
-    return google_search.get_api_status() 
+    """Get the status of the Google Custom Search API."""
+    return google_rental_search.get_api_status()
+
+def is_relevant_url(url: str) -> bool:
+    url = url.lower()
+    # US ZIP and Canadian Postal Code
+    zip_pattern = re.compile(r'\b\d{5}(?:-\d{4})?\b|\b[a-z]\d[a-z][ -]?\d[a-z]\d\b')
+    # Unit or apartment numbers like unit-5b or #202
+    unit_pattern = re.compile(r'(unit[- ]?\d+[a-z]?)|(#\d+)', re.IGNORECASE)
+    # Street names heuristic
+    street_pattern = re.compile(
+        r'\b\w+(?:-|_)?(?:ave|avenue|st|street|road|rd|blvd|drive|dr|way|lane|ln|court|ct|place|pl)\b', 
+        re.IGNORECASE
+    )
+    # 3D virtual tours
+    threed_pattern = re.compile(
+        r'(3d|three[-_]?d|threed|virtual[-_]?tour|threedtours|matterport)', 
+        re.IGNORECASE
+    )
+    return any([
+        zip_pattern.search(url),
+        unit_pattern.search(url),
+        street_pattern.search(url),
+        threed_pattern.search(url)
+    ])
+
+def extract_filtered_rental_links(data):
+    results = []
+    for item in data.get("raw_response", {}).get("items", []):
+        pagemap = item.get("pagemap", {})
+        title = item.get("title", "No Title")
+        snippet = item.get("snippet", "")
+        metatags = pagemap.get("metatags", [{}])
+        image = None
+        description = snippet  # fallback if no meta description
+        # Attempt to get image
+        if "cse_image" in pagemap and pagemap["cse_image"]:
+            image = pagemap["cse_image"][0].get("src")
+        # Attempt to get better description
+        if metatags and isinstance(metatags, list):
+            description = metatags[0].get("description", description)
+        urls_to_check = []
+        # Event > url
+        for event in pagemap.get("Event", []):
+            url = event.get("url")
+            if url:
+                urls_to_check.append(url)
+        # metatags > og:url
+        for tag in metatags:
+            og_url = tag.get("og:url")
+            if og_url:
+                urls_to_check.append(og_url)
+        # Filter relevant URLs and build results
+        for url in urls_to_check:
+            if is_relevant_url(url):
+                results.append({
+                    "title": title,
+                    "desc": description,
+                    "image": image,
+                    "url": url
+                })
+    return results
+
+def load_and_filter_saved_results(json_path):
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return extract_filtered_rental_links(data) 

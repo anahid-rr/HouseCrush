@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - House Crush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            background: #fafbfc;
+            color: #181c23;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 48px 16px 48px;
+            background: #fff;
+            border-bottom: 1px solid #ececec;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #222;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #4caf87;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav a {
+            color: #444;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-right: 8px;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #4caf87;
+        }
+        .nav .sign-in {
+            border: 1px solid #d1e7dd;
+            background: #fff;
+            color: #222;
+            border-radius: 8px;
+            padding: 8px 20px;
+            margin-right: 8px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav .sign-in:hover {
+            background: #f6fefb;
+            color: #4caf87;
+        }
+        .nav .get-started {
+            background: #4caf87;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .nav .get-started:hover {
+            background: #388e5c;
+        }
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 16px;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #181c23;
+        }
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .content-section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .content-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #181c23;
+        }
+        .content-section p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .footer {
+            background: linear-gradient(90deg, #222 60%, #388e5c 100%);
+            color: #fff;
+            padding: 48px 0 0 0;
+            font-size: 1rem;
+            margin-top: 0;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 0 16px 32px 16px;
+            gap: 32px;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            max-width: 320px;
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+        .footer-desc {
+            color: #b7e4c7;
+            font-size: 1rem;
+            margin-top: 4px;
+            font-weight: 400;
+        }
+        .footer-links {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .footer-link-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #b7e4c7;
+            font-size: 1.08rem;
+        }
+        .footer-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #4caf87;
+        }
+        .footer-bottom {
+            border-top: 1px solid #2e3a4a;
+            text-align: center;
+            color: #b7e4c7;
+            font-size: 1rem;
+            padding: 18px 0 12px 0;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px 20px;
+            }
+            .nav {
+                gap: 16px;
+            }
+            .nav a {
+                font-size: 0.9rem;
+            }
+            .page-title {
+                font-size: 2rem;
+            }
+            .content-section {
+                padding: 24px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .nav {
+                display: none;
+            }
+            .main-content {
+                padding: 40px 16px;
+            }
+            .page-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">
+            <span class="logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4h-6v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10.5z"/></svg>
+            </span>
+            House Crush
+        </a>
+        <nav class="nav">
+            <a href="/#features">Features</a>
+            <a href="/#how-it-works">How it Works</a>
+            <a href="/#sign-in" class="sign-in">Sign In</a>
+            <button class="get-started" onclick="window.location.href='/'">Get Started</button>
+        </nav>
+    </header>
+
+    <main class="main" style="position: relative; background: url('/static/img/background.jpg') center center/cover no-repeat; min-height: 70vh; padding-bottom: 32px;">
+        <div class="page-header">
+            <h1 class="page-title">About House Crush</h1>
+            <p class="page-subtitle">We're on a mission to make finding the perfect rental home effortless and intelligent.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Our Story</h2>
+            <p>House Crush was born from the frustration of spending countless hours searching for rental properties across multiple websites. We realized that the rental search process was broken - scattered information, inconsistent formats, and no intelligent matching based on what really matters to renters.</p>
+            <p>Our team of engineers and designers came together to build an AI-powered solution that aggregates listings from all major rental platforms and uses intelligent algorithms to match properties with your lifestyle, preferences, and needs.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Our Mission</h2>
+            <p>We believe everyone deserves to find a home they love without the stress and time investment of traditional rental searches. Our mission is to leverage artificial intelligence to create a seamless, personalized rental search experience that saves you time and helps you make better decisions.</p>
+            <p>By combining data from multiple sources with intelligent analysis of location, amenities, and lifestyle preferences, we're transforming how people find their next home.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Our Values</h2>
+            <p><strong>Innovation:</strong> We constantly push the boundaries of what's possible with AI and machine learning to improve the rental search experience.</p>
+            <p><strong>User-Centric:</strong> Every feature we build is designed with the user in mind, focusing on what makes their lives easier and better.</p>
+            <p><strong>Transparency:</strong> We believe in being open about how our AI works and providing clear, honest information about properties and matches.</p>
+            <p><strong>Community:</strong> We're building more than just a tool - we're creating a community of renters who share insights and help each other find better homes.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Get in Touch</h2>
+            <p>Have questions about House Crush or want to share your experience? We'd love to hear from you! Visit our <a href="/contact" style="color: #4caf87; text-decoration: none;">contact page</a> to get in touch with our team.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24"><rect width="24" height="24" rx="8" fill="#4caf87"/><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4h-6v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10.5z" fill="#fff"/></svg>
+                </span>
+                <div>
+                    <b>House Crush</b>
+                    <div class="footer-desc">AI-powered rental search that saves you time and finds better homes.</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <div class="footer-link-title">Product</div>
+                    <a href="/#features">Features</a>
+                    <a href="/#how-it-works">How it Works</a>
+                    <a href="/#qaSection">Q&A</a>
+                </div>
+                <div>
+                    <div class="footer-link-title">Company</div>
+                    <a href="/about">About</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div>
+                    <div class="footer-link-title">Support</div>
+                    <a href="/help">Help Center</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 House Crush. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html> 
