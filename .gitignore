@@ -1,7 +1,14 @@
-
 .env
 *.key
 *.pem
 private/
 secrets/
 results/
+__pycache__/
+debug/
+tmp/
+static/
+.log
+# Test files
+test_*.py
+*_test.py
