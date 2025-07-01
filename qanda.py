@@ -10,6 +10,7 @@ import logging
 from datetime import datetime
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
+from config import config
 
 # Load environment variables
 load_dotenv()
@@ -65,14 +66,8 @@ class QandAManager:
             system_prompt = self._create_system_prompt()
             user_prompt = question.strip()
             
-            # Log the question for debugging
-            self._log_question(question)
-            
             # Get answer from OpenAI
             answer_data = self._get_openai_answer(system_prompt, user_prompt)
-            
-            # Log the response
-            self._log_response(question, answer_data)
             
             return answer_data
             
@@ -84,7 +79,8 @@ class QandAManager:
                 'error': 'OpenAI library not installed. Please install with: pip install openai'
             }
         except Exception as e:
-            logger.error(f"Error answering question: {e}")
+            if config.should_log_debug():
+                logger.error(f"Error answering question: {e}")
             self._log_error(question, str(e))
             return {
                 'success': False,
@@ -148,51 +144,42 @@ Keep answers concise but informative (2-4 sentences typically)."""
                 }
                 
             except Exception as e:
-                logger.warning(f"Failed to use model {model}: {e}")
+                if config.should_log_debug():
+                    logger.warning(f"Failed to use model {model}: {e}")
                 continue
         
         # If all models fail
         raise Exception("All OpenAI models failed")
     
-    def _log_question(self, question: str):
-        """Log the question for debugging."""
-        self._save_debug_data("question", {
-            "timestamp": datetime.now().isoformat(),
-            "question": question
-        })
-    
-    def _log_response(self, question: str, response_data: Dict):
-        """Log the response for debugging."""
-        self._save_debug_data("response", {
-            "timestamp": datetime.now().isoformat(),
-            "question": question,
-            "answer": response_data.get('answer', ''),
-            "sources": response_data.get('sources', []),
-            "model_used": response_data.get('model_used', ''),
-            "success": response_data.get('success', False)
-        })
-    
     def _log_error(self, question: str, error: str):
-        """Log errors for debugging."""
-        self._save_debug_data("error", {
-            "timestamp": datetime.now().isoformat(),
-            "question": question,
-            "error": error,
-            "error_type": "Q&A Error"
-        })
+        """Log errors for debugging (only in development)."""
+        if config.should_save_debug_files():
+            self._save_debug_data("error", {
+                "timestamp": datetime.now().isoformat(),
+                "question": question,
+                "error": error,
+                "error_type": "Q&A Error"
+            })
     
     def _save_debug_data(self, data_type: str, data: Dict):
-        """Save debug data to files."""
+        """Save debug data to files (only in development)."""
+        if not config.should_save_debug_files():
+            return
+        
         try:
             # Create debug directory if it doesn't exist
             debug_dir = 'debug'
             if not os.path.exists(debug_dir):
                 os.makedirs(debug_dir)
+                if config.should_log_debug():
+                    logger.info(f"Created debug directory: {debug_dir}")
             
             # Create Q&A debug subdirectory
             qa_debug_dir = os.path.join(debug_dir, 'qa')
             if not os.path.exists(qa_debug_dir):
                 os.makedirs(qa_debug_dir)
+                if config.should_log_debug():
+                    logger.info(f"Created Q&A debug directory: {qa_debug_dir}")
             
             # Generate timestamp for filename
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -205,10 +192,22 @@ Keep answers concise but informative (2-4 sentences typically)."""
             with open(filepath, 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
             
-            logger.info(f"✅ Saved Q&A {data_type} data to: {filepath}")
+            if config.should_log_debug():
+                logger.info(f"✅ Saved Q&A {data_type} data to: {filepath}")
             
         except Exception as e:
             logger.error(f"❌ Error saving Q&A debug data: {e}")
+            # Try to save to current directory as fallback
+            if config.should_save_debug_files():
+                try:
+                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    filename = f"qa_{data_type}_{timestamp}.json"
+                    with open(filename, 'w', encoding='utf-8') as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
+                    if config.should_log_debug():
+                        logger.info(f"✅ Saved Q&A {data_type} data to current directory: {filename}")
+                except Exception as fallback_error:
+                    logger.error(f"❌ Failed to save Q&A debug data even to current directory: {fallback_error}")
     
     def get_status(self) -> Dict:
         """Get the status of the Q&A system."""
