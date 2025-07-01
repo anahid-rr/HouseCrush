@@ -776,22 +776,20 @@ Filter URLs that contain:
    - Zip codes
    - Street names
    - Unit numbers  
-   - 3D tours
+   - threedTours
    - apartments name
 
-For each relevant listing, extract:
+For each extracted url, search the website and complete the following fields:
 - title: Property title
 - desc: Property description
-- image: extract from image_url or og:image
-- url: The property URL
 - price: Find the property price in the snippet or description or search it in other website and findout the price only and only set the price in the price field.
 - features: Find the features in the snippet or description as a list of strings(e.g. dishwasher, dryer, In-unit laundry, etc.)
 - source: use displayLink
 - tags: find the property tags as a list of strings(e.g. 2 BR, 2 Bath,  dishwasher, dryer, In-unit laundry, etc.)
-
+Exclude all listings where the minimum price is higher than the user's maximum desired price. For instance, if the user wants $2300–$3200, include listings priced $2300–$4500, but exclude listings with a minimum price above $3200.  
 For the extracted properties, calculate how many user preferences are satisfied, treating each as an equal part of the whole.
 Then, return both the match percentage and a ranking of the properties from highest to lowest match.
-Return those has price in the user range preferencesin a JSON array with this structure:
+Return result in a JSON array with this structure:
 [
   {{
     "title": "Property Title",

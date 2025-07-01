@@ -1,5 +1,6 @@
 import os
 import json
+import csv
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify
 from config import config
@@ -130,6 +131,69 @@ def do_streamlined_search(filter_values: dict) -> dict:
         'error_message': None
     }
 
+# --- Autocomplete Routes ---
+@app.route('/api/autocomplete/cities')
+def autocomplete_cities():
+    """API endpoint for city autocomplete suggestions."""
+    query = request.args.get('q', '').lower()
+    suggestions = []
+    
+    try:
+        with open('data/cities.csv', 'r', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                city = row['City']
+                province = row['Province']
+                full_name = f"{city}, {province}"
+                
+                if query in city.lower() or query in province.lower():
+                    suggestions.append({
+                        'value': full_name,
+                        'label': full_name
+                    })
+                    
+                    # Limit to 10 suggestions
+                    if len(suggestions) >= 10:
+                        break
+    except FileNotFoundError:
+        # Return empty list if file doesn't exist
+        pass
+    except Exception as e:
+        if config.should_log_debug():
+            print(f"Error reading cities CSV: {e}")
+    
+    return jsonify(suggestions)
+
+@app.route('/api/autocomplete/amenities')
+def autocomplete_amenities():
+    """API endpoint for amenities autocomplete suggestions."""
+    query = request.args.get('q', '').lower()
+    suggestions = []
+    
+    try:
+        with open('data/amenities.csv', 'r', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                amenity = row['Amenity']
+                
+                if query in amenity.lower():
+                    suggestions.append({
+                        'value': amenity,
+                        'label': amenity
+                    })
+                    
+                    # Limit to 10 suggestions
+                    if len(suggestions) >= 10:
+                        break
+    except FileNotFoundError:
+        # Return empty list if file doesn't exist
+        pass
+    except Exception as e:
+        if config.should_log_debug():
+            print(f"Error reading amenities CSV: {e}")
+    
+    return jsonify(suggestions)
+
 # --- Flask Route ---
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -146,7 +210,8 @@ def index():
         'max_price': '',
         'num_bedrooms': '',
         'amenities': [],
-        'lifestyle': ''
+        'lifestyle': '',
+        'custom_amenities': []
     }
     if request.method == 'POST':
         form_type = request.form.get('form_type', '')
@@ -198,6 +263,7 @@ def index():
             filter_values['num_bedrooms'] = request.form.get('num_bedrooms', '')
             filter_values['amenities'] = request.form.getlist('amenities')
             filter_values['lifestyle'] = request.form.get('lifestyle', '')
+            filter_values['custom_amenities'] = request.form.getlist('custom_amenities[]')
             result = do_streamlined_search(filter_values)
             properties = result['properties']
             summary = result['summary']
@@ -229,6 +295,7 @@ def index():
                 filter_values['num_bedrooms'] = request.form.get('num_bedrooms', '')
                 filter_values['amenities'] = request.form.getlist('amenities')
                 filter_values['lifestyle'] = request.form.get('lifestyle', '')
+                filter_values['custom_amenities'] = request.form.getlist('custom_amenities[]')
                 result = do_streamlined_search(filter_values)
                 properties = result['properties']
                 summary = result['summary']

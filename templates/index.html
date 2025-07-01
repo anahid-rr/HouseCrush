@@ -1026,6 +1026,30 @@
             .subheadline { font-size: 1rem; }
             .cta-primary, .cta-secondary { font-size: 1rem; padding: 12px 18px; }
         }
+        
+        /* Autocomplete styles */
+        .suggestion-item {
+            transition: background-color 0.2s ease;
+        }
+        
+        .suggestion-item:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .suggestion-item.active {
+            background-color: #4caf87;
+            color: white;
+        }
+        
+        .suggestion-item.active:hover {
+            background-color: #388e5c;
+        }
+        
+        #city-suggestions,
+        .amenity-suggestions {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e5e7eb;
+        }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen" {% if summary %}data-has-search-results="true"{% endif %}>
@@ -1069,9 +1093,10 @@
             <form method="POST" action="/" onsubmit="return validateSearchForm()">
                 <input type="hidden" name="form_type" value="search">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-                    <div>
+                    <div class="relative">
                         <label class="block text-gray-700 text-xs mb-1" for="location">City <span class="text-red-500">*</span></label>
-                        <input type="text" name="location" id="location" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="e.g. Toronto" value="{{ filter_values.location }}" required>
+                        <input type="text" name="location" id="location" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="e.g. Toronto, ON" value="{{ filter_values.location }}" required autocomplete="off">
+                        <div id="city-suggestions" class="absolute z-50 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto hidden"></div>
                     </div>
                     <div>
                         <label class="block text-gray-700 text-xs mb-1" for="min_price">Min Price</label>
@@ -1101,10 +1126,29 @@
                         <div class="space-y-2">
                             <label class="block text-gray-700 text-xs mb-1">Add custom amenities:</label>
                             <div id="custom-amenities-container">
-                                <div class="flex gap-2 mb-2">
-                                    <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry">
+                                {% if filter_values.custom_amenities %}
+                                    {% for custom_amenity in filter_values.custom_amenities %}
+                                        {% if loop.first %}
+                                        <div class="flex gap-2 mb-2 relative">
+                                            <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry" value="{{ custom_amenity }}" autocomplete="off">
+                                            <div class="amenity-suggestions absolute z-50 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto hidden" style="top: 100%; left: 0;"></div>
+                                            <button type="button" onclick="addAmenityField()" class="bg-indigo-100 text-indigo-600 px-3 py-2 rounded-lg hover:bg-indigo-200 transition-colors"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                        {% else %}
+                                        <div class="flex gap-2 mb-2 relative">
+                                            <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry" value="{{ custom_amenity }}" autocomplete="off">
+                                            <div class="amenity-suggestions absolute z-50 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto hidden" style="top: 100%; left: 0;"></div>
+                                            <button type="button" onclick="removeAmenityField(this)" class="bg-red-100 text-red-600 px-3 py-2 rounded-lg hover:bg-red-200 transition-colors"><i class="fas fa-minus"></i></button>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                <div class="flex gap-2 mb-2 relative">
+                                    <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry" autocomplete="off">
+                                    <div class="amenity-suggestions absolute z-50 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto hidden" style="top: 100%; left: 0;"></div>
                                     <button type="button" onclick="addAmenityField()" class="bg-indigo-100 text-indigo-600 px-3 py-2 rounded-lg hover:bg-indigo-200 transition-colors"><i class="fas fa-plus"></i></button>
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -1114,7 +1158,9 @@
                     <input type="text" name="lifestyle" id="lifestyle" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="e.g. near a park, quiet area, close to gym" value="{{ filter_values.lifestyle }}">
                 </div>
                 <div class="flex justify-end">
-                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"><i class="fas fa-search mr-2"></i>Find Properties</button>
+                    <button type="submit" id="searchButton" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        <i class="fas fa-search mr-2"></i>Find Properties
+                    </button>
                 </div>
             </form>
             
@@ -1150,7 +1196,7 @@
                         <div class="h-48 mb-2 bg-gray-200 rounded"></div>
                         {% endif %}
                        
-                        <div class="text-lg font-semibold text-gray-800 mt-2"> {{ property.description[:150] }}{% if property.description|length > 150 %}...{% endif %}</div>
+                        <div class="text-lg font-semibold text-gray-800 mt-2">{{ property.title }}</div>
                         <div class="text-green-700 text-xl font-bold mb-2">{{ property.price }}</div>
                        
                         <div class="flex flex-wrap gap-2 mb-2">
@@ -1172,7 +1218,7 @@
                 </div>
             </div>
             {% endif %}
-            {% if filtered_properties %}
+            <!-- {% if filtered_properties %}
             <div class="mt-8 pt-6 border-t border-gray-200">
                 <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                     <i class="fas fa-robot text-indigo-600 mr-2"></i>
@@ -1209,11 +1255,8 @@
                     {% endfor %}
                 </div>
             </div>
-            {% endif %}
-            <!-- <div class="mt-8 bg-gray-50 rounded-lg p-4 flex items-center gap-3">
-                <i class="fas fa-robot text-green-600 text-2xl"></i>
-                <div><span class="font-semibold">House Crush AI</span> <span class="text-gray-700">{{ summary }}</span></div>
-            </div> -->
+            {% endif %} -->
+          
         </div>
     </section>
 
@@ -1897,8 +1940,28 @@
                         e.preventDefault();
                         return false;
                     }
+                    
+                    // Show processing state for search form
+                    const searchButton = document.getElementById('searchButton');
+                    if (searchButton) {
+                        const originalText = searchButton.innerHTML;
+                        searchButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
+                        searchButton.disabled = true;
+                        
+                        // Reset button after form submission (in case of errors)
+                        setTimeout(() => {
+                            searchButton.innerHTML = originalText;
+                            searchButton.disabled = false;
+                        }, 10000); // Reset after 10 seconds as fallback
+                    }
                 });
             }
+            
+            // Initialize autocomplete for city input
+            initializeCityAutocomplete();
+            
+            // Initialize autocomplete for amenities
+            initializeAmenityAutocomplete();
             
             // Auto-scroll to search form if there are results
             const hasSearchResults = document.body.getAttribute('data-has-search-results') === 'true';
@@ -1916,6 +1979,219 @@
             }
         });
         
+        // Autocomplete functions
+        function initializeCityAutocomplete() {
+            const cityInput = document.getElementById('location');
+            const suggestionsDiv = document.getElementById('city-suggestions');
+            
+            if (!cityInput || !suggestionsDiv) return;
+            
+            let timeoutId;
+            
+            cityInput.addEventListener('input', function() {
+                clearTimeout(timeoutId);
+                const query = this.value.trim();
+                
+                if (query.length < 2) {
+                    suggestionsDiv.classList.add('hidden');
+                    return;
+                }
+                
+                timeoutId = setTimeout(() => {
+                    fetch(`/api/autocomplete/cities?q=${encodeURIComponent(query)}`)
+                        .then(response => response.json())
+                        .then(suggestions => {
+                            displayCitySuggestions(suggestions);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching city suggestions:', error);
+                        });
+                }, 300);
+            });
+            
+            // Hide suggestions when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!cityInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
+                    suggestionsDiv.classList.add('hidden');
+                }
+            });
+            
+            // Handle keyboard navigation
+            cityInput.addEventListener('keydown', function(e) {
+                const visibleSuggestions = suggestionsDiv.querySelectorAll('.suggestion-item:not(.hidden)');
+                const activeSuggestion = suggestionsDiv.querySelector('.suggestion-item.active');
+                
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    if (activeSuggestion) {
+                        activeSuggestion.classList.remove('active');
+                        const nextSuggestion = activeSuggestion.nextElementSibling;
+                        if (nextSuggestion && nextSuggestion.classList.contains('suggestion-item')) {
+                            nextSuggestion.classList.add('active');
+                        } else {
+                            visibleSuggestions[0]?.classList.add('active');
+                        }
+                    } else {
+                        visibleSuggestions[0]?.classList.add('active');
+                    }
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if (activeSuggestion) {
+                        activeSuggestion.classList.remove('active');
+                        const prevSuggestion = activeSuggestion.previousElementSibling;
+                        if (prevSuggestion && prevSuggestion.classList.contains('suggestion-item')) {
+                            prevSuggestion.classList.add('active');
+                        } else {
+                            visibleSuggestions[visibleSuggestions.length - 1]?.classList.add('active');
+                        }
+                    } else {
+                        visibleSuggestions[visibleSuggestions.length - 1]?.classList.add('active');
+                    }
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (activeSuggestion) {
+                        cityInput.value = activeSuggestion.dataset.value;
+                        suggestionsDiv.classList.add('hidden');
+                    }
+                } else if (e.key === 'Escape') {
+                    suggestionsDiv.classList.add('hidden');
+                }
+            });
+        }
+        
+        function displayCitySuggestions(suggestions) {
+            const suggestionsDiv = document.getElementById('city-suggestions');
+            
+            if (suggestions.length === 0) {
+                suggestionsDiv.classList.add('hidden');
+                return;
+            }
+            
+            suggestionsDiv.innerHTML = suggestions.map(suggestion => `
+                <div class="suggestion-item p-2 hover:bg-gray-100 cursor-pointer border-b border-gray-200 last:border-b-0" 
+                     data-value="${suggestion.value}">
+                    ${suggestion.label}
+                </div>
+            `).join('');
+            
+            suggestionsDiv.classList.remove('hidden');
+            
+            // Add click handlers
+            suggestionsDiv.querySelectorAll('.suggestion-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.getElementById('location').value = this.dataset.value;
+                    suggestionsDiv.classList.add('hidden');
+                });
+            });
+        }
+        
+        function initializeAmenityAutocomplete() {
+            const amenityInputs = document.querySelectorAll('input[name="custom_amenities[]"]');
+            
+            amenityInputs.forEach(input => {
+                const container = input.closest('.relative');
+                const suggestionsDiv = container.querySelector('.amenity-suggestions');
+                
+                if (!suggestionsDiv) return;
+                
+                let timeoutId;
+                
+                input.addEventListener('input', function() {
+                    clearTimeout(timeoutId);
+                    const query = this.value.trim();
+                    
+                    if (query.length < 2) {
+                        suggestionsDiv.classList.add('hidden');
+                        return;
+                    }
+                    
+                    timeoutId = setTimeout(() => {
+                        fetch(`/api/autocomplete/amenities?q=${encodeURIComponent(query)}`)
+                            .then(response => response.json())
+                            .then(suggestions => {
+                                displayAmenitySuggestions(suggestions, suggestionsDiv, input);
+                            })
+                            .catch(error => {
+                                console.error('Error fetching amenity suggestions:', error);
+                            });
+                    }, 300);
+                });
+                
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!input.contains(e.target) && !suggestionsDiv.contains(e.target)) {
+                        suggestionsDiv.classList.add('hidden');
+                    }
+                });
+                
+                // Handle keyboard navigation
+                input.addEventListener('keydown', function(e) {
+                    const visibleSuggestions = suggestionsDiv.querySelectorAll('.suggestion-item:not(.hidden)');
+                    const activeSuggestion = suggestionsDiv.querySelector('.suggestion-item.active');
+                    
+                    if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        if (activeSuggestion) {
+                            activeSuggestion.classList.remove('active');
+                            const nextSuggestion = activeSuggestion.nextElementSibling;
+                            if (nextSuggestion && nextSuggestion.classList.contains('suggestion-item')) {
+                                nextSuggestion.classList.add('active');
+                            } else {
+                                visibleSuggestions[0]?.classList.add('active');
+                            }
+                        } else {
+                            visibleSuggestions[0]?.classList.add('active');
+                        }
+                    } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        if (activeSuggestion) {
+                            activeSuggestion.classList.remove('active');
+                            const prevSuggestion = activeSuggestion.previousElementSibling;
+                            if (prevSuggestion && prevSuggestion.classList.contains('suggestion-item')) {
+                                prevSuggestion.classList.add('active');
+                            } else {
+                                visibleSuggestions[visibleSuggestions.length - 1]?.classList.add('active');
+                            }
+                        } else {
+                            visibleSuggestions[visibleSuggestions.length - 1]?.classList.add('active');
+                        }
+                    } else if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (activeSuggestion) {
+                            input.value = activeSuggestion.dataset.value;
+                            suggestionsDiv.classList.add('hidden');
+                        }
+                    } else if (e.key === 'Escape') {
+                        suggestionsDiv.classList.add('hidden');
+                    }
+                });
+            });
+        }
+        
+        function displayAmenitySuggestions(suggestions, suggestionsDiv, input) {
+            if (suggestions.length === 0) {
+                suggestionsDiv.classList.add('hidden');
+                return;
+            }
+            
+            suggestionsDiv.innerHTML = suggestions.map(suggestion => `
+                <div class="suggestion-item p-2 hover:bg-gray-100 cursor-pointer border-b border-gray-200 last:border-b-0" 
+                     data-value="${suggestion.value}">
+                    ${suggestion.label}
+                </div>
+            `).join('');
+            
+            suggestionsDiv.classList.remove('hidden');
+            
+            // Add click handlers
+            suggestionsDiv.querySelectorAll('.suggestion-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    input.value = this.dataset.value;
+                    suggestionsDiv.classList.add('hidden');
+                });
+            });
+        }
+        
         // Existing functions...
         function setQuestion(question) {
             document.getElementById('question').value = question;
@@ -1924,12 +2200,91 @@
         function addAmenityField() {
             const container = document.getElementById('custom-amenities-container');
             const newField = document.createElement('div');
-            newField.className = 'flex gap-2 mb-2';
+            newField.className = 'flex gap-2 mb-2 relative';
             newField.innerHTML = `
-                <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry">
+                <input type="text" name="custom_amenities[]" class="flex-1 p-2 border border-gray-300 rounded-lg text-sm" placeholder="e.g., Gym, Balcony, In-unit Laundry" autocomplete="off">
+                <div class="amenity-suggestions absolute z-50 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto hidden" style="top: 100%; left: 0;"></div>
                 <button type="button" onclick="removeAmenityField(this)" class="bg-red-100 text-red-600 px-3 py-2 rounded-lg hover:bg-red-200 transition-colors"><i class="fas fa-minus"></i></button>
             `;
             container.appendChild(newField);
+            
+            // Initialize autocomplete for the new field
+            const newInput = newField.querySelector('input[name="custom_amenities[]"]');
+            const newSuggestionsDiv = newField.querySelector('.amenity-suggestions');
+            
+            if (newInput && newSuggestionsDiv) {
+                let timeoutId;
+                
+                newInput.addEventListener('input', function() {
+                    clearTimeout(timeoutId);
+                    const query = this.value.trim();
+                    
+                    if (query.length < 2) {
+                        newSuggestionsDiv.classList.add('hidden');
+                        return;
+                    }
+                    
+                    timeoutId = setTimeout(() => {
+                        fetch(`/api/autocomplete/amenities?q=${encodeURIComponent(query)}`)
+                            .then(response => response.json())
+                            .then(suggestions => {
+                                displayAmenitySuggestions(suggestions, newSuggestionsDiv, newInput);
+                            })
+                            .catch(error => {
+                                console.error('Error fetching amenity suggestions:', error);
+                            });
+                    }, 300);
+                });
+                
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!newInput.contains(e.target) && !newSuggestionsDiv.contains(e.target)) {
+                        newSuggestionsDiv.classList.add('hidden');
+                    }
+                });
+                
+                // Handle keyboard navigation
+                newInput.addEventListener('keydown', function(e) {
+                    const visibleSuggestions = newSuggestionsDiv.querySelectorAll('.suggestion-item:not(.hidden)');
+                    const activeSuggestion = newSuggestionsDiv.querySelector('.suggestion-item.active');
+                    
+                    if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        if (activeSuggestion) {
+                            activeSuggestion.classList.remove('active');
+                            const nextSuggestion = activeSuggestion.nextElementSibling;
+                            if (nextSuggestion && nextSuggestion.classList.contains('suggestion-item')) {
+                                nextSuggestion.classList.add('active');
+                            } else {
+                                visibleSuggestions[0]?.classList.add('active');
+                            }
+                        } else {
+                            visibleSuggestions[0]?.classList.add('active');
+                        }
+                    } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        if (activeSuggestion) {
+                            activeSuggestion.classList.remove('active');
+                            const prevSuggestion = activeSuggestion.previousElementSibling;
+                            if (prevSuggestion && prevSuggestion.classList.contains('suggestion-item')) {
+                                prevSuggestion.classList.add('active');
+                            } else {
+                                visibleSuggestions[visibleSuggestions.length - 1]?.classList.add('active');
+                            }
+                        } else {
+                            visibleSuggestions[visibleSuggestions.length - 1]?.classList.add('active');
+                        }
+                    } else if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (activeSuggestion) {
+                            newInput.value = activeSuggestion.dataset.value;
+                            newSuggestionsDiv.classList.add('hidden');
+                        }
+                    } else if (e.key === 'Escape') {
+                        newSuggestionsDiv.classList.add('hidden');
+                    }
+                });
+            }
         }
         
         function removeAmenityField(button) {
