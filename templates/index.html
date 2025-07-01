@@ -1191,10 +1191,10 @@
                         {% else %}
                         <div class="h-48 mb-2 bg-gray-200 rounded"></div>
                         {% endif %}
-                        <div class="text-lg font-semibold text-gray-800 mt-2">{{ property.description }}</div>
+                        <div class="text-lg font-semibold text-gray-800 mt-2">{{ property.title }}</div>
                         <div class="text-green-700 text-xl font-bold mb-2">{{ property.price }}</div>
                         {% if property.features %}
-                        <div class="text-sm text-gray-600 mb-2 line-clamp-2">{{ property.features[:150] }}{% if property.description|length > 150 %}...{% endif %}</div>
+                        <div class="text-sm text-gray-600 mb-2 line-clamp-2">{{ property.features[:150] }}{% if property.features|length > 150 %}...{% endif %}</div>
                         {% endif %}
                         <div class="flex flex-wrap gap-2 mb-2">
                             {% for tag in property.tags %}
@@ -1210,10 +1210,10 @@
                 </div>
             </div>
             {% endif %}
-            <div class="mt-8 bg-gray-50 rounded-lg p-4 flex items-center gap-3">
+            <!-- <div class="mt-8 bg-gray-50 rounded-lg p-4 flex items-center gap-3">
                 <i class="fas fa-robot text-green-600 text-2xl"></i>
                 <div><span class="font-semibold">House Crush AI</span> <span class="text-gray-700">{{ summary }}</span></div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -1277,14 +1277,14 @@
                 <div style="background: #4f46e5; color: #fff; border-top-left-radius: 12px; border-top-right-radius: 12px; padding: 18px 28px 12px 28px; margin: -24px -24px 24px -24px;">
                     <h2 class="text-2xl font-bold" style="color: #fff; margin: 0;">Ask About Rental Properties</h2>
                 </div>
-                <form method="POST" action="/" class="mb-8" id="qaForm">
+                <form method="POST" action="{{ url_for('index') }}" class="mb-8" id="qaForm" onsubmit="submitQAForm(event)">
                     <input type="hidden" name="form_type" value="qa">
                     <div class="mb-4">
                         <label for="question" class="block text-gray-700 text-sm mb-2">Ask about rental properties:</label>
                         <div class="flex gap-2">
-                            <input type="text" name="question" id="question" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What are the typical rental requirements?" required="">
+                            <input type="text" name="question" id="question" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What are the typical rental requirements?" required>
                             <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
-                                <i class="fas fa-search mr-2"></i>Search
+                                <i class="fas fa-search mr-2"></i>Ask AI
                             </button>
                         </div>
                     </div>
@@ -1312,6 +1312,17 @@
                     </div>
                 </div>
                 <!-- Results Section -->
+                <div id="qaResults" class="mt-8" style="display: none;">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
+                        <div id="qaAnswer" class="prose max-w-none"></div>
+                        <div id="qaSources" class="mt-6 pt-4 border-t border-gray-200" style="display: none;">
+                            <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
+                            <ul id="qaSourcesList" class="text-sm text-gray-600"></ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Original Results Section (for server-side rendering) -->
                 {% if answer %}
                 <div class="bg-gray-50 rounded-lg p-6 mt-8">
                     <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
@@ -1790,9 +1801,94 @@
             }
         }
         
+        // Q&A Form AJAX Submission
+        function submitQAForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Show loading state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
+            submitButton.disabled = true;
+            
+            // Hide previous results
+            document.getElementById('qaResults').style.display = 'none';
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                // Check if response is JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    return response.text().then(text => {
+                        throw new Error('Expected JSON response but got HTML');
+                    });
+                }
+            })
+            .then(data => {
+                console.log('JSON response:', data); // Debug log
+                
+                if (data.success && data.answer) {
+                    // Display the answer
+                    document.getElementById('qaAnswer').innerHTML = data.answer;
+                    document.getElementById('qaResults').style.display = 'block';
+                    
+                    // Display sources if available
+                    if (data.sources && data.sources.length > 0) {
+                        const sourcesList = document.getElementById('qaSourcesList');
+                        sourcesList.innerHTML = '';
+                        
+                        data.sources.forEach(source => {
+                            const li = document.createElement('li');
+                            li.className = 'flex items-center gap-2';
+                            li.innerHTML = `<i class="fas fa-file-alt text-indigo-500"></i>${source}`;
+                            sourcesList.appendChild(li);
+                        });
+                        
+                        document.getElementById('qaSources').style.display = 'block';
+                    } else {
+                        document.getElementById('qaSources').style.display = 'none';
+                    }
+                    
+                    // Scroll to the Q&A section to show results
+                    document.getElementById('qaSection').scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                } else {
+                    // Show error message
+                    const errorMsg = data.error || 'Sorry, we couldn\'t process your question. Please try again.';
+                    document.getElementById('qaAnswer').innerHTML = `<p class="text-red-600">${errorMsg}</p>`;
+                    document.getElementById('qaResults').style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('qaAnswer').innerHTML = '<p class="text-red-600">An error occurred. Please try again.</p>';
+                document.getElementById('qaResults').style.display = 'block';
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            });
+        }
+        
         // Add form submission handler
         document.addEventListener('DOMContentLoaded', function() {
             const searchForm = document.querySelector('form[method="POST"]');
+            const qaForm = document.getElementById('qaForm');
+            
             if (searchForm) {
                 searchForm.addEventListener('submit', function(e) {
                     // Only validate if it's the search form (not Q&A form)
