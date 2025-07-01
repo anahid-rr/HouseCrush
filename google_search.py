@@ -19,6 +19,7 @@ import glob
 from datetime import datetime
 from typing import List, Optional, Dict
 from dotenv import load_dotenv
+from config import config
 
 # Load environment variables
 load_dotenv()
@@ -41,10 +42,11 @@ class GoogleRentalSearch:
         """Build a search query for rental listings."""
         # Define the sites to search
         target_sites = [
-            "apartments.com",
+            
             "zillow.com",
-            "padmapper.com",
-            "kijiji.ca"
+            "apartments.com",
+            "padmapper.com"        # 
+            # "kijiji.ca"
         ]
         site_query = " OR ".join([f"site:{site}" for site in target_sites])
         
@@ -218,6 +220,7 @@ def simple_google_search(location: str, min_price: Optional[int] = None,
             "success": True,
             "message": f"Search completed successfully. Found {len(search_results.get('items', []))} results.",
             "file_path": file_path,
+            "json_data": search_results,
             "results_count": len(search_results.get('items', []))
         }
         
@@ -237,9 +240,11 @@ def _extract_price(text):
         r'([0-9,]+)\s*USD',
         r'([0-9,]+)\s*CAD',
         r'([0-9,]+)\s*/\s*month',
+        r'([0-9,]+)\s*per\s*month',
+        r'([0-9,]+)\s*monthly',
     ]
     for pattern in price_patterns:
-        match = re.search(pattern, text)
+        match = re.search(pattern, text, re.IGNORECASE)
         if match:
             try:
                 return int(match.group(1).replace(',', ''))
@@ -286,6 +291,97 @@ def _extract_image_url(item):
     if 'cse_image' in pagemap and pagemap['cse_image']:
         return pagemap['cse_image'][0].get('src', '')
     return ''
+
+def extract_urls_and_images(raw_response):
+    extracted_results = []
+    seen_combinations = set()  # To track duplicates
+
+    items = raw_response.get("items", [])
+    for item in items:
+        display_link = item.get("displayLink", "")
+        pagemap = item.get("pagemap", {})
+
+        if display_link == "www.apartments.com":
+            # For apartments.com, extract from BOTH metatags AND Event paths
+            extracted_results_apartments = []
+            apartments_urls_seen = set()  # Track URLs specifically for apartments
+            
+            # First, try metatags path (like Zillow)
+            metatags = pagemap.get("metatags", [])
+            if metatags:
+                tag = metatags[0]  # Usually a single dict in a list
+                url = tag.get("og:url")
+                image = tag.get("og:image")
+                # Check if both URL and image exist and are not empty
+                if url and image and url.strip() and image.strip():
+                    clean_url = url.strip()
+                    # Check for duplicate URLs specifically for apartments
+                    if clean_url not in apartments_urls_seen:
+                        apartments_urls_seen.add(clean_url)
+                        # Create a unique key for global duplicate checking
+                        combination = f"apartments_{clean_url}_{image.strip()}"
+                        if combination not in seen_combinations:
+                            seen_combinations.add(combination)
+                            extracted_results_apartments.append({
+                                "source": display_link,
+                                "url": clean_url,
+                                "image": image.strip(),
+                                "extraction_method": "metatags"
+                            })
+            
+            # Second, try Event path (apartments.com specific)
+            events = pagemap.get("Event", [])
+            if events:
+                # Iterate through all events in the array
+                for event in events:
+                    url = event.get("url")
+                    image = event.get("image")
+                    # Check if both URL and image exist and are not empty
+                    if url and image and url.strip() and image.strip():
+                        clean_url = url.strip()
+                        # Check for duplicate URLs specifically for apartments
+                        if clean_url not in apartments_urls_seen:
+                            apartments_urls_seen.add(clean_url)
+                            # Create a unique key for global duplicate checking
+                            combination = f"apartments_{clean_url}_{image.strip()}"
+                            if combination not in seen_combinations:
+                                seen_combinations.add(combination)
+                                extracted_results_apartments.append({
+                                    "source": display_link,
+                                    "url": clean_url,
+                                    "image": image.strip(),
+                                    "extraction_method": "event"
+                                })
+            
+            # Add all apartments.com results to the main results
+            extracted_results.extend(extracted_results_apartments)
+
+        else:
+            # For other sites (like Zillow), extract only from metatags
+            metatags = pagemap.get("metatags", [])
+            if metatags:
+                tag = metatags[0]  # Usually a single dict in a list
+                url = tag.get("og:url")
+                image = tag.get("og:image")
+                # Check if both URL and image exist and are not empty
+                if url and image and url.strip() and image.strip():
+                    # Create a unique key for duplicate checking
+                    combination = f"other_{url}_{image}"
+                    if combination not in seen_combinations:
+                        seen_combinations.add(combination)
+                        extracted_results.append({
+                            "source": display_link,
+                            "url": url.strip(),
+                            "image": image.strip()
+                        })
+
+    # Return in JSON-like dictionary format
+    return {
+        "items": extracted_results,
+        "total_results": len(extracted_results),
+        "extracted_data": True,
+        "format": "extracted_urls_and_images"
+    }
 
 def _parse_google_response(json_data):
     """
@@ -446,10 +542,12 @@ For each relevant listing, extract:
 - desc: Property description
 - image: extract from image_url or og:image
 - url: The property URL
-- price: The property price you can find in the snippet or description
-- features: The property features you can find in the snippet or description
+- price: The property price you can find in the snippet or description if you can't find it, search on website.
+- features: The property features you can find in the snippet or description as a list of strings(e.g. dishwasher, dryer, In-unit laundry, etc.)
 - source: Extract the domain/host (e.g., kijiji.ca, zillow.com) from the property URL
-After that, Rank the extracted properties based on the user preferences
+- tags: find the tags of the property URL as a list of strings(e.g. 2 BR, 2 Bath,  dishwasher, dryer, In-unit laundry, etc.)
+
+After that, Rank and calculate the match percentage of the extracted properties based on the user preferences(for example, if the user prefers a 2 bedroom apartment, and the property has 2 bedrooms, the match percentage should be 100%)
 
 Return a JSON array with this structure:
 [
@@ -461,7 +559,9 @@ Return a JSON array with this structure:
     "price": "Property Price",
     "features": "Property Features",
     "source": "Property Source",
-    "rank": "Property Rank"
+    "rank": "Property Rank",
+    "tags": "Property Tags",
+    "match": "Property Match Percentage"
   }}
 ]
 
@@ -484,7 +584,7 @@ Return only valid JSON without any additional text.
         # Call OpenAI API
         logger.info("Calling OpenAI API with Google search data...")
         response = openai.ChatCompletion.create(
-            model="gpt-4o",
+            model="gpt-4o-mini-search-preview",
             messages=[
                 {"role": "system", "content": "You are a rental property analysis expert. Extract and filter and rank rental listings from Google search results. Return only valid JSON."},
                 {"role": "user", "content": prompt}
@@ -537,8 +637,9 @@ Return only valid JSON without any additional text.
                 'price': property_data.get('price', ''),
                 'source': property_data.get('source', ''),
                 'rank': property_data.get('rank', ''),
-                'features': property_data.get('features', '')        
-                
+                'features': property_data.get('features', ''),
+                'tags': property_data.get('tags', ''),
+                'match': property_data.get('match', '')
             }
             ai_filtered_properties.append(property_obj)
         
@@ -571,24 +672,29 @@ Return only valid JSON without any additional text.
 
 def save_openai_debug_data(data_type: str, data: Dict):
     """
-    Save OpenAI debug data to files for analysis and debugging.
+    Save OpenAI debug data to files for analysis and debugging (only in development).
     
     Args:
         data_type: Type of data ('prompt', 'response', 'parsed_results', 'final_results', 'error')
         data: Data to save
     """
+    if not config.should_save_debug_files():
+        return
+    
     try:
         # Create debug directory if it doesn't exist
         debug_dir = 'debug'
         if not os.path.exists(debug_dir):
             os.makedirs(debug_dir)
-            logger.info(f"Created debug directory: {debug_dir}")
+            if config.should_log_debug():
+                logger.info(f"Created debug directory: {debug_dir}")
         
         # Create OpenAI debug subdirectory
         openai_debug_dir = os.path.join(debug_dir, 'openai')
         if not os.path.exists(openai_debug_dir):
             os.makedirs(openai_debug_dir)
-            logger.info(f"Created OpenAI debug directory: {openai_debug_dir}")
+            if config.should_log_debug():
+                logger.info(f"Created OpenAI debug directory: {openai_debug_dir}")
         
         # Generate timestamp for filename
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -601,19 +707,211 @@ def save_openai_debug_data(data_type: str, data: Dict):
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         
-        logger.info(f"✅ Saved {data_type} data to: {filepath}")
+        if config.should_log_debug():
+            logger.info(f"✅ Saved {data_type} data to: {filepath}")
         
     except Exception as e:
         logger.error(f"❌ Error saving debug data: {e}")
         # Try to save to current directory as fallback
+        if config.should_save_debug_files():
+            try:
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                filename = f"openai_{data_type}_{timestamp}.json"
+                with open(filename, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                if config.should_log_debug():
+                    logger.info(f"✅ Saved {data_type} data to current directory: {filename}")
+            except Exception as fallback_error:
+                logger.error(f"❌ Failed to save debug data even to current directory: {fallback_error}")
+
+def intelligent_filtered_json(google_search_data: Dict, user_preferences: Dict) -> Dict:
+    """
+    Uses JSON content directly and sends the prompt to OpenAI for more intelligent filtering 
+    or ranking based on user preferences (like lifestyle, amenities, etc.).
+    
+    Args:
+        google_search_data: Dictionary containing Google search results
+        user_preferences: Dictionary containing user preferences (location, price, bedrooms, amenities, lifestyle)
+        
+    Returns:
+        Dictionary containing:
+        - success: Boolean indicating success
+        - properties: List of AI-filtered properties
+        - message: Status message
+        - error: Error message (if failed)
+    """
+    try:
+        # Check if OpenAI is available
         try:
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"openai_{data_type}_{timestamp}.json"
-            with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            logger.info(f"✅ Saved {data_type} data to current directory: {filename}")
-        except Exception as fallback_error:
-            logger.error(f"❌ Failed to save debug data even to current directory: {fallback_error}")
+            import openai
+            if not openai.api_key:
+                openai.api_key = os.getenv('OPENAI_API_KEY')
+            
+            if not openai.api_key:
+                return {
+                    "success": False,
+                    "error": "OpenAI API key not configured",
+                    "message": "OpenAI not available for intelligent filtering"
+                }
+        except ImportError:
+            return {
+                "success": False,
+                "error": "OpenAI integration not available",
+                "message": "Intelligent filtering requires OpenAI integration"
+            }
+        
+        if "error" in google_search_data:
+            return {
+                "success": False,
+                "error": google_search_data["error"],
+                "message": "Invalid search data"
+            }
+        
+        logger.info("Starting intelligent filtering with OpenAI using JSON content...")
+        
+        # Create the prompt for OpenAI (same as in intelligent_filtered)
+        prompt = f"""
+In the json data I give you,
+Filter URLs that contain:
+   - Zip codes
+   - Street names
+   - Unit numbers  
+   - 3D tours
+   - apartments name
+
+For each relevant listing, extract:
+- title: Property title
+- desc: Property description
+- image: extract from image_url or og:image
+- url: The property URL
+- price: Find the property price in the snippet or description or search it in other website and findout the price only and only set the price in the price field.
+- features: Find the features in the snippet or description as a list of strings(e.g. dishwasher, dryer, In-unit laundry, etc.)
+- source: use displayLink
+- tags: find the property tags as a list of strings(e.g. 2 BR, 2 Bath,  dishwasher, dryer, In-unit laundry, etc.)
+
+For the extracted properties, calculate how many user preferences are satisfied, treating each as an equal part of the whole.
+Then, return both the match percentage and a ranking of the properties from highest to lowest match.
+Return those has price in the user range preferencesin a JSON array with this structure:
+[
+  {{
+    "title": "Property Title",
+    "desc": "Property Description", 
+    "image": "Image URL if available",
+    "url": "Property URL",
+    "price": "Property Price",
+    "features": "Property Features",
+    "source": "Property Source",
+    "rank": "Property Rank",
+    "tags": "Property Tags",
+    "match": "Property Match Percentage"
+  }}
+]
+
+Here is the Google search results JSON to analyze:
+{json.dumps(google_search_data, indent=2)}
+Here is the user preferences:
+{json.dumps(user_preferences, indent=2)}
+
+Return only valid JSON without any additional text.
+"""
+
+        # Save the prompt to a file for debugging
+        save_openai_debug_data("prompt", {
+            "timestamp": datetime.now().isoformat(),
+            "user_preferences": user_preferences,
+            "google_search_data_source": "direct_json",
+            "prompt": prompt
+        })
+       
+        # Call OpenAI API
+        logger.info("Calling OpenAI API with Google search data...")
+        response = openai.ChatCompletion.create(
+            model="gpt-4o-mini-search-preview",
+            messages=[
+                {"role": "system", "content": "You are a rental property analysis expert. Extract and filter and rank rental listings from Google search results. Return only valid JSON."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=4000,
+            # temperature=0.1
+        )
+        
+        # Parse the response
+        response_text = response.choices[0].message.content.strip()
+        logger.info(f"OpenAI response received, length: {len(response_text)}")
+        
+        # Save the raw OpenAI response
+        save_openai_debug_data("response", {
+            "timestamp": datetime.now().isoformat(),
+            "user_preferences": user_preferences,
+            "google_search_data_source": "direct_json",
+            "raw_response": response_text,
+            "response_length": len(response_text),
+            "model_used": "gpt-4o-mini-search-preview",
+            "tokens_used": response.usage.total_tokens if hasattr(response, 'usage') else None
+        })
+        
+        # Extract JSON from response (in case there's extra text)
+        json_start = response_text.find('[')
+        json_end = response_text.rfind(']') + 1
+        if json_start != -1 and json_end != -1:
+            response_text = response_text[json_start:json_end]
+        
+        filtered_results = json.loads(response_text)
+        logger.info(f"Successfully parsed {len(filtered_results)} filtered listings")
+        
+        # Save the final filtered results
+        save_openai_debug_data("final_results", {
+            "timestamp": datetime.now().isoformat(),
+            "user_preferences": user_preferences,
+            "google_search_data_source": "direct_json",
+            "filtered_results": filtered_results,
+            "total_filtered": len(filtered_results)
+        })
+        
+        # Format results to match expected structure
+        ai_filtered_properties = []
+        for i, property_data in enumerate(filtered_results):
+            property_obj = {
+                'title': property_data.get('title', ''),
+                'description': property_data.get('desc', ''),
+                'url': property_data.get('url', ''),
+                'image_url': property_data.get('image', ''),
+                'price': property_data.get('price', ''),
+                'source': property_data.get('source', ''),
+                'rank': property_data.get('rank', ''),
+                'features': property_data.get('features', ''),
+                'tags': property_data.get('tags', ''),
+                'match': property_data.get('match', '')
+            }
+            ai_filtered_properties.append(property_obj)
+        
+        logger.info(f"Intelligent filtering completed. {len(ai_filtered_properties)} properties AI-filtered.")
+        
+        return {
+            "success": True,
+            "properties": ai_filtered_properties,
+            "message": f"AI filtered {len(ai_filtered_properties)} properties",
+            "total_original": len(google_search_data.get('items', [])),
+            "total_ai_filtered": len(ai_filtered_properties)
+        }
+        
+    except Exception as e:
+        logger.error(f"Error in intelligent_filtered_json: {e}")
+        
+        # Save error information
+        save_openai_debug_data("error", {
+            "timestamp": datetime.now().isoformat(),
+            "user_preferences": user_preferences,
+            "google_search_data_source": "direct_json",
+            "error": str(e),
+            "error_type": type(e).__name__
+        })
+        
+        return {
+            "success": False,
+            "error": str(e),
+            "message": "Intelligent filtering failed"
+        }
 
 def streamlined_search(location: str, min_price: Optional[int] = None, 
                       max_price: Optional[int] = None, bedrooms: Optional[int] = None,
@@ -659,6 +957,11 @@ def streamlined_search(location: str, min_price: Optional[int] = None,
         json_file_path = search_result['file_path']
         logger.info(f"Search completed. Results saved to: {json_file_path}")
         
+        # step 1.1: extract urls and images
+        logger.info("Step 1.1: Extracting URLs and images...")
+        urls_and_images = extract_urls_and_images(search_result['json_data'])
+        logger.info(f"Extracted {len(urls_and_images['items'])} URLs and images")
+
         # Step 2: Apply intelligent filtering
         logger.info("Step 2: Applying intelligent filtering...")
         user_preferences = {
@@ -667,10 +970,11 @@ def streamlined_search(location: str, min_price: Optional[int] = None,
             'max_price': max_price,
             'bedrooms': bedrooms,
             'amenities': amenities or [],
-            'lifestyle': lifestyle or ''
+            'lifestyle': lifestyle or []
         }
         
-        ai_result = intelligent_filtered(json_file_path, user_preferences)
+        # ai_result = intelligent_filtered(json_file_path, user_preferences)
+        ai_result = intelligent_filtered_json(urls_and_images, user_preferences)
         
         if not ai_result.get('success', False):
             # Fallback to simple filtering if AI fails

@@ -1,21 +1,32 @@
 import os
 import json
 from datetime import datetime
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from config import config
 
 app = Flask(__name__)
 
-# --- Debug Logger ---
+# --- Environment-aware Debug Logger ---
 def log_debug(data_type: str, data: dict):
-    """Save debug data to a file for troubleshooting."""
-    debug_dir = 'debug'
-    if not os.path.exists(debug_dir):
-        os.makedirs(debug_dir)
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    filename = f"debug_{data_type}_{timestamp}.json"
-    filepath = os.path.join(debug_dir, filename)
-    with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    """Save debug data to a file for troubleshooting (only in development)."""
+    if not config.should_save_debug_files():
+        return
+    
+    try:
+        debug_dir = 'debug'
+        if not os.path.exists(debug_dir):
+            os.makedirs(debug_dir)
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        filename = f"debug_{data_type}_{timestamp}.json"
+        filepath = os.path.join(debug_dir, filename)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        
+        if config.should_log_debug():
+            print(f"✅ Debug data saved: {filepath}")
+    except Exception as e:
+        if config.should_log_debug():
+            print(f"❌ Error saving debug data: {e}")
 
 # --- Streamlined Search Method ---
 def do_streamlined_search(filter_values: dict) -> dict:
@@ -45,7 +56,11 @@ def do_streamlined_search(filter_values: dict) -> dict:
         amenities=amenities,
         lifestyle=lifestyle
     )
-    log_debug('search_result', search_result)
+    
+    # Log debug data only in development
+    if config.should_save_debug_files():
+        log_debug('search_result', search_result)
+    
     if not search_result.get('success', False):
         return {
             'properties': [],
@@ -68,12 +83,32 @@ def do_streamlined_search(filter_values: dict) -> dict:
       
         if price and price != 'Contact for price':
             if isinstance(price, (int, float)) and price > 0:
-                display_price = f"${price:,}"
+                # Format numeric prices with commas and dollar sign
+                display_price = f"${price:,}/month"
+            elif isinstance(price, str):
+                # Handle string prices (e.g., "$1,500", "1500", "Contact for pricing")
+                price_str = str(price).strip()
+                if price_str.startswith('$'):
+                    # Already has dollar sign, just add /month if not present
+                    if '/month' not in price_str.lower() and '/mo' not in price_str.lower():
+                        display_price = f"{price_str}/month"
+                    else:
+                        display_price = price_str
+                elif price_str.replace(',', '').replace('.', '').isdigit():
+                    # Numeric string, format it
+                    try:
+                        numeric_price = int(price_str.replace(',', ''))
+                        display_price = f"${numeric_price:,}/month"
+                    except ValueError:
+                        display_price = price_str
+                else:
+                    # Non-numeric string, use as is
+                    display_price = price_str
             else:
                 display_price = str(price)
         else:
             display_price = "Contact for price"
-        match_percentage = min(95, 75 + (ai_score // 10)) if ai_score else 75
+        match_percentage = property_data.get('match', min(95, 75 + (ai_score // 10)) if ai_score else 75)
         final_properties.append({
             'title': title,
             'price': display_price,
@@ -130,12 +165,31 @@ def index():
             # Handle Q&A submission
             question = request.form.get('question', '').strip()
             if question:
-                from qanda import answer_user_question
-                qa_result = answer_user_question(question)
-                answer = qa_result.get('answer', '')
-                sources = qa_result.get('sources', [])
-                error_message = qa_result.get('error', '') if not qa_result.get('success', True) else None
-                
+                try:
+                    from qanda import answer_user_question
+                    qa_result = answer_user_question(question)
+                    answer = qa_result.get('answer', '')
+                    sources = qa_result.get('sources', [])
+                    error_message = qa_result.get('error', '') if not qa_result.get('success', True) else None
+                    
+                    # Check if this is an AJAX request
+                    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+                        return jsonify({
+                            'success': qa_result.get('success', True),
+                            'answer': answer,
+                            'sources': sources,
+                            'error': error_message
+                        })
+                except Exception as e:
+                    error_message = f"Q&A system error: {str(e)}"
+                    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+                        return jsonify({
+                            'success': False,
+                            'answer': '',
+                            'sources': [],
+                            'error': error_message
+                        })
+        
         elif form_type == 'search':
             # Handle rental search submission
             filter_values['location'] = request.form.get('location', '')
@@ -255,4 +309,14 @@ def terms():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=7860, debug=True)
+    # Set Flask debug mode based on environment
+    debug_mode = config.is_development
+    
+    if config.should_log_debug():
+        print(f"🚀 Starting House Crush in {config.environment} mode")
+        print(f"📊 Debug logging: {'Enabled' if config.enable_debug_logging else 'Disabled'}")
+        print(f"📁 File logging: {'Enabled' if config.enable_file_logging else 'Disabled'}")
+        print(f"🐛 Debug files: {'Enabled' if config.enable_debug_files else 'Disabled'}")
+        print(f"💬 Feedback logging: {'Enabled' if config.enable_feedback_logging else 'Disabled'}")
+    
+    app.run(host="0.0.0.0", port=7860, debug=debug_mode)

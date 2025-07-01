@@ -6,13 +6,13 @@ services:
     ports:
       - "7860:7860"
     environment:
-      - FLASK_ENV=production
+      - FLASK_ENV=development
       - PORT=7860
-      # Debug settings (disabled in production by default)
-      - ENABLE_DEBUG_LOGGING=false
-      - ENABLE_FILE_LOGGING=false
-      - ENABLE_DEBUG_FILES=false
-      - ENABLE_FEEDBACK_LOGGING=false
+      # Debug settings (enabled in development)
+      - ENABLE_DEBUG_LOGGING=true
+      - ENABLE_FILE_LOGGING=true
+      - ENABLE_DEBUG_FILES=true
+      - ENABLE_FEEDBACK_LOGGING=true
       # Add your API keys here or use a .env file
       # - TOGETHER_API_KEY=your_key_here
       # - GOOGLE_API_KEY=your_key_here
@@ -22,7 +22,6 @@ services:
     volumes:
       - ./results:/app/results
       - ./logs:/app/logs
-      # Only mount debug and tmp directories in development
       - ./debug:/app/debug
       - ./tmp:/app/tmp
     restart: unless-stopped
