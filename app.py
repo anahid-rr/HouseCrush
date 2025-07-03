@@ -10,7 +10,7 @@ app = Flask(__name__)
 # --- Environment-aware Debug Logger ---
 def log_debug(data_type: str, data: dict):
     """Save debug data to a file for troubleshooting (only in development)."""
-    if not config.should_save_debug_files():
+    if not config.should_save_json_files():
         return
     
     try:

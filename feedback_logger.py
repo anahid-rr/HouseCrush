@@ -31,7 +31,7 @@ class FeedbackLogger:
     
     def _load_feedback_data(self) -> Dict:
         """Load existing feedback data from JSON file."""
-        if not config.should_log_feedback():
+        if not config.should_save_json_files():
             return {
                 'total_feedback': 0,
                 'feedback_entries': [],
@@ -54,7 +54,7 @@ class FeedbackLogger:
     
     def _save_feedback_data(self):
         """Save feedback data to JSON file."""
-        if not config.should_log_feedback():
+        if not config.should_save_json_files():
             return
         
         try:
@@ -100,7 +100,7 @@ class FeedbackLogger:
             self.feedback_data['total_feedback'] += 1
             
             # Save JSON data only in development
-            if config.should_log_feedback():
+            if config.should_save_json_files():
                 self._save_feedback_data()
             
             if config.should_log_debug():
@@ -126,7 +126,7 @@ class FeedbackLogger:
     
     def clear_feedback(self) -> bool:
         """Clear all feedback data."""
-        if not config.should_log_feedback():
+        if not config.should_save_json_files():
             return True
         
         try:

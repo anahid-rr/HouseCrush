@@ -201,20 +201,24 @@ def simple_google_search(location: str, min_price: Optional[int] = None,
                 "message": "Google search failed"
             }
         
-        # Create results directory if it doesn't exist
-        results_dir = "results"
-        if not os.path.exists(results_dir):
-            os.makedirs(results_dir)
-        
-        # Save raw JSON response
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"google_search_{timestamp}.json"
-        file_path = os.path.join(results_dir, filename)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(search_results, f, indent=2, ensure_ascii=False)
-        
-        logger.info(f"Google search results saved to: {file_path}")
+        # Save raw JSON response only in development
+        file_path = None
+        if config.should_save_json_files():
+            # Create results directory if it doesn't exist
+            results_dir = "results"
+            if not os.path.exists(results_dir):
+                os.makedirs(results_dir)
+            
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"google_search_{timestamp}.json"
+            file_path = os.path.join(results_dir, filename)
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(search_results, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"Google search results saved to: {file_path}")
+        else:
+            logger.info("Google search results not saved (production mode)")
         
         return {
             "success": True,

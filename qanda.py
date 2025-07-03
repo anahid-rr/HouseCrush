@@ -153,7 +153,7 @@ Keep answers concise but informative (2-4 sentences typically)."""
     
     def _log_error(self, question: str, error: str):
         """Log errors for debugging (only in development)."""
-        if config.should_save_debug_files():
+        if config.should_save_json_files():
             self._save_debug_data("error", {
                 "timestamp": datetime.now().isoformat(),
                 "question": question,
@@ -163,7 +163,7 @@ Keep answers concise but informative (2-4 sentences typically)."""
     
     def _save_debug_data(self, data_type: str, data: Dict):
         """Save debug data to files (only in development)."""
-        if not config.should_save_debug_files():
+        if not config.should_save_json_files():
             return
         
         try:
@@ -198,7 +198,7 @@ Keep answers concise but informative (2-4 sentences typically)."""
         except Exception as e:
             logger.error(f"❌ Error saving Q&A debug data: {e}")
             # Try to save to current directory as fallback
-            if config.should_save_debug_files():
+            if config.should_save_json_files():
                 try:
                     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                     filename = f"qa_{data_type}_{timestamp}.json"

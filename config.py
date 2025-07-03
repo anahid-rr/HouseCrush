@@ -21,6 +21,7 @@ class Config:
         self.enable_file_logging = self.is_development
         self.enable_debug_files = self.is_development
         self.enable_feedback_logging = self.is_development
+        self.enable_json_file_saving = self.is_development
         
         # Override with explicit environment variables if set
         if os.getenv('ENABLE_DEBUG_LOGGING') is not None:
@@ -34,6 +35,9 @@ class Config:
         
         if os.getenv('ENABLE_FEEDBACK_LOGGING') is not None:
             self.enable_feedback_logging = os.getenv('ENABLE_FEEDBACK_LOGGING', 'false').lower() == 'true'
+        
+        if os.getenv('ENABLE_JSON_FILE_SAVING') is not None:
+            self.enable_json_file_saving = os.getenv('ENABLE_JSON_FILE_SAVING', 'false').lower() == 'true'
     
     def get_debug_config(self) -> Dict[str, Any]:
         """Get debug configuration settings."""
@@ -44,7 +48,8 @@ class Config:
             'enable_debug_logging': self.enable_debug_logging,
             'enable_file_logging': self.enable_file_logging,
             'enable_debug_files': self.enable_debug_files,
-            'enable_feedback_logging': self.enable_feedback_logging
+            'enable_feedback_logging': self.enable_feedback_logging,
+            'enable_json_file_saving': self.enable_json_file_saving
         }
     
     def should_log_debug(self) -> bool:
@@ -62,6 +67,10 @@ class Config:
     def should_log_to_files(self) -> bool:
         """Check if logging to files should be enabled."""
         return self.enable_file_logging
+    
+    def should_save_json_files(self) -> bool:
+        """Check if JSON files should be saved (only in development)."""
+        return self.enable_json_file_saving
 
 # Global configuration instance
 config = Config() 

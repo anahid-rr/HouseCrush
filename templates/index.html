@@ -585,6 +585,8 @@
             align-items: center;
             justify-content: center;
         }
+        
+
         .features-section {
             max-width: 1200px;
             margin: 60px auto 0 auto;
@@ -741,6 +743,11 @@
         .steps-section {
             background: #fafbfc;
             padding: 60px 0 40px 0;
+        }
+        .steps-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px 40px 16px;
             text-align: center;
         }
         .steps-title {
@@ -752,26 +759,45 @@
         .steps-subtitle {
             font-size: 1.1rem;
             color: #555;
-            margin-bottom: 40px;
+            margin-bottom: 0;
             font-weight: 400;
             text-align: center;
         }
+        .steps-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            padding: 0 16px;
+        }
+        .steps-left {
+            flex: 1;
+            max-width: 500px;
+            padding: 20px 0;
+        }
+        .steps-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
         .steps-grid {
             display: flex;
-            gap: 48px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0 auto;
-            max-width: 900px;
+            flex-direction: column;
+            gap: 24px;
+            padding: 20px 0;
         }
         .step {
-            flex: 1 1 220px;
-            min-width: 200px;
-            max-width: 300px;
             display: flex;
             flex-direction: column;
+            gap: 12px;
+        }
+        .step-header {
+            display: flex;
+            flex-direction: row;
             align-items: center;
-            margin-bottom: 24px;
+            gap: 16px;
         }
         .step-circle {
             width: 48px;
@@ -784,19 +810,136 @@
             justify-content: center;
             font-size: 1.6rem;
             font-weight: 700;
-            margin-bottom: 18px;
+            flex-shrink: 0;
+        }
+        .step-content {
+            display: flex;
+            flex-direction: column;
         }
         .step-title {
-            font-size: 1.18rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #181c23;
-            margin-bottom: 8px;
-            text-align: center;
         }
         .step-desc {
             font-size: 1rem;
             color: #555;
-            text-align: center;
+            line-height: 1.5;
+            margin-left: 64px;
+        }
+        
+        /* Sample Results Card Styles */
+        .sample-results-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(60,72,88,0.12);
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            max-width: 500px;
+            width: 100%;
+        }
+        .sample-results-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 16px 20px 12px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            background: #fafbfc;
+        }
+        .sample-filter-chip {
+            background: #e6f4ea;
+            color: #388e5c;
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .sample-filter-chip.location {
+            background: #e6f4ea;
+            color: #388e5c;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .sample-property-list {
+            padding: 12px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .sample-property-item {
+            background: #fafbfc;
+            border-radius: 8px;
+            padding: 10px;
+            position: relative;
+            border: 1px solid #f0f0f0;
+            min-height: 90px;
+        }
+        .sample-property-item.top-match {
+            background: #e6f4ea;
+            border-color: #4caf87;
+        }
+        .sample-match-badge {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: #4caf87;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.65rem;
+            border-radius: 6px;
+            padding: 2px 6px;
+        }
+        .sample-property-item:not(.top-match) .sample-match-badge {
+            background: #e6f4ea;
+            color: #388e5c;
+        }
+        .sample-property-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #181c23;
+            margin-bottom: 4px;
+            padding-right: 45px;
+            line-height: 1.3;
+        }
+        .sample-property-price {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #4caf87;
+            margin-bottom: 6px;
+        }
+        .sample-property-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .sample-tag {
+            background: #e6f4ea;
+            color: #388e5c;
+            border-radius: 6px;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        .sample-results-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-top: 1px solid #f0f0f0;
+            padding: 12px 20px;
+            background: #fff;
+            font-size: 0.8rem;
+            color: #222;
+        }
+        .sample-footer-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .sample-footer-text {
+            flex: 1;
+            line-height: 1.3;
         }
         .pricing-section {
             max-width: 1200px;
@@ -987,6 +1130,26 @@
                 flex-direction: column;
                 gap: 40px;
             }
+            .steps-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .steps-grid {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .step {
+                max-width: none;
+            }
+            .steps-right {
+                display: flex;
+                justify-content: center;
+            }
+            .sample-results-card {
+                max-width: 100%;
+                width: 100%;
+            }
+
             .features-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1084,7 +1247,7 @@
     </main>
 
     <!-- Search Form Section -->
-    <section id="searchFormSection" style="margin: 0 auto; max-width: 1100px; padding: 48px 16px 0 16px;">
+    <section id="searchFormSection" style="margin: 0 auto; max-width: 1100px; padding: 48px 16px 60px 16px;">
         <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
            
             <div style="background: #4caf87; color: #fff; border-top-left-radius: 12px; border-top-right-radius: 12px; padding: 18px 28px 12px 28px; margin: -24px -24px 24px -24px;">
@@ -1218,179 +1381,13 @@
                 </div>
             </div>
             {% endif %}
-            <!-- {% if filtered_properties %}
-            <div class="mt-8 pt-6 border-t border-gray-200">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                    <i class="fas fa-robot text-indigo-600 mr-2"></i>
-                    AI-Filtered Individual Listings ({{ filtered_properties|length }} found)
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {% for property in filtered_properties %}
-                    <div class="bg-gray-50 rounded-lg p-5 border border-gray-200 relative">
-                        {% if loop.index0 == 0 %}
-                        <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Top Match</span>
-                        {% elif property.match_score %}
-                        <span class="absolute top-4 left-4 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">{{ property.match_score }}% Match</span>
-                        {% endif %}
-                        {% if property.image_url %}
-                        <div class="h-48 mb-2 bg-gray-200 rounded" style="background-image: url('{{ property.image_url }}'); background-size: cover; background-position: center;"></div>
-                        {% else %}
-                        <div class="h-48 mb-2 bg-gray-200 rounded"></div>
-                        {% endif %}
-                        <div class="text-lg font-semibold text-gray-800 mt-2">{{ property.title }}</div>
-                        <div class="text-green-700 text-xl font-bold mb-2">{{ property.price }}</div>
-                        {% if property.features %}
-                        <div class="text-sm text-gray-600 mb-2 line-clamp-2">{{ property.features[:150] }}{% if property.features|length > 150 %}...{% endif %}</div>
-                        {% endif %}
-                        <div class="flex flex-wrap gap-2 mb-2">
-                            {% for tag in property.tags %}
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                        <div class="text-xs text-gray-500 mt-2">
-                            <i class="fas fa-external-link-alt mr-1"></i>
-                            <a href="{{ property.url }}" target="_blank" class="text-indigo-600 hover:text-indigo-800">{{ property.source }}</a>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-            {% endif %} -->
-          
+         
         </div>
     </section>
 
-    <!-- Results Section (Example) -->
-    <section class="results-section" style="padding: 0 16px;">
-        <div class="results-header">
-            <div class="filter-chip">Budget: $1,000–$2,000 <span class="close">&times;</span></div>
-            <div class="filter-chip">2+ Bedrooms <span class="close">&times;</span></div>
-            <div class="filter-chip">Pet Friendly <span class="close">&times;</span></div>
-            <div class="filter-chip location"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#b7e4c7"></circle><path d="M10 4a4 4 0 0 1 4 4c0 2.5-4 8-4 8s-4-5.5-4-8a4 4 0 0 1 4-4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#388e5c"></path></svg> Near Downtown</div>
-        </div>
-        <div class="property-grid">
-            <div class="property-card top-match">
-                <div class="match-badge">Top Match</div>
-                <div class="property-image"></div>
-                <div class="property-title">Modern Downtown Apartment</div>
-                <div class="property-price">$1,850/mo</div>
-                <div class="property-tags">
-                    <span class="tag">5 min to gym</span>
-                    <span class="tag">Near transit</span>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="match-badge">98% Match</div>
-                <div class="property-image"></div>
-                <div class="property-title">Spacious Loft with Parking</div>
-                <div class="property-price">$1,695/mo</div>
-                <div class="property-tags">
-                    <span class="tag">10 min to work</span>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-image"></div>
-                <div class="property-title">Cozy 2BR with Balcony</div>
-                <div class="property-price">$1,550/mo</div>
-                <div class="property-tags">
-                    <span class="tag">Pet friendly</span>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-image"></div>
-                <div class="property-title">Luxury Highrise Studio</div>
-                <div class="property-price">$1,925/mo</div>
-                <div class="property-tags">
-                    <span class="tag">Gym included</span>
-                </div>
-            </div>
-        </div>
-        <div class="results-footer">
-            <div class="footer-icon">
-                <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="#e6f4ea"></circle><path d="M12 7v5l3 3" stroke="#388e5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
-            </div>
-            <div class="footer-text"><b>House Crush AI</b> I found 28 properties matching your criteria. The top match is only 5 minutes from your gym!</div>
-        </div>
-    </section>
 
-    <!-- Q&A Section -->
-    <section id="qaSection" style="margin: 0 auto; max-width: 100vw; background: transparent; padding: 0;">
-        <div style="background: #fafbfc; width: 100vw; box-shadow: 0 8px 32px 0 rgba(60,72,88,0.10); padding: 60px 0 40px 0; margin: 0;">
-            <div class="bg-white rounded-lg shadow-lg p-6 mx-auto" style="max-width: 1100px;">
-                <div style="background: #4f46e5; color: #fff; border-top-left-radius: 12px; border-top-right-radius: 12px; padding: 18px 28px 12px 28px; margin: -24px -24px 24px -24px;">
-                    <h2 class="text-2xl font-bold" style="color: #fff; margin: 0;">Ask About Rental Properties</h2>
-                </div>
-                <form method="POST" action="{{ url_for('index') }}" class="mb-8" id="qaForm" onsubmit="submitQAForm(event)">
-                    <input type="hidden" name="form_type" value="qa">
-                    <div class="mb-4">
-                        <label for="question" class="block text-gray-700 text-sm mb-2">Ask about rental properties:</label>
-                        <div class="flex gap-2">
-                            <input type="text" name="question" id="question" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What are the typical rental requirements?" required>
-                            <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
-                                <i class="fas fa-search mr-2"></i>Ask AI
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <!-- Quick Questions -->
-                <div class="mt-8">
-                    <h3 class="text-base font-medium text-gray-600 mb-3">Quick Questions:</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <button onclick="setQuestion('What are the typical rental requirements?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                            <i class="fas fa-clipboard-list text-indigo-500 mr-2"></i>
-                            What are the typical rental requirements?
-                        </button>
-                        <button onclick="setQuestion('What amenities should I look for?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                            <i class="fas fa-home text-indigo-500 mr-2"></i>
-                            What amenities should I look for?
-                        </button>
-                        <button onclick="setQuestion('What is the difference between downtown and suburban properties?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                            <i class="fas fa-building text-indigo-500 mr-2"></i>
-                            What is the difference between downtown and suburban properties?
-                        </button>
-                        <button onclick="setQuestion('What are current rental market trends?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
-                            <i class="fas fa-chart-line text-indigo-500 mr-2"></i>
-                            What are current rental market trends?
-                        </button>
-                    </div>
-                </div>
-                <!-- Results Section -->
-                <div id="qaResults" class="mt-8" style="display: none;">
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
-                        <div id="qaAnswer" class="prose max-w-none"></div>
-                        <div id="qaSources" class="mt-6 pt-4 border-t border-gray-200" style="display: none;">
-                            <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
-                            <ul id="qaSourcesList" class="text-sm text-gray-600"></ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Original Results Section (for server-side rendering) -->
-                {% if answer %}
-                <div class="bg-gray-50 rounded-lg p-6 mt-8">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
-                    <div class="prose max-w-none">
-                        {{ answer | safe }}
-                    </div>
-                    {% if sources %}
-                    <div class="mt-6 pt-4 border-t border-gray-200">
-                        <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
-                        <ul class="text-sm text-gray-600">
-                            {% for source in sources %}
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-file-alt text-indigo-500"></i>
-                                {{ source }}
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-                </div>
-                {% endif %}
-            </div>
-        </div>
-    </section>
 
+   
     <!-- Pain Points Section -->
     <section class="pain-section">
         <h2 class="pain-title">The Rental Search Struggle is Real</h2>
@@ -1494,7 +1491,104 @@
             </div>
         </div>
     </section>
-
+  <!-- How It Works Steps Section -->
+  <!-- <section class="steps-section">
+    <div class="steps-header">
+        <h2 class="steps-title">How House Crush Works</h2>
+        <div class="steps-subtitle">From search to shortlist in three simple steps</div>
+    </div>
+    <div class="steps-content">
+        <div class="steps-left">
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-circle">1</div>
+                        <div class="step-title">Set Your Preferences</div>
+                    </div>
+                    <div class="step-desc">Tell us your budget, desired amenities, and important locations like work and gym</div>
+                </div>
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-circle">2</div>
+                        <div class="step-title">AI Does the Work</div>
+                    </div>
+                    <div class="step-desc">Our AI searches multiple sites, analyzes locations, and calculates commute times</div>
+                </div>
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-circle">3</div>
+                        <div class="step-title">Get Your Shortlist</div>
+                    </div>
+                    <div class="step-desc">Receive ranked results with helpful badges like "Near Gym" and "Quick Commute"</div>
+                </div>
+            </div>
+        </div>
+        <div class="steps-right">-->
+            <!-- Sample Results Section -->
+           <!-- <div class="sample-results-card">
+                <div class="sample-results-header">
+                    <div class="sample-filter-chip">Budget: $1,000–$2,000</div>
+                    <div class="sample-filter-chip">2+ Bedrooms</div>
+                    <div class="sample-filter-chip">Pet Friendly</div>
+                    <div class="sample-filter-chip location"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#b7e4c7"></circle><path d="M10 4a4 4 0 0 1 4 4c0 2.5-4 8-4 8s-4-5.5-4-8a4 4 0 0 1 4-4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#388e5c"></path></svg> Near Downtown</div>
+                </div>
+                <div class="sample-property-list">
+                    <div class="sample-property-item top-match">
+                        <div class="sample-match-badge">Top Match</div>
+                        <div class="sample-property-title">Modern Downtown Apartment</div>
+                        <div class="sample-property-price">$1,850/mo</div>
+                        <div class="sample-property-tags">
+                            <span class="sample-tag">5 min to gym</span>
+                            <span class="sample-tag">Near transit</span>
+                        </div>
+                    </div>
+                    <div class="sample-property-item">
+                        <div class="sample-match-badge">98% Match</div>
+                        <div class="sample-property-title">Spacious Loft with Parking</div>
+                        <div class="sample-property-price">$1,695/mo</div>
+                        <div class="sample-property-tags">
+                            <span class="sample-tag">10 min to work</span>
+                        </div>
+                    </div>
+                    <div class="sample-property-item">
+                        <div class="sample-property-title">Cozy 2BR with Balcony</div>
+                        <div class="sample-property-price">$1,550/mo</div>
+                        <div class="sample-property-tags">
+                            <span class="sample-tag">Pet friendly</span>
+                        </div>
+                    </div>
+                    <div class="sample-property-item">
+                        <div class="sample-property-title">Luxury Highrise Studio</div>
+                        <div class="sample-property-price">$1,925/mo</div>
+                        <div class="sample-property-tags">
+                            <span class="sample-tag">Gym included</span>
+                        </div>
+                    </div>
+                    <div class="sample-property-item">
+                        <div class="sample-property-title">Garden View Apartment</div>
+                        <div class="sample-property-price">$1,750/mo</div>
+                        <div class="sample-property-tags">
+                            <span class="sample-tag">Balcony</span>
+                        </div>
+                    </div>
+                    <div class="sample-property-item">
+                        <div class="sample-property-title">Modern Studio Loft</div>
+                        <div class="sample-property-price">$1,600/mo</div>
+                        <div class="sample-property-tags">
+                            <span class="sample-tag">High ceilings</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sample-results-footer">
+                    <div class="sample-footer-icon">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10" fill="#e6f4ea"></circle><path d="M12 7v5l3 3" stroke="#388e5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+                    </div>
+                    <div class="sample-footer-text"><b>House Crush AI</b> Found 28 properties. Top match is 5 min from your gym!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
     <!-- Features Section -->
     <section class="features-section" id="features">
         <h2 class="features-title">Powerful Features That Save You Time</h2>
@@ -1592,28 +1686,84 @@
         </div>
     </section>
 
-    <!-- How It Works Steps Section -->
-    <section class="steps-section">
-        <h2 class="steps-title">How House Crush Works</h2>
-        <div class="steps-subtitle">From search to shortlist in three simple steps</div>
-        <div class="steps-grid">
-            <div class="step">
-                <div class="step-circle">1</div>
-                <div class="step-title">Set Your Preferences</div>
-                <div class="step-desc">Tell us your budget, desired amenities, and important locations like work and gym</div>
+  
+ <!-- Q&A Section -->
+ <section id="qaSection" style="margin: 0 auto; max-width: 100vw; background: transparent; padding: 0;">
+    <div style="background: #fafbfc; width: 100vw; box-shadow: 0 8px 32px 0 rgba(60,72,88,0.10); padding: 60px 0 40px 0; margin: 0;">
+        <div class="bg-white rounded-lg shadow-lg p-6 mx-auto" style="max-width: 1100px;">
+            <div style="background: #4f46e5; color: #fff; border-top-left-radius: 12px; border-top-right-radius: 12px; padding: 18px 28px 12px 28px; margin: -24px -24px 24px -24px;">
+                <h2 class="text-2xl font-bold" style="color: #fff; margin: 0;">Ask About Rental Properties</h2>
             </div>
-            <div class="step">
-                <div class="step-circle">2</div>
-                <div class="step-title">AI Does the Work</div>
-                <div class="step-desc">Our AI searches multiple sites, analyzes locations, and calculates commute times</div>
+            <form method="POST" action="{{ url_for('index') }}" class="mb-8" id="qaForm" onsubmit="submitQAForm(event)">
+                <input type="hidden" name="form_type" value="qa">
+                <div class="mb-4">
+                    <label for="question" class="block text-gray-700 text-sm mb-2">Ask about rental properties:</label>
+                    <div class="flex gap-2">
+                        <input type="text" name="question" id="question" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What are the typical rental requirements?" required>
+                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                            <i class="fas fa-search mr-2"></i>Ask AI
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- Quick Questions -->
+            <div class="mt-8">
+                <h3 class="text-base font-medium text-gray-600 mb-3">Quick Questions:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button onclick="setQuestion('What are the typical rental requirements?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-clipboard-list text-indigo-500 mr-2"></i>
+                        What are the typical rental requirements?
+                    </button>
+                    <button onclick="setQuestion('What amenities should I look for?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-home text-indigo-500 mr-2"></i>
+                        What amenities should I look for?
+                    </button>
+                    <button onclick="setQuestion('What is the difference between downtown and suburban properties?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-building text-indigo-500 mr-2"></i>
+                        What is the difference between downtown and suburban properties?
+                    </button>
+                    <button onclick="setQuestion('What are current rental market trends?')" class="w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex items-center text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-chart-line text-indigo-500 mr-2"></i>
+                        What are current rental market trends?
+                    </button>
+                </div>
             </div>
-            <div class="step">
-                <div class="step-circle">3</div>
-                <div class="step-title">Get Your Shortlist</div>
-                <div class="step-desc">Receive ranked results with helpful badges like "Near Gym" and "Quick Commute"</div>
+            <!-- Results Section -->
+            <div id="qaResults" class="mt-8" style="display: none;">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
+                    <div id="qaAnswer" class="prose max-w-none"></div>
+                    <div id="qaSources" class="mt-6 pt-4 border-t border-gray-200" style="display: none;">
+                        <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
+                        <ul id="qaSourcesList" class="text-sm text-gray-600"></ul>
+                    </div>
+                </div>
             </div>
+            <!-- Original Results Section (for server-side rendering) -->
+            {% if answer %}
+            <div class="bg-gray-50 rounded-lg p-6 mt-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Answer:</h2>
+                <div class="prose max-w-none">
+                    {{ answer | safe }}
+                </div>
+                {% if sources %}
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                    <h3 class="text-sm font-semibold text-gray-600 mb-2">Sources:</h3>
+                    <ul class="text-sm text-gray-600">
+                        {% for source in sources %}
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-file-alt text-indigo-500"></i>
+                            {{ source }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Pricing Section -->
     <section class="pricing-section">
